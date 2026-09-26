@@ -13,7 +13,7 @@ DIST = ROOT / "dist"
 
 def bundle() -> str:
     page = (SRC / "template.html").read_text()
-    for marker, name in [("/*STYLES*/", "styles.css"), ("/*DISTRICTS*/", "districts.js"),
+    for marker, name in [("/*STYLES*/", "styles.css"), ("/*DISTRICTS*/", "districts.js"), ("/*GEO*/", "geo.js"),
                          ("/*CONTENT*/", "content.js"), ("/*APP*/", "app.js")]:
         body = (SRC / name).read_text()
         if name.endswith(".js"):
@@ -25,7 +25,8 @@ def bundle() -> str:
 def main() -> None:
     DIST.mkdir(exist_ok=True)
     fragment = bundle()
-    (DIST / "artifact.html").write_text(fragment)
+    # The hosted artifact's security policy blocks the Census geocoder, so it offers ZIP lookup only.
+    (DIST / "artifact.html").write_text(fragment.replace("<script>", "<script>window.FVG_HOSTED=true;\n", 1))
     standalone = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
                   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
                   + fragment + "\n</html>\n")

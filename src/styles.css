@@ -89,6 +89,21 @@ select, input[type="search"] {
 .chip[aria-pressed="true"] { background: var(--pick-soft); border-color: var(--pick); color: var(--ink); }
 .links { font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
 
+/* Address / ZIP lookup */
+.find { display: grid; gap: 6px; padding: 14px; margin-inline: -4px; border: 2px solid var(--pick); border-radius: 8px; background: var(--pick-soft); }
+.find-label { font: 800 17px/1.2 var(--display); font-stretch: 85%; text-transform: uppercase; letter-spacing: .03em; }
+.find-bar { display: flex; gap: 8px; flex-wrap: wrap; }
+.find-bar input { flex: 1 1 220px; min-width: 0; font: 16px/1.2 var(--body); color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; }
+.find-msg { margin: 0; font-weight: 600; color: var(--no); }
+.find-msg:empty { display: none; }
+.hint.small { font-size: 12.5px; }
+.find-result { display: grid; gap: 8px; border: 1px solid var(--rule); border-radius: 8px; padding: 12px; }
+.find-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.find-head #find-clear { margin-left: auto; }
+.find-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.find-k { font: 600 12px/1.2 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); min-width: 150px; }
+.find-result .hint { margin: 0; color: var(--muted); font-size: 13.5px; }
+
 /* Section headers look like ballot contest bands */
 .sec { display: grid; gap: 10px; }
 .sec > h2 {

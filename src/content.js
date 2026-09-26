@@ -970,7 +970,7 @@ window.GUIDE = {
     src: [["Patch: Meet the judicial candidates", "https://patch.com/california/murrieta/meet-3-judicial-candidates-rivco-judge-upcoming-election"], ["NBC Palm Springs: primary results", "https://www.nbcpalmsprings.com/local-and-community/2026/06/03/paradise-leads-race-for-riverside-county-judicial-seat"]]
   },
   {
-    id: "moval", sec: "riverside", scope: "local", county: "Riverside", place: "Moreno Valley", title: "Mayor, City of Moreno Valley",
+    id: "moval", sec: "riverside", scope: "local", geo: {"pl": ["Moreno Valley"]}, county: "Riverside", place: "Moreno Valley", title: "Mayor, City of Moreno Valley",
     pick: "Ulises Cabrera", pickType: "slate",
     quick: "Incumbent pushing for shelter beds, better-paying jobs and tougher environmental rules on warehouses.",
     quick_es: "Alcalde en funciones que impulsa albergues, mejores empleos y reglas ambientales más estrictas para bodegas.",
@@ -992,7 +992,7 @@ window.GUIDE = {
     src: [["City of Moreno Valley: 2026 election", "https://moval.gov/departments/city-clerk/2026-election.html"], ["IE Voice: Cabrera interview", "https://theievoice.com/the-interview-moreno-valley-city-councilmember-ulises-cabrera-why-im-running-for-mayor/"]]
   },
   {
-    id: "perris3", sec: "riverside", scope: "local", county: "Riverside", place: "Perris", title: "City Council, District 3, City of Perris",
+    id: "perris3", sec: "riverside", scope: "local", geo: {"pl": ["Perris"]}, part: "District 3", county: "Riverside", place: "Perris", title: "City Council, District 3, City of Perris",
     pick: "David Starr Rabb", pickType: "slate", depth: "limited",
     quick: "Attorney and councilmember since 2014. Experience and continuity.",
     quick_es: "Abogado y concejal desde 2014; experiencia y continuidad.",
@@ -1005,7 +1005,7 @@ window.GUIDE = {
     src: [["City of Perris: Councilmember Rabb", "https://www.cityofperris.org/Home/Components/StaffDirectory/StaffDirectory/8/182"]]
   },
   {
-    id: "rivw2", sec: "riverside", scope: "local", county: "Riverside", place: "Riverside (city)", title: "City Council, Ward 2, City of Riverside", sub: "Runoff",
+    id: "rivw2", sec: "riverside", scope: "local", geo: {"pl": ["Riverside"]}, part: "Ward 2", county: "Riverside", place: "Riverside (city)", title: "City Council, Ward 2, City of Riverside", sub: "Runoff",
     pick: "Gracie Torres", pickType: "slate",
     quick: "Water district director with the backing of the mayor, police and firefighters. Led the primary.",
     quick_es: "Directora del distrito de agua con respaldo de la alcaldesa, policías y bomberos; ganó la primaria.",
@@ -1021,7 +1021,7 @@ window.GUIDE = {
     src: [["Raincross Gazette: Ward 2 runoff", "https://www.raincrossgazette.com/ward-2-primary-rivals-vahl-montero-endorse-aram-ayra-ahead-of-runoff/"], ["Riverside Record: primary results", "https://riversiderecord.org/riverside-council-candidates-june-election-early-returns/"]]
   },
   {
-    id: "rivw4", sec: "riverside", scope: "local", county: "Riverside", place: "Riverside (city)", title: "City Council, Ward 4, City of Riverside", sub: "Runoff",
+    id: "rivw4", sec: "riverside", scope: "local", geo: {"pl": ["Riverside"]}, part: "Ward 4", county: "Riverside", place: "Riverside (city)", title: "City Council, Ward 4, City of Riverside", sub: "Runoff",
     pick: "Rich Vandenberg", pickType: "slate",
     quick: "Riverside native pushing smarter growth and skeptical of large warehouse projects.",
     quick_es: "Nativo de Riverside que impulsa un crecimiento inteligente y cuestiona grandes proyectos de bodegas.",
@@ -1037,7 +1037,7 @@ window.GUIDE = {
     src: [["Raincross Gazette: Vandenberg platform", "https://www.raincrossgazette.com/rich-vandenberg-announces-bid-for-ward-4-city-council-seat/"], ["Riverside Record: primary results", "https://riversiderecord.org/riverside-council-candidates-june-election-early-returns/"]]
   },
   {
-    id: "dhcd5", sec: "riverside", scope: "local", county: "Riverside", place: "Desert Healthcare District (Palm Desert, Indio, Bermuda Dunes)", title: "Desert Healthcare District, Zone 5 (short term)",
+    id: "dhcd5", sec: "riverside", scope: "local", geo: {"pl": ["Palm Desert", "Indio", "Bermuda Dunes"]}, part: "Zone 5", county: "Riverside", place: "Desert Healthcare District (Palm Desert, Indio, Bermuda Dunes)", title: "Desert Healthcare District, Zone 5 (short term)",
     pick: "Anyse Smith", pickType: "slate", depth: "limited",
     quick: "Housing and legal-aid attorney for unhoused people, appointed unanimously in January 2026.",
     quick_es: "Abogada de vivienda y asistencia legal para personas sin hogar, nombrada por unanimidad en enero de 2026.",
@@ -1068,7 +1068,7 @@ window.GUIDE = {
     src: [["Community Forward Redlands: Binks and Vara advance", "https://www.communityforwardredlands.com/binks-vara-advance-in-san-bernardino-county-schools-race/"]]
   },
   {
-    id: "sbBoeB", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "County Board of Education, Area B", title: "County Board of Education, Area B",
+    id: "sbBoeB", sec: "sanbernardino", scope: "local", part: "Trustee Area B", county: "San Bernardino", place: "County Board of Education, Area B", title: "County Board of Education, Area B",
     pick: "Miki R. Inbody", pickType: "slate",
     quick: "Fontana Unified superintendent and 35-year educator who started in Head Start.",
     quick_es: "Superintendente de Fontana Unified y educadora por 35 años que empezó en Head Start.",
@@ -1084,7 +1084,7 @@ window.GUIDE = {
     src: [["Inbody candidacy announcement", "https://natlawreview.com/press-releases/fontana-superintendent-miki-rene-inbody-announces-candidacy-san-bernardino"], ["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "cjusd1", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Colton Joint Unified", title: "Colton Joint Unified School Board, Area 1",
+    id: "cjusd1", sec: "sanbernardino", scope: "local", geo: {"sch": ["Colton Joint Unified School District"]}, part: "Area 1", county: "San Bernardino", place: "Colton Joint Unified", title: "Colton Joint Unified School Board, Area 1",
     pick: "Israel Fuentes Jr.", pickType: "slate", depth: "limited",
     quick: "Incumbent trustee. Experience and continuity.",
     quick_es: "Miembro en funciones; experiencia y continuidad.",
@@ -1098,7 +1098,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "cjusd2", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Colton Joint Unified", title: "Colton Joint Unified School Board, Area 2", sub: "Vote for up to 2",
+    id: "cjusd2", sec: "sanbernardino", scope: "local", geo: {"sch": ["Colton Joint Unified School District"]}, part: "Area 2", county: "San Bernardino", place: "Colton Joint Unified", title: "Colton Joint Unified School Board, Area 2", sub: "Vote for up to 2",
     pick: "Dan Flores", pickType: "slate", depth: "limited",
     quick: "Incumbent trustee. (The slate listed him under Area 1; the county list places him in Area 2.)",
     quick_es: "Miembro en funciones. (La lista lo puso en el Área 1; el condado lo ubica en el Área 2).",
@@ -1112,7 +1112,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "fusd1", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Fontana Unified", title: "Fontana Unified School Board, Area 1",
+    id: "fusd1", sec: "sanbernardino", scope: "local", geo: {"sch": ["Fontana Unified School District"]}, part: "Area 1", county: "San Bernardino", place: "Fontana Unified", title: "Fontana Unified School Board, Area 1",
     pick: "Mars Serna", pickType: "slate", depth: "limited",
     quick: "Incumbent trustee during new school construction and district growth.",
     quick_es: "Miembro en funciones durante la construcción de nuevas escuelas y el crecimiento del distrito.",
@@ -1124,7 +1124,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "rusd5", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Rialto Unified", title: "Rialto Unified School Board, Area 5",
+    id: "rusd5", sec: "sanbernardino", scope: "local", geo: {"sch": ["Rialto Unified School District"]}, part: "Area 5", county: "San Bernardino", place: "Rialto Unified", title: "Rialto Unified School Board, Area 5",
     pick: "Evelyn P. Dominguez", pickType: "filled", depth: "limited",
     quick: "Incumbent nurse and parent leader, the first Latina elected to the Rialto board.",
     quick_es: "Enfermera y líder de padres en funciones; primera latina elegida a la junta de Rialto.",
@@ -1141,7 +1141,7 @@ window.GUIDE = {
     src: [["Rialto USD: Board members", "https://www.rialto.k12.ca.us/our-board/meet-our-board"], ["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
   {
-    id: "sbcusd", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino City Unified", title: "San Bernardino City Unified School Board", sub: "Vote for up to 3",
+    id: "sbcusd", sec: "sanbernardino", scope: "local", geo: {"sch": ["San Bernardino City Unified School District"]}, county: "San Bernardino", place: "San Bernardino City Unified", title: "San Bernardino City Unified School Board", sub: "Vote for up to 3",
     pick: "Danny Tillman, Abigail Medina, Mary Ellen Abilez Grande", pickType: "slate", depth: "limited",
     quick: "Re-elect the three incumbents for stability in a district that serves many Black and Latino students.",
     quick_es: "Reelegir a los tres miembros en funciones para dar estabilidad a un distrito con muchos estudiantes afroamericanos y latinos.",
@@ -1158,7 +1158,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "snow4", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Snowline Joint Unified (Phelan, Wrightwood)", title: "Snowline Joint Unified School Board, Area 4",
+    id: "snow4", sec: "sanbernardino", scope: "local", geo: {"sch": ["Snowline Joint Unified School District"]}, part: "Area 4", county: "San Bernardino", place: "Snowline Joint Unified (Phelan, Wrightwood)", title: "Snowline Joint Unified School Board, Area 4",
     pick: "Dr. Terrance L. Stone", pickType: "slate",
     quick: "Youth and community consultant with court and public-safety advisory experience.",
     quick_es: "Consultor de juventud y comunidad con experiencia asesorando tribunales y seguridad pública.",
@@ -1173,7 +1173,7 @@ window.GUIDE = {
     src: [["Executives Diary: Dr. Terrance Stone", "https://executivesdiary.com/2026/02/07/dr-terrance-stone/"], ["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
   {
-    id: "adelMayor", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Adelanto", title: "Mayor, City of Adelanto",
+    id: "adelMayor", sec: "sanbernardino", scope: "local", geo: {"pl": ["Adelanto"]}, county: "San Bernardino", place: "Adelanto", title: "Mayor, City of Adelanto",
     pick: "Stevevonna Evans", pickType: "slate", depth: "limited",
     quick: "Sitting councilwoman offering new leadership at the top.",
     quick_es: "Concejal en funciones que ofrece nuevo liderazgo en la alcaldía.",
@@ -1186,7 +1186,7 @@ window.GUIDE = {
     src: [["SBC Sentinel: match-ups", "https://sbcsentinel.com/2026/08/more-clarity-on-november-mayoral-and-city-council-match-ups/"]]
   },
   {
-    id: "adelCouncil", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Adelanto", title: "City Council, City of Adelanto", sub: "Vote for up to 2",
+    id: "adelCouncil", sec: "sanbernardino", scope: "local", geo: {"pl": ["Adelanto"]}, county: "San Bernardino", place: "Adelanto", title: "City Council, City of Adelanto", sub: "Vote for up to 2",
     pick: "Jayshawn Johnson", pickType: "slate", depth: "limited",
     quick: "Planning commissioner bringing a new voice to the council.",
     quick_es: "Comisionado de planificación que aporta una voz nueva al concejo.",
@@ -1200,7 +1200,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "coltonMayor", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Colton", title: "Mayor, City of Colton",
+    id: "coltonMayor", sec: "sanbernardino", scope: "local", geo: {"pl": ["Colton"]}, county: "San Bernardino", place: "Colton", title: "Mayor, City of Colton",
     pick: "John R. Echevarria", pickType: "slate",
     quick: "Councilmember and police officer with a people-first platform on safety and affordability.",
     quick_es: "Concejal y policía con una propuesta centrada en la gente: seguridad y costo de vida.",
@@ -1212,7 +1212,7 @@ window.GUIDE = {
     src: [["IECN: Echevarria launch", "https://iecn.com/councilman-john-echevarria-launches-colton-mayoral-bid/"]]
   },
   {
-    id: "colton4", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Colton", title: "City Council, District 4, City of Colton",
+    id: "colton4", sec: "sanbernardino", scope: "local", geo: {"pl": ["Colton"]}, part: "District 4", county: "San Bernardino", place: "Colton", title: "City Council, District 4, City of Colton",
     pick: "Joseph Paulino", pickType: "slate",
     quick: "Retired school-district police chief with 32 years in law enforcement.",
     quick_es: "Jefe de policía escolar jubilado con 32 años en las fuerzas del orden.",
@@ -1225,7 +1225,7 @@ window.GUIDE = {
     src: [["Inland Valley News: Paulino", "https://inlandvalleynews.com/coltons-next-councilman-supporters-rally-behind-joe-paulinos-run/"]]
   },
   {
-    id: "fontanaMayor", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Fontana", title: "Mayor, City of Fontana",
+    id: "fontanaMayor", sec: "sanbernardino", scope: "local", geo: {"pl": ["Fontana"]}, county: "San Bernardino", place: "Fontana", title: "Mayor, City of Fontana",
     pick: "Acquanetta Warren", pickType: "slate",
     quick: "Fontana's first Black and first woman mayor, bringing jobs and a new homeless navigation center.",
     quick_es: "Primera alcaldesa afroamericana y primera mujer alcaldesa de Fontana; trae empleos y un nuevo centro para personas sin hogar.",
@@ -1246,7 +1246,7 @@ window.GUIDE = {
     src: [["Hoodline: Fontana mayor race", "https://hoodline.com/2026/09/bernie-backed-latina-challenges-fontana-s-longtime-black-republican-mayor/"]]
   },
   {
-    id: "rcMayor", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Rancho Cucamonga", title: "Mayor, City of Rancho Cucamonga",
+    id: "rcMayor", sec: "sanbernardino", scope: "local", geo: {"pl": ["Rancho Cucamonga"]}, county: "San Bernardino", place: "Rancho Cucamonga", title: "Mayor, City of Rancho Cucamonga",
     pick: "Lynne B. Kennedy", pickType: "slate",
     quick: "Twelve years on the council and a 40-year education career. Supports adding housing.",
     quick_es: "Doce años en el concejo y 40 años de carrera en educación; apoya más vivienda.",
@@ -1264,7 +1264,7 @@ window.GUIDE = {
     src: [["City of Rancho Cucamonga: Kennedy", "https://www.cityofrc.us/directory/lynne-b-kennedy"], ["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
   {
-    id: "rc2", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Rancho Cucamonga", title: "City Council, District 2, City of Rancho Cucamonga",
+    id: "rc2", sec: "sanbernardino", scope: "local", geo: {"pl": ["Rancho Cucamonga"]}, part: "District 2", county: "San Bernardino", place: "Rancho Cucamonga", title: "City Council, District 2, City of Rancho Cucamonga",
     pick: "Dejonae Marie Shaw", pickType: "slate", depth: "limited",
     quick: "Licensed vocational nurse bringing a working-family, health-care perspective to the council.",
     quick_es: "Enfermera vocacional con perspectiva de familia trabajadora y salud para el concejo.",
@@ -1281,7 +1281,7 @@ window.GUIDE = {
     src: [["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
   {
-    id: "rialtoCouncil", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "Rialto", title: "City Council, City of Rialto", sub: "Vote for up to 2",
+    id: "rialtoCouncil", sec: "sanbernardino", scope: "local", geo: {"pl": ["Rialto"]}, county: "San Bernardino", place: "Rialto", title: "City Council, City of Rialto", sub: "Vote for up to 2",
     pick: "Carl Mayfield", pickType: "slate", depth: "limited",
     quick: "Parole agent supervisor with public-safety experience.",
     quick_es: "Supervisor de agentes de libertad condicional con experiencia en seguridad pública.",
@@ -1301,7 +1301,7 @@ window.GUIDE = {
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
   {
-    id: "sbw1", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 1, City of San Bernardino", sub: "Runoff",
+    id: "sbw1", sec: "sanbernardino", scope: "local", geo: {"pl": ["San Bernardino"]}, part: "Ward 1", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 1, City of San Bernardino", sub: "Runoff",
     pick: "Ron Alvarado", pickType: "slate", depth: "limited",
     quick: "Government fraud investigator promising accountability at city hall.",
     quick_es: "Investigador de fraude gubernamental que promete rendición de cuentas en el ayuntamiento.",
@@ -1313,7 +1313,7 @@ window.GUIDE = {
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
   {
-    id: "sbw2", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 2, City of San Bernardino", sub: "Runoff",
+    id: "sbw2", sec: "sanbernardino", scope: "local", geo: {"pl": ["San Bernardino"]}, part: "Ward 2", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 2, City of San Bernardino", sub: "Runoff",
     pick: "Christian Shaughnessy", pickType: "slate", depth: "limited",
     quick: "Housing specialist focused on the city's housing needs.",
     quick_es: "Especialista en vivienda enfocado en las necesidades de vivienda de la ciudad.",
@@ -1325,7 +1325,7 @@ window.GUIDE = {
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
   {
-    id: "sbw4", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 4, City of San Bernardino", sub: "Runoff",
+    id: "sbw4", sec: "sanbernardino", scope: "local", geo: {"pl": ["San Bernardino"]}, part: "Ward 4", county: "San Bernardino", place: "San Bernardino (city)", title: "City Council, Ward 4, City of San Bernardino", sub: "Runoff",
     pick: "Joe Salas", pickType: "slate", depth: "limited",
     quick: "Teacher challenging the incumbent in a race decided by less than a point in June.",
     quick_es: "Maestro que reta al titular en una contienda decidida por menos de un punto en junio.",
@@ -1337,7 +1337,7 @@ window.GUIDE = {
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
   {
-    id: "sbvmwd1", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino Valley Municipal Water District", title: "SB Valley Municipal Water District, Division 1 (short term)",
+    id: "sbvmwd1", sec: "sanbernardino", scope: "local", geo: {"pl": ["San Bernardino", "Highland", "Redlands", "Loma Linda", "Colton", "Rialto", "Grand Terrace", "Yucaipa"]}, part: "Division 1", county: "San Bernardino", place: "San Bernardino Valley Municipal Water District", title: "SB Valley Municipal Water District, Division 1 (short term)",
     pick: "Jonathan Lee", pickType: "slate", depth: "limited",
     quick: "Challenger for a water board that sets costs on every household bill.",
     quick_es: "Aspirante a la junta de agua que influye en el costo de cada recibo del hogar.",
@@ -1349,7 +1349,7 @@ window.GUIDE = {
     src: [["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
   {
-    id: "sbvmwd3", sec: "sanbernardino", scope: "local", county: "San Bernardino", place: "San Bernardino Valley Municipal Water District", title: "SB Valley Municipal Water District, Division 3",
+    id: "sbvmwd3", sec: "sanbernardino", scope: "local", geo: {"pl": ["San Bernardino", "Highland", "Redlands", "Loma Linda", "Colton", "Rialto", "Grand Terrace", "Yucaipa"]}, part: "Division 3", county: "San Bernardino", place: "San Bernardino Valley Municipal Water District", title: "SB Valley Municipal Water District, Division 3",
     pick: "Amy Malone", pickType: "slate", depth: "limited",
     quick: "Public-relations consultant focused on transparency for ratepayers.",
     quick_es: "Consultora de relaciones públicas enfocada en transparencia para los usuarios.",

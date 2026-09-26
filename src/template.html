@@ -30,6 +30,17 @@
   <div class="wrap" id="view-ballot">
     <section class="panel" aria-labelledby="mb-h">
       <h2 id="mb-h" data-t="myBallot">My ballot</h2>
+      <form id="find" class="find" autocomplete="on">
+        <label for="find-q" class="find-label" data-t="findTitle">Find my ballot</label>
+        <p class="hint" data-t="findHint"></p>
+        <div class="find-bar">
+          <input type="text" id="find-q" name="street-address" autocomplete="street-address" inputmode="text" enterkeyhint="search">
+          <button type="submit" class="btn" data-t="findBtn">Look up</button>
+        </div>
+        <p class="find-msg" id="find-msg" aria-live="polite"></p>
+        <p class="hint small" data-t="privacy"></p>
+      </form>
+      <div id="find-result" class="find-result" hidden></div>
       <p class="hint" data-t="myHint"></p>
       <div class="fields">
         <div class="field"><label for="f-county" data-t="county">County</label><select id="f-county"></select></div>
@@ -161,13 +172,13 @@
       <h2 data-lang="es" hidden>Bueno saber</h2>
       <ul data-lang="en">
         <li>This is an independent guide. It isn't affiliated with any campaign, party or the organization that wrote the slate.</li>
-        <li>Statewide propositions and offices are on every Californian's ballot. District and local races are covered in depth for Riverside and San Bernardino counties. Pick your districts under My ballot to see the official candidates for districts this guide doesn't cover.</li>
+        <li>Statewide propositions and offices are on every Californian's ballot. District and local races are covered in depth for Riverside and San Bernardino counties. Enter your address or ZIP code under My ballot to see your districts, including official candidates for districts this guide doesn't cover. District lookups use 2020 Census blocks matched to the new 2026 congressional map (Prop 50) and the current legislative and Board of Equalization maps.</li>
         <li>Local ballot measures (city and school bonds, etc.) aren't covered, except Riverside County's countywide Measure A.</li>
         <li>Always compare with your official sample ballot. It is the final word on what you'll vote on.</li>
       </ul>
       <ul data-lang="es" hidden>
         <li>Esta guía es independiente. No está afiliada a ninguna campaña, partido ni a la organización que hizo la lista.</li>
-        <li>Las proposiciones y cargos estatales están en la boleta de todo California. Las contiendas locales se cubren a fondo para Riverside y San Bernardino. Elija sus distritos en Mi boleta para ver los candidatos oficiales de distritos no cubiertos.</li>
+        <li>Las proposiciones y cargos estatales están en la boleta de todo California. Las contiendas locales se cubren a fondo para Riverside y San Bernardino. Escriba su dirección o código postal en Mi boleta para ver sus distritos, incluidos los candidatos oficiales de distritos no cubiertos.</li>
         <li>No se cubren medidas locales (bonos de ciudades y escuelas, etc.), salvo la Medida A del condado de Riverside.</li>
         <li>Compare siempre con su boleta de muestra oficial.</li>
       </ul>
@@ -178,6 +189,9 @@
 
 <script>
 /*DISTRICTS*/
+</script>
+<script>
+/*GEO*/
 </script>
 <script>
 /*CONTENT*/
