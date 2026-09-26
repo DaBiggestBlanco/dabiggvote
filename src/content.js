@@ -1,10 +1,8 @@
 // Guide content. Each contest carries the pick, the research-backed reasons for it,
 // and a fair summary of every alternative with the reason it was not chosen.
 //
-// pickType:
-//   "slate"  - pick comes straight from the community slate this guide is based on
-//   "filled" - the slate listed NO PREFERENCE; this guide made a pick using the lens
-//   "added"  - the contest was not on the slate at all; added because it is on the ballot
+// pickType (internal only, never shown to viewers): where a pick originated.
+//   "slate" original source list, "filled" source had no preference, "added" race not in the source.
 // depth: "limited" when little public information exists about the candidates.
 // impact: "low" when the outcome is close to certain or the choice changes little.
 
@@ -27,15 +25,6 @@ window.GUIDE = {
     { id: "sanbernardino", en: "San Bernardino County & cities", es: "Condado y ciudades de San Bernardino" }
   ],
 
-  corrections: [
-    "Governor: slate spelled \"Xavier Becrra\". The official name is Xavier Becerra.",
-    "State Senate District 18: slate spelled \"Steve Padillo\". The official name is Steve Padilla.",
-    "State Senate District 32: slate spelled \"Dr. Tiffini Tate\". The official name is Tiffanie Tate.",
-    "Colton Joint Unified: slate listed Dan Flores under Area 1. The county candidate list places Dan Flores in Area 2 (Israel Fuentes Jr. is the Area 1 candidate).",
-    "San Bernardino Valley Municipal Water District: slate said \"District\" 1 and 3. The official seats are Division 1 (short term) and Division 3.",
-    "Adelanto: the slate did not say it, but the council race elects two members. You may vote for up to two.",
-    "San Bernardino City Unified: this race elects three members at large, which is why the slate lists three names."
-  ],
 
   contests: [
 
@@ -245,10 +234,10 @@ window.GUIDE = {
     why: [
       "Families are asked to approve tax after tax for homelessness and other programs, often with little to show. Independent audits give voters proof before and after.",
       "It keeps new taxes under the same spending limit voters already approved, instead of letting them go around it.",
-      "It fits the slate's No on 40. If the billionaire tax passed, this measure would likely cancel it, because that tax exempts its revenue from the limit."
+      "It pairs with this guide's No on 40. If the billionaire tax passed, this measure would likely cancel it, because that tax exempts its revenue from the limit."
     ],
     other: [
-      { n: "NO", about: "SEIU-UHW and the Riverside County Democratic Party call it a billionaire-funded move to undo the billionaire tax, and they point out it would cancel that tax.", whyNot: "That effect on Prop 40 is real and is part of why the slate supports it. The audit requirement also stands on its own merits." }
+      { n: "NO", about: "SEIU-UHW and the Riverside County Democratic Party call it a billionaire-funded move to undo the billionaire tax, and they point out it would cancel that tax.", whyNot: "That effect on Prop 40 is real and is part of why this guide supports it. The audit requirement also stands on its own merits." }
     ],
     src: [["CA Secretary of State Quick Reference: Prop 41", "https://voterguide.sos.ca.gov/quick-reference-guide/41.htm"]]
   },
@@ -265,7 +254,7 @@ window.GUIDE = {
     },
     why: [
       "No one is proposing to tax ordinary retirement accounts. Those are already protected by practice and politics, so the ban solves a problem families don't have.",
-      "Locking a permanent ban into the constitution takes choices away from future voters. The slate opposes a one-time wealth tax now (Prop 40) but does not want to ban every future option.",
+      "Locking a permanent ban into the constitution takes choices away from future voters. This guide opposes a one-time wealth tax now (Prop 40) but does not want to ban every future option.",
       "Unlike Prop 41, which adds accountability, this is a flat prohibition."
     ],
     other: [
@@ -348,7 +337,7 @@ window.GUIDE = {
       "Plans to declare a housing state of emergency to fund 40,000 affordable units, and to freeze insurance and utility rates while cracking down on price gouging. Those costs hit middle-class budgets hardest.",
       "Wants to expand health coverage, which matters as federal cuts push people off Medi-Cal.",
       "Defends voting access and civil rights protections, and led California's lawsuits against federal overreach as Attorney General.",
-      "Opposes the billionaire wealth tax (Prop 40), in line with the slate."
+      "Opposes the billionaire wealth tax (Prop 40), in line with this guide."
     ],
     cands: [
       { n: "Xavier Becerra", p: "Democratic", d: "Voting Rights Attorney", pick: true },
@@ -363,7 +352,7 @@ window.GUIDE = {
     quick_es: "Tesorera estatal y contadora pública con larga experiencia financiera; impulsa el programa de préstamos para vivienda de la Prop 37.",
     why: [
       "State Treasurer since 2019 and a certified public accountant. She brings real financial management experience.",
-      "A named supporter of Prop 37, the middle-income home-buying program the slate backs.",
+      "A named supporter of Prop 37, the middle-income home-buying program this guide backs.",
       "Endorsed by the California Labor Federation, the Building Trades and AFSCME."
     ],
     cands: [
@@ -384,7 +373,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Shirley N. Weber", p: "Democratic", d: "California Secretary of State", inc: true, pick: true },
-      { n: "Donald P. (Don) Wagner", p: "Republican", d: "Orange County Supervisor", about: "Orange County supervisor and former Irvine mayor and Assemblymember. Supports voter ID, criticizes slow ballot counting, and has pushed for releasing voter data to federal authorities.", whyNot: "His voter-ID and voter-data positions line up with Prop 39, which the slate opposes because it would disproportionately block eligible voters." }
+      { n: "Donald P. (Don) Wagner", p: "Republican", d: "Orange County Supervisor", about: "Orange County supervisor and former Irvine mayor and Assemblymember. Supports voter ID, criticizes slow ballot counting, and has pushed for releasing voter data to federal authorities.", whyNot: "His voter-ID and voter-data positions line up with Prop 39, which this guide opposes because it would disproportionately block eligible voters." }
     ],
     src: [["CalMatters Voter Guide: Secretary of State", "https://calmatters.org/california-voter-guide-2026/secretary-of-state/"]]
   },
@@ -480,7 +469,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Nelson Esparza", p: "Democratic", d: "Teacher/Economist/Councilmember", pick: true },
-      { n: "Shannon Grove", p: "Republican", d: "State Senator/Businesswoman", about: "Republican state senator from Kern County, endorsed by the Howard Jarvis Taxpayers Association.", whyNot: "Her positions track the anti-tax measures the slate opposes, such as Prop 43." }
+      { n: "Shannon Grove", p: "Republican", d: "State Senator/Businesswoman", about: "Republican state senator from Kern County, endorsed by the Howard Jarvis Taxpayers Association.", whyNot: "Her positions track the anti-tax measures this guide opposes, such as Prop 43." }
     ],
     src: [["CalMatters Voter Guide: Board of Equalization", "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"]]
   },
@@ -496,7 +485,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Tom Umberg", p: "Democratic", d: "Small Businessman/Senator", pick: true },
-      { n: "Denis Bilodeau", p: "Republican", d: "Councilmember/Civil Engineer", about: "Orange city councilmember and taxpayer association president, backed by the Republican Party.", whyNot: "A capable local official, but his taxpayer-group agenda lines up with measures the slate opposes." }
+      { n: "Denis Bilodeau", p: "Republican", d: "Councilmember/Civil Engineer", about: "Orange city councilmember and taxpayer association president, backed by the Republican Party.", whyNot: "A capable local official, but his taxpayer-group agenda lines up with measures this guide opposes." }
     ],
     src: [["CalMatters Voter Guide: Board of Equalization", "https://calmatters.org/california-voter-guide-2026/board-of-equalization/"], ["KPBS: BOE District 4 explainer", "https://www.kpbs.org/news/politics/2026/05/04/2026-primary-election-candidates-running-for-the-board-of-equalization-district-4"]]
   },
@@ -654,7 +643,7 @@ window.GUIDE = {
     pick: "Young Kim", pickType: "filled",
     quick: "Two Republicans. Kim is the more moderate, independent-minded choice who has backed DACA protections.",
     quick_es: "Dos republicanos; Kim es la opción más moderada e independiente, que ha apoyado protecciones de DACA.",
-    note: "The slate listed NO PREFERENCE here. Redistricting put two Republican incumbents in one seat, so there is no Democrat on the ballot. This guide picks the candidate closer to the lens rather than leaving the race blank.",
+    note: "Redistricting put two Republican incumbents in one seat, so there is no Democrat on the ballot. This guide picks the candidate closer to its priorities.",
     why: [
       "Kim has positioned herself as a moderate. She has backed a path to citizenship for DACA recipients and has split with President Trump at times, which Calvert attacks her for.",
       "Calvert is running as the most loyal Trump ally in the race and calls Kim insufficiently conservative on immigration.",
@@ -869,7 +858,7 @@ window.GUIDE = {
     pick: "Victor Hernandez", pickType: "filled", impact: "low",
     quick: "Low-impact race. Hernandez is closer to the lens on health care and voting, though the incumbent is heavily favored.",
     quick_es: "Contienda de bajo impacto: Hernandez está más cerca en salud y voto, aunque el titular es gran favorito.",
-    note: "The slate listed NO PREFERENCE. No Democrat made the November ballot, so the choice is between a Republican incumbent and a Green Party candidate. This guide makes a lens-based pick but marks it low impact.",
+    note: "No Democrat made the November ballot, so the choice is between a Republican incumbent and a Green Party candidate. This guide makes a pick based on its priorities but marks it low impact.",
     why: [
       "Hernandez's positions are closer to the lens on health coverage, voting access and working-family costs.",
       "The criminal-justice group Initiate Justice Action recommends him, citing the incumbent's voting record.",
@@ -902,7 +891,7 @@ window.GUIDE = {
     pick: "Kevin Akin", pickType: "filled", impact: "low",
     quick: "Low-impact race. Akin is closer to the lens on health care and workers; the incumbent is heavily favored.",
     quick_es: "Contienda de bajo impacto: Akin está más cerca en salud y trabajadores; la titular es gran favorita.",
-    note: "The slate listed NO PREFERENCE. No Democrat is on the November ballot. Akin reached the general election as a write-in. This guide makes a lens-based pick but marks it low impact.",
+    note: "No Democrat is on the November ballot. Akin reached the general election as a write-in. This guide makes a pick based on its priorities but marks it low impact.",
     why: [
       "Akin, a Western Riverside County native and former carpenter, steelworker and union member, campaigns on affordable housing, child care, universal health care and refusing corporate money.",
       "Johnson opposed California's sanctuary law (SB 54) as a Lake Elsinore councilmember and votes with the Republican caucus.",
@@ -1100,13 +1089,13 @@ window.GUIDE = {
   {
     id: "cjusd2", sec: "sanbernardino", scope: "local", geo: {"sch": ["Colton Joint Unified School District"]}, part: "Area 2", county: "San Bernardino", place: "Colton Joint Unified", title: "Colton Joint Unified School Board, Area 2", sub: "Vote for up to 2",
     pick: "Dan Flores", pickType: "slate", depth: "limited",
-    quick: "Incumbent trustee. (The slate listed him under Area 1; the county list places him in Area 2.)",
-    quick_es: "Miembro en funciones. (La lista lo puso en el Área 1; el condado lo ubica en el Área 2).",
-    note: "This seat elects two members. The slate named only Dan Flores. For your second vote, the other incumbent, Berenice Sandoval, offers continuity, but that is optional.",
+    quick: "Incumbent trustee. Experience and continuity.",
+    quick_es: "Miembro en funciones; experiencia y continuidad.",
+    note: "This seat elects two members. For your second vote, the other incumbent, Berenice Sandoval, offers continuity.",
     why: ["Incumbent trustee with board experience."],
     cands: [
       { n: "Dan Flores", d: "Incumbent", inc: true, pick: true },
-      { n: "Berenice Sandoval", d: "Incumbent", inc: true, about: "Incumbent trustee.", whyNot: "Not named by the slate. A reasonable choice for your second vote." },
+      { n: "Berenice Sandoval", d: "Incumbent", inc: true, about: "Incumbent trustee.", whyNot: "A reasonable choice for your second vote." },
       { n: "Lisa Villa", d: "Retired Campus Security", whyNot: "Little public record." }
     ],
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
@@ -1128,7 +1117,7 @@ window.GUIDE = {
     pick: "Evelyn P. Dominguez", pickType: "filled", depth: "limited",
     quick: "Incumbent nurse and parent leader, the first Latina elected to the Rialto board.",
     quick_es: "Enfermera y líder de padres en funciones; primera latina elegida a la junta de Rialto.",
-    note: "The slate listed NO PREFERENCE. Public information is thin for all three candidates, so this is a low-confidence pick based on experience.",
+    note: "Public information is thin for all three candidates, so this is a low-confidence pick based on experience.",
     why: [
       "Elected in 2022 as the first Latina on the Rialto Unified board. A nurse and a parent leader at Boyd Elementary.",
       "A nurse's perspective on student health and a parent's view of the classroom fit the lens's priority on school quality."
@@ -1180,7 +1169,7 @@ window.GUIDE = {
     why: ["Current Adelanto councilwoman, with council seat through 2028, so she brings working knowledge of city hall to the mayor's job."],
     cands: [
       { n: "Stevevonna Evans", d: "Councilwoman", pick: true },
-      { n: "Gabriel Reyes", d: "Mayor / Business Owner", inc: true, about: "Incumbent mayor.", whyNot: "The slate favors a change in leadership." },
+      { n: "Gabriel Reyes", d: "Mayor / Business Owner", inc: true, about: "Incumbent mayor.", whyNot: "This guide favors a change in leadership." },
       { n: "Ronald Beard", d: "Customer Service Representative", whyNot: "Little public record." }
     ],
     src: [["SBC Sentinel: match-ups", "https://sbcsentinel.com/2026/08/more-clarity-on-november-mayoral-and-city-council-match-ups/"]]
@@ -1190,12 +1179,12 @@ window.GUIDE = {
     pick: "Jayshawn Johnson", pickType: "slate", depth: "limited",
     quick: "Planning commissioner bringing a new voice to the council.",
     quick_es: "Comisionado de planificación que aporta una voz nueva al concejo.",
-    note: "Two seats are open. The slate named one candidate. Your second vote is optional.",
+    note: "Two seats are open. Your second vote is optional.",
     why: ["Appointed planning commissioner with direct experience on the growth and development decisions the council makes."],
     cands: [
       { n: "Jayshawn Johnson", d: "Appointed Planning Commissioner", pick: true },
-      { n: "Angelo Meza", d: "Councilmember / Manufacturing Supervisor", inc: true, whyNot: "Not named by the slate." },
-      { n: "Amanda Uptergrove", d: "Councilmember / Business Owner", inc: true, whyNot: "Not named by the slate." }
+      { n: "Angelo Meza", d: "Councilmember / Manufacturing Supervisor", inc: true, whyNot: "Not this guide's pick." },
+      { n: "Amanda Uptergrove", d: "Councilmember / Business Owner", inc: true, whyNot: "Not this guide's pick." }
     ],
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
@@ -1207,7 +1196,7 @@ window.GUIDE = {
     why: ["Colton councilmember and police officer running on public safety, affordability, small-business support and responsive service."],
     cands: [
       { n: "John R. Echevarria", d: "Councilmember / Police Officer", pick: true },
-      { n: "Frank J. Navarro", d: "Mayor, City of Colton", inc: true, about: "Incumbent mayor.", whyNot: "The slate favors Echevarria's focus on safety and responsive service." }
+      { n: "Frank J. Navarro", d: "Mayor, City of Colton", inc: true, about: "Incumbent mayor.", whyNot: "This guide favors Echevarria's focus on safety and responsive service." }
     ],
     src: [["IECN: Echevarria launch", "https://iecn.com/councilman-john-echevarria-launches-colton-mayoral-bid/"]]
   },
@@ -1236,7 +1225,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Acquanetta Warren", d: "Mayor of Fontana", inc: true, pick: true },
-      { n: "Jocelyn \"Joz\" Sida", d: "Nonprofit Chapter Director", about: "Democratic socialist endorsed by Sen. Bernie Sanders. Kaiser High graduate and former Sierra Club San Gorgonio Chapter director. Criticizes warehouse growth, broken streets and thin parks and transit.", whyNot: "She raises real concerns about warehouse pollution. The state forced stricter warehouse rules on Fontana in 2022. But the slate values Warren's track record delivering jobs and services." },
+      { n: "Jocelyn \"Joz\" Sida", d: "Nonprofit Chapter Director", about: "Democratic socialist endorsed by Sen. Bernie Sanders. Kaiser High graduate and former Sierra Club San Gorgonio Chapter director. Criticizes warehouse growth, broken streets and thin parks and transit.", whyNot: "She raises real concerns about warehouse pollution. The state forced stricter warehouse rules on Fontana in 2022. But this guide values Warren's track record delivering jobs and services." },
       { n: "Mylinda Carrillo", d: "Community Outreach Volunteer", whyNot: "Little public record." },
       { n: "Nicholas Ortega", d: "Account Representative", whyNot: "Little public record." },
       { n: "Jackie Heredia", d: "Community Engagement Coordinator", whyNot: "Little public record." },
@@ -1256,7 +1245,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Lynne B. Kennedy", d: "Mayor Pro Tem", pick: true },
-      { n: "Oliver King", d: "Business Owner / Attorney", about: "Attorney and business owner endorsed by the San Bernardino County Democratic Party.", whyNot: "A credible alternative with a party endorsement. The slate prefers Kennedy's long council experience." },
+      { n: "Oliver King", d: "Business Owner / Attorney", about: "Attorney and business owner endorsed by the San Bernardino County Democratic Party.", whyNot: "A credible alternative with a party endorsement. This guide prefers Kennedy's long council experience." },
       { n: "Marjorie Hamada", d: "Business Owner / Attorney", whyNot: "Less public record." },
       { n: "Jaskirat Sondh", d: "Businessman", whyNot: "Less public record." },
       { n: "Michael R. Perez", d: "Retired", whyNot: "Less public record." }
@@ -1274,7 +1263,7 @@ window.GUIDE = {
     ],
     cands: [
       { n: "Dejonae Marie Shaw", d: "Licensed Vocational Nurse", pick: true },
-      { n: "Kristine Scott", d: "Rancho Cucamonga Councilmember", inc: true, whyNot: "Incumbent. The slate favors a new voice." },
+      { n: "Kristine Scott", d: "Rancho Cucamonga Councilmember", inc: true, whyNot: "Incumbent. This guide favors a new voice." },
       { n: "David VanGorden", d: "Retired Police Officer", whyNot: "Less public record." },
       { n: "Connie Velazquez", d: "Commercial Realtor", whyNot: "Less public record." }
     ],
@@ -1285,18 +1274,18 @@ window.GUIDE = {
     pick: "Carl Mayfield", pickType: "slate", depth: "limited",
     quick: "Parole agent supervisor with public-safety experience.",
     quick_es: "Supervisor de agentes de libertad condicional con experiencia en seguridad pública.",
-    note: "Two seats are open among nine candidates. The slate named one. The San Bernardino County Democratic Party endorsed Ana Gonzalez and Rafael Trujillo if you want a second choice.",
+    note: "Two seats are open among nine candidates. If you want a second choice, the San Bernardino County Democratic Party endorsed Ana Gonzalez and Rafael Trujillo.",
     why: ["Parole agent supervisor, bringing experience in public safety and reentry, which helps people coming home succeed and keeps neighborhoods safer."],
     cands: [
       { n: "Carl Mayfield", d: "Parole Agent Supervisor", pick: true },
-      { n: "Ed Scott", d: "Rialto City Councilman", inc: true, whyNot: "Not named by the slate." },
-      { n: "Edward Montoya Jr.", d: "Appointed Incumbent", inc: true, whyNot: "Not named by the slate." },
-      { n: "Ana Gonzalez", d: "Nonprofit Executive Director", about: "Endorsed by the SB County Democratic Party.", whyNot: "Not named by the slate. A reasonable second vote." },
-      { n: "Rafael Trujillo", d: "Case Manager / Parent", about: "Endorsed by the SB County Democratic Party.", whyNot: "Not named by the slate. A reasonable second vote." },
-      { n: "Edward J. Carrillo", d: "City Treasurer", whyNot: "Not named by the slate." },
-      { n: "Blanca Mondragon", d: "Community Advocate", whyNot: "Not named by the slate." },
-      { n: "Robert \"Bobby\" Bustamante", d: "Iron Worker", whyNot: "Not named by the slate." },
-      { n: "Celina Diaz", d: "Human Resources", whyNot: "Not named by the slate." }
+      { n: "Ed Scott", d: "Rialto City Councilman", inc: true, whyNot: "Not this guide's pick." },
+      { n: "Edward Montoya Jr.", d: "Appointed Incumbent", inc: true, whyNot: "Not this guide's pick." },
+      { n: "Ana Gonzalez", d: "Nonprofit Executive Director", about: "Endorsed by the SB County Democratic Party.", whyNot: "A reasonable second vote." },
+      { n: "Rafael Trujillo", d: "Case Manager / Parent", about: "Endorsed by the SB County Democratic Party.", whyNot: "A reasonable second vote." },
+      { n: "Edward J. Carrillo", d: "City Treasurer", whyNot: "Not this guide's pick." },
+      { n: "Blanca Mondragon", d: "Community Advocate", whyNot: "Not this guide's pick." },
+      { n: "Robert \"Bobby\" Bustamante", d: "Iron Worker", whyNot: "Not this guide's pick." },
+      { n: "Celina Diaz", d: "Human Resources", whyNot: "Not this guide's pick." }
     ],
     src: [["SB County candidate list", "https://uploads.rov.sbcounty.gov/ROV/Elections/2026/1103/Report_CandidateList.pdf"]]
   },
@@ -1308,7 +1297,7 @@ window.GUIDE = {
     why: ["Works as a government fraud investigator, a useful background for a city that has struggled with financial oversight."],
     cands: [
       { n: "Ron Alvarado", d: "Government Fraud Investigator", pick: true },
-      { n: "Virginia Marquez", d: "Community Services Liaison", about: "Community services liaison.", whyNot: "The slate favors Alvarado's accountability background." }
+      { n: "Virginia Marquez", d: "Community Services Liaison", about: "Community services liaison.", whyNot: "This guide favors Alvarado's accountability background." }
     ],
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
@@ -1320,7 +1309,7 @@ window.GUIDE = {
     why: ["Works as a housing specialist, directly relevant to San Bernardino's housing and homelessness challenges."],
     cands: [
       { n: "Christian Shaughnessy", d: "Housing Specialist", pick: true },
-      { n: "Benito Barrios", d: "Small Business Owner", about: "Small business owner.", whyNot: "The slate favors Shaughnessy's housing expertise." }
+      { n: "Benito Barrios", d: "Small Business Owner", about: "Small business owner.", whyNot: "This guide favors Shaughnessy's housing expertise." }
     ],
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
@@ -1332,7 +1321,7 @@ window.GUIDE = {
     why: ["A teacher who brings a school-and-family perspective. The primary was within one point, so turnout decides this one."],
     cands: [
       { n: "Joe Salas", d: "Teacher", pick: true },
-      { n: "Fred Shorett", d: "Council Member / Businessman", inc: true, about: "Incumbent councilmember and businessman.", whyNot: "The slate favors a change in this ward." }
+      { n: "Fred Shorett", d: "Council Member / Businessman", inc: true, about: "Incumbent councilmember and businessman.", whyNot: "This guide favors a change in this ward." }
     ],
     src: [["Community Forward Redlands: SB city results", "https://www.communityforwardredlands.com/san-bernardino-city-election-results-2026-2/"]]
   },
@@ -1344,7 +1333,7 @@ window.GUIDE = {
     why: ["Also endorsed by the San Bernardino County Democratic Party. Water boards are low-profile but shape household bills and drought planning."],
     cands: [
       { n: "Jonathan Lee", d: "No ballot designation", pick: true },
-      { n: "Jose Velasquez", d: "Appointed Director", inc: true, about: "Appointed incumbent director.", whyNot: "Appointed rather than elected. The slate favors Lee." }
+      { n: "Jose Velasquez", d: "Appointed Director", inc: true, about: "Appointed incumbent director.", whyNot: "Appointed rather than elected. This guide favors Lee." }
     ],
     src: [["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]
   },
@@ -1356,7 +1345,7 @@ window.GUIDE = {
     why: ["Also endorsed by the San Bernardino County Democratic Party."],
     cands: [
       { n: "Amy Malone", d: "Public Relations Consultant", pick: true },
-      { n: "David E. Mlynarski", d: "Water Board Member", whyNot: "The slate favors Malone." },
+      { n: "David E. Mlynarski", d: "Water Board Member", whyNot: "This guide favors Malone." },
       { n: "Jesus Medina", d: "Rehab Project Coordinator", whyNot: "Little public record." }
     ],
     src: [["SB County Democrats endorsements", "https://www.sanbernardinodemocrats.org/endorsements-nov-2026/"]]

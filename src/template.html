@@ -1,190 +1,201 @@
 <title>Family Voting Guide 2026</title>
-<meta name="description" content="Quick picks and research for every race on the November 3, 2026 California ballot, with a focus on Riverside and San Bernardino counties.">
+<meta name="description" content="Plain-language picks and the reasons behind them for every race on the November 3, 2026 California ballot.">
+<meta name="theme-color" content="#13294b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=IBM+Plex+Mono:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
 /*STYLES*/
 </style>
 
-<header class="mast">
-  <div class="wrap">
-    <div class="meta"><span class="eyebrow" data-t="eyebrow">California General Election</span><span class="count" id="countdown"></span><button type="button" class="langbtn" id="lang" data-t="lang">Español</button></div>
-    <h1 data-t="title">Family Voting Guide 2026</h1>
-    <p data-t="tagline"></p>
-    <div class="meta"><span>TUE · NOV 3 · 2026 · 7 AM–8 PM</span></div>
+<a class="skip" href="#main" data-t="skip">Skip to main content</a>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <div>
+        <div class="brand-name" data-t="title">Family Voting Guide</div>
+        <div class="brand-sub"><span id="countdown"></span></div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button type="button" class="icon-btn" id="size" aria-label="Text size"><span aria-hidden="true">A<small>A</small></span></button>
+      <button type="button" class="pill-btn" id="lang" data-t="lang">Español</button>
+    </div>
   </div>
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" class="tab" data-tab="ballot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm2 4v2h2V7H7Zm4 0v2h6V7h-6Zm-4 4v2h2v-2H7Zm4 0v2h6v-2h-6Zm-4 4v2h2v-2H7Zm4 0v2h6v-2h-6Z"/></svg><span data-t="tabBallot">My ballot</span></button>
+    <button type="button" class="tab" data-tab="list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h11v2H9V5Zm0 6h11v2H9v-2Zm0 6h11v2H9v-2ZM4 4.5 5.5 6 8 3.5 9 4.5 5.5 8 3 5.5l1-1Zm0 6L5.5 12 8 9.5l1 1L5.5 14 3 11.5l1-1Zm0 6L5.5 18 8 15.5l1 1L5.5 20 3 17.5l1-1Z"/></svg><span data-t="tabList">My list</span></button>
+    <button type="button" class="tab" data-tab="vote"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h2v2h6V2h2v2h2a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h2V2Zm11 8H6v9h12v-9Zm-8 2 1.5 1.5L15 10l1 1-4.5 4.5L9 13l1-1Z"/></svg><span data-t="tabVote">How to vote</span></button>
+    <button type="button" class="tab" data-tab="about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm-1 8v7h2v-7h-2Zm0-4v2h2V6h-2Z"/></svg><span data-t="tabAbout">About</span></button>
+  </nav>
 </header>
 
-<nav class="tabs" aria-label="Sections">
-  <div class="wrap" role="tablist">
-    <button type="button" class="tab" role="tab" data-tab="ballot" data-t="tabBallot">Ballot</button>
-    <button type="button" class="tab" role="tab" data-tab="cheat" data-t="tabCheat">Cheat sheet</button>
-    <button type="button" class="tab" role="tab" data-tab="vote" data-t="tabVote">How to vote</button>
-    <button type="button" class="tab" role="tab" data-tab="about" data-t="tabAbout">About this guide</button>
-  </div>
-</nav>
-
-<main>
+<main id="main">
   <!-- BALLOT -->
-  <div class="wrap" id="view-ballot">
-    <section class="panel" aria-labelledby="mb-h">
-      <h2 id="mb-h" data-t="myBallot">My ballot</h2>
-      <form id="find" class="find" autocomplete="on">
-        <label for="find-q" class="find-label" data-t="findTitle">Find my ballot</label>
-        <p class="hint" data-t="findHint"></p>
+  <section class="view" id="view-ballot" aria-labelledby="h-ballot">
+    <h1 class="sr" id="h-ballot" data-t="tabBallot">My ballot</h1>
+
+    <div class="card find" id="find-card">
+      <form id="find" autocomplete="on">
+        <label for="find-q" class="find-title" data-t="findTitle">Find your ballot</label>
+        <p class="muted" id="find-hint" data-t="findHint"></p>
         <div class="find-bar">
-          <input type="text" id="find-q" name="street-address" autocomplete="street-address" inputmode="text" enterkeyhint="search">
-          <button type="submit" class="btn" data-t="findBtn">Look up</button>
+          <input type="text" id="find-q" name="street-address" autocomplete="street-address" enterkeyhint="search">
+          <button type="submit" class="btn primary" data-t="findBtn">Show my ballot</button>
         </div>
-        <p class="find-msg" id="find-msg" aria-live="polite"></p>
-        <p class="hint small" data-t="privacy"></p>
+        <p class="find-msg" id="find-msg" role="status" aria-live="polite"></p>
+        <p class="fine" data-t="privacy"></p>
       </form>
-      <div id="find-result" class="find-result" hidden></div>
-      <p class="hint" data-t="myHint"></p>
+    </div>
+
+    <div class="card summary" id="summary" hidden></div>
+
+    <details class="card manual" id="manual">
+      <summary data-t="manualTitle">Set my districts by hand</summary>
       <div class="fields">
         <div class="field"><label for="f-county" data-t="county">County</label><select id="f-county"></select></div>
         <div class="field"><label for="f-cd" data-t="cd">U.S. House</label><select id="f-cd"></select></div>
         <div class="field"><label for="f-sd" data-t="sd">State Senate</label><select id="f-sd"></select></div>
-        <div class="field"><label for="f-ad" data-t="ad">Assembly</label><select id="f-ad"></select></div>
+        <div class="field"><label for="f-ad" data-t="ad">State Assembly</label><select id="f-ad"></select></div>
         <div class="field"><label for="f-boe" data-t="boe">Board of Equalization</label><select id="f-boe"></select></div>
       </div>
-      <div class="links"><strong data-t="lookup">Find my districts</strong>
-        <a href="https://findyourrep.legislature.ca.gov/" target="_blank" rel="noopener">State Legislature &amp; Congress lookup</a>
-        <a href="https://voteinfo.net" target="_blank" rel="noopener">Riverside County registrar</a>
-        <a href="https://elections.sbcounty.gov/voterregistration/districtlookuptools/addresslookup/" target="_blank" rel="noopener">San Bernardino County lookup</a>
-      </div>
-      <div class="row">
-        <label class="switch"><input type="checkbox" id="f-mine"> <span data-t="onlyMine">Only show my ballot</span></label>
-        <div class="seg" id="mode" role="group" aria-label="Detail level">
-          <button type="button" data-mode="quick" data-t="quick">Quick picks</button>
-          <button type="button" data-mode="research" data-t="research">Full research</button>
-        </div>
-      </div>
-      <div id="places-wrap" class="field" hidden>
-        <label data-t="places">Local races in my county</label>
-        <div class="places" id="places"></div>
-      </div>
-      <input type="search" id="q" autocomplete="off" aria-label="Search">
-    </section>
-    <div id="ballot-list" class="sec"></div>
-  </div>
+      <p class="fine"><span data-t="lookup">Look up your districts:</span> <a href="https://findyourrep.legislature.ca.gov/" target="_blank" rel="noopener">findyourrep.legislature.ca.gov</a></p>
+    </details>
 
-  <!-- CHEAT SHEET -->
-  <div class="wrap" id="view-cheat" hidden>
-    <div class="row noprint">
-      <div style="flex:1 1 280px"><h2 style="font-size:24px;font-stretch:85%;text-transform:uppercase" data-t="cheatTitle">My picks</h2><p class="hint" style="margin:4px 0 0;color:var(--muted)" data-t="cheatHint"></p></div>
-      <button type="button" class="btn" id="copy" data-t="copy">Copy picks as text</button>
+    <div class="toolbar" id="toolbar">
+      <div class="progress" id="progress" aria-live="polite"></div>
+      <div class="toolbar-row">
+        <label class="switch"><input type="checkbox" id="f-all"><span class="track" aria-hidden="true"></span><span data-t="browseAll">Show every race in California</span></label>
+        <label class="switch"><input type="checkbox" id="f-open"><span class="track" aria-hidden="true"></span><span data-t="openAll">Show all reasons</span></label>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 0 1 5.6 11.2l4.6 4.6-1.4 1.4-4.6-4.6A7 7 0 1 1 10 3Zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg>
+        <input type="search" id="q" autocomplete="off">
+      </div>
+      <nav class="jump" id="jump" aria-label="Jump to section"></nav>
     </div>
-    <div class="toast noprint" id="copy-msg" aria-live="polite"></div>
-    <textarea id="copy-out" class="copyfallback noprint" hidden readonly aria-label="Picks as text"></textarea>
-    <div class="cheat" id="cheat-list"></div>
-  </div>
+
+    <div id="ballot-list"></div>
+  </section>
+
+  <!-- TAKE-ALONG LIST -->
+  <section class="view" id="view-list" hidden aria-labelledby="h-list">
+    <div class="view-head">
+      <h1 id="h-list" data-t="listTitle">Your take-along list</h1>
+      <p class="muted" data-t="listHint"></p>
+    </div>
+    <div class="list-actions">
+      <button type="button" class="btn primary" id="copy" data-t="copy">Copy as text</button>
+      <span class="toast" id="copy-msg" role="status" aria-live="polite"></span>
+    </div>
+    <textarea id="copy-out" class="copyfallback" hidden readonly aria-label="Picks as text"></textarea>
+    <div class="card cheat" id="cheat-list"></div>
+  </section>
 
   <!-- HOW TO VOTE -->
-  <div class="wrap" id="view-vote" hidden>
+  <section class="view" id="view-vote" hidden aria-labelledby="h-vote">
+    <div class="view-head"><h1 id="h-vote" data-t="tabVote">How to vote</h1></div>
     <div data-lang="en">
-      <div class="dates">
-        <div class="date" data-end="2026-10-05"><time>Mon, Oct 5</time><div><b>Ballots start arriving by mail.</b> Every registered voter gets one. Drop boxes open.</div></div>
-        <div class="date" data-end="2026-10-19"><time>Mon, Oct 19</time><div><b>Last day to register</b> online at registertovote.ca.gov or by mail (postmarked). After this, you can still register and vote the same day at your county elections office or a voting location.</div></div>
-        <div class="date" data-end="2026-11-02"><time>Late Oct – Nov 2</time><div><b>Early in-person voting.</b> Days and locations vary by county. Look yours up below.</div></div>
-        <div class="date" data-end="2026-11-03"><time>Tue, Nov 3</time><div><b>Election Day, 7 AM–8 PM.</b> Drop your mail ballot in a drop box or at a voting location by 8 PM, or mail it postmarked today. In line by 8 PM? Stay in line. You can vote.</div></div>
-        <div class="date" data-end="2026-11-10"><time>Tue, Nov 10</time><div><b>Last day</b> for mail ballots postmarked by Nov 3 to arrive and be counted.</div></div>
-      </div>
-      <div class="prose">
+      <ol class="card dates">
+        <li class="date" data-end="2026-10-05"><time>Mon, Oct 5</time><div><b>Ballots start arriving by mail.</b> Every registered voter gets one. Drop boxes open.</div></li>
+        <li class="date" data-end="2026-10-19"><time>Mon, Oct 19</time><div><b>Last day to register</b> online at registertovote.ca.gov or by mail (postmarked). After this, you can still register and vote the same day at your county elections office or a voting location.</div></li>
+        <li class="date" data-end="2026-11-02"><time>Late Oct – Nov 2</time><div><b>Early in-person voting.</b> Days and places vary by county. Look yours up below.</div></li>
+        <li class="date" data-end="2026-11-03"><time>Tue, Nov 3</time><div><b>Election Day, 7 AM–8 PM.</b> Drop off your mail ballot by 8 PM, or mail it postmarked today. In line at 8 PM? Stay in line. You can still vote.</div></li>
+        <li class="date" data-end="2026-11-10"><time>Tue, Nov 10</time><div><b>Last day</b> for mail ballots postmarked by Nov 3 to arrive and be counted.</div></li>
+      </ol>
+      <div class="card prose">
         <h2>Three ways to vote</h2>
         <ul>
-          <li><b>By mail:</b> fill in the oval next to your choice with a blue or black pen, sign the envelope (your signature is how your identity is checked), and mail it with no stamp needed.</li>
-          <li><b>Drop box:</b> the safest option if you're close to the deadline. No stamp, and it counts if dropped by 8 PM on Nov 3.</li>
-          <li><b>In person:</b> bring your mail ballot to surrender, or vote a provisional ballot. You don't need ID in California if you're a registered voter, except some first-time voters who registered by mail.</li>
+          <li><b>By mail:</b> fill in the oval next to your choice with a blue or black pen, sign the envelope (your signature confirms who you are) and mail it. No stamp needed.</li>
+          <li><b>Drop box:</b> the safest option close to the deadline. No stamp, and it counts if dropped by 8 PM on Nov 3.</li>
+          <li><b>In person:</b> bring your mail ballot to trade in, or vote a provisional ballot. Registered voters don't need ID in California, except some first-time voters who registered by mail.</li>
         </ul>
-        <h2>Links you'll use</h2>
-        <ul>
+        <h2>Helpful links</h2>
+        <ul class="links-list">
           <li><a href="https://voterstatus.sos.ca.gov" target="_blank" rel="noopener">Check that you're registered</a></li>
           <li><a href="https://registertovote.ca.gov" target="_blank" rel="noopener">Register or update your address</a></li>
-          <li><a href="https://california.ballottrax.net/voter/" target="_blank" rel="noopener">Track your ballot</a> by text, email or phone</li>
+          <li><a href="https://california.ballottrax.net/voter/" target="_blank" rel="noopener">Track your ballot by text or email</a></li>
           <li><a href="https://caearlyvoting.sos.ca.gov/" target="_blank" rel="noopener">Find drop boxes and voting locations</a></li>
           <li><a href="https://voterguide.sos.ca.gov" target="_blank" rel="noopener">Official state voter guide</a></li>
-          <li>County registrars: <a href="https://voteinfo.net" target="_blank" rel="noopener">Riverside</a> · <a href="https://elections.sbcounty.gov" target="_blank" rel="noopener">San Bernardino</a></li>
         </ul>
-        <p class="foot">Problems voting? Call the California Secretary of State hotline: 800-345-VOTE (8683).</p>
+        <p class="fine">Problems voting? Call the California Secretary of State hotline: <b>800-345-VOTE (8683)</b>.</p>
       </div>
     </div>
     <div data-lang="es" hidden>
-      <div class="dates">
-        <div class="date" data-end="2026-10-05"><time>Lun, 5 oct</time><div><b>Empiezan a llegar las boletas por correo.</b> Cada votante inscrito recibe una. Abren los buzones.</div></div>
-        <div class="date" data-end="2026-10-19"><time>Lun, 19 oct</time><div><b>Último día para inscribirse</b> en registertovote.ca.gov o por correo (matasellos). Después, aún puede inscribirse y votar el mismo día en la oficina electoral de su condado o en un lugar de votación.</div></div>
-        <div class="date" data-end="2026-11-02"><time>Fin oct – 2 nov</time><div><b>Votación anticipada en persona.</b> Días y lugares varían por condado. Búsquelos abajo.</div></div>
-        <div class="date" data-end="2026-11-03"><time>Mar, 3 nov</time><div><b>Día de la elección, 7 AM–8 PM.</b> Deje su boleta en un buzón o lugar de votación antes de las 8 PM, o envíela con matasellos de hoy. ¿En la fila a las 8 PM? Quédese: puede votar.</div></div>
-        <div class="date" data-end="2026-11-10"><time>Mar, 10 nov</time><div><b>Último día</b> para que lleguen las boletas con matasellos del 3 de nov.</div></div>
-      </div>
-      <div class="prose">
+      <ol class="card dates">
+        <li class="date" data-end="2026-10-05"><time>Lun, 5 oct</time><div><b>Empiezan a llegar las boletas por correo.</b> Cada votante inscrito recibe una. Abren los buzones.</div></li>
+        <li class="date" data-end="2026-10-19"><time>Lun, 19 oct</time><div><b>Último día para inscribirse</b> en registertovote.ca.gov o por correo (matasellos). Después, aún puede inscribirse y votar el mismo día en la oficina electoral de su condado o en un lugar de votación.</div></li>
+        <li class="date" data-end="2026-11-02"><time>Fin oct – 2 nov</time><div><b>Votación anticipada en persona.</b> Días y lugares varían por condado. Búsquelos abajo.</div></li>
+        <li class="date" data-end="2026-11-03"><time>Mar, 3 nov</time><div><b>Día de la elección, 7 AM–8 PM.</b> Entregue su boleta antes de las 8 PM o envíela con matasellos de hoy. ¿En la fila a las 8 PM? Quédese: todavía puede votar.</div></li>
+        <li class="date" data-end="2026-11-10"><time>Mar, 10 nov</time><div><b>Último día</b> para que lleguen las boletas con matasellos del 3 de nov.</div></li>
+      </ol>
+      <div class="card prose">
         <h2>Tres formas de votar</h2>
         <ul>
-          <li><b>Por correo:</b> rellene el óvalo junto a su elección con bolígrafo azul o negro, firme el sobre (su firma verifica su identidad) y envíelo sin estampilla.</li>
-          <li><b>Buzón oficial:</b> la opción más segura si se acerca la fecha límite. Sin estampilla; cuenta si la deja antes de las 8 PM del 3 de nov.</li>
-          <li><b>En persona:</b> lleve su boleta por correo para entregarla o vote con boleta provisional. En California no necesita identificación si está inscrito, salvo algunos votantes nuevos inscritos por correo.</li>
+          <li><b>Por correo:</b> rellene el óvalo junto a su elección con bolígrafo azul o negro, firme el sobre (su firma confirma quién es) y envíelo. No necesita estampilla.</li>
+          <li><b>Buzón oficial:</b> la opción más segura cerca de la fecha límite. Sin estampilla; cuenta si la deja antes de las 8 PM del 3 de nov.</li>
+          <li><b>En persona:</b> lleve su boleta por correo para cambiarla o vote con boleta provisional. Los votantes inscritos no necesitan identificación en California, salvo algunos votantes nuevos inscritos por correo.</li>
         </ul>
         <h2>Enlaces útiles</h2>
-        <ul>
+        <ul class="links-list">
           <li><a href="https://voterstatus.sos.ca.gov" target="_blank" rel="noopener">Verifique su inscripción</a></li>
           <li><a href="https://registertovote.ca.gov" target="_blank" rel="noopener">Inscríbase o actualice su dirección</a></li>
-          <li><a href="https://california.ballottrax.net/voter/" target="_blank" rel="noopener">Siga su boleta</a> por texto, correo o teléfono</li>
+          <li><a href="https://california.ballottrax.net/voter/" target="_blank" rel="noopener">Siga su boleta por texto o correo</a></li>
           <li><a href="https://caearlyvoting.sos.ca.gov/" target="_blank" rel="noopener">Encuentre buzones y lugares de votación</a></li>
           <li><a href="https://voterguide.sos.ca.gov" target="_blank" rel="noopener">Guía oficial del estado</a></li>
-          <li>Oficinas electorales: <a href="https://voteinfo.net" target="_blank" rel="noopener">Riverside</a> · <a href="https://elections.sbcounty.gov" target="_blank" rel="noopener">San Bernardino</a></li>
         </ul>
-        <p class="foot">¿Problemas para votar? Línea de la Secretaría de Estado en español: 800-232-VOTA (8682).</p>
+        <p class="fine">¿Problemas para votar? Línea en español de la Secretaría de Estado: <b>800-232-VOTA (8682)</b>.</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ABOUT -->
-  <div class="wrap" id="view-about" hidden>
-    <div class="prose">
-      <h2 data-lang="en">How the picks were made</h2>
-      <h2 data-lang="es" hidden>Cómo se hicieron las recomendaciones</h2>
-      <p data-lang="en">The picks come from a 2026 community slate focused on Riverside County, San Bernardino County and statewide races. The slate listed names and yes/no positions only, with no reasons. Every explanation here was researched from official voter guides, candidate records, endorsements and local news, and each one links to its sources.</p>
-      <p data-lang="es" hidden>Las recomendaciones vienen de una lista comunitaria de 2026 enfocada en los condados de Riverside y San Bernardino y en contiendas estatales. La lista solo tenía nombres y posiciones de sí o no, sin razones. Cada explicación aquí se investigó en guías oficiales, historiales de candidatos, respaldos y noticias locales, con enlaces a sus fuentes.</p>
-      <p><b data-lang="en">The lens:</b><b data-lang="es" hidden>El enfoque:</b> <span id="lens"></span></p>
-      <h2 data-lang="en">What the labels mean</h2>
-      <h2 data-lang="es" hidden>Qué significan las etiquetas</h2>
-      <ul data-lang="en">
-        <li><span class="badge">Slate pick</span> The pick is straight from the slate. The reasons are researched.</li>
-        <li><span class="badge filled">Pick added (slate had none)</span> The slate said "no preference." A pick was made using the lens above.</li>
-        <li><span class="badge added">Race added (not on slate)</span> The race is on your ballot but wasn't on the slate, such as judges and Riverside County's Measure A.</li>
-        <li><span class="badge low">Low impact</span> The outcome is close to certain, so your vote mostly signals priorities.</li>
-        <li><span class="badge">Limited info</span> Little public information exists. The pick follows the slate.</li>
+  <section class="view" id="view-about" hidden aria-labelledby="h-about">
+    <div class="view-head"><h1 id="h-about" data-t="aboutTitle">How this guide picks</h1></div>
+    <div class="card prose" data-lang="en">
+      <p id="lens-en"></p>
+      <h2>How close races are decided</h2>
+      <ul>
+        <li><b>Democrat vs. Republican:</b> the Democrat, unless the Republican's record is clearly better for our families. Each race explains why.</li>
+        <li><b>Two candidates from the same party:</b> first, support from the Legislative Black Caucus, NAACP, grassroots community groups and Black nonprofits. Next, the California Democratic Party's endorsement. Then the more practical, budget-minded candidate. Then a Black candidate when it's still close, and finally experience.</li>
+        <li><b>No Democrat on the ballot:</b> the candidate closer to the priorities above. These races are marked <span class="tag low">Low impact</span> when the result is nearly certain.</li>
+        <li><b>Anything clearly good or bad for the Black community</b>, such as reparations, police accountability and voting access, can decide a race on its own.</li>
       </ul>
-      <ul data-lang="es" hidden>
-        <li><span class="badge">Recomendación de la lista</span> Viene directamente de la lista; las razones se investigaron.</li>
-        <li><span class="badge filled">Recomendación añadida</span> La lista no tenía preferencia; se eligió usando el enfoque de arriba.</li>
-        <li><span class="badge added">Contienda añadida</span> Está en su boleta pero no en la lista, como jueces y la Medida A de Riverside.</li>
-        <li><span class="badge low">Bajo impacto</span> El resultado es casi seguro; su voto indica sobre todo prioridades.</li>
-        <li><span class="badge">Poca información</span> Hay poca información pública; se sigue la lista.</li>
+      <h2>What the tags mean</h2>
+      <ul>
+        <li><span class="tag low">Low impact</span> The result is nearly certain, so your vote mostly shows what you care about.</li>
+        <li><span class="tag">Limited info</span> Little public information exists about these candidates.</li>
+        <li><span class="tag part">Ward 2 only</span> Only part of the city or district votes on this race. Check your sample ballot.</li>
       </ul>
-      <h2 data-lang="en">Corrections to the original slate</h2>
-      <h2 data-lang="es" hidden>Correcciones a la lista original</h2>
-      <p data-lang="en">Names, districts and seat numbers were checked against the Secretary of State's Certified List of Candidates (Aug. 27, 2026) and the San Bernardino County candidate list.</p>
-      <p data-lang="es" hidden>Los nombres y distritos se verificaron con la Lista Certificada de Candidatos de la Secretaría de Estado (27 de agosto de 2026) y la lista del condado de San Bernardino.</p>
-      <ul id="corrections"></ul>
-      <h2 data-lang="en">Good to know</h2>
-      <h2 data-lang="es" hidden>Bueno saber</h2>
-      <ul data-lang="en">
-        <li>This is an independent guide. It isn't affiliated with any campaign, party or the organization that wrote the slate.</li>
-        <li>Statewide propositions and offices are on every Californian's ballot. District and local races are covered in depth for Riverside and San Bernardino counties. Enter your address or ZIP code under My ballot to see your districts, including official candidates for districts this guide doesn't cover. District lookups use 2020 Census blocks matched to the new 2026 congressional map (Prop 50) and the current legislative and Board of Equalization maps.</li>
-        <li>Local ballot measures (city and school bonds, etc.) aren't covered, except Riverside County's countywide Measure A.</li>
-        <li>Always compare with your official sample ballot. It is the final word on what you'll vote on.</li>
+      <h2>Good to know</h2>
+      <ul>
+        <li>This is an independent guide, not connected to any campaign or party.</li>
+        <li>Every statewide measure and office is covered, plus every U.S. House, State Senate, Assembly and Board of Equalization race in California. City, school and water races are covered in depth for Riverside and San Bernardino counties.</li>
+        <li>District lookups match your ZIP or address to 2020 Census blocks and the new 2026 congressional map (Prop 50). Your official sample ballot is the final word.</li>
+        <li>Research details are in English.</li>
       </ul>
-      <ul data-lang="es" hidden>
-        <li>Esta guía es independiente. No está afiliada a ninguna campaña, partido ni a la organización que hizo la lista.</li>
-        <li>Las proposiciones y cargos estatales están en la boleta de todo California. Las contiendas locales se cubren a fondo para Riverside y San Bernardino. Escriba su dirección o código postal en Mi boleta para ver sus distritos, incluidos los candidatos oficiales de distritos no cubiertos.</li>
-        <li>No se cubren medidas locales (bonos de ciudades y escuelas, etc.), salvo la Medida A del condado de Riverside.</li>
-        <li>Compare siempre con su boleta de muestra oficial.</li>
-      </ul>
-      <p class="foot">Last updated Sept. 26, 2026.</p>
+      <p class="fine">Last updated Sept. 26, 2026.</p>
     </div>
-  </div>
+    <div class="card prose" data-lang="es" hidden>
+      <p id="lens-es"></p>
+      <h2>Cómo se deciden las contiendas cerradas</h2>
+      <ul>
+        <li><b>Demócrata contra republicano:</b> el demócrata, salvo que el historial del republicano sea claramente mejor para nuestras familias. Cada contienda explica por qué.</li>
+        <li><b>Dos candidatos del mismo partido:</b> primero, el apoyo del Caucus Legislativo Afroamericano, la NAACP, grupos comunitarios y organizaciones afroamericanas sin fines de lucro. Luego, el respaldo del Partido Demócrata de California. Después, el candidato más práctico y prudente con el presupuesto. Luego, un candidato afroamericano si sigue parejo y, por último, la experiencia.</li>
+        <li><b>Sin demócrata en la boleta:</b> el candidato más cercano a estas prioridades. Se marcan <span class="tag low">Bajo impacto</span> cuando el resultado es casi seguro.</li>
+        <li><b>Lo que claramente ayuda o perjudica a la comunidad afroamericana</b>, como reparaciones, rendición de cuentas policial y acceso al voto, puede decidir una contienda por sí solo.</li>
+      </ul>
+      <h2>Bueno saber</h2>
+      <ul>
+        <li>Esta guía es independiente; no está conectada con ninguna campaña ni partido.</li>
+        <li>Cubre todas las medidas y cargos estatales y todas las contiendas de Cámara de EE. UU., Senado, Asamblea y Junta de Igualación en California. Las contiendas de ciudades, escuelas y agua se cubren a fondo en los condados de Riverside y San Bernardino.</li>
+        <li>Su boleta de muestra oficial tiene la última palabra.</li>
+        <li>Los detalles de la investigación están en inglés.</li>
+      </ul>
+    </div>
+  </section>
 </main>
 
 <script>
