@@ -1,1 +1,32 @@
 # dabiggvote
+
+An interactive voting guide for the November 3, 2026 California general election. It covers every statewide proposition and office, plus district and local races across Riverside and San Bernardino counties.
+
+- **Quick picks:** what to vote for, in one line per race.
+- **Full research:** why each pick was made, what each measure does, and every other candidate or position with the reason it wasn't chosen, plus sources.
+- **My ballot:** choose a county and districts to see only your races. Districts the guide doesn't cover show the official candidates from the Secretary of State.
+- **Cheat sheet:** a one-page list of your picks, with a button that copies them as text.
+- **How to vote:** key dates, ways to vote and official lookup links.
+- English and Spanish.
+
+## Share it
+
+`dist/family-voting-guide.html` is a single self-contained file. It opens in any browser, works offline, and can be texted or emailed.
+
+## Edit it
+
+| File | What it holds |
+| --- | --- |
+| `src/content.js` | Every contest: pick, reasons, alternatives, sources |
+| `src/districts.js` | Official candidates for every congressional, legislative and BOE district (generated) |
+| `src/app.js` | Filtering, rendering, language toggle, copy |
+| `src/styles.css` | Look and feel, light and dark themes |
+| `src/template.html` | Page layout, How to vote and About text |
+
+After editing, rebuild:
+
+```sh
+python3 tools/build.py
+```
+
+`data/sos-certified-candidates-2026-general.json` is parsed from the Secretary of State's [Certified List of Candidates](https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf) with `tools/parse_sos_cert_list.py`.
