@@ -15,7 +15,7 @@ def bundle() -> str:
     page = (SRC / "template.html").read_text()
     for marker, name in [("/*STYLES*/", "styles.css"), ("/*DISTRICTS*/", "districts.js"), ("/*GEO*/", "geo.js"),
                          ("/*CONTENT*/", "content.js"), ("/*APP*/", "app.js")]:
-        names = ["content.js", "content-house.js", "content-senate.js", "content-assembly.js"] if name == "content.js" else [name]
+        names = ["content.js", "content-house.js", "content-senate.js", "content-assembly.js", "content-records.js"] if name == "content.js" else [name]
         body = "\n".join((SRC / n).read_text() for n in names)
         if name.endswith(".js"):
             body = body.replace("</script", "<\\/script")
