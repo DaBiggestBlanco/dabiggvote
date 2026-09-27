@@ -54,3 +54,7 @@ The original source list had errors that were fixed against official candidate l
 - State Senate 32: "Dr. Tiffini Tate" → Tiffanie Tate
 - Colton Joint Unified: Dan Flores runs in Area 2, not Area 1
 - San Bernardino Valley MWD: Divisions 1 (short term) and 3, not "Districts"
+
+## Regional wording
+
+Statewide explanations must make sense for any Californian. When a region-specific fact strengthens the case (home prices, air quality, a local ballot measure that shows the stakes), add it as a region or county variant in `src/content-regional.js` and keep a general version under `all`. Never assume the reader lives in the Inland Empire.

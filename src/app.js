@@ -110,6 +110,11 @@
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function $(sel) { return document.querySelector(sel); }
   function located() { return !!(S.geo || S.county || S.cd || S.sd || S.ad || S.boe); }
+  // Region-aware text: a string, or an object keyed by county, region or "all".
+  function rt(v) {
+    if (v == null || typeof v === "string") return v;
+    return v[S.county] || v[G.regionOf ? G.regionOf(S.county) : ""] || v.all;
+  }
   function byId(id) { for (var i = 0; i < G.contests.length; i++) if (G.contests[i].id === id) return G.contests[i]; }
 
   // ── which races show ──
@@ -128,7 +133,7 @@
   }
   function matches(c) {
     if (!S.q) return true;
-    var hay = [c.title, c.sub, c.pick, c.quick, c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
+    var hay = [c.title, c.sub, c.pick, rt(c.quick), c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
     return S.q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
   }
   function visible() { return G.contests.filter(function (c) { return inScope(c) && matches(c); }); }
@@ -168,15 +173,15 @@
       h.push("<div><h3>" + esc(t("whatItDoes")) + "</h3><p>" + esc(c.what.summary) + "</p>" +
         '<div class="yn"><div class="y"><b>' + esc(t("yesMeans")) + "</b>" + esc(c.what.yes) + '</div><div class="n"><b>' + esc(t("noMeans")) + "</b>" + esc(c.what.no) + "</div><div><b>" + esc(t("cost")) + "</b>" + esc(c.what.fiscal) + "</div></div></div>");
     }
-    h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(w) + "</li>"; }).join("") + "</ul></div>");
+    h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
     var chosen = (c.cands || []).filter(function (x) { return x.pick; });
     var alts = (c.other || []).concat((c.cands || []).filter(function (x) { return !x.pick; }));
     if (alts.length || chosen.length) {
       h.push("<div><h3>" + esc(t("others")) + '</h3><div class="alts">' +
         chosen.map(function (x) { return '<div class="alt chosen"><div class="who">✓ ' + esc(x.n) + candLine(x) + "</div></div>"; }).join("") +
         alts.map(function (x) {
-          return '<div class="alt"><div class="who">' + esc(x.n) + candLine(x) + "</div>" + (x.about ? "<div>" + esc(x.about) + "</div>" : "") +
-            (x.whyNot ? '<div class="whynot"><b>' + esc(t("whyNot")) + "</b> " + esc(x.whyNot) + "</div>" : "") + "</div>";
+          return '<div class="alt"><div class="who">' + esc(x.n) + candLine(x) + "</div>" + (x.about ? "<div>" + esc(rt(x.about)) + "</div>" : "") +
+            (x.whyNot ? '<div class="whynot"><b>' + esc(t("whyNot")) + "</b> " + esc(rt(x.whyNot)) + "</div>" : "") + "</div>";
         }).join("") + "</div></div>");
     }
     if (c.src && c.src.length) h.push('<div class="src"><h3>' + esc(t("sources")) + "</h3><ul>" + c.src.map(function (s) { return '<li><a href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a></li>"; }).join("") + "</ul></div>");
@@ -189,7 +194,7 @@
 
   function card(c) {
     var open = S.open || !!expanded[c.id], done = !!S.done[c.id], kind = pickKind(c.pick);
-    var quick = S.lang === "es" && c.quick_es ? c.quick_es : c.quick;
+    var quick = S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
     var tags = [];
     if (c.part) tags.push('<span class="tag part">' + esc(t("part")(c.part)) + "</span>");
     if (c.unopposed) tags.push('<span class="tag">' + esc(t("unopposed")) + "</span>");
