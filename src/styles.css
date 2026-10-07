@@ -294,3 +294,6 @@ td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
 .verdict-box { margin-top: 10px; background: var(--card-2); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; font-size: .9375rem; }
 .mchip.sm { min-height: 40px; padding: 4px 12px; font-size: .875rem; }
 .per-sub { font-weight: 700; color: var(--muted); margin: 8px 0 0; font-size: .9375rem; }
+.linkbox { border: 1.5px dashed var(--name); border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; font-size: .9375rem; background: var(--name-soft); }
+.linkbox ul { margin: 4px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+.clash { font-weight: 700; color: var(--no); }

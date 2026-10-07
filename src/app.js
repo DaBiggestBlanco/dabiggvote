@@ -271,6 +271,19 @@
     var r = ruleOf(c);
     return r === "dr" || r === "judges" ? "strong" : r === "local" && c.depth === "limited" ? "close" : r ? "lean" : null;
   }
+  function linkOf(c) { return (CH.links || []).filter(function (l) { return l.ids.indexOf(c.id) >= 0; })[0]; }
+  function clashText(l) {
+    var lt = l[S.lang] || l.en, first = l.ids[0], out = [];
+    if ((mineList(byId(first))[0] || sugg(byId(first))) !== "YES") return "";
+    l.ids.slice(1).forEach(function (id) { if ((mineList(byId(id))[0] || sugg(byId(id))) === "YES") out.push(id.slice(1)); });
+    return out.length ? lt.clash.split("{x}").join(out.join(S.lang === "es" ? " y " : " and ")) : "";
+  }
+  function linkBox(c, full) {
+    var l = linkOf(c); if (!l) return "";
+    var lt = l[S.lang] || l.en, cl = clashText(l);
+    return '<div class="linkbox"><b>🔗 ' + esc(lt.title) + "</b>" + (full ? "<ul>" + lt.body.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "<div>" + esc(lt.body[1]) + "</div>") +
+      (cl ? '<div class="clash">' + esc(cl) + "</div>" : "") + "</div>";
+  }
   function notesFor(c) { return (c.me || []).filter(function (m) { return S.prof[m[0]] === m[1]; }).map(function (m) { return m[2]; }); }
   function forYou(c) {
     var notes = notesFor(c);
@@ -323,6 +336,7 @@
       h.push("<div><h3>" + esc(t("whatItDoes")) + "</h3><p>" + esc(c.what.summary) + "</p>" +
         '<div class="yn"><div class="y"><b>' + esc(t("yesMeans")) + "</b>" + esc(c.what.yes) + '</div><div class="n"><b>' + esc(t("noMeans")) + "</b>" + esc(c.what.no) + "</div><div><b>" + esc(t("cost")) + "</b>" + esc(c.what.fiscal) + "</div></div></div>");
     }
+    if (linkOf(c)) h.push(linkBox(c, true));
     if (c.score) h.push(scorecard(c));
     var rl = ruleOf(c), cfc = confOf(c);
     if (rl) h.push('<div class="note"><b>' + esc(t("ruleH")) + ":</b> " + esc(t("rules")[rl]) + (cfc ? ' <span class="tag conf-' + cfc + '">' + esc(t("conf")[cfc]) + "</span>" : "") + "</div>");
@@ -377,7 +391,7 @@
         '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(sp)) + "</span></div>" +
         '<p class="race-quick">' + esc(quick) + "</p>" +
         (tags.length ? '<div class="tags">' + tags.join("") + "</div>" : "") +
-        forYou(c) + mineRow(c) +
+        linkBox(c, false) + forYou(c) + mineRow(c) +
       "</div>" +
       '<div class="race-actions">' +
         '<button type="button" class="why-btn" data-why="' + c.id + '" aria-expanded="' + open + '" aria-controls="d-' + c.id + '">' + ICON_CHEV + "<span>" + esc(open ? t("hide") : whyLbl(c)) + "</span></button>" +
@@ -639,6 +653,7 @@
         else cur = [v];
         if (!cur.length) delete S.mine[c.id]; else S.mine[c.id] = max > 1 ? cur : cur[0];
         b.parentNode.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", mineList(c).indexOf(x.dataset.v) >= 0); });
+        if (linkOf(c)) { var y0 = window.scrollY; renderBallot(); window.scrollTo(0, y0); var nb = document.querySelector('#c-' + c.id + ' [data-v="' + v + '"]'); if (nb) nb.focus(); }
         renderList(); renderPersonal(); save();
       } else if (b.dataset.done) {
         var did = b.dataset.done;

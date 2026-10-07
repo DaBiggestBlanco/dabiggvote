@@ -48,6 +48,22 @@
       { id: "lowtax", lens: false, en: "Lower taxes and less government spending", es: "Menos impuestos y menos gasto público" },
       { id: "lessdebt", lens: false, en: "Less state borrowing", es: "Menos préstamos del estado" }
     ],
+    // Measures that legally affect each other. Each is scored on its own; this explains how they interact.
+    links: [{
+      ids: ["p40", "p41", "p42"],
+      en: { title: "Props 40, 41 and 42 are tied together",
+        body: ["Prop 40 is the one-time billionaire tax. Props 41 and 42 would each block taxes like it.",
+          "If Prop 41 or 42 passes with more yes votes than Prop 40, the state's analysts say courts could find they conflict and stop Prop 40, even if Prop 40 also passes.",
+          "So in practice, YES on 40 with NO on 41 and 42 supports the billionaire tax. NO on 40 with YES on 41 and 42 opposes it, and also locks in limits on future taxes.",
+          "Each measure is still scored on what it does by itself, so this guide doesn't count the conflict twice."],
+        clash: "Your picks work against each other: you chose YES on Prop 40 and YES on Prop {x}. If {x} gets more yes votes, it could cancel 40." },
+      es: { title: "Las proposiciones 40, 41 y 42 están ligadas",
+        body: ["La 40 es el impuesto único a multimillonarios. La 41 y la 42 bloquearían impuestos como ese.",
+          "Si la 41 o la 42 aprueba con más votos SÍ que la 40, los analistas del estado dicen que los tribunales podrían anular la 40, aunque también apruebe.",
+          "En la práctica, SÍ en la 40 con NO en la 41 y 42 apoya el impuesto. NO en la 40 con SÍ en la 41 y 42 se opone, y además fija límites a impuestos futuros.",
+          "Cada medida se califica por lo que hace por sí sola, para no contar el conflicto dos veces."],
+        clash: "Sus selecciones se contradicen: eligió SÍ en la 40 y SÍ en la {x}. Si la {x} recibe más votos SÍ, podría anular la 40." }
+    }],
     // Groups used, in order, when the issues don't settle a measure.
     tiebreak: ["naacp", "dem", "lwv"]
   };
@@ -401,12 +417,10 @@
       lowtax: [-1, "A new tax, though only on billionaires."]
     },
     p41: {
-      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
       services: [0, "Audits of new tax-funded programs could improve results, but its spending-limit rule could restrict future funding. These roughly offset."],
       lowtax: [1, "Puts new taxes under the state spending limit and adds audits before new special taxes reach voters."]
     },
     p42: {
-      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
       services: [-1, "Permanently rules out one way to raise revenue, so the state's analysts say future revenue may not grow as much."],
       lowtax: [2, "Permanently bans new state taxes on owning savings, investments, retirement accounts and business interests, and bans retroactive taxes."]
     },
@@ -446,9 +460,9 @@
     p40: { YES: ["A one-time 5% tax on about 200 billionaires, with 90% of the money going to health care.", "Un impuesto único de 5% a unos 200 multimillonarios; 90% del dinero va a la salud."],
            NO: ["One-time money can't pay for ongoing care, and the state could lose income taxes if billionaires leave.", "El dinero único no paga atención continua, y el estado podría perder impuestos si los multimillonarios se van."] },
     p41: { YES: ["Requires independent audits of programs funded by new taxes, before and after voters approve them.", "Exige auditorías independientes de programas financiados por impuestos nuevos, antes y después de aprobarlos."],
-           NO: ["Could cancel the billionaire tax for health care and limits how future taxes are counted.", "Podría anular el impuesto a multimillonarios para la salud y limita cómo se cuentan futuros impuestos."] },
+           NO: ["Audits could help, but its spending-limit rule could restrict future funding. The issues are about even, so the groups decide.", "Las auditorías podrían ayudar, pero su regla de límite de gasto podría restringir fondos futuros. Los temas están parejos, así que deciden los grupos."] },
     p42: { YES: ["Permanently bans new state taxes on owning savings, retirement accounts and other personal property.", "Prohíbe para siempre nuevos impuestos estatales sobre ahorros, cuentas de retiro y otros bienes personales."],
-           NO: ["A permanent constitutional ban that could cancel the billionaire tax and ties future voters' hands.", "Una prohibición constitucional permanente que podría anular el impuesto a multimillonarios y limita a futuros votantes."] },
+           NO: ["A permanent constitutional ban that rules out a way to raise revenue and ties future voters' hands.", "Una prohibición constitucional permanente que descarta una forma de obtener ingresos y limita a futuros votantes."] },
     p43: { YES: ["Requires two-thirds approval for local special taxes put on the ballot by petition, the same bar governments face.", "Exige dos tercios para impuestos locales especiales propuestos por petición, igual que para los gobiernos."],
            NO: ["Would let one-third of voters block local funding for fire, 911, roads and schools that most people want.", "Permitiría que un tercio de los votantes bloquee fondos locales para bomberos, 911, calles y escuelas que la mayoría quiere."] },
     p44: { YES: ["Requires community clinics to spend at least 90% of revenue on patient care and related services.", "Exige que las clínicas comunitarias gasten al menos 90% de sus ingresos en atención y servicios relacionados."],

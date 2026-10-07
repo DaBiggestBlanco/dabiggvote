@@ -26,10 +26,11 @@ Anything that clearly helps or hurts the Black community (reparations, police re
    - Strong: the issues decide, the group majority agrees, and the net score is at least 2 or the groups are unanimous.
    - Lean: the issues decide and the groups agree, but narrowly; or the issues decide by 2+ while the groups tie; or the groups decide unanimously.
    - Close call: the issues decide but the group majority disagrees; or the groups decide without being unanimous.
-5. Show the California Republican Party's position for reference; it isn't part of the tiebreak.
-6. Give the strongest case on each side and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
+5. **Score each measure on its own.** Effects that only happen through another measure on the same ballot (for example, Prop 41 or 42 canceling Prop 40) are not scored. Show them in a "tied together" box on each linked measure instead, and warn readers whose own picks work against each other.
+6. Show the California Republican Party's position for reference; it isn't part of the tiebreak.
+7. Give the strongest case on each side and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
 
-Results with equal weights (Oct. 7, 2026): YES on 1, 2, 3, 4, 5, 37, 38, 40, 45; NO on 39, 41, 42, 43, 44. Compared with the original list, 4, 5 and 40 changed to YES, 41 changed to NO, and 45 changed to YES.
+Results with equal weights (Oct. 7, 2026): YES on 1, 2, 3, 4, 5, 37, 38, 40, 45; NO on 39, 41, 42, 43, 44. Compared with the original list, 4, 5 and 40 changed to YES, 41 changed to NO, and 45 changed to YES. Prop 40 is a Lean, 41 a Close call (decided by the groups), and 42 a Lean.
 
 ## Confidence for candidate races
 
