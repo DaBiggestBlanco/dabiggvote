@@ -30,14 +30,24 @@
       search: "Search races, names or measures",
       progress: function (d, n) { return d + " of " + n + " races marked done"; },
       startHere: "Type your ZIP code above to add your congressional, legislative and local races. Statewide races are below.",
-      pickLbl: "Our pick", yes: "Vote YES", no: "Vote NO", yesAll: "Vote YES on all", yesBoth: "Vote YES on both", noRec: "No recommendation",
-      why: "Why this pick", hide: "Hide reasons", done: "Done", markDone: "Mark done",
+      pickLbl: "Suggested pick", yes: "Vote YES", no: "Vote NO", yesAll: "Vote YES on all", yesBoth: "Vote YES on both", noRec: "No recommendation",
+      why: "Why this pick", whyProp: "Details & both sides", hide: "Hide details", done: "Done", markDone: "Mark done",
       low: "Low impact", limited: "Limited info", unopposed: "Unopposed", part: function (p) { return p + " only"; }, inc: "Incumbent",
       whatItDoes: "What it does", yesMeans: "A YES vote means", noMeans: "A NO vote means", cost: "Cost",
-      whyPick: "Why we picked this", others: "The other choices, and why we didn't pick them", whyNot: "Why not:", note: "Good to know", check: "Check your sample ballot", sources: "Sources",
+      whyPick: "Why it's the suggested pick", others: "The other choices, and why they aren't suggested", whyNot: "Why not:", note: "Good to know", check: "Check your sample ballot", sources: "Sources",
       races: function (n) { return n + (n === 1 ? " race" : " races"); },
       empty: "No races match your search.",
-      listTitle: "Your take-along list", listHint: "Bring this with you, screenshot it, or copy it into a text. Races you mark done are crossed off.",
+      listTitle: "Your take-along list", listHint: "Shows your own pick wherever you chose one, and the suggested pick everywhere else. Bring it with you, screenshot it, or copy it into a text.",
+      myPick: "My pick", mineTag: "your pick", sugWas: function (p) { return "suggested: " + p; }, mineCopy: function (p) { return "my pick; suggested " + p; },
+      caseYes: "The case for YES", caseNo: "The case for NO", claimsH: "Claims you may hear, checked against the official voter guide",
+      verdict: { "true": "Accurate", partly: "Partly accurate", "false": "Not accurate", debated: "Debated", unverified: "Not verified" },
+      groupsH: "What major groups recommend", forYou: "For you",
+      lean: { yes: "Your priorities lean YES", no: "Your priorities lean NO", mix: "Your priorities point both ways" },
+      becauseOf: "Based on what you chose:",
+      perTitle: "Optional: tailor it to you", perHint: "Skip this if you like. Nothing here is required, and answers stay on this device. They never change the suggested picks. They add short notes on how each measure could affect you and which side fits what you care about.",
+      aboutYou: "About you", matters: "What matters most to you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
+      lineup: "How the measures line up", colSug: "Suggested", colPri: "Your priorities", colMine: "My pick",
+      leanShort: { yes: "Lean YES", no: "Lean NO", mix: "Mixed" },
       copy: "Copy as text", copied: "Copied. Paste it into a text or email.", copyFail: "Copy isn't allowed here. Select the text below and copy it.",
       election: "Election Day: Tuesday, Nov. 3, 2026",
       party: { "Democratic": "Democrat", "Republican": "Republican", "Non-Partisan": "Nonpartisan", "Green": "Green", "Peace and Freedom": "Peace & Freedom", "Libertarian": "Libertarian", "No party preference": "No party preference", "": "" },
@@ -65,14 +75,24 @@
       search: "Buscar contiendas, nombres o medidas",
       progress: function (d, n) { return d + " de " + n + " contiendas marcadas"; },
       startHere: "Escriba su código postal arriba para agregar sus contiendas del Congreso, la Legislatura y locales. Las contiendas estatales están abajo.",
-      pickLbl: "Recomendación", yes: "Vote SÍ", no: "Vote NO", yesAll: "Vote SÍ a todos", yesBoth: "Vote SÍ a ambos", noRec: "Sin recomendación",
-      why: "Por qué", hide: "Ocultar razones", done: "Listo", markDone: "Marcar listo",
+      pickLbl: "Selección sugerida", yes: "Vote SÍ", no: "Vote NO", yesAll: "Vote SÍ a todos", yesBoth: "Vote SÍ a ambos", noRec: "Sin recomendación",
+      why: "Por qué", whyProp: "Detalles y ambos lados", hide: "Ocultar detalles", done: "Listo", markDone: "Marcar listo",
       low: "Bajo impacto", limited: "Poca información", unopposed: "Sin oposición", part: function (p) { return "Solo " + p; }, inc: "En funciones",
       whatItDoes: "Qué hace", yesMeans: "Votar SÍ significa", noMeans: "Votar NO significa", cost: "Costo",
-      whyPick: "Por qué lo elegimos", others: "Las otras opciones y por qué no las elegimos", whyNot: "Por qué no:", note: "Bueno saber", check: "Revise su boleta de muestra", sources: "Fuentes",
+      whyPick: "Por qué es la selección sugerida", others: "Las otras opciones y por qué no se sugieren", whyNot: "Por qué no:", note: "Bueno saber", check: "Revise su boleta de muestra", sources: "Fuentes",
       races: function (n) { return n + (n === 1 ? " contienda" : " contiendas"); },
       empty: "Ninguna contienda coincide con su búsqueda.",
-      listTitle: "Su lista para llevar", listHint: "Llévela, tome una captura o cópiela en un mensaje. Las contiendas marcadas aparecen tachadas.",
+      listTitle: "Su lista para llevar", listHint: "Muestra su propia selección donde eligió una, y la sugerida en lo demás. Llévela, tome una captura o cópiela en un mensaje.",
+      myPick: "Mi selección", mineTag: "su selección", sugWas: function (p) { return "sugerida: " + p; }, mineCopy: function (p) { return "mi selección; sugerida " + p; },
+      caseYes: "Argumentos a favor (SÍ)", caseNo: "Argumentos en contra (NO)", claimsH: "Afirmaciones que puede oír, verificadas con la guía oficial",
+      verdict: { "true": "Correcto", partly: "Parcialmente correcto", "false": "Incorrecto", debated: "En debate", unverified: "Sin verificar" },
+      groupsH: "Qué recomiendan grupos importantes", forYou: "Para usted",
+      lean: { yes: "Sus prioridades se inclinan al SÍ", no: "Sus prioridades se inclinan al NO", mix: "Sus prioridades apuntan a ambos lados" },
+      becauseOf: "Según lo que eligió:",
+      perTitle: "Opcional: personalícelo", perHint: "Puede omitir esto. Nada es obligatorio y las respuestas se quedan en este dispositivo. Nunca cambian las selecciones sugeridas. Agregan notas breves sobre cómo cada medida podría afectarle y qué lado coincide con lo que le importa.",
+      aboutYou: "Sobre usted", matters: "Lo que más le importa", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
+      lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colPri: "Sus prioridades", colMine: "Mi selección",
+      leanShort: { yes: "SÍ", no: "NO", mix: "Mixto" },
       copy: "Copiar como texto", copied: "Copiado. Péguelo en un mensaje o correo.", copyFail: "No se permite copiar aquí. Seleccione el texto de abajo y cópielo.",
       election: "Día de la elección: martes 3 de noviembre de 2026",
       esNote: "Los detalles de la investigación están en inglés.",
@@ -89,12 +109,12 @@
   var SEC_OF = { cd: "house", sd: "senate", ad: "assembly", boe: "state" };
 
   // ── state ──
-  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {} };
+  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {}, mine: {}, prof: {}, pri: {} };
   var expanded = {};
-  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done"];
+  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done", "mine", "prof", "pri"];
   function load() {
     try { var v = JSON.parse(localStorage.getItem("fvg2026v2") || "{}"); PERSIST.forEach(function (k) { if (k in v) S[k] = v[k]; }); } catch (e) {}
-    if (!S.done || typeof S.done !== "object") S.done = {};
+    ["done", "mine", "prof", "pri"].forEach(function (k) { if (!S[k] || typeof S[k] !== "object") S[k] = {}; });
     var h = (location.hash || "").slice(1);
     if (["ballot", "list", "vote", "about"].indexOf(h) >= 0) S.tab = h;
   }
@@ -153,6 +173,54 @@
     return p;
   }
   function secName(id) { return SEC[S.lang][id]; }
+
+  // ── my picks and personal notes ──
+  var CH = G.CHOICE || { groups: [], profile: [], priorities: [] };
+  function seats(c) { return (c.cands || []).filter(function (x) { return x.pick; }).length || 1; }
+  function mineOpts(c) {
+    if (c.unopposed || /^YES on/.test(c.pick)) return [];
+    if (c.sec === "props" || c.pick === "YES" || c.pick === "NO") return ["YES", "NO"];
+    return (c.cands || []).length > 1 ? c.cands.map(function (x) { return x.n; }) : [];
+  }
+  function mineList(c) { var m = S.mine[c.id]; return m == null ? [] : [].concat(m); }
+  function mineText(c) { var m = mineList(c); return m.length ? m.map(shortPick).join(", ") : ""; }
+  function finalPick(c) { return mineText(c) || shortPick(c.pick); }
+  function differs(c) {
+    var m = mineList(c); if (!m.length) return false;
+    var sug = (c.cands || []).filter(function (x) { return x.pick; }).map(function (x) { return x.n; });
+    if (!sug.length) sug = [c.pick];
+    return m.slice().sort().join("|") !== sug.slice().sort().join("|");
+  }
+  function leanOf(c) {
+    if (!c.lean) return null;
+    var sc = 0, n = 0, why = [];
+    Object.keys(c.lean).forEach(function (ax) {
+      var a = S.pri[ax], pr = CH.priorities.filter(function (x) { return x.id === ax; })[0];
+      if (!a || !pr) return;
+      n++; sc += a === c.lean[ax] ? 1 : -1;
+      why.push(pr[a][S.lang === "es" ? 1 : 0]);
+    });
+    return n ? { v: sc > 0 ? "yes" : sc < 0 ? "no" : "mix", why: why } : null;
+  }
+  function notesFor(c) { return (c.me || []).filter(function (m) { return S.prof[m[0]] === m[1]; }).map(function (m) { return m[2]; }); }
+  function forYou(c) {
+    var l = leanOf(c), notes = notesFor(c);
+    if (!l && !notes.length) return "";
+    return '<div class="foryou"><b class="fy-h">' + esc(t("forYou")) + "</b>" +
+      (l ? '<div class="lean ' + l.v + '">' + esc(t("lean")[l.v]) + '</div><div class="fy-why">' + esc(t("becauseOf")) + " " + esc(l.why.join(" · ")) + "</div>" : "") +
+      (notes.length ? "<ul>" + notes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+  }
+  function mineRow(c) {
+    var opts = mineOpts(c); if (!opts.length) return "";
+    var cur = mineList(c);
+    return '<div class="mine" role="group" aria-label="' + esc(t("myPick") + ": " + c.title) + '"><span class="mine-lbl">' + esc(t("myPick")) + "</span>" +
+      opts.map(function (v) {
+        var on = cur.indexOf(v) >= 0, k = v === "YES" ? " y" : v === "NO" ? " n" : "";
+        return '<button type="button" class="mchip' + k + '" data-mine="' + esc(c.id) + '" data-v="' + esc(v) + '" aria-pressed="' + on + '">' + esc(shortPick(v)) + "</button>";
+      }).join("") + "</div>";
+  }
+  function verdictLbl(v) { return t("verdict")[v] || v; }
+  function groupVal(v) { return v === "YES" ? t("yes") : v === "NO" ? t("no") : v; }
   function candLine(x) {
     var bits = [];
     if (x.p) bits.push(T[S.lang].party[x.p] || x.p);
@@ -173,6 +241,20 @@
       h.push("<div><h3>" + esc(t("whatItDoes")) + "</h3><p>" + esc(c.what.summary) + "</p>" +
         '<div class="yn"><div class="y"><b>' + esc(t("yesMeans")) + "</b>" + esc(c.what.yes) + '</div><div class="n"><b>' + esc(t("noMeans")) + "</b>" + esc(c.what.no) + "</div><div><b>" + esc(t("cost")) + "</b>" + esc(c.what.fiscal) + "</div></div></div>");
     }
+    if (c.sides) {
+      h.push('<div class="sides"><div class="side y"><h3>' + esc(t("caseYes")) + "</h3><ul>" + c.sides.yes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div><div class="side n"><h3>' + esc(t("caseNo")) + "</h3><ul>" + c.sides.no.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div></div>");
+    }
+    if (c.claims && c.claims.length) {
+      h.push("<div><h3>" + esc(t("claimsH")) + '</h3><div class="claims">' + c.claims.map(function (x) {
+        return '<div class="claim"><div class="claim-q">“' + esc(x[0]) + '”</div><span class="verdict v-' + x[1] + '">' + esc(verdictLbl(x[1])) + "</span><div>" + esc(x[2]) + "</div></div>";
+      }).join("") + "</div></div>");
+    }
+    if (c.groups) {
+      h.push("<div><h3>" + esc(t("groupsH")) + '</h3><table class="groups">' + CH.groups.map(function (g) {
+        var v = c.groups[g.id] || "—";
+        return '<tr><td><a href="' + esc(g.url) + '" target="_blank" rel="noopener">' + esc(g.n) + '</a></td><td class="gv ' + (v === "YES" ? "yes" : v === "NO" ? "no" : "") + '">' + esc(groupVal(v)) + "</td></tr>";
+      }).join("") + "</table></div>");
+    }
     h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
     var chosen = (c.cands || []).filter(function (x) { return x.pick; });
     var alts = (c.other || []).concat((c.cands || []).filter(function (x) { return !x.pick; }));
@@ -192,6 +274,7 @@
     return (on ? ICON_CHECK : ICON_BOX) + "<span>" + esc(on ? t("done") : t("markDone")) + "</span>";
   }
 
+  function whyLbl(c) { return c.sides ? t("whyProp") : t("why"); }
   function card(c) {
     var open = S.open || !!expanded[c.id], done = !!S.done[c.id], kind = pickKind(c.pick);
     var quick = S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
@@ -203,12 +286,13 @@
     return '<article class="race' + (done ? " done" : "") + '" id="c-' + c.id + '">' +
       '<div class="race-main">' +
         '<div><h3 class="race-title">' + esc(c.title) + "</h3>" + (c.sub ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + "</div>" +
-        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span>' + (kind === "name" ? '<span class="lbl">' + esc(t("pickLbl")) + "</span> " : "") + esc(pickText(c.pick)) + "</span></div>" +
+        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(c.pick)) + "</span></div>" +
         '<p class="race-quick">' + esc(quick) + "</p>" +
         (tags.length ? '<div class="tags">' + tags.join("") + "</div>" : "") +
+        forYou(c) + mineRow(c) +
       "</div>" +
       '<div class="race-actions">' +
-        '<button type="button" class="why-btn" data-why="' + c.id + '" aria-expanded="' + open + '" aria-controls="d-' + c.id + '">' + ICON_CHEV + "<span>" + esc(open ? t("hide") : t("why")) + "</span></button>" +
+        '<button type="button" class="why-btn" data-why="' + c.id + '" aria-expanded="' + open + '" aria-controls="d-' + c.id + '">' + ICON_CHEV + "<span>" + esc(open ? t("hide") : whyLbl(c)) + "</span></button>" +
         '<button type="button" class="done-btn" data-done="' + c.id + '" aria-pressed="' + done + '">' + doneButton(c.id, done) + "</button>" +
       "</div>" +
       '<div class="detail" id="d-' + c.id + '"' + (open ? "" : " hidden") + ">" + (open ? detail(c) : "") + "</div>" +
@@ -294,7 +378,7 @@
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       lines.push(secName(id).toUpperCase());
-      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + shortPick(c.pick)); });
+      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + finalPick(c) + (differs(c) ? " (" + t("mineCopy")(shortPick(c.pick)) + ")" : "")); });
       lines.push("");
     });
     return lines.join("\n").trim();
@@ -304,11 +388,42 @@
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       h.push("<h3>" + esc(secName(id)) + "</h3><table>" + cs.map(function (c) {
-        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(c.pick) + '">' + esc(shortPick(c.pick)) + "</td></tr>";
+        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(mineList(c)[0] || c.pick) + '">' + esc(finalPick(c)) + (mineList(c).length ? '<div class="mine-note">' + esc(differs(c) ? t("sugWas")(shortPick(c.pick)) : t("mineTag")) + "</div>" : "") + "</td></tr>";
       }).join("") + "</table>");
     });
     $("#cheat-list").innerHTML = h.join("") || '<p class="empty">' + esc(t("empty")) + "</p>";
     $("#copy-out").hidden = true;
+  }
+
+  function seg(kind, id, opts, cur) {
+    return '<div class="seg" role="group">' + opts.map(function (o) {
+      return '<button type="button" class="mchip" data-' + kind + '="' + id + '" data-v="' + esc(o[0]) + '" aria-pressed="' + (cur === o[0]) + '">' + esc(o[1]) + "</button>";
+    }).join("") + "</div>";
+  }
+  function renderPersonal() {
+    var es = S.lang === "es", h = [];
+    h.push('<p class="fine">' + esc(t("perHint")) + "</p>");
+    h.push('<h3 class="per-h">' + esc(t("aboutYou")) + "</h3>");
+    CH.profile.forEach(function (q) {
+      var opts = q.opts ? q.opts.map(function (o) { return [o[0], es ? o[2] : o[1]]; }) : [["yes", t("optYes")], ["no", t("optNo")]];
+      h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + "</div>" + seg("prof", q.id, opts, S.prof[q.id]) + "</div>");
+    });
+    h.push('<h3 class="per-h">' + esc(t("matters")) + "</h3>");
+    CH.priorities.forEach(function (q) {
+      h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + '</div><div class="seg col" role="group">' + ["a", "b"].map(function (k) {
+        return '<button type="button" class="mchip wide" data-pri="' + q.id + '" data-v="' + k + '" aria-pressed="' + (S.pri[q.id] === k) + '">' + esc(q[k][es ? 1 : 0]) + "</button>";
+      }).join("") + "</div></div>");
+    });
+    var props = G.contests.filter(function (c) { return c.lean; }), any = props.some(leanOf);
+    if (any) {
+      h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colPri")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
+        props.map(function (c) {
+          var l = leanOf(c);
+          return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(c.pick) + '">' + esc(shortPick(c.pick)) + '</td><td class="' + (l ? l.v : "") + '">' + esc(l ? t("leanShort")[l.v] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
+        }).join("") + "</tbody></table>");
+    }
+    if (Object.keys(S.prof).length || Object.keys(S.pri).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
+    $("#personal-body").innerHTML = h.join("");
   }
 
   function renderStatic() {
@@ -333,7 +448,7 @@
     });
   }
 
-  function renderAll() { renderStatic(); renderManual(); renderSummary(); renderBallot(); renderList(); save(); }
+  function renderAll() { renderStatic(); renderManual(); renderPersonal(); renderSummary(); renderBallot(); renderList(); save(); }
   function refresh() { renderSummary(); renderBallot(); renderList(); save(); }
 
   // ── ZIP / address lookup ──
@@ -426,7 +541,15 @@
         var id = b.dataset.why, open = b.getAttribute("aria-expanded") !== "true";
         expanded[id] = open;
         var d = $("#d-" + id); d.innerHTML = open ? detail(byId(id)) : ""; d.hidden = !open;
-        b.setAttribute("aria-expanded", open); b.querySelector("span").textContent = open ? t("hide") : t("why");
+        b.setAttribute("aria-expanded", open); b.querySelector("span").textContent = open ? t("hide") : whyLbl(byId(id));
+      } else if (b.dataset.mine) {
+        var c = byId(b.dataset.mine), v = b.dataset.v, cur = mineList(c), max = seats(c);
+        if (cur.indexOf(v) >= 0) cur.splice(cur.indexOf(v), 1);
+        else if (max > 1) { cur.push(v); if (cur.length > max) cur.shift(); }
+        else cur = [v];
+        if (!cur.length) delete S.mine[c.id]; else S.mine[c.id] = max > 1 ? cur : cur[0];
+        b.parentNode.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", mineList(c).indexOf(x.dataset.v) >= 0); });
+        renderList(); renderPersonal(); save();
       } else if (b.dataset.done) {
         var did = b.dataset.done;
         if (S.done[did]) delete S.done[did]; else S.done[did] = true;
@@ -435,6 +558,21 @@
         b.setAttribute("aria-pressed", on); b.innerHTML = doneButton(did, on);
         renderProgress(visible()); renderList(); save();
       }
+    });
+    $("#personal-body").addEventListener("click", function (e) {
+      var g = e.target.closest("[data-goto]");
+      if (g) { e.preventDefault(); S.q = ""; $("#q").value = ""; renderBallot(); var el = $("#c-" + g.dataset.goto); if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" }); return; }
+      var b = e.target.closest("button"); if (!b) return;
+      if (b.id === "clear-ans") { S.prof = {}; S.pri = {}; }
+      else {
+        var store = b.dataset.prof ? S.prof : b.dataset.pri ? S.pri : null, key = b.dataset.prof || b.dataset.pri;
+        if (!store) return;
+        if (store[key] === b.dataset.v) delete store[key]; else store[key] = b.dataset.v;
+      }
+      var y = window.scrollY, sel = b.id === "clear-ans" ? null : '[data-' + (b.dataset.prof ? "prof" : "pri") + '="' + key + '"][data-v="' + b.dataset.v + '"]';
+      renderPersonal(); renderBallot(); save();
+      window.scrollTo(0, y);
+      if (sel) { var nb = document.querySelector("#personal-body " + sel); if (nb) nb.focus(); }
     });
     $("#copy").addEventListener("click", function () {
       var txt = cheatText(), msg = $("#copy-msg"), out = $("#copy-out");

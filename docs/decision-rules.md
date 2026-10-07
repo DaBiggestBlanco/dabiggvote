@@ -17,6 +17,13 @@ Weigh what matters most to middle-class Black and other minority families in Cal
 
 Anything that clearly helps or hurts the Black community (reparations, police reform, voting access and similar) can decide a close race by itself.
 
+## Propositions
+
+- Check every fact against the official state Voter Information Guide (the Legislative Analyst's analysis and the Attorney General's summary). Official arguments are opinions; label them as such.
+- Weigh the NAACP California/Hawaii State Conference's recommendation first, then the California Democratic Party's, the same order used for candidates. Show the California Republican Party and League of Women Voters positions too, so readers see the full range.
+- Give the strongest case on each side, including fiscally conservative arguments, and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
+- Prop 45 was re-examined on Oct. 7, 2026 and changed from No to Yes. The earlier No rested on warehouse pollution, but warehouses aren't eligible, and the NAACP supports it.
+
 ## Democrat vs. Republican
 
 Pick the Democrat, unless the Republican's record is clearly better for these families. A Republican can win on their record. Say why when one doesn't clear the bar.

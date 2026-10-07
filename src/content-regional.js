@@ -74,19 +74,21 @@
     sd: "San Diego County's 2016 Measure A for transit and roads won about 58% of the vote but failed because it needed two-thirds. Prop 43 would bring that same bar to measures voters put on the ballot themselves."
   };
 
-  // Prop 45: CEQA fast-track
+  // Prop 45: CEQA fast-track. Regional home prices on the YES side, regional air quality on the NO side.
   var p45 = byId("p45");
-  p45.quick = "Would weaken the environmental reviews that neighborhoods next to freeways, ports, refineries and warehouses rely on.";
-  p45.why[0] = {
-    all: "Many Black and Latino neighborhoods sit next to freeways, ports, refineries and warehouses. CEQA review is one of the few tools residents have to push back on new pollution.",
-    ie: "The Los Angeles–Long Beach air basin, which includes the Inland Empire, has the worst ozone pollution in the country, much of it from diesel trucks serving the region's warehouses. CEQA review is one of the few tools residents have to push back.",
-    la: "The Los Angeles–Long Beach area has the worst ozone pollution in the country, and neighborhoods near the ports, rail yards and freeways breathe the worst of it. CEQA review is one of the few tools residents have to push back.",
-    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the worst ozone pollution in the country. CEQA review is one of the few tools residents have to push back on new pollution.",
-    valley: "Bakersfield has had the nation's worst year-round particle pollution for seven years running, and Visalia and Fresno are close behind. CEQA review is one of the few tools Valley residents have to push back on new pollution.",
-    bay: "Neighborhoods like West Oakland and Richmond sit next to the port, freeways and refineries, and they already carry the Bay Area's heaviest pollution. CEQA review is one of the few tools residents have to push back.",
-    sd: "Neighborhoods like Barrio Logan and National City sit beside the port, shipyards and freeways. CEQA review is one of the few tools residents have to push back on new pollution."
+  p45.why[0] = perCounty(p45.why[0], function (c, p) {
+    return "In " + c + " County the median home sold for about " + money(p) + " in August 2026. Delays and lawsuits add years and cost to new homes, clinics and transit, and Black and Latino families pay that price.";
+  });
+  p45.other[0].about = {
+    all: p45.other[0].about,
+    ie: "The Inland Empire breathes some of the worst ozone in the country. Clean-air and environmental-justice groups say faster review for freeway and transit projects could add pollution near homes and schools. " + p45.other[0].about,
+    la: "Neighborhoods near LA's ports, rail yards and freeways breathe the worst air in the country. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
+    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the nation's worst ozone. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
+    valley: "Bakersfield, Visalia and Fresno have some of the nation's worst particle pollution. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
+    bay: "West Oakland and Richmond already carry the Bay Area's heaviest pollution next to ports, freeways and refineries. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
+    sd: "Barrio Logan and National City sit beside the port, shipyards and freeways. Clean-air groups say faster review for transportation projects could add to that burden. " + p45.other[0].about
   };
-  p45.src.push(ALA);
+  p45.src.push(CAR, ALA);
 
   // Attorney General
   var ag = byId("ag");

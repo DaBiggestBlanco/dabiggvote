@@ -8,7 +8,7 @@
 
 window.GUIDE = {
   electionDate: "2026-11-03",
-  updated: "2026-09-26",
+  updated: "2026-10-07",
   lens: {
     en: "Every explanation weighs what matters most to middle-class Black and other minority families in California: the freedom to vote without new barriers, affordable health care, building wealth through homeownership, fair taxes for working and middle-class households, safe neighborhoods with fair policing, public schools that close achievement gaps, clean air in warehouse-heavy Inland Empire communities, and leaders who show up for our neighborhoods.",
     es: "Cada explicación considera lo que más importa a las familias afroamericanas y de otras minorías de clase media en California: votar sin nuevas barreras, atención médica asequible, crear patrimonio con la compra de vivienda, impuestos justos para la clase trabajadora y media, barrios seguros con policía justa, escuelas públicas que cierren brechas de rendimiento, aire limpio en comunidades con muchas bodegas en el Inland Empire y líderes que den la cara por nuestros barrios."
@@ -305,25 +305,27 @@ window.GUIDE = {
     src: [["CA Secretary of State Quick Reference: Prop 44", "https://voterguide.sos.ca.gov/quick-reference-guide/44.htm"]]
   },
   {
-    id: "p45", sec: "props", scope: "all", title: "Proposition 45", sub: "Fast-track environmental review (CEQA) for many projects",
-    pick: "NO", pickType: "slate",
-    quick: "Would weaken the environmental reviews that neighborhoods near warehouses and freeways rely on.",
-    quick_es: "Debilitaría las revisiones ambientales que protegen a barrios cerca de bodegas y autopistas.",
+    id: "p45", sec: "props", scope: "all", title: "Proposition 45", sub: "Faster environmental review (CEQA) for housing, clinics, schools, transit and more",
+    pick: "YES", pickType: "slate",
+    quick: "A close call. Speeds up approvals for homes, clinics, schools, transit, water and clean energy, but trims public input.",
+    quick_es: "Decisión reñida. Acelera la aprobación de viviendas, clínicas, escuelas, transporte, agua y energía limpia, pero reduce la participación pública.",
+    note: "Close call. The NAACP California/Hawaii and the California Republican Party support it. The California Democratic Party, the League of Women Voters and clean-air groups oppose it. Read both sides below.",
     what: {
-      summary: "Changes the California Environmental Quality Act (CEQA) for many housing, transportation, water and health projects. It sets tight review deadlines and limits what courts can consider in challenges.",
-      yes: "Covered projects get faster review and narrower court challenges.",
+      summary: "Creates an optional faster track under the California Environmental Quality Act (CEQA) for housing, water, clean energy, health facilities, fire and police stations, wildfire prevention, broadband, schools and transportation. It sets deadlines for reviews, permits and lawsuits, limits comment periods and project alternatives, and narrows what courts can stop.",
+      yes: "Eligible projects can choose faster review with tighter deadlines and narrower court challenges.",
       no: "Projects keep today's review and court process.",
-      fiscal: "Likely high tens of millions of dollars a year at first, possibly over $100 million, partly covered by fees. Long-term effects uncertain."
+      fiscal: "Likely high tens of millions of dollars a year at first, possibly over $100 million, partly covered by fees. Long-term effects uncertain, positive or negative."
     },
     why: [
-      "The Inland Empire already has some of the worst air in the country, much of it from trucks and warehouses near Black and Latino neighborhoods. CEQA review is one of the few tools residents have.",
-      "The measure applies to far more than housing, and narrowing court review removes a check that has protected communities.",
-      "Opponents say the savings would go mainly to developers and utilities rather than lowering families' costs."
+      "Black and Latino families pay when affordable homes never break ground, clinics never open and transit stalls. Delays and lawsuits add years and cost to exactly those projects.",
+      "The NAACP California/Hawaii State Conference supports it, while insisting it be carried out with early community input and attention to neighborhoods that already carry heavy pollution.",
+      "It doesn't exempt any project from environmental review or other environmental laws, and builders choose whether to use it. Warehouses, refineries and other industrial projects aren't eligible.",
+      "This guide first leaned No, mainly over warehouse pollution. The official guide shows warehouses aren't covered, so that concern doesn't apply."
     ],
     other: [
-      { n: "YES", about: "The Yes on 45 coalition says CEQA lawsuits delay homes, schools, hospitals, water and clean energy, raising the cost of living. It says strong protections remain.", whyNot: "CEQA does need reform for housing, and the Legislature has passed targeted fixes. This measure goes further than housing and weakens protections for communities that already breathe the worst air." }
+      { n: "NO", about: "Clean-air, environmental-justice and nurses' groups, the California Democratic Party and the League of Women Voters say it weakens CEQA's protections and public input, and that its utility and business funders gain more than families. The state's analysts say it could lead to approval of projects with negative environmental impacts.", whyNot: "These risks are real, especially for neighborhoods near freeways, since transportation projects qualify. But the projects it covers are ones our communities badly need, CEQA still applies, and civil-rights leaders judged the cost of delay to be higher. Watch how it's carried out." }
     ],
-    src: [["CA Secretary of State Quick Reference: Prop 45", "https://voterguide.sos.ca.gov/quick-reference-guide/45.htm"]]
+    src: [["CA Secretary of State Quick Reference: Prop 45", "https://voterguide.sos.ca.gov/quick-reference-guide/45.htm"], ["NAACP California/Hawaii: Where we stand on every 2026 ballot measure", "https://cahinaacp.org/our-vote-our-voice-where-we-stand-on-every-2026-ballot-measure/"]]
   },
 
   // ───────────────────────── STATEWIDE OFFICES ─────────────────────────
