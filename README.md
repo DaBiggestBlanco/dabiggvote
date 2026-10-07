@@ -16,6 +16,9 @@ An interactive voting guide for the November 3, 2026 California general election
 
 ## Share it
 
+**Website (Vercel):** `vercel.json` serves `site/index.html`, the standalone page, with exact street-address lookup. Import the repo at vercel.com; every push to the production branch redeploys.
+
+
 `dist/family-voting-guide.html` is a single self-contained file. It opens in any browser, works offline, and can be texted or emailed.
 
 ## Edit it

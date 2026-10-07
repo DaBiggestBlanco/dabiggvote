@@ -3,6 +3,7 @@
 
 dist/family-voting-guide.html  full standalone page to text, email or open offline
 dist/artifact.html             same page without the document shell, for publishing as a hosted artifact
+site/index.html                the standalone page, served by Vercel (see vercel.json)
 """
 from pathlib import Path
 
@@ -32,6 +33,9 @@ def main() -> None:
                   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
                   + fragment + "\n</html>\n")
     (DIST / "family-voting-guide.html").write_text(standalone)
+    site = ROOT / "site"
+    site.mkdir(exist_ok=True)
+    (site / "index.html").write_text(standalone)
     print(f"built {len(standalone):,} bytes")
 
 
