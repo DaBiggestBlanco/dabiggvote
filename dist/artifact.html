@@ -510,7 +510,7 @@ td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
         <li><b>Score the issues.</b> For each measure, the guide scores what a YES vote does on each issue above, from "hurts a lot" to "helps a lot," using facts from the official state voter guide. Every issue counts the same.</li>
         <li><b>Add them up.</b> If the helps clearly outweigh the hurts, or the other way around, that's the suggested pick.</li>
         <li><b>Break close calls with trusted groups.</b> If the issues are close, the majority of the NAACP California/Hawaii, the California Democratic Party and the League of Women Voters decides.</li>
-        <li><b>Say how sure it is.</b> <span class="tag conf-strong">Strong pick</span> means the issues clearly point one way and most groups agree. <span class="tag conf-lean">Lean</span> means the margin is small or the groups split. <span class="tag conf-close">Close call</span> means the issues are nearly even or the groups disagree.</li>
+        <li><b>Say how sure it is.</b> <span class="tag conf-strong">Very confident</span> means the issues clearly point one way and most groups agree. <span class="tag conf-lean">Fairly confident</span> means the issues point one way but not by a lot, or the groups split. <span class="tag conf-close">Close call</span> means reasonable people could go either way.</li>
       </ol>
       <p>Open <b>Details & both sides</b> on any measure to see the full scorecard. Under <b>Tailor it to you</b> you can change how much each issue counts, or turn on issues like lower taxes or less state borrowing. The suggested pick updates to match your weights.</p>
       <h2>How candidate races are decided</h2>
@@ -556,7 +556,7 @@ td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
         <li><b>Calificar los temas.</b> Para cada medida, la guía califica lo que hace un voto SÍ en cada tema, de "perjudica mucho" a "ayuda mucho", con datos de la guía oficial del estado. Todos los temas cuentan igual.</li>
         <li><b>Sumar.</b> Si lo que ayuda supera claramente a lo que perjudica, o al revés, esa es la selección sugerida.</li>
         <li><b>Desempatar con grupos de confianza.</b> Si los temas están parejos, decide la mayoría de la NAACP California/Hawái, el Partido Demócrata de California y la Liga de Mujeres Votantes.</li>
-        <li><b>Decir qué tan segura es.</b> <span class="tag conf-strong">Selección firme</span>, <span class="tag conf-lean">Inclinación</span> o <span class="tag conf-close">Reñida</span>.</li>
+        <li><b>Decir qué tan segura es.</b> <span class="tag conf-strong">Muy seguro</span>, <span class="tag conf-lean">Bastante seguro</span> o <span class="tag conf-close">Reñida</span> (cualquiera de las dos opciones es razonable).</li>
       </ol>
       <p>Abra <b>Detalles y ambos lados</b> para ver la calificación completa. En <b>Personalícelo</b> puede cambiar cuánto cuenta cada tema; la selección sugerida se ajusta a sus pesos.</p>
       <h2>Sus propias selecciones</h2>
@@ -3321,7 +3321,7 @@ window.GUIDE = {
       caseYes: "The case for YES", caseNo: "The case for NO", claimsH: "Claims you may hear, checked against the official voter guide",
       verdict: { "true": "Accurate", partly: "Partly accurate", "false": "Not accurate", debated: "Debated", unverified: "Not verified" },
       groupsH: "What major groups recommend", forYou: "For you",
-      conf: { strong: "Strong pick", lean: "Lean", close: "Close call" }, confShort: { strong: "Strong", lean: "Lean", close: "Close" },
+      conf: { strong: "Very confident", lean: "Fairly confident", close: "Close call" }, confShort: { strong: "High", lean: "Medium", close: "Close call" },
       byWeights: "Changed by your weights",
       howMade: "How the suggested pick was made",
       eff: { "2": "Helps a lot", "1": "Helps", "0": "Cuts both ways", "-1": "Hurts", "-2": "Hurts a lot" },
@@ -3331,7 +3331,7 @@ window.GUIDE = {
       byLens: function (p) { return "The issues point to " + p + "."; },
       byGroups: function (p) { return "The issues are close, so the groups below break the tie: " + p + "."; },
       noCall: "The issues are close and the groups split, so there's no recommendation.",
-      confWhy: { strong: "The issues clearly point this way and most groups agree.", lean: "The issues point this way, but not by much, or the groups are split.", close: "The issues are close, or the groups disagree with where they point." },
+      confWhy: { strong: "The issues clearly point this way and most groups agree.", lean: "The issues point this way, but not by a lot, or the groups are split.", close: "Reasonable people could go either way: the issues are nearly even, or the groups disagree." },
       tieNote: "The NAACP California/Hawaii, California Democratic Party and League of Women Voters break close calls by majority. The Republican Party's position is shown for reference.",
       ruleH: "How this pick was made",
       rules: {
@@ -3389,7 +3389,7 @@ window.GUIDE = {
       caseYes: "Argumentos a favor (SÍ)", caseNo: "Argumentos en contra (NO)", claimsH: "Afirmaciones que puede oír, verificadas con la guía oficial",
       verdict: { "true": "Correcto", partly: "Parcialmente correcto", "false": "Incorrecto", debated: "En debate", unverified: "Sin verificar" },
       groupsH: "Qué recomiendan grupos importantes", forYou: "Para usted",
-      conf: { strong: "Selección firme", lean: "Inclinación", close: "Reñida" }, confShort: { strong: "Firme", lean: "Inclin.", close: "Reñida" },
+      conf: { strong: "Muy seguro", lean: "Bastante seguro", close: "Reñida" }, confShort: { strong: "Alta", lean: "Media", close: "Reñida" },
       byWeights: "Cambió por sus pesos",
       howMade: "Cómo se hizo la selección sugerida",
       eff: { "2": "Ayuda mucho", "1": "Ayuda", "0": "Ambos lados", "-1": "Perjudica", "-2": "Perjudica mucho" },
