@@ -19,14 +19,29 @@ Anything that clearly helps or hurts the Black community (reparations, police re
 
 ## Propositions
 
-- Check every fact against the official state Voter Information Guide (the Legislative Analyst's analysis and the Attorney General's summary). Official arguments are opinions; label them as such.
-- Weigh the NAACP California/Hawaii State Conference's recommendation first, then the California Democratic Party's, the same order used for candidates. Show the California Republican Party and League of Women Voters positions too, so readers see the full range.
-- Give the strongest case on each side, including fiscally conservative arguments, and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
-- Prop 45 was re-examined on Oct. 7, 2026 and changed from No to Yes. The earlier No rested on warehouse pollution, but warehouses aren't eligible, and the NAACP supports it.
+1. **Score the issues.** For each measure, score what a YES vote does on each lens issue from -2 (hurts a lot) to +2 (helps a lot), with a one-line reason. Use facts from the official state Voter Information Guide (Legislative Analyst and Attorney General). Official arguments are opinions. Scores live in `src/content-choices.js`.
+2. **Add them up.** All lens issues count equally by default (weight 1). Two other issues, lower taxes and less state borrowing, start at weight 0. Readers can set any weight from 0 to 3, and the pick updates.
+3. **Decide.** If the net score is at least 1 and the helps-minus-hurts margin is at least a quarter of the total, the issues decide. Otherwise the majority of the NAACP California/Hawaii, California Democratic Party and League of Women Voters decides. If they split evenly, there's no recommendation.
+4. **Confidence.**
+   - Strong: the issues decide, the group majority agrees, and the net score is at least 2 or the groups are unanimous.
+   - Lean: the issues decide and the groups agree, but narrowly; or the issues decide by 2+ while the groups tie; or the groups decide unanimously.
+   - Close call: the issues decide but the group majority disagrees; or the groups decide without being unanimous.
+5. Show the California Republican Party's position for reference; it isn't part of the tiebreak.
+6. Give the strongest case on each side and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
+
+Results with equal weights (Oct. 7, 2026): YES on 1, 2, 3, 4, 5, 37, 38, 40, 45; NO on 39, 41, 42, 43, 44. Compared with the original list, 4, 5 and 40 changed to YES, 41 changed to NO, and 45 changed to YES.
+
+## Confidence for candidate races
+
+Democrat vs. Republican and judicial retention: Strong. Same party, no Democrat, or a local race: Lean. Local race with limited information: Close call.
+
+## New information
+
+Picks follow these rules, so re-run them whenever the official guide, endorsements or candidate records change, and update the "Last updated" date.
 
 ## Democrat vs. Republican
 
-Pick the Democrat, unless the Republican's record is clearly better for these families. A Republican can win on their record. Say why when one doesn't clear the bar.
+Pick the Democrat, unless the Republican's record is clearly better on the lens issues. A Republican can win on their record. Say why when one doesn't clear the bar.
 
 ## Two candidates from the same party
 

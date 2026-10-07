@@ -1,7 +1,11 @@
-// Help for deciding for yourself on the statewide propositions:
-// the strongest case on each side, common claims checked against the official state voter guide,
-// what major groups recommend, notes that depend on the viewer's situation, and which
-// priorities point toward YES or NO. Nothing here changes the suggested picks.
+// How the suggested pick on each statewide proposition is made, and help for deciding yourself.
+//
+// score: the effect of a YES vote on each issue, from -2 (hurts a lot) to +2 (helps a lot), with the reason.
+//   Facts come from the official state voter guide. The app adds up helps and hurts using each issue's
+//   weight (equal by default; readers can change them). If the issues clearly point one way, that's the pick.
+//   If they're close, the NAACP California/Hawaii, California Democratic Party and League of Women Voters
+//   break the tie by majority. See docs/decision-rules.md.
+// quick: the one-line summary shown on the card for each possible pick.
 (function () {
   var G = window.GUIDE;
   var VIG = ["Official Voter Information Guide (Secretary of State), Nov. 3, 2026", "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf"];
@@ -29,48 +33,28 @@
       { id: "near", en: "Do you live near a freeway, port, rail yard or other big transportation project?", es: "¿Vive cerca de una autopista, puerto, patio ferroviario u otra obra de transporte grande?" }
     ],
 
-    // What matters most. Each choice has two sides; "lean" on a measure names the side that points to YES.
-    priorities: [
-      { id: "tax", en: "Taxes and services", es: "Impuestos y servicios",
-        a: ["Keep taxes as low as possible, even if that means fewer public services", "Mantener los impuestos lo más bajos posible, aunque haya menos servicios"],
-        b: ["Keep funding schools, health care and services, even if taxes stay where they are", "Seguir financiando escuelas, salud y servicios, aunque los impuestos sigan igual"] },
-      { id: "wealth", en: "Taxing the very wealthy", es: "Impuestos a los más ricos",
-        a: ["Avoid new taxes on the very wealthy that could push them or their money out of state", "Evitar nuevos impuestos a los más ricos que podrían sacarlos a ellos o su dinero del estado"],
-        b: ["Ask billionaires and top earners to pay more", "Pedir que los multimillonarios y quienes más ganan paguen más"] },
-      { id: "debt", en: "State borrowing", es: "Préstamos del estado",
-        a: ["Avoid new state debt", "Evitar nueva deuda estatal"],
-        b: ["Borrow to invest in housing, research and other long-term needs", "Pedir prestado para invertir en vivienda, investigación y otras necesidades a largo plazo"] },
-      { id: "save", en: "Budget surpluses", es: "Superávits del presupuesto",
-        a: ["Return extra money to taxpayers when revenue runs high", "Devolver el dinero extra a los contribuyentes cuando sobran ingresos"],
-        b: ["Save more in good years to protect services in bad years", "Ahorrar más en años buenos para proteger servicios en años malos"] },
-      { id: "home", en: "Help buying a home", es: "Ayuda para comprar casa",
-        a: ["Government help with down payments for working and middle-class buyers", "Ayuda del gobierno con el enganche para compradores de clase trabajadora y media"],
-        b: ["Leave home financing to the private market", "Dejar el financiamiento de vivienda al mercado privado"] },
-      { id: "build", en: "Building vs. review", es: "Construir o revisar",
-        a: ["Build homes, clinics, transit and clean energy faster, with shorter reviews and fewer lawsuits", "Construir vivienda, clínicas, transporte y energía limpia más rápido, con revisiones más cortas y menos demandas"],
-        b: ["Keep full environmental review and more time for public input, even if projects take longer", "Mantener la revisión ambiental completa y más tiempo para opinar, aunque los proyectos tarden más"] },
-      { id: "local", en: "Local tax votes", es: "Votos de impuestos locales",
-        a: ["A simple majority of local voters should be able to pass a tax", "Una mayoría simple de votantes locales debe poder aprobar un impuesto"],
-        b: ["New local special taxes should need two-thirds support", "Los nuevos impuestos locales especiales deben necesitar dos tercios"] },
-      { id: "audit", en: "Rules on public money", es: "Reglas sobre dinero público",
-        a: ["Add audits and spending rules for programs and clinics that get public money", "Agregar auditorías y reglas de gasto a programas y clínicas que reciben dinero público"],
-        b: ["Avoid extra rules that cost money or could cut services", "Evitar reglas extra que cuestan dinero o podrían recortar servicios"] },
-      { id: "vote", en: "Voting rules", es: "Reglas para votar",
-        a: ["Make voting as easy as possible for eligible voters", "Hacer que votar sea lo más fácil posible para los votantes elegibles"],
-        b: ["Require ID to vote, even if it adds steps", "Exigir identificación para votar, aunque agregue pasos"] },
-      { id: "money", en: "Money in politics", es: "Dinero en la política",
-        a: ["Allow public money to help candidates compete without big donors", "Permitir dinero público para que los candidatos compitan sin grandes donantes"],
-        b: ["Keep tax money out of political campaigns", "Mantener el dinero de los impuestos fuera de las campañas"] },
-      { id: "recall", en: "Recall elections", es: "Elecciones revocatorias",
-        a: ["Voters should pick the replacement on the same recall ballot", "Los votantes deben elegir al reemplazo en la misma boleta de revocación"],
-        b: ["A replacement should be chosen through the normal process for a vacancy, not by a small plurality", "El reemplazo debe elegirse por el proceso normal de vacante, no por una pequeña pluralidad"] }
-    ]
+    // The issues each measure is scored on. "lens" issues count equally by default; the others
+    // start at zero so readers who care about them can turn them on.
+    criteria: [
+      { id: "vote", lens: true, en: "Voting rights and fair representation", es: "Derecho al voto y representación justa" },
+      { id: "health", lens: true, en: "Affordable health care", es: "Atención médica asequible" },
+      { id: "home", lens: true, en: "Housing and homeownership", es: "Vivienda y compra de casa" },
+      { id: "tax", lens: true, en: "Fair taxes for working and middle-class families", es: "Impuestos justos para la clase trabajadora y media" },
+      { id: "services", lens: true, en: "Steady public services and a stable budget", es: "Servicios públicos estables y presupuesto sano" },
+      { id: "school", lens: true, en: "Strong public schools", es: "Escuelas públicas fuertes" },
+      { id: "safe", lens: true, en: "Safe neighborhoods and fair policing", es: "Barrios seguros y policía justa" },
+      { id: "air", lens: true, en: "Clean air and healthy neighborhoods", es: "Aire limpio y barrios sanos" },
+      { id: "repair", lens: true, en: "Repair for harms to Black Californians", es: "Reparación de daños a los afroamericanos de California" },
+      { id: "lowtax", lens: false, en: "Lower taxes and less government spending", es: "Menos impuestos y menos gasto público" },
+      { id: "lessdebt", lens: false, en: "Less state borrowing", es: "Menos préstamos del estado" }
+    ],
+    // Groups used, in order, when the issues don't settle a measure.
+    tiebreak: ["naacp", "dem", "lwv"]
   };
 
   var PROPS = {
     p1: {
       groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "YES" },
-      lean: { debt: "b", home: "a" },
       yes: [
         "California builds far too few homes people can afford. More than half of renters spend over 30% of their income on rent.",
         "Most of the money ($7.2 billion) builds, buys or renovates affordable rentals, usually reserved for lower-income households for 55 years. The state estimates up to 40,000 rental units and up to 40,000 households helped toward ownership.",
@@ -94,7 +78,6 @@
     },
     p2: {
       groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { save: "b" },
       yes: [
         "The budget swung from a $100 billion surplus to a large deficit in a few years. Doubling the rainy day fund to 20% cushions schools, Medi-Cal and public safety in the next downturn.",
         "It forces the state to bank more of a revenue spike instead of starting new spending it can't sustain.",
@@ -116,7 +99,6 @@
     },
     p3: {
       groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { tax: "b", wealth: "b" },
       yes: [
         "It keeps today's rates on the top 2% of earners. Without it, those rates end in 2031 and the state loses $5–15 billion a year.",
         "The money goes to schools and community colleges, which frees other state money for programs like Medi-Cal. Supporters list school layoffs and bigger classes as the risk of losing it.",
@@ -140,7 +122,6 @@
     },
     p4: {
       groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { money: "a" },
       yes: [
         "Running for office often takes personal wealth or rich donors. Small-donor matching programs help working-class candidates and candidates of color compete.",
         "It creates no program and spends no money by itself. Each city, county or the state could choose to adopt one.",
@@ -160,7 +141,6 @@
     },
     p5: {
       groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { recall: "b" },
       yes: [
         "Today a recalled governor can be replaced by someone who wins only a small share of the vote. In 2021, the leading replacement would have taken office with support from about 28% of recall voters.",
         "It removes the incentive to use recalls to redo an election, and most states with recalls already fill vacancies this way.",
@@ -179,7 +159,6 @@
     },
     p37: {
       groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "NO" },
-      lean: { home: "a" },
       yes: [
         "Many families can afford a monthly mortgage but can't save a big down payment. Prop 37 lends up to 17% of the price, so a buyer needs only 3% down.",
         "Private bond investors fund it and buyers repay it, so the state's analysts find no direct cost to taxpayers.",
@@ -203,7 +182,6 @@
     },
     p38: {
       groups: { naacp: "YES", dem: "YES", gop: "YES", lwv: "NO" },
-      lean: { debt: "b" },
       yes: [
         "Immunotherapy is already curing some cancers. At least half the money must go to cancer, heart disease and Alzheimer's, which hit Black communities hard.",
         "Treatments it helps create must be sold in California at a 20% discount, and 10% of any revenue goes back to the state until the bonds are repaid.",
@@ -222,7 +200,6 @@
     },
     p39: {
       groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { vote: "b" },
       yes: [
         "Voter ID is common in other states and polls show support across parties. Supporters say it builds trust in elections.",
         "Everyone could get a free state voter ID card on request.",
@@ -245,7 +222,6 @@
     },
     p40: {
       groups: { naacp: "NO", dem: "YES", gop: "NO", lwv: "Neutral" },
-      lean: { wealth: "b", tax: "b" },
       yes: [
         "Federal cuts are expected to take health coverage from more than a million Californians. Asking about 200 billionaires to pay a one-time 5% tax on their wealth would fund care.",
         "90% of the money must go to health care. Real estate, pensions and retirement accounts are generally excluded.",
@@ -269,7 +245,6 @@
     },
     p41: {
       groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { audit: "a", tax: "a" },
       yes: [
         "Billions have gone to programs like homelessness with too little to show for it. Prop 41 has the independent State Auditor review a program before voters are asked for a new tax, and every four years after.",
         "Audit summaries would appear in the official voter guide, so voters see results before deciding.",
@@ -288,7 +263,6 @@
     },
     p42: {
       groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { wealth: "a", tax: "a" },
       yes: [
         "It bans new state taxes on simply owning savings, investments, retirement accounts, business interests and other personal property, which you already paid income tax to build.",
         "It bans taxes that reach back to money earned or actions taken before the tax passed. Supporters call retroactive taxes unfair.",
@@ -311,7 +285,6 @@
     },
     p43: {
       groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { local: "b", tax: "a" },
       yes: [
         "Prop 13 required two-thirds approval for local special taxes. A 2017 court ruling let taxes proposed by citizen petition pass with a simple majority, and Prop 43 closes that gap.",
         "Supporters say local governments imposed more than 2,000 new or higher taxes in a decade, including transfer taxes on home sales.",
@@ -333,7 +306,6 @@
     },
     p44: {
       groups: { naacp: "NO", dem: "NO", gop: "NO", lwv: "NO" },
-      lean: { audit: "a" },
       yes: [
         "Community clinics receive billions in public money. Supporters say some spend too much on executive pay and overhead while patients wait months for appointments.",
         "Requiring 90% of revenue to go to care and related services, with public reporting, would steer more money to patients and frontline workers.",
@@ -354,7 +326,6 @@
     },
     p45: {
       groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { build: "a" },
       yes: [
         "Delays and lawsuits raise the cost of homes, clinics, schools, transit, water and clean energy. Prop 45 sets firm deadlines for reviews, permits and court cases on those projects.",
         "Projects still need environmental review and must follow every environmental law. Builders can choose whether to use the faster process.",
@@ -379,6 +350,113 @@
     }
   };
 
+
+  var SCORE = {
+    p1: {
+      home: [2, "$7.2 billion builds, buys or renovates affordable rentals, and $1.1 billion helps first-time and lower-income buyers. The state estimates up to 40,000 rental units and up to 40,000 households helped toward owning."],
+      services: [-1, "Repaying it takes about $500–600 million a year from the state budget for about 25 years, roughly 0.25% of the budget."],
+      lowtax: [-1, "Adds state spending through debt payments, though it raises no tax."],
+      lessdebt: [-2, "Adds $10 billion of state debt repaid from the general budget. The $1.25 billion for veterans is repaid by the veterans."]
+    },
+    p2: {
+      services: [2, "Doubles the rainy day fund to 20% of state taxes, so schools, Medi-Cal and other services face fewer cuts in a recession."],
+      tax: [-1, "Deposits would stop counting toward the voter-approved spending limit, making taxpayer rebates less likely."],
+      lowtax: [-1, "Makes rebates under the state spending limit less likely."],
+      lessdebt: [1, "Requires extra payments on state debts through 2040 instead of 2030."]
+    },
+    p3: {
+      school: [2, "Keeps $5–15 billion a year that goes mainly to K–12 schools and community colleges."],
+      health: [1, "With schools funded, other state money stays available for Medi-Cal and health programs."],
+      tax: [1, "Applies only to income over about $371,000 (single) or $742,000 (married). Working and middle-class families' rates don't change."],
+      lowtax: [-2, "Makes the top income tax rates permanent instead of letting them drop in 2031."]
+    },
+    p4: {
+      vote: [1, "Lets communities create small-donor matching or similar programs that help working-class candidates and candidates of color run without wealthy donors."],
+      services: [-1, "Programs governments choose to create could cost significant money, though not from school, transportation or public safety funds."],
+      lowtax: [-1, "Opens the door to spending public money on campaigns."]
+    },
+    p5: {
+      vote: [0, "Cuts both ways. A replacement couldn't take office with a small share of the vote, but voters would no longer choose the replacement on the same ballot."],
+      services: [0, "Could save or cost millions per recall depending on the office, and statewide recalls are rare."]
+    },
+    p37: {
+      home: [2, "Lends up to 17% of a newly built home's price to middle-income buyers who put 3% down, for families who can afford a mortgage but not a down payment."],
+      services: [0, "Buyers repay the bonds. The state's analysts find no direct state or local cost."]
+    },
+    p38: {
+      health: [1, "Funds immunology research on cancer, heart disease and Alzheimer's, with a 20% California discount on resulting treatments. Benefits are uncertain and could take decades."],
+      services: [-1, "Costs about $500–600 million a year from the state budget for about 20 years, possibly offset by royalties."],
+      lowtax: [-1, "Adds state spending through debt payments."],
+      lessdebt: [-2, "Adds $8.4 billion of state debt."]
+    },
+    p39: {
+      vote: [-2, "Mail ballots without matching ID digits wouldn't count, and in-person voters would need government ID, which Black, elderly, low-income and young voters are less likely to have current."],
+      services: [-1, "Costs tens of millions to low hundreds of millions of dollars a year to carry out."],
+      lowtax: [-1, "Adds an ongoing cost to state and local budgets."]
+    },
+    p40: {
+      health: [2, "Raises tens of billions of dollars over several years, 90% of it for health care, as federal cuts reduce health funding."],
+      tax: [1, "Paid only by about 200 people worth more than $1 billion. Working and middle-class families don't pay it."],
+      services: [-1, "One-time money can't fund ongoing care, and the state could lose under $1 billion a year in income taxes if billionaires leave or shift income."],
+      lowtax: [-1, "A new tax, though only on billionaires."]
+    },
+    p41: {
+      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
+      services: [0, "Audits of new tax-funded programs could improve results, but its spending-limit rule could restrict future funding. These roughly offset."],
+      lowtax: [1, "Puts new taxes under the state spending limit and adds audits before new special taxes reach voters."]
+    },
+    p42: {
+      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
+      services: [-1, "Permanently rules out one way to raise revenue, so the state's analysts say future revenue may not grow as much."],
+      lowtax: [2, "Permanently bans new state taxes on owning savings, investments, retirement accounts and business interests, and bans retroactive taxes."]
+    },
+    p43: {
+      services: [-2, "Citizen-proposed local measures for fire, 911, roads, parks, libraries and clinics would need two-thirds, so more would fail."],
+      home: [-1, "Local measures that fund affordable housing would be harder to pass."],
+      vote: [-1, "Just over one-third of voters could block what nearly two-thirds want."],
+      lowtax: [2, "Makes new local special taxes, including sales, parcel and transfer taxes, much harder to pass."]
+    },
+    p44: {
+      health: [-1, "Clinics now spend about 80% of revenue on care on average. Requiring 90% could move some money to care, but the state's analysts warn some clinics might close."]
+    },
+    p45: {
+      home: [2, "Housing gets firm deadlines for reviews, permits and lawsuits, which now delay new homes and add cost."],
+      health: [1, "Clinics, hospitals and medical offices also qualify for faster approval."],
+      air: [-1, "Transportation projects like freeway work also qualify, with shorter comment periods and narrower court review. The state's analysts say projects with more harmful impacts could be approved. Warehouses and refineries don't qualify."]
+    }
+  };
+
+  var QUICK = {
+    p1: { YES: ["Builds and preserves affordable homes and funds down-payment help, with no new tax.", "Construye y preserva viviendas asequibles y ayuda con el enganche, sin impuesto nuevo."],
+          NO: ["Adds $10 billion of state debt, costing about $500–600 million a year for 25 years.", "Agrega $10 mil millones de deuda estatal, con un costo de unos $500–600 millones al año por 25 años."] },
+    p2: { YES: ["Saves more in good years so schools and services aren't cut when the economy dips.", "Ahorra más en años buenos para no recortar escuelas y servicios en una recesión."],
+          NO: ["Makes taxpayer rebates less likely and adds no new money for services.", "Hace menos probables los reembolsos a contribuyentes y no agrega dinero para servicios."] },
+    p3: { YES: ["Keeps a tax that only hits incomes over ~$371,000 so schools don't lose $5–15 billion a year.", "Mantiene un impuesto solo a ingresos de más de ~$371,000 para que las escuelas no pierdan $5–15 mil millones al año."],
+          NO: ["Lets the 2012 \"temporary\" top income tax rates expire in 2031, as voters were told.", "Deja que las tasas \"temporales\" de 2012 venzan en 2031, como se prometió."] },
+    p4: { YES: ["Lets communities choose public campaign financing so candidates without wealthy donors can compete.", "Permite financiamiento público de campañas para que compitan candidatos sin donantes ricos."],
+          NO: ["Would let governments spend taxpayer money on campaigns, with no statewide cap.", "Permitiría gastar dinero público en campañas, sin límite estatal."] },
+    p5: { YES: ["A recalled official would be replaced through the normal vacancy process, not a crowded race won with a small share of votes.", "El reemplazo de un funcionario destituido seguiría el proceso normal de vacante, no una contienda con poca votación."],
+          NO: ["Keeps voters choosing the replacement on the same ballot when a statewide official is recalled.", "Mantiene que los votantes elijan al reemplazo en la misma boleta."] },
+    p37: { YES: ["Helps middle-income families buy a new home with a state loan for up to 17% of the price, at no taxpayer cost.", "Ayuda a familias de ingresos medios a comprar casa nueva con un préstamo de hasta 17% del precio, sin costo para los contribuyentes."],
+           NO: ["A second loan only for new homes, with no priority for first-time buyers.", "Un segundo préstamo solo para casas nuevas, sin prioridad para quienes compran por primera vez."] },
+    p38: { YES: ["Funds research on cancer, heart disease and Alzheimer's, with a 20% discount on resulting treatments.", "Financia investigación sobre cáncer, corazón y Alzheimer, con 20% de descuento en los tratamientos que resulten."],
+           NO: ["Borrows $8.4 billion for one research field; past research bonds paid back far less than promised.", "Pide prestados $8.4 mil millones para un solo campo; bonos anteriores devolvieron mucho menos de lo prometido."] },
+    p39: { YES: ["Requires ID to vote, adds citizenship checks of voter rolls, and offers a free voter ID card.", "Exige identificación para votar, verifica la ciudadanía en los registros y ofrece una identificación gratuita."],
+           NO: ["Would throw out mail ballots missing matching ID digits and add costly barriers to voting.", "Anularía boletas por correo sin los dígitos de identificación y añadiría barreras costosas para votar."] },
+    p40: { YES: ["A one-time 5% tax on about 200 billionaires, with 90% of the money going to health care.", "Un impuesto único de 5% a unos 200 multimillonarios; 90% del dinero va a la salud."],
+           NO: ["One-time money can't pay for ongoing care, and the state could lose income taxes if billionaires leave.", "El dinero único no paga atención continua, y el estado podría perder impuestos si los multimillonarios se van."] },
+    p41: { YES: ["Requires independent audits of programs funded by new taxes, before and after voters approve them.", "Exige auditorías independientes de programas financiados por impuestos nuevos, antes y después de aprobarlos."],
+           NO: ["Could cancel the billionaire tax for health care and limits how future taxes are counted.", "Podría anular el impuesto a multimillonarios para la salud y limita cómo se cuentan futuros impuestos."] },
+    p42: { YES: ["Permanently bans new state taxes on owning savings, retirement accounts and other personal property.", "Prohíbe para siempre nuevos impuestos estatales sobre ahorros, cuentas de retiro y otros bienes personales."],
+           NO: ["A permanent constitutional ban that could cancel the billionaire tax and ties future voters' hands.", "Una prohibición constitucional permanente que podría anular el impuesto a multimillonarios y limita a futuros votantes."] },
+    p43: { YES: ["Requires two-thirds approval for local special taxes put on the ballot by petition, the same bar governments face.", "Exige dos tercios para impuestos locales especiales propuestos por petición, igual que para los gobiernos."],
+           NO: ["Would let one-third of voters block local funding for fire, 911, roads and schools that most people want.", "Permitiría que un tercio de los votantes bloquee fondos locales para bomberos, 911, calles y escuelas que la mayoría quiere."] },
+    p44: { YES: ["Requires community clinics to spend at least 90% of revenue on patient care and related services.", "Exige que las clínicas comunitarias gasten al menos 90% de sus ingresos en atención y servicios relacionados."],
+           NO: ["Doctors and nurses warn it could close community clinics that serve millions.", "Médicos y enfermeras advierten que podría cerrar clínicas comunitarias que atienden a millones."] },
+    p45: { YES: ["Speeds up approvals for homes, clinics, schools, transit and clean energy, but trims public input.", "Acelera la aprobación de viviendas, clínicas, escuelas, transporte y energía limpia, pero reduce la participación pública."],
+           NO: ["Weakens environmental review and public input for many projects, including freeway work.", "Debilita la revisión ambiental y la participación pública en muchos proyectos, incluidas obras de autopistas."] }
+  };
+
   var EXTRA_SRC = {
     p38: [["Capitol Weekly: Stem cell agency receives $15.6 million in royalties", "https://capitolweekly.net/?p=15528"]],
     p40: [["OECD: The Role and Design of Net Wealth Taxes (2018)", "https://www.oecd.org/tax/the-role-and-design-of-net-wealth-taxes-in-the-oecd-9789264290303-en.htm"]]
@@ -386,7 +464,7 @@
 
   G.contests.forEach(function (c) {
     var d = PROPS[c.id]; if (!d) return;
-    c.groups = d.groups; c.lean = d.lean; c.sides = { yes: d.yes, no: d.no }; c.claims = d.claims; c.me = d.me;
+    c.groups = d.groups; c.score = SCORE[c.id]; c.quickBy = QUICK[c.id]; c.sides = { yes: d.yes, no: d.no }; c.claims = d.claims; c.me = d.me;
     c.src = c.src.concat([VIG], EXTRA_SRC[c.id] || []);
   });
 })();

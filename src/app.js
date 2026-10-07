@@ -42,12 +42,32 @@
       caseYes: "The case for YES", caseNo: "The case for NO", claimsH: "Claims you may hear, checked against the official voter guide",
       verdict: { "true": "Accurate", partly: "Partly accurate", "false": "Not accurate", debated: "Debated", unverified: "Not verified" },
       groupsH: "What major groups recommend", forYou: "For you",
-      lean: { yes: "Your priorities lean YES", no: "Your priorities lean NO", mix: "Your priorities point both ways" },
-      becauseOf: "Based on what you chose:",
+      conf: { strong: "Strong pick", lean: "Lean", close: "Close call" },
+      byWeights: "Changed by your weights",
+      howMade: "How the suggested pick was made",
+      eff: { "2": "Helps a lot", "1": "Helps", "0": "Cuts both ways", "-1": "Hurts", "-2": "Hurts a lot" },
+      offNote: "you set this to not count",
+      noEffect: "No clear effect on:",
+      tally: function (h, u) { return "Helps: " + h + " · Hurts: " + u; },
+      byLens: function (p) { return "The issues point to " + p + "."; },
+      byGroups: function (p) { return "The issues are close, so the groups below break the tie: " + p + "."; },
+      noCall: "The issues are close and the groups split, so there's no recommendation.",
+      confWhy: { strong: "The issues clearly point this way and most groups agree.", lean: "The issues point this way, but not by much, or the groups are split.", close: "The issues are close, or the groups disagree with where they point." },
+      tieNote: "The NAACP California/Hawaii, California Democratic Party and League of Women Voters break close calls by majority. The Republican Party's position is shown for reference.",
+      ruleH: "How this pick was made",
+      rules: {
+        dr: "Democrat vs. Republican: the Democrat, unless the Republican's record is clearly better on the issues this guide weighs.",
+        same: "Same party: trusted community groups first (Black Caucus, NAACP, local Black and grassroots groups), then the California Democratic Party's endorsement, then the more practical, budget-minded candidate, then a Black candidate when it's still close, then experience.",
+        nodem: "No Democrat on the ballot: the candidate closer to the issues this guide weighs.",
+        judges: "Judges: keep them unless there's a serious reason to remove one.",
+        local: "Local race: weighed against the issues this guide weighs, using records and endorsements."
+      },
+      weightsH: "How much each issue counts", weightsHint: "Every issue counts the same unless you change it. Your weights can change the suggested pick on propositions; candidate picks follow the written rules.",
+      wLvl: ["Doesn't count", "Counts", "Counts more", "Counts most"], otherIssues: "Other issues some voters weigh (off unless you turn them on)",
+      resetW: "Reset to equal",
       perTitle: "Optional: tailor it to you", perHint: "Skip this if you like. Nothing here is required, and answers stay on this device. They never change the suggested picks. They add short notes on how each measure could affect you and which side fits what you care about.",
-      aboutYou: "About you", matters: "What matters most to you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
-      lineup: "How the measures line up", colSug: "Suggested", colPri: "Your priorities", colMine: "My pick",
-      leanShort: { yes: "Lean YES", no: "Lean NO", mix: "Mixed" },
+      aboutYou: "About you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
+      lineup: "How the measures line up", colSug: "Suggested", colConf: "Confidence", colMine: "My pick",
       copy: "Copy as text", copied: "Copied. Paste it into a text or email.", copyFail: "Copy isn't allowed here. Select the text below and copy it.",
       election: "Election Day: Tuesday, Nov. 3, 2026",
       party: { "Democratic": "Democrat", "Republican": "Republican", "Non-Partisan": "Nonpartisan", "Green": "Green", "Peace and Freedom": "Peace & Freedom", "Libertarian": "Libertarian", "No party preference": "No party preference", "": "" },
@@ -87,12 +107,32 @@
       caseYes: "Argumentos a favor (SÍ)", caseNo: "Argumentos en contra (NO)", claimsH: "Afirmaciones que puede oír, verificadas con la guía oficial",
       verdict: { "true": "Correcto", partly: "Parcialmente correcto", "false": "Incorrecto", debated: "En debate", unverified: "Sin verificar" },
       groupsH: "Qué recomiendan grupos importantes", forYou: "Para usted",
-      lean: { yes: "Sus prioridades se inclinan al SÍ", no: "Sus prioridades se inclinan al NO", mix: "Sus prioridades apuntan a ambos lados" },
-      becauseOf: "Según lo que eligió:",
+      conf: { strong: "Selección firme", lean: "Inclinación", close: "Reñida" },
+      byWeights: "Cambió por sus pesos",
+      howMade: "Cómo se hizo la selección sugerida",
+      eff: { "2": "Ayuda mucho", "1": "Ayuda", "0": "Ambos lados", "-1": "Perjudica", "-2": "Perjudica mucho" },
+      offNote: "usted lo puso en no cuenta",
+      noEffect: "Sin efecto claro en:",
+      tally: function (h, u) { return "Ayuda: " + h + " · Perjudica: " + u; },
+      byLens: function (p) { return "Los temas apuntan a " + p + "."; },
+      byGroups: function (p) { return "Los temas están parejos, así que los grupos de abajo desempatan: " + p + "."; },
+      noCall: "Los temas están parejos y los grupos divididos, así que no hay recomendación.",
+      confWhy: { strong: "Los temas apuntan claramente en esta dirección y la mayoría de los grupos coincide.", lean: "Los temas apuntan en esta dirección, pero por poco, o los grupos están divididos.", close: "Los temas están parejos, o los grupos no coinciden con la dirección de los temas." },
+      tieNote: "La NAACP California/Hawái, el Partido Demócrata de California y la Liga de Mujeres Votantes desempatan por mayoría. La posición del Partido Republicano se muestra como referencia.",
+      ruleH: "Cómo se hizo esta selección",
+      rules: {
+        dr: "Demócrata contra republicano: el demócrata, salvo que el historial del republicano sea claramente mejor en los temas que pesa esta guía.",
+        same: "Mismo partido: primero grupos comunitarios de confianza (Caucus Afroamericano, NAACP, grupos locales), luego el respaldo del Partido Demócrata de California, luego el candidato más práctico y prudente, luego un candidato afroamericano si sigue parejo, y por último la experiencia.",
+        nodem: "Sin demócrata en la boleta: el candidato más cercano a los temas que pesa esta guía.",
+        judges: "Jueces: mantenerlos salvo que haya una razón seria para destituir a alguno.",
+        local: "Contienda local: comparada con los temas que pesa esta guía, según historial y respaldos."
+      },
+      weightsH: "Cuánto cuenta cada tema", weightsHint: "Todos los temas cuentan igual a menos que usted lo cambie. Sus pesos pueden cambiar la selección sugerida en las proposiciones; las de candidatos siguen las reglas escritas.",
+      wLvl: ["No cuenta", "Cuenta", "Cuenta más", "Cuenta mucho"], otherIssues: "Otros temas que algunos votantes pesan (apagados salvo que los active)",
+      resetW: "Volver a igual",
       perTitle: "Opcional: personalícelo", perHint: "Puede omitir esto. Nada es obligatorio y las respuestas se quedan en este dispositivo. Nunca cambian las selecciones sugeridas. Agregan notas breves sobre cómo cada medida podría afectarle y qué lado coincide con lo que le importa.",
-      aboutYou: "Sobre usted", matters: "Lo que más le importa", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
-      lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colPri: "Sus prioridades", colMine: "Mi selección",
-      leanShort: { yes: "SÍ", no: "NO", mix: "Mixto" },
+      aboutYou: "Sobre usted", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
+      lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colConf: "Confianza", colMine: "Mi selección",
       copy: "Copiar como texto", copied: "Copiado. Péguelo en un mensaje o correo.", copyFail: "No se permite copiar aquí. Seleccione el texto de abajo y cópielo.",
       election: "Día de la elección: martes 3 de noviembre de 2026",
       esNote: "Los detalles de la investigación están en inglés.",
@@ -109,12 +149,12 @@
   var SEC_OF = { cd: "house", sd: "senate", ad: "assembly", boe: "state" };
 
   // ── state ──
-  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {}, mine: {}, prof: {}, pri: {} };
+  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {}, mine: {}, prof: {}, w: {} };
   var expanded = {};
-  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done", "mine", "prof", "pri"];
+  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done", "mine", "prof", "w"];
   function load() {
     try { var v = JSON.parse(localStorage.getItem("fvg2026v2") || "{}"); PERSIST.forEach(function (k) { if (k in v) S[k] = v[k]; }); } catch (e) {}
-    ["done", "mine", "prof", "pri"].forEach(function (k) { if (!S[k] || typeof S[k] !== "object") S[k] = {}; });
+    ["done", "mine", "prof", "w"].forEach(function (k) { if (!S[k] || typeof S[k] !== "object") S[k] = {}; });
     var h = (location.hash || "").slice(1);
     if (["ballot", "list", "vote", "about"].indexOf(h) >= 0) S.tab = h;
   }
@@ -153,11 +193,11 @@
   }
   function matches(c) {
     if (!S.q) return true;
-    var hay = [c.title, c.sub, c.pick, rt(c.quick), c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
+    var hay = [c.title, c.sub, sugg(c), rt(c.quick), c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
     return S.q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
   }
   function visible() { return G.contests.filter(function (c) { return inScope(c) && matches(c); }); }
-  function countable(list) { return list.filter(function (c) { return !c.unopposed && c.pick !== "No recommendation"; }); }
+  function countable(list) { return list.filter(function (c) { return !c.unopposed && sugg(c) !== "No recommendation"; }); }
 
   // ── rendering helpers ──
   function pickKind(p) { return p === "NO" ? "no" : /^YES/.test(p) ? "yes" : p === "No recommendation" ? "none" : "name"; }
@@ -184,31 +224,73 @@
   }
   function mineList(c) { var m = S.mine[c.id]; return m == null ? [] : [].concat(m); }
   function mineText(c) { var m = mineList(c); return m.length ? m.map(shortPick).join(", ") : ""; }
-  function finalPick(c) { return mineText(c) || shortPick(c.pick); }
+  function finalPick(c) { return mineText(c) || shortPick(sugg(c)); }
   function differs(c) {
     var m = mineList(c); if (!m.length) return false;
     var sug = (c.cands || []).filter(function (x) { return x.pick; }).map(function (x) { return x.n; });
-    if (!sug.length) sug = [c.pick];
+    if (!sug.length) sug = [sugg(c)];
     return m.slice().sort().join("|") !== sug.slice().sort().join("|");
   }
-  function leanOf(c) {
-    if (!c.lean) return null;
-    var sc = 0, n = 0, why = [];
-    Object.keys(c.lean).forEach(function (ax) {
-      var a = S.pri[ax], pr = CH.priorities.filter(function (x) { return x.id === ax; })[0];
-      if (!a || !pr) return;
-      n++; sc += a === c.lean[ax] ? 1 : -1;
-      why.push(pr[a][S.lang === "es" ? 1 : 0]);
+  // ── how suggested picks are made ──
+  function crit(id) { return CH.criteria.filter(function (x) { return x.id === id; })[0]; }
+  function wOf(id) { return id in S.w ? S.w[id] : (crit(id) && crit(id).lens ? 1 : 0); }
+  function customW() { return Object.keys(S.w).some(function (k) { return S.w[k] !== (crit(k) && crit(k).lens ? 1 : 0); }); }
+  // Propositions: add up helps and hurts by weight; if the issues are close, the tiebreak groups decide by majority.
+  function evaluate(c, useDefault) {
+    var pro = 0, con = 0;
+    Object.keys(c.score).forEach(function (id) {
+      var w = useDefault ? (crit(id).lens ? 1 : 0) : wOf(id), v = c.score[id][0] * w;
+      if (v > 0) pro += v; else con -= v;
     });
-    return n ? { v: sc > 0 ? "yes" : sc < 0 ? "no" : "mix", why: why } : null;
+    var net = pro - con, m = pro + con ? net / (pro + con) : 0, y = 0, n = 0;
+    (CH.tiebreak || []).forEach(function (g) { var v = c.groups[g]; if (v === "YES") y++; else if (v === "NO") n++; });
+    var gSide = y > n ? "YES" : n > y ? "NO" : null, unan = y + n >= 2 && (!y || !n);
+    var r = { pro: pro, con: con, net: net };
+    if (Math.abs(net) >= 1 && Math.abs(m) >= 0.25) {
+      r.pick = net > 0 ? "YES" : "NO"; r.by = "lens";
+      var agree = gSide === r.pick;
+      r.conf = agree && (Math.abs(net) >= 2 || unan) ? "strong" : agree || (!gSide && Math.abs(net) >= 2) ? "lean" : "close";
+    } else if (gSide) { r.pick = gSide; r.by = "groups"; r.conf = unan ? "lean" : "close"; }
+    else { r.pick = "No recommendation"; r.by = "none"; r.conf = null; }
+    return r;
+  }
+  function sugg(c) { return c.score ? evaluate(c).pick : c.pick; }
+  function changedByW(c) { return !!c.score && customW() && evaluate(c).pick !== evaluate(c, true).pick; }
+  function ruleOf(c) {
+    if (c.unopposed || c.pick === "No recommendation" || c.score) return null;
+    if (/^YES on/.test(c.pick)) return "judges";
+    var ps = (c.cands || []).map(function (x) { return x.p; }).filter(Boolean);
+    if (!ps.length) return "local";
+    if (ps.indexOf("Democratic") < 0) return "nodem";
+    if (ps.indexOf("Republican") >= 0) return "dr";
+    return "same";
+  }
+  function confOf(c) {
+    if (c.score) return evaluate(c).conf;
+    if (c.conf) return c.conf;
+    var r = ruleOf(c);
+    return r === "dr" || r === "judges" ? "strong" : r === "local" && c.depth === "limited" ? "close" : r ? "lean" : null;
   }
   function notesFor(c) { return (c.me || []).filter(function (m) { return S.prof[m[0]] === m[1]; }).map(function (m) { return m[2]; }); }
   function forYou(c) {
-    var l = leanOf(c), notes = notesFor(c);
-    if (!l && !notes.length) return "";
-    return '<div class="foryou"><b class="fy-h">' + esc(t("forYou")) + "</b>" +
-      (l ? '<div class="lean ' + l.v + '">' + esc(t("lean")[l.v]) + '</div><div class="fy-why">' + esc(t("becauseOf")) + " " + esc(l.why.join(" · ")) + "</div>" : "") +
-      (notes.length ? "<ul>" + notes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+    var notes = notesFor(c);
+    if (!notes.length) return "";
+    return '<div class="foryou"><b class="fy-h">' + esc(t("forYou")) + "</b><ul>" + notes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+  }
+  function scorecard(c) {
+    var r = evaluate(c), es = S.lang === "es", rows = [], none = [];
+    CH.criteria.forEach(function (cr) {
+      var sc = c.score[cr.id], w = wOf(cr.id);
+      if (!sc) { if (cr.lens && w) none.push(es ? cr.es : cr.en); return; }
+      if (!cr.lens && !w) return;
+      var k = sc[0] > 0 ? "yes" : sc[0] < 0 ? "no" : "";
+      rows.push('<tr><td><b>' + esc(es ? cr.es : cr.en) + '</b><div class="sc-why">' + esc(rt(sc[1])) + "</div></td><td class=\"sc-eff " + k + (w ? "" : " off") + '">' + esc(t("eff")[String(sc[0])]) + (w !== 1 ? "<small>×" + w + (w ? "" : " · " + esc(t("offNote"))) + "</small>" : "") + "</td></tr>");
+    });
+    var res = r.by === "lens" ? t("byLens")(pickText(r.pick)) : r.by === "groups" ? t("byGroups")(pickText(r.pick)) : t("noCall");
+    return "<div><h3>" + esc(t("howMade")) + '</h3><p class="fine">' + esc(es ? "Efecto de votar SÍ en cada tema:" : "What a YES vote does on each issue:") + '</p><table class="scorecard">' + rows.join("") + "</table>" +
+      (none.length ? '<p class="fine">' + esc(t("noEffect")) + " " + esc(none.join(", ")) + "</p>" : "") +
+      '<div class="verdict-box"><div><b>' + esc(t("tally")(r.pro, r.con)) + "</b></div><div>" + esc(res) + "</div>" +
+      (r.conf ? '<div><span class="tag conf-' + r.conf + '">' + esc(t("conf")[r.conf]) + "</span> " + esc(t("confWhy")[r.conf]) + "</div>" : "") + "</div></div>";
   }
   function mineRow(c) {
     var opts = mineOpts(c); if (!opts.length) return "";
@@ -241,6 +323,9 @@
       h.push("<div><h3>" + esc(t("whatItDoes")) + "</h3><p>" + esc(c.what.summary) + "</p>" +
         '<div class="yn"><div class="y"><b>' + esc(t("yesMeans")) + "</b>" + esc(c.what.yes) + '</div><div class="n"><b>' + esc(t("noMeans")) + "</b>" + esc(c.what.no) + "</div><div><b>" + esc(t("cost")) + "</b>" + esc(c.what.fiscal) + "</div></div></div>");
     }
+    if (c.score) h.push(scorecard(c));
+    var rl = ruleOf(c), cfc = confOf(c);
+    if (rl) h.push('<div class="note"><b>' + esc(t("ruleH")) + ":</b> " + esc(t("rules")[rl]) + (cfc ? ' <span class="tag conf-' + cfc + '">' + esc(t("conf")[cfc]) + "</span>" : "") + "</div>");
     if (c.sides) {
       h.push('<div class="sides"><div class="side y"><h3>' + esc(t("caseYes")) + "</h3><ul>" + c.sides.yes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div><div class="side n"><h3>' + esc(t("caseNo")) + "</h3><ul>" + c.sides.no.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div></div>");
     }
@@ -250,12 +335,12 @@
       }).join("") + "</div></div>");
     }
     if (c.groups) {
-      h.push("<div><h3>" + esc(t("groupsH")) + '</h3><table class="groups">' + CH.groups.map(function (g) {
+      h.push("<div><h3>" + esc(t("groupsH")) + '</h3><p class="fine">' + esc(t("tieNote")) + '</p><table class="groups">' + CH.groups.map(function (g) {
         var v = c.groups[g.id] || "—";
         return '<tr><td><a href="' + esc(g.url) + '" target="_blank" rel="noopener">' + esc(g.n) + '</a></td><td class="gv ' + (v === "YES" ? "yes" : v === "NO" ? "no" : "") + '">' + esc(groupVal(v)) + "</td></tr>";
       }).join("") + "</table></div>");
     }
-    h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
+    if (c.why) h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
     var chosen = (c.cands || []).filter(function (x) { return x.pick; });
     var alts = (c.other || []).concat((c.cands || []).filter(function (x) { return !x.pick; }));
     if (alts.length || chosen.length) {
@@ -276,17 +361,20 @@
 
   function whyLbl(c) { return c.sides ? t("whyProp") : t("why"); }
   function card(c) {
-    var open = S.open || !!expanded[c.id], done = !!S.done[c.id], kind = pickKind(c.pick);
-    var quick = S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
+    var open = S.open || !!expanded[c.id], done = !!S.done[c.id], sp = sugg(c), kind = pickKind(sp);
+    var qb = c.quickBy && c.quickBy[sp], quick = qb ? qb[S.lang === "es" ? 1 : 0] : S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
+    var cf = confOf(c);
     var tags = [];
     if (c.part) tags.push('<span class="tag part">' + esc(t("part")(c.part)) + "</span>");
     if (c.unopposed) tags.push('<span class="tag">' + esc(t("unopposed")) + "</span>");
     else if (c.impact === "low") tags.push('<span class="tag low">' + esc(t("low")) + "</span>");
+    if (cf) tags.unshift('<span class="tag conf-' + cf + '">' + esc(t("conf")[cf]) + "</span>");
+    if (changedByW(c)) tags.unshift('<span class="tag part">' + esc(t("byWeights")) + "</span>");
     if (c.depth === "limited") tags.push('<span class="tag">' + esc(t("limited")) + "</span>");
     return '<article class="race' + (done ? " done" : "") + '" id="c-' + c.id + '">' +
       '<div class="race-main">' +
         '<div><h3 class="race-title">' + esc(c.title) + "</h3>" + (c.sub ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + "</div>" +
-        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(c.pick)) + "</span></div>" +
+        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(sp)) + "</span></div>" +
         '<p class="race-quick">' + esc(quick) + "</p>" +
         (tags.length ? '<div class="tags">' + tags.join("") + "</div>" : "") +
         forYou(c) + mineRow(c) +
@@ -378,7 +466,7 @@
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       lines.push(secName(id).toUpperCase());
-      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + finalPick(c) + (differs(c) ? " (" + t("mineCopy")(shortPick(c.pick)) + ")" : "")); });
+      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + finalPick(c) + (differs(c) ? " (" + t("mineCopy")(shortPick(sugg(c))) + ")" : "")); });
       lines.push("");
     });
     return lines.join("\n").trim();
@@ -388,7 +476,7 @@
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       h.push("<h3>" + esc(secName(id)) + "</h3><table>" + cs.map(function (c) {
-        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(mineList(c)[0] || c.pick) + '">' + esc(finalPick(c)) + (mineList(c).length ? '<div class="mine-note">' + esc(differs(c) ? t("sugWas")(shortPick(c.pick)) : t("mineTag")) + "</div>" : "") + "</td></tr>";
+        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(mineList(c)[0] || sugg(c)) + '">' + esc(finalPick(c)) + (mineList(c).length ? '<div class="mine-note">' + esc(differs(c) ? t("sugWas")(shortPick(sugg(c))) : t("mineTag")) + "</div>" : "") + "</td></tr>";
       }).join("") + "</table>");
     });
     $("#cheat-list").innerHTML = h.join("") || '<p class="empty">' + esc(t("empty")) + "</p>";
@@ -408,21 +496,23 @@
       var opts = q.opts ? q.opts.map(function (o) { return [o[0], es ? o[2] : o[1]]; }) : [["yes", t("optYes")], ["no", t("optNo")]];
       h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + "</div>" + seg("prof", q.id, opts, S.prof[q.id]) + "</div>");
     });
-    h.push('<h3 class="per-h">' + esc(t("matters")) + "</h3>");
-    CH.priorities.forEach(function (q) {
-      h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + '</div><div class="seg col" role="group">' + ["a", "b"].map(function (k) {
-        return '<button type="button" class="mchip wide" data-pri="' + q.id + '" data-v="' + k + '" aria-pressed="' + (S.pri[q.id] === k) + '">' + esc(q[k][es ? 1 : 0]) + "</button>";
-      }).join("") + "</div></div>");
-    });
-    var props = G.contests.filter(function (c) { return c.lean; }), any = props.some(leanOf);
-    if (any) {
-      h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colPri")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
-        props.map(function (c) {
-          var l = leanOf(c);
-          return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(c.pick) + '">' + esc(shortPick(c.pick)) + '</td><td class="' + (l ? l.v : "") + '">' + esc(l ? t("leanShort")[l.v] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
-        }).join("") + "</tbody></table>");
-    }
-    if (Object.keys(S.prof).length || Object.keys(S.pri).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
+    h.push('<h3 class="per-h">' + esc(t("weightsH")) + '</h3><p class="fine">' + esc(t("weightsHint")) + "</p>");
+    var wq = function (cr) {
+      return '<div class="q"><div class="q-t">' + esc(es ? cr.es : cr.en) + '</div><div class="seg">' + [0, 1, 2, 3].map(function (n) {
+        return '<button type="button" class="mchip sm" data-w="' + cr.id + '" data-v="' + n + '" aria-pressed="' + (wOf(cr.id) === n) + '">' + esc(t("wLvl")[n]) + "</button>";
+      }).join("") + "</div></div>";
+    };
+    CH.criteria.filter(function (x) { return x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
+    h.push('<p class="per-sub">' + esc(t("otherIssues")) + "</p>");
+    CH.criteria.filter(function (x) { return !x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
+    if (customW()) h.push('<button type="button" class="btn ghost" id="reset-w">' + esc(t("resetW")) + "</button>");
+    var props = G.contests.filter(function (c) { return c.score; });
+    h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colConf")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
+      props.map(function (c) {
+        var sp = sugg(c), cf = confOf(c);
+        return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(sp) + '">' + esc(shortPick(sp)) + (changedByW(c) ? " *" : "") + "</td><td>" + esc(cf ? t("conf")[cf] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
+      }).join("") + "</tbody></table>" + (props.some(changedByW) ? '<p class="fine">* ' + esc(t("byWeights")) + "</p>" : ""));
+    if (Object.keys(S.prof).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
     $("#personal-body").innerHTML = h.join("");
   }
 
@@ -563,14 +653,19 @@
       var g = e.target.closest("[data-goto]");
       if (g) { e.preventDefault(); S.q = ""; $("#q").value = ""; renderBallot(); var el = $("#c-" + g.dataset.goto); if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" }); return; }
       var b = e.target.closest("button"); if (!b) return;
-      if (b.id === "clear-ans") { S.prof = {}; S.pri = {}; }
-      else {
-        var store = b.dataset.prof ? S.prof : b.dataset.pri ? S.pri : null, key = b.dataset.prof || b.dataset.pri;
-        if (!store) return;
-        if (store[key] === b.dataset.v) delete store[key]; else store[key] = b.dataset.v;
-      }
-      var y = window.scrollY, sel = b.id === "clear-ans" ? null : '[data-' + (b.dataset.prof ? "prof" : "pri") + '="' + key + '"][data-v="' + b.dataset.v + '"]';
-      renderPersonal(); renderBallot(); save();
+      var key, kind, sel = null;
+      if (b.id === "clear-ans") S.prof = {};
+      else if (b.id === "reset-w") S.w = {};
+      else if (b.dataset.w) {
+        key = b.dataset.w; kind = "w"; var n = +b.dataset.v, def = crit(key).lens ? 1 : 0;
+        if (n === def) delete S.w[key]; else S.w[key] = n;
+      } else if (b.dataset.prof) {
+        key = b.dataset.prof; kind = "prof";
+        if (S.prof[key] === b.dataset.v) delete S.prof[key]; else S.prof[key] = b.dataset.v;
+      } else return;
+      var y = window.scrollY;
+      if (kind) sel = '[data-' + kind + '="' + key + '"][data-v="' + b.dataset.v + '"]';
+      renderPersonal(); renderBallot(); renderList(); save();
       window.scrollTo(0, y);
       if (sel) { var nb = document.querySelector("#personal-body " + sel); if (nb) nb.focus(); }
     });

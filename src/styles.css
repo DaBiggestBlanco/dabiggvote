@@ -282,3 +282,15 @@ td.yes, .gv.yes { color: var(--yes); } td.no, .gv.no { color: var(--no); }
 .seg.col { flex-direction: column; }
 .mine-note { font-size: .75rem; font-weight: 600; color: var(--muted); }
 @media print { .mine, .foryou, .personal { display: none !important; } }
+.tag.conf-strong { background: var(--yes-soft); color: var(--yes); border-color: transparent; }
+.tag.conf-lean { background: var(--name-soft); color: var(--name); border-color: transparent; }
+.tag.conf-close { background: var(--mark); color: var(--mark-ink); border-color: transparent; }
+table.scorecard { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: .9375rem; }
+.scorecard td { padding: 10px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.sc-why { color: var(--muted); font-size: .875rem; margin-top: 2px; }
+td.sc-eff { text-align: right; font-weight: 800; white-space: nowrap; padding-left: 10px; }
+td.sc-eff.off { opacity: .5; }
+td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
+.verdict-box { margin-top: 10px; background: var(--card-2); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; font-size: .9375rem; }
+.mchip.sm { min-height: 40px; padding: 4px 12px; font-size: .875rem; }
+.per-sub { font-weight: 700; color: var(--muted); margin: 8px 0 0; font-size: .9375rem; }

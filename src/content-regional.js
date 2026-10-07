@@ -34,59 +34,46 @@
   G.lens.en = G.lens.en.replace("clean air in warehouse-heavy Inland Empire communities", "clean air in neighborhoods next to freeways, ports, refineries and warehouses");
   G.lens.es = G.lens.es.replace("aire limpio en comunidades con muchas bodegas en el Inland Empire", "aire limpio en barrios junto a autopistas, puertos, refinerías y bodegas");
 
-  // Prop 1: housing bond
+  // Propositions: regional detail goes into the scorecard reasons (see content-choices.js).
   var p1 = byId("p1");
-  p1.why[0] = perCounty(
-    "Rent and home prices are the biggest squeeze on middle-class families in California, where the median home sold for about $901,000 in August 2026. This bond funds affordable rentals and a path to ownership through down-payment assistance.",
-    function (c, p) {
-      return "Rent and home prices are the biggest squeeze on middle-class families. In " + c + " County the median home sold for about " + money(p) + " in August 2026" +
-        (p < 700000 ? ", so down-payment help can put ownership within reach for families who are paying rent now." : ", which puts ownership out of reach for many working families.") +
-        " This bond funds both affordable rentals and down-payment help.";
-    });
+  p1.score.home[1] = perCounty(p1.score.home[1], function (c, p) {
+    return "In " + c + " County the median home sold for about " + money(p) + " in August 2026" +
+      (p < 700000 ? ", so down-payment help can put owning within reach for families renting now. " : ", out of reach for many working families. ") + p1.score.home[1];
+  });
   p1.src.push(CAR);
 
-  // Prop 37: loans for buyers of new homes under $1.5 million
   var p37 = byId("p37");
-  p37.why.push(perCounty(
-    "Homes must cost under $1.5 million to qualify, which covers most newly built homes in the state outside the priciest Bay Area and coastal markets.",
-    function (c, p) {
-      return p < 1100000
-        ? "In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, nearly all new homes fall under the program's $1.5 million cap, so local buyers can use it."
-        : "In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, many new homes cost more than the $1.5 million cap. The program will help fewer buyers here, but it still reaches newer condos, townhomes and homes in nearby lower-cost areas.";
-    }));
+  p37.score.home[1] = perCounty(p37.score.home[1] + " Homes must cost under about $1.5 million, which covers most new homes outside the priciest areas.", function (c, p) {
+    return p37.score.home[1] + (p < 1100000
+      ? " In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, nearly all new homes fall under the price cap."
+      : " In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, many new homes cost more than the cap, so it will help fewer buyers here.");
+  });
   p37.src.push(CAR);
 
-  // Prop 4: public campaign money
-  var p4 = byId("p4");
-  p4.why[0] = "Every dollar that goes to political campaigns is a dollar not spent on services. The state and many cities and counties are already dealing with budget gaps and federal cuts.";
-  p4.other[0].about = p4.other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-  byId("p40").other[0].about = byId("p40").other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-  byId("p41").other[0].about = byId("p41").other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-
-  // Prop 43: two-thirds vote for local special taxes
   var p43 = byId("p43");
-  p43.why[1] = {
-    all: "Communities across California depend on local measures for fire stations, 911 response, parks, roads, transit and homeless services.",
-    ie: "Fast-growing Inland Empire communities depend on local measures to build fire stations, speed up 911 response and keep up with parks and roads.",
-    la: "Los Angeles County's 2024 Measure A homelessness tax passed with about 57% of the vote. Under Prop 43's two-thirds rule, it would have failed.",
-    bay: "San Francisco's 2018 Prop C, which funds homeless housing and services, passed with 61% of the vote. Under Prop 43's two-thirds rule, it would have failed. Bay Area transit also leans on voter-approved local taxes.",
-    valley: "Valley cities and counties with tight budgets rely on local measures for police, fire and road repair. A two-thirds bar would let a small minority block them.",
-    sd: "San Diego County's 2016 Measure A for transit and roads won about 58% of the vote but failed because it needed two-thirds. Prop 43 would bring that same bar to measures voters put on the ballot themselves."
+  var base43 = p43.score.services[1];
+  p43.score.services[1] = {
+    all: base43,
+    ie: base43 + " Fast-growing Inland Empire cities rely on local measures to build fire stations and keep up with 911 response, parks and roads.",
+    la: base43 + " L.A. County's 2024 Measure A homelessness tax passed with about 57% and would have failed under a two-thirds rule.",
+    bay: base43 + " San Francisco's 2018 Prop C for homeless housing passed with 61% and would have failed under a two-thirds rule.",
+    valley: base43 + " Valley cities with tight budgets rely on local measures for police, fire and road repair.",
+    sd: base43 + " San Diego County's 2016 Measure A for transit and roads won about 58% but failed because it needed two-thirds."
   };
 
-  // Prop 45: CEQA fast-track. Regional home prices on the YES side, regional air quality on the NO side.
   var p45 = byId("p45");
-  p45.why[0] = perCounty(p45.why[0], function (c, p) {
-    return "In " + c + " County the median home sold for about " + money(p) + " in August 2026. Delays and lawsuits add years and cost to new homes, clinics and transit, and Black and Latino families pay that price.";
+  p45.score.home[1] = perCounty(p45.score.home[1], function (c, p) {
+    return p45.score.home[1] + " In " + c + " County the median home sold for about " + money(p) + " in August 2026.";
   });
-  p45.other[0].about = {
-    all: p45.other[0].about,
-    ie: "The Inland Empire breathes some of the worst ozone in the country. Clean-air and environmental-justice groups say faster review for freeway and transit projects could add pollution near homes and schools. " + p45.other[0].about,
-    la: "Neighborhoods near LA's ports, rail yards and freeways breathe the worst air in the country. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the nation's worst ozone. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    valley: "Bakersfield, Visalia and Fresno have some of the nation's worst particle pollution. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    bay: "West Oakland and Richmond already carry the Bay Area's heaviest pollution next to ports, freeways and refineries. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    sd: "Barrio Logan and National City sit beside the port, shipyards and freeways. Clean-air groups say faster review for transportation projects could add to that burden. " + p45.other[0].about
+  var base45 = p45.score.air[1];
+  p45.score.air[1] = {
+    all: base45,
+    ie: "The Inland Empire breathes some of the worst ozone in the country, so faster freeway projects matter here. " + base45,
+    la: "Neighborhoods near L.A.'s ports, rail yards and freeways breathe the worst air in the country. " + base45,
+    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the nation's worst ozone. " + base45,
+    valley: "Bakersfield, Visalia and Fresno have some of the nation's worst particle pollution. " + base45,
+    bay: "West Oakland and Richmond already carry the Bay Area's heaviest pollution next to ports and freeways. " + base45,
+    sd: "Barrio Logan and National City sit beside the port, shipyards and freeways. " + base45
   };
   p45.src.push(CAR, ALA);
 

@@ -10,8 +10,8 @@ window.GUIDE = {
   electionDate: "2026-11-03",
   updated: "2026-10-07",
   lens: {
-    en: "Every explanation weighs what matters most to middle-class Black and other minority families in California: the freedom to vote without new barriers, affordable health care, building wealth through homeownership, fair taxes for working and middle-class households, safe neighborhoods with fair policing, public schools that close achievement gaps, clean air in warehouse-heavy Inland Empire communities, and leaders who show up for our neighborhoods.",
-    es: "Cada explicación considera lo que más importa a las familias afroamericanas y de otras minorías de clase media en California: votar sin nuevas barreras, atención médica asequible, crear patrimonio con la compra de vivienda, impuestos justos para la clase trabajadora y media, barrios seguros con policía justa, escuelas públicas que cierren brechas de rendimiento, aire limpio en comunidades con muchas bodegas en el Inland Empire y líderes que den la cara por nuestros barrios."
+    en: "Every pick weighs what matters most to middle-class Black and other minority families in California: voting rights and fair representation, affordable health care, housing and homeownership, fair taxes for working and middle-class families, steady public services, strong public schools, safe neighborhoods with fair policing, clean air, and repair for harms to Black Californians. Each of these counts equally unless you change the weights.",
+    es: "Cada selección considera lo que más importa a las familias afroamericanas y de otras minorías de clase media en California: derecho al voto y representación justa, atención médica asequible, vivienda y compra de casa, impuestos justos para la clase trabajadora y media, servicios públicos estables, escuelas públicas fuertes, barrios seguros con policía justa, aire limpio y reparación de daños a los afroamericanos. Todos cuentan igual a menos que usted cambie su peso."
   },
 
   sections: [
@@ -40,15 +40,6 @@ window.GUIDE = {
       no: "The state cannot borrow this money for these programs.",
       fiscal: "About $500–600 million a year from the state budget for roughly 25 years to repay the bond."
     },
-    why: [
-      "Rent and home prices are the biggest squeeze on middle-class families in the Inland Empire. This bond funds both rentals and a path to ownership through down-payment assistance.",
-      "Homeownership is the main way Black families build wealth, and the racial homeownership gap is still wide. Down-payment help targets exactly that barrier.",
-      "It raises no taxes. It is repaid from the existing budget, like the school and water bonds voters have approved before.",
-      "No official argument against it was submitted to the state voter guide."
-    ],
-    other: [
-      { n: "NO", about: "A no vote avoids new state debt. Repayment would cost roughly $500–600 million a year for 25 years.", whyNot: "The debt cost is real. But the housing shortage costs families more every year in rent, and bonds are the normal way the state pays for long-lasting buildings." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 1", "https://voterguide.sos.ca.gov/quick-reference-guide/1.htm"]]
   },
   {
@@ -62,14 +53,6 @@ window.GUIDE = {
       no: "Existing reserve and debt-payment rules stay the same.",
       fiscal: "Higher state reserves."
     },
-    why: [
-      "When recessions hit, the first cuts land on schools, clinics and programs our communities rely on. A larger cushion protects those services.",
-      "Backed by firefighters, hospitals and educators.",
-      "Saving during surplus years is the same discipline a middle-class household uses."
-    ],
-    other: [
-      { n: "NO", about: "Opponents, led by Assemblymember David Tangipa, say reserve deposits would be excluded from the state spending limit, making taxpayer rebates less likely.", whyNot: "Taxpayer rebates under the spending limit are rare and small. A stable budget during downturns helps more families than an occasional rebate." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 2", "https://voterguide.sos.ca.gov/quick-reference-guide/2.htm"]]
   },
   {
@@ -83,19 +66,11 @@ window.GUIDE = {
       no: "Those rates expire in 2031.",
       fiscal: "Keeps $5–15 billion a year in state revenue that would otherwise go away."
     },
-    why: [
-      "It does not raise taxes on anyone. It keeps rates that have been in place for 14 years.",
-      "Almost no middle-class family earns enough to pay it. It applies only above roughly $371,000 a year.",
-      "Losing $5–15 billion a year would mean bigger classes and fewer counselors, and the schools that serve Black and Latino students tend to feel cuts first."
-    ],
-    other: [
-      { n: "NO", about: "Opponents say Californians already pay some of the nation's highest taxes and the state should fix spending before making taxes permanent.", whyNot: "Spending accountability matters, but letting this tax expire would cut schools without lowering taxes for middle-class families." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 3", "https://voterguide.sos.ca.gov/quick-reference-guide/3.htm"]]
   },
   {
     id: "p4", sec: "props", scope: "all", title: "Proposition 4", sub: "Allow public money for election campaigns",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "Would let governments spend taxpayer money on political campaigns, while services are already stretched.",
     quick_es: "Permitiría gastar dinero de los contribuyentes en campañas políticas, cuando los servicios ya están limitados.",
     what: {
@@ -104,19 +79,11 @@ window.GUIDE = {
       no: "The existing ban stays in place for the state and most local governments.",
       fiscal: "A few hundred thousand dollars a year for the state ethics agency, plus whatever each government chooses to spend on its own program."
     },
-    why: [
-      "Every dollar that goes to political campaigns is a dollar not spent on services. The state and many Inland Empire cities are already dealing with budget gaps and federal cuts.",
-      "The measure sets no cap on how much a government can spend or how many candidates can receive funds. Opponents warn that includes funding negative ads.",
-      "Programs would be designed by the same officials who benefit from them. That can tilt toward incumbents rather than newcomers from our communities."
-    ],
-    other: [
-      { n: "YES", about: "Supporters, including Californians for Fair Elections and the Riverside County Democratic Party, say California is the only state that bans public financing. They argue small-dollar matching programs help working-class and minority candidates compete without big donors.", whyNot: "The fairness goal is a good one, and this is a close call. But the measure is open-ended on cost, and it lands at a time when public dollars are tight. Keeping the ban protects service budgets until a program with firm limits is proposed." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 4", "https://voterguide.sos.ca.gov/quick-reference-guide/4.htm"], ["Riverside County Democrats prop guide (for the other side)", "https://www.riversidecountydemocrats.org/endorsements/"]]
   },
   {
     id: "p5", sec: "props", scope: "all", title: "Proposition 5", sub: "Change how statewide recall elections work",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "Keeps voters, not politicians, choosing the replacement when a statewide official is recalled.",
     quick_es: "Mantiene que los votantes, y no los políticos, elijan al reemplazo cuando se destituye a un funcionario estatal.",
     what: {
@@ -125,13 +92,6 @@ window.GUIDE = {
       no: "Recall ballots would still ask voters who should replace the official.",
       fiscal: "Unknown overall. Millions in savings or costs per recall, depending on the office."
     },
-    why: [
-      "Under a Yes, other politicians or a later election would fill the seat, and the office could sit vacant in the meantime. Keeping the current system keeps that choice with voters on the same ballot.",
-      "It changes the state constitution, so any flaw would be hard to fix."
-    ],
-    other: [
-      { n: "YES", about: "Supporters, including the League of Women Voters and California Common Cause, say it closes a loophole that lets a replacement win with a small share of the vote.", whyNot: "The plurality problem is real. But the fix shifts power away from voters, and the recall is rarely used. This guide keeps the decision with the voters." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 5", "https://voterguide.sos.ca.gov/quick-reference-guide/5.htm"]]
   },
   {
@@ -145,14 +105,6 @@ window.GUIDE = {
       no: "No new program is created.",
       fiscal: "No direct state or local cost. The bonds are repaid by borrowers, not the general fund."
     },
-    why: [
-      "It is aimed squarely at the middle class: income limits, 3% down, and the buyer must live in the home.",
-      "Owning a home is the main way families build wealth to pass on, and the down payment is the biggest hurdle for Black and first-generation buyers.",
-      "Buyers repay the bonds, so taxpayers carry no direct cost. No argument against it was submitted to the state voter guide."
-    ],
-    other: [
-      { n: "NO", about: "A no vote avoids creating a large new state lending program.", whyNot: "No organized opposition exists, and the program is designed to pay for itself." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 37", "https://voterguide.sos.ca.gov/quick-reference-guide/37.htm"]]
   },
   {
@@ -166,14 +118,6 @@ window.GUIDE = {
       no: "The state does not borrow for it.",
       fiscal: "About $500–600 million a year for about 20 years, possibly offset in part if the research earns revenue."
     },
-    why: [
-      "Black Americans die at higher rates from several diseases this research targets, including some cancers, heart disease and Alzheimer's.",
-      "The measure requires a 20% discount on resulting treatments and independent audits.",
-      "Supported by patient groups such as the Michael J. Fox Foundation and the American Nurses Association California."
-    ],
-    other: [
-      { n: "NO", about: "A Stanford medical researcher argues it locks in decades of debt and steers half the money to one institute, when research should be funded through the regular budget.", whyNot: "The concern about concentrating money in one institute is fair. But the health benefits and the drug-price discount outweigh it for families facing these diseases." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 38", "https://voterguide.sos.ca.gov/quick-reference-guide/38.htm"]]
   },
   {
@@ -187,20 +131,11 @@ window.GUIDE = {
       no: "Voter identity continues to be confirmed by signature, as it is now.",
       fiscal: "Tens of millions to low hundreds of millions of dollars a year to carry out."
     },
-    why: [
-      "Studies consistently find Black, elderly, low-income and young voters are less likely to have a current government ID. This would fall hardest on them.",
-      "A missing or mistyped number on the envelope would void an otherwise valid mail ballot, and most Californians vote by mail.",
-      "California already checks every mail ballot signature and lets voters fix problems. It would cost up to hundreds of millions a year to solve a problem the state has not found at any real scale.",
-      "Because it is a constitutional amendment, it would be very hard to undo."
-    ],
-    other: [
-      { n: "YES", about: "Supporters (Californians for Voter ID) say voter ID has support across parties and would increase trust in elections.", whyNot: "Trust matters, but this measure's cost falls on eligible voters who lose their ballots. Better ID access, not stricter ballot rejection, is the fair way to build trust." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 39", "https://voterguide.sos.ca.gov/quick-reference-guide/39.htm"]]
   },
   {
     id: "p40", sec: "props", scope: "all", title: "Proposition 40", sub: "One-time 5% tax on billionaires' wealth",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "A one-time wealth tax that could push billionaires out and shrink the income-tax base the budget relies on.",
     quick_es: "Un impuesto único al patrimonio que podría ahuyentar a multimillonarios y reducir los ingresos que sostienen el presupuesto.",
     what: {
@@ -209,20 +144,11 @@ window.GUIDE = {
       no: "No wealth tax.",
       fiscal: "Tens of billions of dollars one time, spread over several years. The state's own analysts also project a possible ongoing loss of up to $1 billion a year in income taxes."
     },
-    why: [
-      "It is a one-time payment, so it cannot permanently fix health care funding. The state's own analysts project an ongoing loss in income-tax revenue if very wealthy residents leave.",
-      "California's budget already depends heavily on a small number of top earners. When revenue swings, the cuts land on services middle-class families use.",
-      "Taxing wealth on paper, like stock in a private company, is new and complicated, and would face years of court fights.",
-      "Gubernatorial candidate Xavier Becerra, whom this guide supports, also opposes the billionaire tax."
-    ],
-    other: [
-      { n: "YES", about: "Backed by SEIU-UHW, Sen. Bernie Sanders and the Riverside County Democratic Party. Supporters say federal cuts took coverage from more than a million Californians, and billionaires, not the middle class, should cover the gap.", whyNot: "The health-care losses are real and serious. But a one-time tax that may shrink future revenue is a shaky way to fund ongoing care. Keeping the state's tax base stable protects middle-class services over the long run." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 40", "https://voterguide.sos.ca.gov/quick-reference-guide/40.htm"], ["CalMatters: Becerra's position on the wealth tax", "https://calmatters.org/california-voter-guide-2026/governor/"]]
   },
   {
     id: "p41", sec: "props", scope: "all", title: "Proposition 41", sub: "Audits and spending-limit rules for new state taxes",
-    pick: "YES", pickType: "slate",
+    pick: "NO", pickType: "slate",
     quick: "Makes new special taxes pass independent audits and follow the state spending limit.",
     quick_es: "Obliga a que los nuevos impuestos especiales pasen auditorías independientes y respeten el límite de gasto estatal.",
     what: {
@@ -231,14 +157,6 @@ window.GUIDE = {
       no: "Current rules stay as they are.",
       fiscal: "Unknown. It depends on future decisions by voters and lawmakers."
     },
-    why: [
-      "Families are asked to approve tax after tax for homelessness and other programs, often with little to show. Independent audits give voters proof before and after.",
-      "It keeps new taxes under the same spending limit voters already approved, instead of letting them go around it.",
-      "It pairs with this guide's No on 40. If the billionaire tax passed, this measure would likely cancel it, because that tax exempts its revenue from the limit."
-    ],
-    other: [
-      { n: "NO", about: "SEIU-UHW and the Riverside County Democratic Party call it a billionaire-funded move to undo the billionaire tax, and they point out it would cancel that tax.", whyNot: "That effect on Prop 40 is real and is part of why this guide supports it. The audit requirement also stands on its own merits." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 41", "https://voterguide.sos.ca.gov/quick-reference-guide/41.htm"]]
   },
   {
@@ -252,14 +170,6 @@ window.GUIDE = {
       no: "The state keeps the option to create such taxes in the future, with voter or legislative approval.",
       fiscal: "Tax revenue may not grow as much in the future."
     },
-    why: [
-      "No one is proposing to tax ordinary retirement accounts. Those are already protected by practice and politics, so the ban solves a problem families don't have.",
-      "Locking a permanent ban into the constitution takes choices away from future voters. This guide opposes a one-time wealth tax now (Prop 40) but does not want to ban every future option.",
-      "Unlike Prop 41, which adds accountability, this is a flat prohibition."
-    ],
-    other: [
-      { n: "YES", about: "Supported by the California Professional Firefighters, the State Building and Construction Trades Council, and AMVETS. They say it protects workers' savings from being taxed twice.", whyNot: "Protecting savings is a fair goal, but a permanent constitutional ban goes much further than needed." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 42", "https://voterguide.sos.ca.gov/quick-reference-guide/42.htm"]]
   },
   {
@@ -273,14 +183,6 @@ window.GUIDE = {
       no: "Voters can keep approving them by majority vote.",
       fiscal: "Local tax revenue may grow less in the future."
     },
-    why: [
-      "Majority rule matters. A measure with 66% support could still fail.",
-      "Growing Inland Empire communities depend on local measures for fire stations, 911 response, parks and roads.",
-      "Opposed by the California Professional Firefighters, the California Federation of Teachers and nurses."
-    ],
-    other: [
-      { n: "YES", about: "The Howard Jarvis Taxpayers Association, CalTax and the California Hispanic Chambers of Commerce say it restores Prop 13's two-thirds rule and closes a loophole used to pass earmarked taxes.", whyNot: "Voters already get the final say on every local tax. Raising the bar to two-thirds hands a veto to a minority." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 43", "https://voterguide.sos.ca.gov/quick-reference-guide/43.htm"]]
   },
   {
@@ -294,14 +196,6 @@ window.GUIDE = {
       no: "No new requirement.",
       fiscal: "State costs in the low tens of millions of dollars a year, covered by fees."
     },
-    why: [
-      "Community clinics are where many Black, Latino and uninsured families get care, especially after federal Medicaid cuts.",
-      "A rigid spending formula could force clinics to cut sites or services. The California Medical Association, American Academy of Pediatrics California, California Academy of Family Physicians and school nurses all oppose it.",
-      "It is sponsored by SEIU-UHW, the same union behind the Prop 40 wealth tax, not by the doctors and nurses who work in these clinics."
-    ],
-    other: [
-      { n: "YES", about: "Supporters (SEIU-UHW) say it keeps health care dollars going to patients instead of executive pay and overhead.", whyNot: "Accountability is good, but the doctors who work in these clinics say this rule would shrink care." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 44", "https://voterguide.sos.ca.gov/quick-reference-guide/44.htm"]]
   },
   {
@@ -309,22 +203,12 @@ window.GUIDE = {
     pick: "YES", pickType: "slate",
     quick: "A close call. Speeds up approvals for homes, clinics, schools, transit, water and clean energy, but trims public input.",
     quick_es: "Decisión reñida. Acelera la aprobación de viviendas, clínicas, escuelas, transporte, agua y energía limpia, pero reduce la participación pública.",
-    note: "Close call. The NAACP California/Hawaii and the California Republican Party support it. The California Democratic Party, the League of Women Voters and clean-air groups oppose it. Read both sides below.",
     what: {
       summary: "Creates an optional faster track under the California Environmental Quality Act (CEQA) for housing, water, clean energy, health facilities, fire and police stations, wildfire prevention, broadband, schools and transportation. It sets deadlines for reviews, permits and lawsuits, limits comment periods and project alternatives, and narrows what courts can stop.",
       yes: "Eligible projects can choose faster review with tighter deadlines and narrower court challenges.",
       no: "Projects keep today's review and court process.",
       fiscal: "Likely high tens of millions of dollars a year at first, possibly over $100 million, partly covered by fees. Long-term effects uncertain, positive or negative."
     },
-    why: [
-      "Black and Latino families pay when affordable homes never break ground, clinics never open and transit stalls. Delays and lawsuits add years and cost to exactly those projects.",
-      "The NAACP California/Hawaii State Conference supports it, while insisting it be carried out with early community input and attention to neighborhoods that already carry heavy pollution.",
-      "It doesn't exempt any project from environmental review or other environmental laws, and builders choose whether to use it. Warehouses, refineries and other industrial projects aren't eligible.",
-      "This guide first leaned No, mainly over warehouse pollution. The official guide shows warehouses aren't covered, so that concern doesn't apply."
-    ],
-    other: [
-      { n: "NO", about: "Clean-air, environmental-justice and nurses' groups, the California Democratic Party and the League of Women Voters say it weakens CEQA's protections and public input, and that its utility and business funders gain more than families. The state's analysts say it could lead to approval of projects with negative environmental impacts.", whyNot: "These risks are real, especially for neighborhoods near freeways, since transportation projects qualify. But the projects it covers are ones our communities badly need, CEQA still applies, and civil-rights leaders judged the cost of delay to be higher. Watch how it's carried out." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 45", "https://voterguide.sos.ca.gov/quick-reference-guide/45.htm"], ["NAACP California/Hawaii: Where we stand on every 2026 ballot measure", "https://cahinaacp.org/our-vote-our-voice-where-we-stand-on-every-2026-ballot-measure/"]]
   },
 

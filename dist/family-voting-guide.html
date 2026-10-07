@@ -294,6 +294,18 @@ td.yes, .gv.yes { color: var(--yes); } td.no, .gv.no { color: var(--no); }
 .seg.col { flex-direction: column; }
 .mine-note { font-size: .75rem; font-weight: 600; color: var(--muted); }
 @media print { .mine, .foryou, .personal { display: none !important; } }
+.tag.conf-strong { background: var(--yes-soft); color: var(--yes); border-color: transparent; }
+.tag.conf-lean { background: var(--name-soft); color: var(--name); border-color: transparent; }
+.tag.conf-close { background: var(--mark); color: var(--mark-ink); border-color: transparent; }
+table.scorecard { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: .9375rem; }
+.scorecard td { padding: 10px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.sc-why { color: var(--muted); font-size: .875rem; margin-top: 2px; }
+td.sc-eff { text-align: right; font-weight: 800; white-space: nowrap; padding-left: 10px; }
+td.sc-eff.off { opacity: .5; }
+td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
+.verdict-box { margin-top: 10px; background: var(--card-2); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; font-size: .9375rem; }
+.mchip.sm { min-height: 40px; padding: 4px 12px; font-size: .875rem; }
+.per-sub { font-weight: 700; color: var(--muted); margin: 8px 0 0; font-size: .9375rem; }
 
 </style>
 
@@ -450,20 +462,28 @@ td.yes, .gv.yes { color: var(--yes); } td.no, .gv.no { color: var(--no); }
     <div class="view-head"><h1 id="h-about" data-t="aboutTitle">How this guide picks</h1></div>
     <div class="card prose" data-lang="en">
       <p id="lens-en"></p>
-      <h2>Suggested picks, and your own</h2>
+      <h2>How propositions are decided</h2>
+      <ol>
+        <li><b>Score the issues.</b> For each measure, the guide scores what a YES vote does on each issue above, from "hurts a lot" to "helps a lot," using facts from the official state voter guide. Every issue counts the same.</li>
+        <li><b>Add them up.</b> If the helps clearly outweigh the hurts, or the other way around, that's the suggested pick.</li>
+        <li><b>Break close calls with trusted groups.</b> If the issues are close, the majority of the NAACP California/Hawaii, the California Democratic Party and the League of Women Voters decides.</li>
+        <li><b>Say how sure it is.</b> <span class="tag conf-strong">Strong pick</span> means the issues clearly point one way and most groups agree. <span class="tag conf-lean">Lean</span> means the margin is small or the groups split. <span class="tag conf-close">Close call</span> means the issues are nearly even or the groups disagree.</li>
+      </ol>
+      <p>Open <b>Details & both sides</b> on any measure to see the full scorecard. Under <b>Tailor it to you</b> you can change how much each issue counts, or turn on issues like lower taxes or less state borrowing. The suggested pick updates to match your weights.</p>
+      <h2>How candidate races are decided</h2>
       <ul>
-        <li>Every race shows a <b>suggested pick</b> with the reasons behind it. Tap <b>Details</b> to see the full research, including the strongest case on each side of every proposition, common claims checked against the official state voter guide, and what major groups recommend.</li>
-        <li>Disagree? Tap your own choice under <b>My pick</b>. Your list and the copy-as-text button use your picks. Nothing is sent anywhere; picks stay on your device.</li>
-        <li>Optional: answer a few questions under <b>Tailor it to you</b> to see how each measure could affect your household and which side fits your priorities. You never need to answer anything to use the guide.</li>
-        <li>Propositions weigh the NAACP California/Hawaii State Conference's recommendation heavily, along with the official analysis. Prop 45 was re-examined against the official guide on Oct. 7 and changed from No to Yes. It's still a close call.</li>
-      </ul>
-      <h2>How close races are decided</h2>
-      <ul>
-        <li><b>Democrat vs. Republican:</b> the Democrat, unless the Republican's record is clearly better for our families. Each race explains why.</li>
+        <li><b>Democrat vs. Republican:</b> the Democrat, unless the Republican's record is clearly better on the issues above. Each race explains why.</li>
         <li><b>Two candidates from the same party:</b> first, support from the Legislative Black Caucus, NAACP, grassroots community groups and Black nonprofits. Next, the California Democratic Party's endorsement. Then the more practical, budget-minded candidate. Then a Black candidate when it's still close, and finally experience.</li>
-        <li><b>No Democrat on the ballot:</b> the candidate closer to the priorities above. These races are marked <span class="tag low">Low impact</span> when the result is nearly certain.</li>
+        <li><b>No Democrat on the ballot:</b> the candidate closer to the issues above.</li>
         <li><b>Anything clearly good or bad for the Black community</b>, such as reparations, police accountability and voting access, can decide a race on its own.</li>
       </ul>
+      <h2>Your own picks</h2>
+      <ul>
+        <li>Disagree? Tap your own choice under <b>My pick</b> on any race. Your list and copied text use it. Nothing is sent anywhere.</li>
+        <li>Optional questions under <b>Tailor it to you</b> add notes on how a measure could affect your household. You never need to answer anything.</li>
+      </ul>
+      <h2>When things change</h2>
+      <p>Picks follow these rules, so they're re-run whenever new official information, endorsements or records come out. The date below shows the last check.</p>
       <h2>What the tags mean</h2>
       <ul>
         <li><span class="tag low">Low impact</span> The result is nearly certain, so your vote mostly shows what you care about.</li>
@@ -488,11 +508,18 @@ td.yes, .gv.yes { color: var(--yes); } td.no, .gv.no { color: var(--no); }
         <li><b>Sin demócrata en la boleta:</b> el candidato más cercano a estas prioridades. Se marcan <span class="tag low">Bajo impacto</span> cuando el resultado es casi seguro.</li>
         <li><b>Lo que claramente ayuda o perjudica a la comunidad afroamericana</b>, como reparaciones, rendición de cuentas policial y acceso al voto, puede decidir una contienda por sí solo.</li>
       </ul>
-      <h2>Selecciones sugeridas y las suyas</h2>
+      <h2>Cómo se deciden las proposiciones</h2>
+      <ol>
+        <li><b>Calificar los temas.</b> Para cada medida, la guía califica lo que hace un voto SÍ en cada tema, de "perjudica mucho" a "ayuda mucho", con datos de la guía oficial del estado. Todos los temas cuentan igual.</li>
+        <li><b>Sumar.</b> Si lo que ayuda supera claramente a lo que perjudica, o al revés, esa es la selección sugerida.</li>
+        <li><b>Desempatar con grupos de confianza.</b> Si los temas están parejos, decide la mayoría de la NAACP California/Hawái, el Partido Demócrata de California y la Liga de Mujeres Votantes.</li>
+        <li><b>Decir qué tan segura es.</b> <span class="tag conf-strong">Selección firme</span>, <span class="tag conf-lean">Inclinación</span> o <span class="tag conf-close">Reñida</span>.</li>
+      </ol>
+      <p>Abra <b>Detalles y ambos lados</b> para ver la calificación completa. En <b>Personalícelo</b> puede cambiar cuánto cuenta cada tema; la selección sugerida se ajusta a sus pesos.</p>
+      <h2>Sus propias selecciones</h2>
       <ul>
-        <li>Cada contienda muestra una <b>selección sugerida</b> con sus razones. Toque <b>Detalles</b> para ver la investigación completa: los mejores argumentos de cada lado de cada proposición, afirmaciones comunes verificadas con la guía oficial del estado y lo que recomiendan grupos importantes.</li>
-        <li>¿No está de acuerdo? Toque su propia opción en <b>Mi selección</b>. Su lista y el botón de copiar usan sus selecciones, que se quedan en su dispositivo.</li>
-        <li>Opcional: responda algunas preguntas en <b>Personalícelo</b> para ver cómo le afectaría cada medida y qué lado coincide con sus prioridades. No necesita responder nada para usar la guía.</li>
+        <li>Toque su propia opción en <b>Mi selección</b>. Su lista y el texto copiado la usan. No se envía nada.</li>
+        <li>Las preguntas opcionales en <b>Personalícelo</b> agregan notas sobre cómo le afectaría una medida. No necesita responder nada.</li>
       </ul>
       <h2>Bueno saber</h2>
       <ul>
@@ -528,8 +555,8 @@ window.GUIDE = {
   electionDate: "2026-11-03",
   updated: "2026-10-07",
   lens: {
-    en: "Every explanation weighs what matters most to middle-class Black and other minority families in California: the freedom to vote without new barriers, affordable health care, building wealth through homeownership, fair taxes for working and middle-class households, safe neighborhoods with fair policing, public schools that close achievement gaps, clean air in warehouse-heavy Inland Empire communities, and leaders who show up for our neighborhoods.",
-    es: "Cada explicación considera lo que más importa a las familias afroamericanas y de otras minorías de clase media en California: votar sin nuevas barreras, atención médica asequible, crear patrimonio con la compra de vivienda, impuestos justos para la clase trabajadora y media, barrios seguros con policía justa, escuelas públicas que cierren brechas de rendimiento, aire limpio en comunidades con muchas bodegas en el Inland Empire y líderes que den la cara por nuestros barrios."
+    en: "Every pick weighs what matters most to middle-class Black and other minority families in California: voting rights and fair representation, affordable health care, housing and homeownership, fair taxes for working and middle-class families, steady public services, strong public schools, safe neighborhoods with fair policing, clean air, and repair for harms to Black Californians. Each of these counts equally unless you change the weights.",
+    es: "Cada selección considera lo que más importa a las familias afroamericanas y de otras minorías de clase media en California: derecho al voto y representación justa, atención médica asequible, vivienda y compra de casa, impuestos justos para la clase trabajadora y media, servicios públicos estables, escuelas públicas fuertes, barrios seguros con policía justa, aire limpio y reparación de daños a los afroamericanos. Todos cuentan igual a menos que usted cambie su peso."
   },
 
   sections: [
@@ -558,15 +585,6 @@ window.GUIDE = {
       no: "The state cannot borrow this money for these programs.",
       fiscal: "About $500–600 million a year from the state budget for roughly 25 years to repay the bond."
     },
-    why: [
-      "Rent and home prices are the biggest squeeze on middle-class families in the Inland Empire. This bond funds both rentals and a path to ownership through down-payment assistance.",
-      "Homeownership is the main way Black families build wealth, and the racial homeownership gap is still wide. Down-payment help targets exactly that barrier.",
-      "It raises no taxes. It is repaid from the existing budget, like the school and water bonds voters have approved before.",
-      "No official argument against it was submitted to the state voter guide."
-    ],
-    other: [
-      { n: "NO", about: "A no vote avoids new state debt. Repayment would cost roughly $500–600 million a year for 25 years.", whyNot: "The debt cost is real. But the housing shortage costs families more every year in rent, and bonds are the normal way the state pays for long-lasting buildings." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 1", "https://voterguide.sos.ca.gov/quick-reference-guide/1.htm"]]
   },
   {
@@ -580,14 +598,6 @@ window.GUIDE = {
       no: "Existing reserve and debt-payment rules stay the same.",
       fiscal: "Higher state reserves."
     },
-    why: [
-      "When recessions hit, the first cuts land on schools, clinics and programs our communities rely on. A larger cushion protects those services.",
-      "Backed by firefighters, hospitals and educators.",
-      "Saving during surplus years is the same discipline a middle-class household uses."
-    ],
-    other: [
-      { n: "NO", about: "Opponents, led by Assemblymember David Tangipa, say reserve deposits would be excluded from the state spending limit, making taxpayer rebates less likely.", whyNot: "Taxpayer rebates under the spending limit are rare and small. A stable budget during downturns helps more families than an occasional rebate." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 2", "https://voterguide.sos.ca.gov/quick-reference-guide/2.htm"]]
   },
   {
@@ -601,19 +611,11 @@ window.GUIDE = {
       no: "Those rates expire in 2031.",
       fiscal: "Keeps $5–15 billion a year in state revenue that would otherwise go away."
     },
-    why: [
-      "It does not raise taxes on anyone. It keeps rates that have been in place for 14 years.",
-      "Almost no middle-class family earns enough to pay it. It applies only above roughly $371,000 a year.",
-      "Losing $5–15 billion a year would mean bigger classes and fewer counselors, and the schools that serve Black and Latino students tend to feel cuts first."
-    ],
-    other: [
-      { n: "NO", about: "Opponents say Californians already pay some of the nation's highest taxes and the state should fix spending before making taxes permanent.", whyNot: "Spending accountability matters, but letting this tax expire would cut schools without lowering taxes for middle-class families." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 3", "https://voterguide.sos.ca.gov/quick-reference-guide/3.htm"]]
   },
   {
     id: "p4", sec: "props", scope: "all", title: "Proposition 4", sub: "Allow public money for election campaigns",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "Would let governments spend taxpayer money on political campaigns, while services are already stretched.",
     quick_es: "Permitiría gastar dinero de los contribuyentes en campañas políticas, cuando los servicios ya están limitados.",
     what: {
@@ -622,19 +624,11 @@ window.GUIDE = {
       no: "The existing ban stays in place for the state and most local governments.",
       fiscal: "A few hundred thousand dollars a year for the state ethics agency, plus whatever each government chooses to spend on its own program."
     },
-    why: [
-      "Every dollar that goes to political campaigns is a dollar not spent on services. The state and many Inland Empire cities are already dealing with budget gaps and federal cuts.",
-      "The measure sets no cap on how much a government can spend or how many candidates can receive funds. Opponents warn that includes funding negative ads.",
-      "Programs would be designed by the same officials who benefit from them. That can tilt toward incumbents rather than newcomers from our communities."
-    ],
-    other: [
-      { n: "YES", about: "Supporters, including Californians for Fair Elections and the Riverside County Democratic Party, say California is the only state that bans public financing. They argue small-dollar matching programs help working-class and minority candidates compete without big donors.", whyNot: "The fairness goal is a good one, and this is a close call. But the measure is open-ended on cost, and it lands at a time when public dollars are tight. Keeping the ban protects service budgets until a program with firm limits is proposed." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 4", "https://voterguide.sos.ca.gov/quick-reference-guide/4.htm"], ["Riverside County Democrats prop guide (for the other side)", "https://www.riversidecountydemocrats.org/endorsements/"]]
   },
   {
     id: "p5", sec: "props", scope: "all", title: "Proposition 5", sub: "Change how statewide recall elections work",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "Keeps voters, not politicians, choosing the replacement when a statewide official is recalled.",
     quick_es: "Mantiene que los votantes, y no los políticos, elijan al reemplazo cuando se destituye a un funcionario estatal.",
     what: {
@@ -643,13 +637,6 @@ window.GUIDE = {
       no: "Recall ballots would still ask voters who should replace the official.",
       fiscal: "Unknown overall. Millions in savings or costs per recall, depending on the office."
     },
-    why: [
-      "Under a Yes, other politicians or a later election would fill the seat, and the office could sit vacant in the meantime. Keeping the current system keeps that choice with voters on the same ballot.",
-      "It changes the state constitution, so any flaw would be hard to fix."
-    ],
-    other: [
-      { n: "YES", about: "Supporters, including the League of Women Voters and California Common Cause, say it closes a loophole that lets a replacement win with a small share of the vote.", whyNot: "The plurality problem is real. But the fix shifts power away from voters, and the recall is rarely used. This guide keeps the decision with the voters." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 5", "https://voterguide.sos.ca.gov/quick-reference-guide/5.htm"]]
   },
   {
@@ -663,14 +650,6 @@ window.GUIDE = {
       no: "No new program is created.",
       fiscal: "No direct state or local cost. The bonds are repaid by borrowers, not the general fund."
     },
-    why: [
-      "It is aimed squarely at the middle class: income limits, 3% down, and the buyer must live in the home.",
-      "Owning a home is the main way families build wealth to pass on, and the down payment is the biggest hurdle for Black and first-generation buyers.",
-      "Buyers repay the bonds, so taxpayers carry no direct cost. No argument against it was submitted to the state voter guide."
-    ],
-    other: [
-      { n: "NO", about: "A no vote avoids creating a large new state lending program.", whyNot: "No organized opposition exists, and the program is designed to pay for itself." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 37", "https://voterguide.sos.ca.gov/quick-reference-guide/37.htm"]]
   },
   {
@@ -684,14 +663,6 @@ window.GUIDE = {
       no: "The state does not borrow for it.",
       fiscal: "About $500–600 million a year for about 20 years, possibly offset in part if the research earns revenue."
     },
-    why: [
-      "Black Americans die at higher rates from several diseases this research targets, including some cancers, heart disease and Alzheimer's.",
-      "The measure requires a 20% discount on resulting treatments and independent audits.",
-      "Supported by patient groups such as the Michael J. Fox Foundation and the American Nurses Association California."
-    ],
-    other: [
-      { n: "NO", about: "A Stanford medical researcher argues it locks in decades of debt and steers half the money to one institute, when research should be funded through the regular budget.", whyNot: "The concern about concentrating money in one institute is fair. But the health benefits and the drug-price discount outweigh it for families facing these diseases." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 38", "https://voterguide.sos.ca.gov/quick-reference-guide/38.htm"]]
   },
   {
@@ -705,20 +676,11 @@ window.GUIDE = {
       no: "Voter identity continues to be confirmed by signature, as it is now.",
       fiscal: "Tens of millions to low hundreds of millions of dollars a year to carry out."
     },
-    why: [
-      "Studies consistently find Black, elderly, low-income and young voters are less likely to have a current government ID. This would fall hardest on them.",
-      "A missing or mistyped number on the envelope would void an otherwise valid mail ballot, and most Californians vote by mail.",
-      "California already checks every mail ballot signature and lets voters fix problems. It would cost up to hundreds of millions a year to solve a problem the state has not found at any real scale.",
-      "Because it is a constitutional amendment, it would be very hard to undo."
-    ],
-    other: [
-      { n: "YES", about: "Supporters (Californians for Voter ID) say voter ID has support across parties and would increase trust in elections.", whyNot: "Trust matters, but this measure's cost falls on eligible voters who lose their ballots. Better ID access, not stricter ballot rejection, is the fair way to build trust." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 39", "https://voterguide.sos.ca.gov/quick-reference-guide/39.htm"]]
   },
   {
     id: "p40", sec: "props", scope: "all", title: "Proposition 40", sub: "One-time 5% tax on billionaires' wealth",
-    pick: "NO", pickType: "slate",
+    pick: "YES", pickType: "slate",
     quick: "A one-time wealth tax that could push billionaires out and shrink the income-tax base the budget relies on.",
     quick_es: "Un impuesto único al patrimonio que podría ahuyentar a multimillonarios y reducir los ingresos que sostienen el presupuesto.",
     what: {
@@ -727,20 +689,11 @@ window.GUIDE = {
       no: "No wealth tax.",
       fiscal: "Tens of billions of dollars one time, spread over several years. The state's own analysts also project a possible ongoing loss of up to $1 billion a year in income taxes."
     },
-    why: [
-      "It is a one-time payment, so it cannot permanently fix health care funding. The state's own analysts project an ongoing loss in income-tax revenue if very wealthy residents leave.",
-      "California's budget already depends heavily on a small number of top earners. When revenue swings, the cuts land on services middle-class families use.",
-      "Taxing wealth on paper, like stock in a private company, is new and complicated, and would face years of court fights.",
-      "Gubernatorial candidate Xavier Becerra, whom this guide supports, also opposes the billionaire tax."
-    ],
-    other: [
-      { n: "YES", about: "Backed by SEIU-UHW, Sen. Bernie Sanders and the Riverside County Democratic Party. Supporters say federal cuts took coverage from more than a million Californians, and billionaires, not the middle class, should cover the gap.", whyNot: "The health-care losses are real and serious. But a one-time tax that may shrink future revenue is a shaky way to fund ongoing care. Keeping the state's tax base stable protects middle-class services over the long run." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 40", "https://voterguide.sos.ca.gov/quick-reference-guide/40.htm"], ["CalMatters: Becerra's position on the wealth tax", "https://calmatters.org/california-voter-guide-2026/governor/"]]
   },
   {
     id: "p41", sec: "props", scope: "all", title: "Proposition 41", sub: "Audits and spending-limit rules for new state taxes",
-    pick: "YES", pickType: "slate",
+    pick: "NO", pickType: "slate",
     quick: "Makes new special taxes pass independent audits and follow the state spending limit.",
     quick_es: "Obliga a que los nuevos impuestos especiales pasen auditorías independientes y respeten el límite de gasto estatal.",
     what: {
@@ -749,14 +702,6 @@ window.GUIDE = {
       no: "Current rules stay as they are.",
       fiscal: "Unknown. It depends on future decisions by voters and lawmakers."
     },
-    why: [
-      "Families are asked to approve tax after tax for homelessness and other programs, often with little to show. Independent audits give voters proof before and after.",
-      "It keeps new taxes under the same spending limit voters already approved, instead of letting them go around it.",
-      "It pairs with this guide's No on 40. If the billionaire tax passed, this measure would likely cancel it, because that tax exempts its revenue from the limit."
-    ],
-    other: [
-      { n: "NO", about: "SEIU-UHW and the Riverside County Democratic Party call it a billionaire-funded move to undo the billionaire tax, and they point out it would cancel that tax.", whyNot: "That effect on Prop 40 is real and is part of why this guide supports it. The audit requirement also stands on its own merits." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 41", "https://voterguide.sos.ca.gov/quick-reference-guide/41.htm"]]
   },
   {
@@ -770,14 +715,6 @@ window.GUIDE = {
       no: "The state keeps the option to create such taxes in the future, with voter or legislative approval.",
       fiscal: "Tax revenue may not grow as much in the future."
     },
-    why: [
-      "No one is proposing to tax ordinary retirement accounts. Those are already protected by practice and politics, so the ban solves a problem families don't have.",
-      "Locking a permanent ban into the constitution takes choices away from future voters. This guide opposes a one-time wealth tax now (Prop 40) but does not want to ban every future option.",
-      "Unlike Prop 41, which adds accountability, this is a flat prohibition."
-    ],
-    other: [
-      { n: "YES", about: "Supported by the California Professional Firefighters, the State Building and Construction Trades Council, and AMVETS. They say it protects workers' savings from being taxed twice.", whyNot: "Protecting savings is a fair goal, but a permanent constitutional ban goes much further than needed." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 42", "https://voterguide.sos.ca.gov/quick-reference-guide/42.htm"]]
   },
   {
@@ -791,14 +728,6 @@ window.GUIDE = {
       no: "Voters can keep approving them by majority vote.",
       fiscal: "Local tax revenue may grow less in the future."
     },
-    why: [
-      "Majority rule matters. A measure with 66% support could still fail.",
-      "Growing Inland Empire communities depend on local measures for fire stations, 911 response, parks and roads.",
-      "Opposed by the California Professional Firefighters, the California Federation of Teachers and nurses."
-    ],
-    other: [
-      { n: "YES", about: "The Howard Jarvis Taxpayers Association, CalTax and the California Hispanic Chambers of Commerce say it restores Prop 13's two-thirds rule and closes a loophole used to pass earmarked taxes.", whyNot: "Voters already get the final say on every local tax. Raising the bar to two-thirds hands a veto to a minority." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 43", "https://voterguide.sos.ca.gov/quick-reference-guide/43.htm"]]
   },
   {
@@ -812,14 +741,6 @@ window.GUIDE = {
       no: "No new requirement.",
       fiscal: "State costs in the low tens of millions of dollars a year, covered by fees."
     },
-    why: [
-      "Community clinics are where many Black, Latino and uninsured families get care, especially after federal Medicaid cuts.",
-      "A rigid spending formula could force clinics to cut sites or services. The California Medical Association, American Academy of Pediatrics California, California Academy of Family Physicians and school nurses all oppose it.",
-      "It is sponsored by SEIU-UHW, the same union behind the Prop 40 wealth tax, not by the doctors and nurses who work in these clinics."
-    ],
-    other: [
-      { n: "YES", about: "Supporters (SEIU-UHW) say it keeps health care dollars going to patients instead of executive pay and overhead.", whyNot: "Accountability is good, but the doctors who work in these clinics say this rule would shrink care." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 44", "https://voterguide.sos.ca.gov/quick-reference-guide/44.htm"]]
   },
   {
@@ -827,22 +748,12 @@ window.GUIDE = {
     pick: "YES", pickType: "slate",
     quick: "A close call. Speeds up approvals for homes, clinics, schools, transit, water and clean energy, but trims public input.",
     quick_es: "Decisión reñida. Acelera la aprobación de viviendas, clínicas, escuelas, transporte, agua y energía limpia, pero reduce la participación pública.",
-    note: "Close call. The NAACP California/Hawaii and the California Republican Party support it. The California Democratic Party, the League of Women Voters and clean-air groups oppose it. Read both sides below.",
     what: {
       summary: "Creates an optional faster track under the California Environmental Quality Act (CEQA) for housing, water, clean energy, health facilities, fire and police stations, wildfire prevention, broadband, schools and transportation. It sets deadlines for reviews, permits and lawsuits, limits comment periods and project alternatives, and narrows what courts can stop.",
       yes: "Eligible projects can choose faster review with tighter deadlines and narrower court challenges.",
       no: "Projects keep today's review and court process.",
       fiscal: "Likely high tens of millions of dollars a year at first, possibly over $100 million, partly covered by fees. Long-term effects uncertain, positive or negative."
     },
-    why: [
-      "Black and Latino families pay when affordable homes never break ground, clinics never open and transit stalls. Delays and lawsuits add years and cost to exactly those projects.",
-      "The NAACP California/Hawaii State Conference supports it, while insisting it be carried out with early community input and attention to neighborhoods that already carry heavy pollution.",
-      "It doesn't exempt any project from environmental review or other environmental laws, and builders choose whether to use it. Warehouses, refineries and other industrial projects aren't eligible.",
-      "This guide first leaned No, mainly over warehouse pollution. The official guide shows warehouses aren't covered, so that concern doesn't apply."
-    ],
-    other: [
-      { n: "NO", about: "Clean-air, environmental-justice and nurses' groups, the California Democratic Party and the League of Women Voters say it weakens CEQA's protections and public input, and that its utility and business funders gain more than families. The state's analysts say it could lead to approval of projects with negative environmental impacts.", whyNot: "These risks are real, especially for neighborhoods near freeways, since transportation projects qualify. But the projects it covers are ones our communities badly need, CEQA still applies, and civil-rights leaders judged the cost of delay to be higher. Watch how it's carried out." }
-    ],
     src: [["CA Secretary of State Quick Reference: Prop 45", "https://voterguide.sos.ca.gov/quick-reference-guide/45.htm"], ["NAACP California/Hawaii: Where we stand on every 2026 ballot measure", "https://cahinaacp.org/our-vote-our-voice-where-we-stand-on-every-2026-ballot-measure/"]]
   },
 
@@ -2734,6 +2645,477 @@ window.GUIDE = {
   });
 })();
 
+// How the suggested pick on each statewide proposition is made, and help for deciding yourself.
+//
+// score: the effect of a YES vote on each issue, from -2 (hurts a lot) to +2 (helps a lot), with the reason.
+//   Facts come from the official state voter guide. The app adds up helps and hurts using each issue's
+//   weight (equal by default; readers can change them). If the issues clearly point one way, that's the pick.
+//   If they're close, the NAACP California/Hawaii, California Democratic Party and League of Women Voters
+//   break the tie by majority. See docs/decision-rules.md.
+// quick: the one-line summary shown on the card for each possible pick.
+(function () {
+  var G = window.GUIDE;
+  var VIG = ["Official Voter Information Guide (Secretary of State), Nov. 3, 2026", "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf"];
+
+  G.CHOICE = {
+    groups: [
+      { id: "naacp", n: "NAACP California/Hawaii", url: "https://cahinaacp.org/our-vote-our-voice-where-we-stand-on-every-2026-ballot-measure/" },
+      { id: "dem", n: "California Democratic Party", url: "https://cadem.org/our-endorsements/" },
+      { id: "gop", n: "California Republican Party", url: "https://cagop.org/pages/endorsements" },
+      { id: "lwv", n: "League of Women Voters of California", url: "https://lwvc.org/vote-with-league/" }
+    ],
+
+    // About you. Answers only add notes; they never change a suggested pick.
+    profile: [
+      { id: "home", en: "Do you rent or own your home?", es: "¿Renta o es dueño de su vivienda?",
+        opts: [["rent", "Rent", "Rento"], ["own", "Own", "Soy dueño"], ["other", "Neither", "Ninguno"]] },
+      { id: "buy", en: "Hoping to buy a home in the next few years?", es: "¿Espera comprar casa en los próximos años?" },
+      { id: "vet", en: "Are you a veteran?", es: "¿Es veterano?" },
+      { id: "clinic", en: "Do you or your family use Medi-Cal or a community health clinic?", es: "¿Usted o su familia usan Medi-Cal o una clínica comunitaria?" },
+      { id: "kids", en: "Do you have kids in public school or community college?", es: "¿Tiene hijos en escuela pública o colegio comunitario?" },
+      { id: "high", en: "Does your household earn more than about $370,000 a year (single) or $740,000 (married)?", es: "¿Su hogar gana más de unos $370,000 al año (soltero) o $740,000 (casados)?" },
+      { id: "retire", en: "Do you have retirement savings, like a 401(k), IRA or pension?", es: "¿Tiene ahorros para el retiro, como 401(k), IRA o pensión?" },
+      { id: "biz", en: "Do you own a business?", es: "¿Es dueño de un negocio?" },
+      { id: "id", en: "Do you have a current California driver's license or state ID?", es: "¿Tiene licencia de manejar o identificación de California vigente?" },
+      { id: "near", en: "Do you live near a freeway, port, rail yard or other big transportation project?", es: "¿Vive cerca de una autopista, puerto, patio ferroviario u otra obra de transporte grande?" }
+    ],
+
+    // The issues each measure is scored on. "lens" issues count equally by default; the others
+    // start at zero so readers who care about them can turn them on.
+    criteria: [
+      { id: "vote", lens: true, en: "Voting rights and fair representation", es: "Derecho al voto y representación justa" },
+      { id: "health", lens: true, en: "Affordable health care", es: "Atención médica asequible" },
+      { id: "home", lens: true, en: "Housing and homeownership", es: "Vivienda y compra de casa" },
+      { id: "tax", lens: true, en: "Fair taxes for working and middle-class families", es: "Impuestos justos para la clase trabajadora y media" },
+      { id: "services", lens: true, en: "Steady public services and a stable budget", es: "Servicios públicos estables y presupuesto sano" },
+      { id: "school", lens: true, en: "Strong public schools", es: "Escuelas públicas fuertes" },
+      { id: "safe", lens: true, en: "Safe neighborhoods and fair policing", es: "Barrios seguros y policía justa" },
+      { id: "air", lens: true, en: "Clean air and healthy neighborhoods", es: "Aire limpio y barrios sanos" },
+      { id: "repair", lens: true, en: "Repair for harms to Black Californians", es: "Reparación de daños a los afroamericanos de California" },
+      { id: "lowtax", lens: false, en: "Lower taxes and less government spending", es: "Menos impuestos y menos gasto público" },
+      { id: "lessdebt", lens: false, en: "Less state borrowing", es: "Menos préstamos del estado" }
+    ],
+    // Groups used, in order, when the issues don't settle a measure.
+    tiebreak: ["naacp", "dem", "lwv"]
+  };
+
+  var PROPS = {
+    p1: {
+      groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "YES" },
+      yes: [
+        "California builds far too few homes people can afford. More than half of renters spend over 30% of their income on rent.",
+        "Most of the money ($7.2 billion) builds, buys or renovates affordable rentals, usually reserved for lower-income households for 55 years. The state estimates up to 40,000 rental units and up to 40,000 households helped toward ownership.",
+        "It raises no taxes, and $1.25 billion for veterans' home loans is repaid by the veterans themselves."
+      ],
+      no: [
+        "It adds about $500–600 million a year in debt payments for 25 years, money that can't go to other needs.",
+        "Fiscal conservatives argue that subsidizing housing without fixing what makes it slow and costly to build (permits, fees, lawsuits) keeps costs per unit high.",
+        "No official argument against it was filed, and no major group opposes it. The California Republican Party is neutral."
+      ],
+      claims: [
+        ["Borrowing doubles what Prop 1 really costs.", "false", "The state's analysts estimate repayment at about $500–600 million a year for about 25 years. After inflation, that is about 15% more than paying cash up front."],
+        ["Most of the money goes to buying existing homes for people.", "false", "$7.2 billion of the $10 billion housing portion goes to building, buying or renovating affordable rental housing. $1.1 billion supports homeownership, mostly as down-payment loans."],
+        ["Down-payment help just pushes home prices up.", "debated", "Economists warn that helping buyers without adding homes can raise prices when supply is tight. Most of Prop 1 pays for new and preserved units rather than buyer aid."]
+      ],
+      me: [
+        ["home", "rent", "Most of Prop 1 funds affordable rentals. Units are usually reserved for lower-income households."],
+        ["buy", "yes", "$1.1 billion helps first-time and low- and moderate-income buyers, mostly with down-payment loans you repay when you sell or pay off the home."],
+        ["vet", "yes", "$1.25 billion funds CalVet home loans for veterans, including some who might not qualify for a regular mortgage."]
+      ]
+    },
+    p2: {
+      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
+      yes: [
+        "The budget swung from a $100 billion surplus to a large deficit in a few years. Doubling the rainy day fund to 20% cushions schools, Medi-Cal and public safety in the next downturn.",
+        "It forces the state to bank more of a revenue spike instead of starting new spending it can't sustain.",
+        "The nonpartisan Legislative Analyst has advised saving more. It passed the Legislature with both parties' votes."
+      ],
+      no: [
+        "Deposits would no longer count toward the voter-approved state spending limit (the 1979 Gann limit), which makes taxpayer rebates less likely.",
+        "It adds no new money for schools, health care or public safety.",
+        "Opponents point out that lawmakers suspended more than $5 billion in required deposits right after passing it, so bigger rules may not mean more savings."
+      ],
+      claims: [
+        ["Prop 2 opens a loophole in the state spending limit.", "true", "Under Prop 2, rainy day fund deposits would count toward the limit only when the money is taken out, not when it is saved. That makes it less likely the state goes over the limit and owes rebates."],
+        ["Prop 2 adds money for schools and health care.", "false", "It doesn't add new money. It saves more in good years so less has to be cut in bad years."]
+      ],
+      me: [
+        ["kids", "yes", "Bigger reserves are meant to soften cuts to schools during a recession."],
+        ["clinic", "yes", "Bigger reserves are meant to soften cuts to Medi-Cal and clinics during a recession."]
+      ]
+    },
+    p3: {
+      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
+      yes: [
+        "It keeps today's rates on the top 2% of earners. Without it, those rates end in 2031 and the state loses $5–15 billion a year.",
+        "The money goes to schools and community colleges, which frees other state money for programs like Medi-Cal. Supporters list school layoffs and bigger classes as the risk of losing it.",
+        "Local school boards decide how to spend it, no administrative overhead is allowed, and spending is audited every year."
+      ],
+      no: [
+        "Voters were told in 2012 and again in 2016 that these rates were temporary. Making them permanent breaks that promise.",
+        "California already has the highest top income tax rate in the nation. Opponents say high earners and businesses leave, shrinking the tax base.",
+        "Fiscal conservatives argue the state should fix spending first; the budget has grown much faster than population."
+      ],
+      claims: [
+        ["Prop 3 doesn't raise anyone's taxes.", "true", "Rates stay where they have been since 2012. The difference is that without Prop 3 they would drop in 2031."],
+        ["Prop 3 is the largest permanent income tax increase in state history.", "debated", "It depends on what you compare to. Compared with current rates, nothing changes. Compared with the law after 2030, top earners would pay $5–15 billion a year more, permanently."],
+        ["High earners will leave the state because of it.", "unverified", "The state's analysts did not estimate any change in where people live because of Prop 3."]
+      ],
+      me: [
+        ["high", "no", "This tax doesn't apply to you. It only affects income over about $371,000 (single) or $742,000 (married)."],
+        ["high", "yes", "You would keep paying the higher rates on income above about $371,000 (single) or $742,000 (married) after 2030."],
+        ["kids", "yes", "The money is assigned to K–12 schools (89%) and community colleges (11%). Local school boards decide how to use it."]
+      ]
+    },
+    p4: {
+      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
+      yes: [
+        "Running for office often takes personal wealth or rich donors. Small-donor matching programs help working-class candidates and candidates of color compete.",
+        "It creates no program and spends no money by itself. Each city, county or the state could choose to adopt one.",
+        "Candidates must show broad support and accept spending limits, and the money can't come from funds for schools, transportation or public safety. It also triples fines for illegal foreign campaign money."
+      ],
+      no: [
+        "It is a blank check: it sets no statewide cap on how much public money a program can spend or how many candidates can get it.",
+        "Candidates could take public money and still take special-interest money.",
+        "The details would be written by the same officials who would benefit. Some critics also raise free-speech concerns about using public money for political messages."
+      ],
+      claims: [
+        ["Prop 4 has no limit on how much taxpayer money candidates can get.", "partly", "Prop 4 itself sets no dollar cap. Each government that creates a program would set one. Candidates must accept spending limits and show broad support to qualify."],
+        ["Candidates could get both public money and special-interest money.", "true", "Prop 4 doesn't ban private contributions to candidates who take public funds."],
+        ["Prop 4 spends tax money on campaigns.", "partly", "Not by itself. It lifts the ban so governments can create programs later. Costs depend on what each one chooses."]
+      ],
+      me: []
+    },
+    p5: {
+      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
+      yes: [
+        "Today a recalled governor can be replaced by someone who wins only a small share of the vote. In 2021, the leading replacement would have taken office with support from about 28% of recall voters.",
+        "It removes the incentive to use recalls to redo an election, and most states with recalls already fill vacancies this way.",
+        "If a governor is recalled, the elected Lieutenant Governor takes over, and voters choose a successor at the next statewide election if there's enough time left in the term."
+      ],
+      no: [
+        "Voters lose the right to choose the replacement on the same ballot. For most statewide offices, the governor would appoint one.",
+        "For legislative seats, the office could sit empty until a costly special election months later.",
+        "The recalled official could run again in that later election. It's a constitutional change, so it's hard to undo."
+      ],
+      claims: [
+        ["Prop 5 takes away voters' power to choose a replacement.", "partly", "For governor, the elected Lieutenant Governor serves, and voters pick a successor at the next statewide election if the recall is early enough. For other statewide offices, the governor appoints. Legislative seats go to a special election."],
+        ["A recalled official could run for the same seat again.", "true", "Under Prop 5, a recalled official may be a candidate in the special election to fill the office."]
+      ],
+      me: []
+    },
+    p37: {
+      groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "NO" },
+      yes: [
+        "Many families can afford a monthly mortgage but can't save a big down payment. Prop 37 lends up to 17% of the price, so a buyer needs only 3% down.",
+        "Private bond investors fund it and buyers repay it, so the state's analysts find no direct cost to taxpayers.",
+        "It only applies to newly built homes, which supporters say will encourage more construction."
+      ],
+      no: [
+        "It's a second loan on the home, with terms voters won't know in advance, and buyers still need 3% down.",
+        "It gives no priority to first-time or first-generation buyers. Income can be up to twice the area median, which tops $300,000 in some areas.",
+        "Fiscal conservatives argue that helping buyers bid without adding supply pushes prices up. The state's analysts say it's unknown whether it would increase home building."
+      ],
+      claims: [
+        ["Prop 37 costs taxpayers nothing.", "true", "The state's analysts find no direct state or local cost. The bonds are repaid from buyers' payments, and the measure says the state does not repay them."],
+        ["If buyers default, taxpayers pay.", "false", "Under the measure as written, the bonds are repaid from homeowners' mortgage payments, not the state budget. Investors who buy the bonds carry that risk."],
+        ["It will lead to more homes being built.", "debated", "The state's analysts say it's unknown whether the program would increase construction or home buying."],
+        ["Higher earners could qualify.", "true", "The income limit is twice the area's median income, which is above $300,000 in some high-cost areas."]
+      ],
+      me: [
+        ["buy", "yes", "You may qualify if you've lived in California for a year, your household income is no more than twice your area's median, you buy a newly built home under your county's price cap, live in it, and put at least 3% down. It's a second loan you repay monthly."],
+        ["home", "rent", "Renters hoping to buy are the main target, but only for newly built homes."]
+      ]
+    },
+    p38: {
+      groups: { naacp: "YES", dem: "YES", gop: "YES", lwv: "NO" },
+      yes: [
+        "Immunotherapy is already curing some cancers. At least half the money must go to cancer, heart disease and Alzheimer's, which hit Black communities hard.",
+        "Treatments it helps create must be sold in California at a 20% discount, and 10% of any revenue goes back to the state until the bonds are repaid.",
+        "It helps make up for federal cuts to medical research, and administration is capped at 2%."
+      ],
+      no: [
+        "It costs about $500–600 million a year for about 20 years, and royalties are uncertain and could take decades.",
+        "Research priorities should be set by scientists and the regular budget, not locked in by a ballot measure for one field.",
+        "California's stem-cell bonds were promised to pay back far more in royalties than they have."
+      ],
+      claims: [
+        ["Prop 38 pays for itself.", "debated", "The state's analysts say revenue from discoveries is uncertain, could be significant, and could take decades to offset the cost."],
+        ["California's stem-cell bonds returned almost nothing in royalties.", "partly", "Royalties have been far below early promises. The stem-cell agency had received about $16 million by early 2022, against about $1.1 billion once predicted. The official voter guide doesn't report a figure."]
+      ],
+      me: []
+    },
+    p39: {
+      groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
+      yes: [
+        "Voter ID is common in other states and polls show support across parties. Supporters say it builds trust in elections.",
+        "Everyone could get a free state voter ID card on request.",
+        "It requires checking that voters on the rolls are citizens and an audit of every county every two years."
+      ],
+      no: [
+        "A missing or mismatched ID number on a mail ballot envelope would get a valid ballot thrown out, and most Californians vote by mail.",
+        "A 'free' ID still takes documents, travel and time off work. Seniors, students, low-income voters and voters of color are least likely to have a current ID.",
+        "It costs tens to low hundreds of millions of dollars a year, and California already confirms identity when people register and checks signatures on mail ballots."
+      ],
+      claims: [
+        ["California doesn't check who is voting.", "false", "Identity is confirmed at registration with a license or Social Security number, and every mail ballot signature is checked. Signatures from in-person voters generally aren't checked before counting."],
+        ["Voter ID would be free.", "partly", "The state must provide a free voter ID card on request. Getting the documents to qualify, and getting to an office, can still cost time and money."],
+        ["Prop 39 would reject mail ballots over a small mistake.", "true", "A mail ballot would not count if the last four digits on the envelope don't match the ID number the voter chose in their registration."]
+      ],
+      me: [
+        ["id", "no", "You'd need a government ID to vote in person and would have to choose an ID number for mail voting. The measure promises a free voter ID card on request."],
+        ["id", "yes", "You'd write the last four digits of your chosen ID number on every mail ballot envelope. A mismatch could get the ballot rejected."]
+      ]
+    },
+    p40: {
+      groups: { naacp: "NO", dem: "YES", gop: "NO", lwv: "Neutral" },
+      yes: [
+        "Federal cuts are expected to take health coverage from more than a million Californians. Asking about 200 billionaires to pay a one-time 5% tax on their wealth would fund care.",
+        "90% of the money must go to health care. Real estate, pensions and retirement accounts are generally excluded.",
+        "It applies to billionaires who lived here on January 1, 2026, so moving away now doesn't avoid it."
+      ],
+      no: [
+        "A one-time tax can't pay for ongoing health care. When it runs out, the gap returns.",
+        "The state's analysts expect a possible loss of under $1 billion a year in income taxes if billionaires leave or shift income.",
+        "Most countries that tried annual wealth taxes dropped them. Taxing hard-to-value assets would mean years of lawsuits, and opponents say the Legislature could expand it without a vote."
+      ],
+      claims: [
+        ["Prop 40 would raise about $100 billion.", "unverified", "That's the supporters' estimate. The state's analysts say 'tens of billions of dollars' over several years and call the amount very hard to predict."],
+        ["Prop 40 will cost California $25 billion as billionaires leave.", "debated", "Opponents cite a Stanford study. The state's analysts project an ongoing income-tax loss of less than $1 billion a year."],
+        ["Prop 40 taxes retirement accounts.", "false", "The state's analysts say real estate, pensions and retirement accounts generally are excluded, and only people worth more than $1 billion owe the tax."],
+        ["Wealth taxes failed in Europe.", "partly", "Twelve OECD countries, nearly all in Europe, had annual wealth taxes in 1990. By 2017 only four did. Prop 40 is different because it is a one-time tax."],
+        ["Billionaires have already left, so it won't raise much.", "partly", "The tax applies to billionaires who lived in California on January 1, 2026, so leaving afterward doesn't avoid it. Future income taxes from those who leave would be lost."]
+      ],
+      me: [
+        ["clinic", "yes", "90% of the money must go to health care services. How it's spent would be decided by the state."]
+      ]
+    },
+    p41: {
+      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
+      yes: [
+        "Billions have gone to programs like homelessness with too little to show for it. Prop 41 has the independent State Auditor review a program before voters are asked for a new tax, and every four years after.",
+        "Audit summaries would appear in the official voter guide, so voters see results before deciding.",
+        "New taxes would have to count toward the voter-approved spending limit, including its rule that extra revenue goes back to taxpayers."
+      ],
+      no: [
+        "Opponents call it a billionaire-funded move to cancel Prop 40. If it gets more yes votes than Prop 40, courts could block Prop 40.",
+        "It cancels state taxes passed after January 1, 2026 that sit outside the spending limit, which could limit future funding choices.",
+        "The audits cost money, low millions a year and growing, and voters can already reject a tax they don't trust."
+      ],
+      claims: [
+        ["Prop 41 is just about audits.", "partly", "It also cancels new state taxes, enacted after January 1, 2026, that exclude their revenue from the state spending limit."],
+        ["Prop 41 would cancel the billionaire tax.", "true", "The state's analysts say that if Prop 41 gets more yes votes than Prop 40, courts could find they conflict and Prop 40 could be stopped."]
+      ],
+      me: []
+    },
+    p42: {
+      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
+      yes: [
+        "It bans new state taxes on simply owning savings, investments, retirement accounts, business interests and other personal property, which you already paid income tax to build.",
+        "It bans taxes that reach back to money earned or actions taken before the tax passed. Supporters call retroactive taxes unfair.",
+        "The NAACP says protecting savings and Black-owned businesses gives families certainty after generations of barriers to building wealth."
+      ],
+      no: [
+        "No one on this ballot proposes taxing ordinary retirement accounts. Opponents say the real purpose is to block the billionaire tax.",
+        "A permanent constitutional ban ties the hands of future voters, even in a crisis.",
+        "If it gets more yes votes than Prop 40, courts could block Prop 40."
+      ],
+      claims: [
+        ["The Constitution currently allows the state to tax your retirement savings.", "partly", "The state could propose such a tax, but it doesn't tax owning financial assets today. Prop 42 would ban any new tax like that."],
+        ["Prop 42 would cancel the billionaire tax.", "true", "The state's analysts say that if Prop 42 gets more yes votes than Prop 40, courts could find they conflict and Prop 40 could be stopped."],
+        ["Prop 42 changes taxes on retirement withdrawals.", "false", "It doesn't touch income taxes, including taxes on retirement withdrawals."]
+      ],
+      me: [
+        ["retire", "yes", "Your retirement accounts aren't taxed for being owned today. Prop 42 would keep the state from adding such a tax in the future."],
+        ["biz", "yes", "It would also ban new state taxes on owning business interests and intellectual property."]
+      ]
+    },
+    p43: {
+      groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
+      yes: [
+        "Prop 13 required two-thirds approval for local special taxes. A 2017 court ruling let taxes proposed by citizen petition pass with a simple majority, and Prop 43 closes that gap.",
+        "Supporters say local governments imposed more than 2,000 new or higher taxes in a decade, including transfer taxes on home sales.",
+        "The Legislature voted almost unanimously to put it on the ballot (35–1 in the Senate, 68–2 in the Assembly)."
+      ],
+      no: [
+        "Just over one-third of voters could block a measure that nearly two-thirds support.",
+        "Local measures pay for fire stations, 911, roads, schools, clinics and affordable housing. Firefighters, teachers and nurses oppose it.",
+        "It doesn't cut any existing tax."
+      ],
+      claims: [
+        ["Prop 43 restores Prop 13's two-thirds rule.", "partly", "Taxes that local governments put on the ballot already need two-thirds. Prop 43 adds the same bar for special taxes that citizens put on the ballot by petition."],
+        ["It lets one-third of voters veto what the majority wants.", "true", "A measure with 66% support would fail."]
+      ],
+      me: [
+        ["home", "own", "It covers local special taxes such as parcel taxes, sales taxes and real-estate transfer taxes when citizens put them on the ballot."],
+        ["home", "rent", "Supporters say local taxes raise rents. Opponents say local measures fund affordable housing and services renters rely on."]
+      ]
+    },
+    p44: {
+      groups: { naacp: "NO", dem: "NO", gop: "NO", lwv: "NO" },
+      yes: [
+        "Community clinics receive billions in public money. Supporters say some spend too much on executive pay and overhead while patients wait months for appointments.",
+        "Requiring 90% of revenue to go to care and related services, with public reporting, would steer more money to patients and frontline workers.",
+        "Clinics that fall short can get penalties back if they comply within five years, and unrecovered penalties fund clinic workforce programs."
+      ],
+      no: [
+        "Clinics now spend about 80% of revenue on care on average. The state's analysts warn clinics that can't reach 90% might close.",
+        "Opponents say it limits spending on interpreters, billing, technology, X-ray machines and other basics that keep clinics open.",
+        "Doctors, pediatricians, school nurses, Planned Parenthood and clinics oppose it. It was written and funded by one union, SEIU-UHW."
+      ],
+      claims: [
+        ["Some clinics spend less than half their money on patients.", "unverified", "That's the supporters' claim. The state's analysts report an average of about 80% spent on health care services, varying by clinic."],
+        ["Prop 44 will close clinics.", "debated", "The state's analysts say some clinics that can't meet the minimum might close instead. How many depends on how the Attorney General defines qualifying spending."]
+      ],
+      me: [
+        ["clinic", "yes", "Community clinics are where many Medi-Cal patients get care. The state's analysts warn some clinics might close rather than meet the 90% rule."]
+      ]
+    },
+    p45: {
+      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
+      yes: [
+        "Delays and lawsuits raise the cost of homes, clinics, schools, transit, water and clean energy. Prop 45 sets firm deadlines for reviews, permits and court cases on those projects.",
+        "Projects still need environmental review and must follow every environmental law. Builders can choose whether to use the faster process.",
+        "Warehouses, refineries and other industrial projects aren't eligible. The NAACP California/Hawaii supports it because Black communities pay when homes, clinics and transit never get built."
+      ],
+      no: [
+        "It caps public comment periods, lets the builder propose a single alternative, and narrows what courts can consider or stop.",
+        "The state's analysts say it could lead to approval of projects with negative environmental impacts. Clean-air, environmental-justice and nurses' groups oppose it.",
+        "It doesn't require any project to lower rents, prices or utility bills, and it was funded largely by gas and electric utilities and business groups."
+      ],
+      claims: [
+        ["Prop 45 exempts projects from environmental review.", "false", "It doesn't exempt any project. Eligible projects still get reviewed, under tighter deadlines and narrower rules."],
+        ["Prop 45 will fast-track warehouses and refineries.", "false", "Only these project types are eligible: housing, water, clean energy, health facilities, fire and police stations, wildfire prevention, broadband, schools and transportation."],
+        ["Prop 45 will lower housing costs.", "debated", "The state's analysts call the long-term effects uncertain. Faster building could lower costs, but nothing in the measure requires lower prices."],
+        ["Prop 45 limits public input.", "true", "It sets a maximum length for comment periods (today there's only a minimum), limits project alternatives and narrows court review."]
+      ],
+      me: [
+        ["near", "yes", "Transportation projects, like freeway and transit work, are eligible for the faster process. Industrial projects like warehouses are not."],
+        ["buy", "yes", "Housing projects are eligible. Supporters say permit delays add more than $75,000 to the cost of a new home; that figure wasn't checked by the state."],
+        ["home", "rent", "Housing projects, including apartments, are eligible for faster approval."]
+      ]
+    }
+  };
+
+
+  var SCORE = {
+    p1: {
+      home: [2, "$7.2 billion builds, buys or renovates affordable rentals, and $1.1 billion helps first-time and lower-income buyers. The state estimates up to 40,000 rental units and up to 40,000 households helped toward owning."],
+      services: [-1, "Repaying it takes about $500–600 million a year from the state budget for about 25 years, roughly 0.25% of the budget."],
+      lowtax: [-1, "Adds state spending through debt payments, though it raises no tax."],
+      lessdebt: [-2, "Adds $10 billion of state debt repaid from the general budget. The $1.25 billion for veterans is repaid by the veterans."]
+    },
+    p2: {
+      services: [2, "Doubles the rainy day fund to 20% of state taxes, so schools, Medi-Cal and other services face fewer cuts in a recession."],
+      tax: [-1, "Deposits would stop counting toward the voter-approved spending limit, making taxpayer rebates less likely."],
+      lowtax: [-1, "Makes rebates under the state spending limit less likely."],
+      lessdebt: [1, "Requires extra payments on state debts through 2040 instead of 2030."]
+    },
+    p3: {
+      school: [2, "Keeps $5–15 billion a year that goes mainly to K–12 schools and community colleges."],
+      health: [1, "With schools funded, other state money stays available for Medi-Cal and health programs."],
+      tax: [1, "Applies only to income over about $371,000 (single) or $742,000 (married). Working and middle-class families' rates don't change."],
+      lowtax: [-2, "Makes the top income tax rates permanent instead of letting them drop in 2031."]
+    },
+    p4: {
+      vote: [1, "Lets communities create small-donor matching or similar programs that help working-class candidates and candidates of color run without wealthy donors."],
+      services: [-1, "Programs governments choose to create could cost significant money, though not from school, transportation or public safety funds."],
+      lowtax: [-1, "Opens the door to spending public money on campaigns."]
+    },
+    p5: {
+      vote: [0, "Cuts both ways. A replacement couldn't take office with a small share of the vote, but voters would no longer choose the replacement on the same ballot."],
+      services: [0, "Could save or cost millions per recall depending on the office, and statewide recalls are rare."]
+    },
+    p37: {
+      home: [2, "Lends up to 17% of a newly built home's price to middle-income buyers who put 3% down, for families who can afford a mortgage but not a down payment."],
+      services: [0, "Buyers repay the bonds. The state's analysts find no direct state or local cost."]
+    },
+    p38: {
+      health: [1, "Funds immunology research on cancer, heart disease and Alzheimer's, with a 20% California discount on resulting treatments. Benefits are uncertain and could take decades."],
+      services: [-1, "Costs about $500–600 million a year from the state budget for about 20 years, possibly offset by royalties."],
+      lowtax: [-1, "Adds state spending through debt payments."],
+      lessdebt: [-2, "Adds $8.4 billion of state debt."]
+    },
+    p39: {
+      vote: [-2, "Mail ballots without matching ID digits wouldn't count, and in-person voters would need government ID, which Black, elderly, low-income and young voters are less likely to have current."],
+      services: [-1, "Costs tens of millions to low hundreds of millions of dollars a year to carry out."],
+      lowtax: [-1, "Adds an ongoing cost to state and local budgets."]
+    },
+    p40: {
+      health: [2, "Raises tens of billions of dollars over several years, 90% of it for health care, as federal cuts reduce health funding."],
+      tax: [1, "Paid only by about 200 people worth more than $1 billion. Working and middle-class families don't pay it."],
+      services: [-1, "One-time money can't fund ongoing care, and the state could lose under $1 billion a year in income taxes if billionaires leave or shift income."],
+      lowtax: [-1, "A new tax, though only on billionaires."]
+    },
+    p41: {
+      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
+      services: [0, "Audits of new tax-funded programs could improve results, but its spending-limit rule could restrict future funding. These roughly offset."],
+      lowtax: [1, "Puts new taxes under the state spending limit and adds audits before new special taxes reach voters."]
+    },
+    p42: {
+      health: [-1, "If it gets more yes votes than Prop 40, courts could cancel the billionaire tax and its health-care money."],
+      services: [-1, "Permanently rules out one way to raise revenue, so the state's analysts say future revenue may not grow as much."],
+      lowtax: [2, "Permanently bans new state taxes on owning savings, investments, retirement accounts and business interests, and bans retroactive taxes."]
+    },
+    p43: {
+      services: [-2, "Citizen-proposed local measures for fire, 911, roads, parks, libraries and clinics would need two-thirds, so more would fail."],
+      home: [-1, "Local measures that fund affordable housing would be harder to pass."],
+      vote: [-1, "Just over one-third of voters could block what nearly two-thirds want."],
+      lowtax: [2, "Makes new local special taxes, including sales, parcel and transfer taxes, much harder to pass."]
+    },
+    p44: {
+      health: [-1, "Clinics now spend about 80% of revenue on care on average. Requiring 90% could move some money to care, but the state's analysts warn some clinics might close."]
+    },
+    p45: {
+      home: [2, "Housing gets firm deadlines for reviews, permits and lawsuits, which now delay new homes and add cost."],
+      health: [1, "Clinics, hospitals and medical offices also qualify for faster approval."],
+      air: [-1, "Transportation projects like freeway work also qualify, with shorter comment periods and narrower court review. The state's analysts say projects with more harmful impacts could be approved. Warehouses and refineries don't qualify."]
+    }
+  };
+
+  var QUICK = {
+    p1: { YES: ["Builds and preserves affordable homes and funds down-payment help, with no new tax.", "Construye y preserva viviendas asequibles y ayuda con el enganche, sin impuesto nuevo."],
+          NO: ["Adds $10 billion of state debt, costing about $500–600 million a year for 25 years.", "Agrega $10 mil millones de deuda estatal, con un costo de unos $500–600 millones al año por 25 años."] },
+    p2: { YES: ["Saves more in good years so schools and services aren't cut when the economy dips.", "Ahorra más en años buenos para no recortar escuelas y servicios en una recesión."],
+          NO: ["Makes taxpayer rebates less likely and adds no new money for services.", "Hace menos probables los reembolsos a contribuyentes y no agrega dinero para servicios."] },
+    p3: { YES: ["Keeps a tax that only hits incomes over ~$371,000 so schools don't lose $5–15 billion a year.", "Mantiene un impuesto solo a ingresos de más de ~$371,000 para que las escuelas no pierdan $5–15 mil millones al año."],
+          NO: ["Lets the 2012 \"temporary\" top income tax rates expire in 2031, as voters were told.", "Deja que las tasas \"temporales\" de 2012 venzan en 2031, como se prometió."] },
+    p4: { YES: ["Lets communities choose public campaign financing so candidates without wealthy donors can compete.", "Permite financiamiento público de campañas para que compitan candidatos sin donantes ricos."],
+          NO: ["Would let governments spend taxpayer money on campaigns, with no statewide cap.", "Permitiría gastar dinero público en campañas, sin límite estatal."] },
+    p5: { YES: ["A recalled official would be replaced through the normal vacancy process, not a crowded race won with a small share of votes.", "El reemplazo de un funcionario destituido seguiría el proceso normal de vacante, no una contienda con poca votación."],
+          NO: ["Keeps voters choosing the replacement on the same ballot when a statewide official is recalled.", "Mantiene que los votantes elijan al reemplazo en la misma boleta."] },
+    p37: { YES: ["Helps middle-income families buy a new home with a state loan for up to 17% of the price, at no taxpayer cost.", "Ayuda a familias de ingresos medios a comprar casa nueva con un préstamo de hasta 17% del precio, sin costo para los contribuyentes."],
+           NO: ["A second loan only for new homes, with no priority for first-time buyers.", "Un segundo préstamo solo para casas nuevas, sin prioridad para quienes compran por primera vez."] },
+    p38: { YES: ["Funds research on cancer, heart disease and Alzheimer's, with a 20% discount on resulting treatments.", "Financia investigación sobre cáncer, corazón y Alzheimer, con 20% de descuento en los tratamientos que resulten."],
+           NO: ["Borrows $8.4 billion for one research field; past research bonds paid back far less than promised.", "Pide prestados $8.4 mil millones para un solo campo; bonos anteriores devolvieron mucho menos de lo prometido."] },
+    p39: { YES: ["Requires ID to vote, adds citizenship checks of voter rolls, and offers a free voter ID card.", "Exige identificación para votar, verifica la ciudadanía en los registros y ofrece una identificación gratuita."],
+           NO: ["Would throw out mail ballots missing matching ID digits and add costly barriers to voting.", "Anularía boletas por correo sin los dígitos de identificación y añadiría barreras costosas para votar."] },
+    p40: { YES: ["A one-time 5% tax on about 200 billionaires, with 90% of the money going to health care.", "Un impuesto único de 5% a unos 200 multimillonarios; 90% del dinero va a la salud."],
+           NO: ["One-time money can't pay for ongoing care, and the state could lose income taxes if billionaires leave.", "El dinero único no paga atención continua, y el estado podría perder impuestos si los multimillonarios se van."] },
+    p41: { YES: ["Requires independent audits of programs funded by new taxes, before and after voters approve them.", "Exige auditorías independientes de programas financiados por impuestos nuevos, antes y después de aprobarlos."],
+           NO: ["Could cancel the billionaire tax for health care and limits how future taxes are counted.", "Podría anular el impuesto a multimillonarios para la salud y limita cómo se cuentan futuros impuestos."] },
+    p42: { YES: ["Permanently bans new state taxes on owning savings, retirement accounts and other personal property.", "Prohíbe para siempre nuevos impuestos estatales sobre ahorros, cuentas de retiro y otros bienes personales."],
+           NO: ["A permanent constitutional ban that could cancel the billionaire tax and ties future voters' hands.", "Una prohibición constitucional permanente que podría anular el impuesto a multimillonarios y limita a futuros votantes."] },
+    p43: { YES: ["Requires two-thirds approval for local special taxes put on the ballot by petition, the same bar governments face.", "Exige dos tercios para impuestos locales especiales propuestos por petición, igual que para los gobiernos."],
+           NO: ["Would let one-third of voters block local funding for fire, 911, roads and schools that most people want.", "Permitiría que un tercio de los votantes bloquee fondos locales para bomberos, 911, calles y escuelas que la mayoría quiere."] },
+    p44: { YES: ["Requires community clinics to spend at least 90% of revenue on patient care and related services.", "Exige que las clínicas comunitarias gasten al menos 90% de sus ingresos en atención y servicios relacionados."],
+           NO: ["Doctors and nurses warn it could close community clinics that serve millions.", "Médicos y enfermeras advierten que podría cerrar clínicas comunitarias que atienden a millones."] },
+    p45: { YES: ["Speeds up approvals for homes, clinics, schools, transit and clean energy, but trims public input.", "Acelera la aprobación de viviendas, clínicas, escuelas, transporte y energía limpia, pero reduce la participación pública."],
+           NO: ["Weakens environmental review and public input for many projects, including freeway work.", "Debilita la revisión ambiental y la participación pública en muchos proyectos, incluidas obras de autopistas."] }
+  };
+
+  var EXTRA_SRC = {
+    p38: [["Capitol Weekly: Stem cell agency receives $15.6 million in royalties", "https://capitolweekly.net/?p=15528"]],
+    p40: [["OECD: The Role and Design of Net Wealth Taxes (2018)", "https://www.oecd.org/tax/the-role-and-design-of-net-wealth-taxes-in-the-oecd-9789264290303-en.htm"]]
+  };
+
+  G.contests.forEach(function (c) {
+    var d = PROPS[c.id]; if (!d) return;
+    c.groups = d.groups; c.score = SCORE[c.id]; c.quickBy = QUICK[c.id]; c.sides = { yes: d.yes, no: d.no }; c.claims = d.claims; c.me = d.me;
+    c.src = c.src.concat([VIG], EXTRA_SRC[c.id] || []);
+  });
+})();
+
 // Region-aware wording for statewide races. A text field may be a plain string or an object
 // keyed by county name, region id, or "all" (the general version shown when no location is set).
 // The app picks the most specific match for the viewer's county.
@@ -2770,59 +3152,46 @@ window.GUIDE = {
   G.lens.en = G.lens.en.replace("clean air in warehouse-heavy Inland Empire communities", "clean air in neighborhoods next to freeways, ports, refineries and warehouses");
   G.lens.es = G.lens.es.replace("aire limpio en comunidades con muchas bodegas en el Inland Empire", "aire limpio en barrios junto a autopistas, puertos, refinerías y bodegas");
 
-  // Prop 1: housing bond
+  // Propositions: regional detail goes into the scorecard reasons (see content-choices.js).
   var p1 = byId("p1");
-  p1.why[0] = perCounty(
-    "Rent and home prices are the biggest squeeze on middle-class families in California, where the median home sold for about $901,000 in August 2026. This bond funds affordable rentals and a path to ownership through down-payment assistance.",
-    function (c, p) {
-      return "Rent and home prices are the biggest squeeze on middle-class families. In " + c + " County the median home sold for about " + money(p) + " in August 2026" +
-        (p < 700000 ? ", so down-payment help can put ownership within reach for families who are paying rent now." : ", which puts ownership out of reach for many working families.") +
-        " This bond funds both affordable rentals and down-payment help.";
-    });
+  p1.score.home[1] = perCounty(p1.score.home[1], function (c, p) {
+    return "In " + c + " County the median home sold for about " + money(p) + " in August 2026" +
+      (p < 700000 ? ", so down-payment help can put owning within reach for families renting now. " : ", out of reach for many working families. ") + p1.score.home[1];
+  });
   p1.src.push(CAR);
 
-  // Prop 37: loans for buyers of new homes under $1.5 million
   var p37 = byId("p37");
-  p37.why.push(perCounty(
-    "Homes must cost under $1.5 million to qualify, which covers most newly built homes in the state outside the priciest Bay Area and coastal markets.",
-    function (c, p) {
-      return p < 1100000
-        ? "In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, nearly all new homes fall under the program's $1.5 million cap, so local buyers can use it."
-        : "In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, many new homes cost more than the $1.5 million cap. The program will help fewer buyers here, but it still reaches newer condos, townhomes and homes in nearby lower-cost areas.";
-    }));
+  p37.score.home[1] = perCounty(p37.score.home[1] + " Homes must cost under about $1.5 million, which covers most new homes outside the priciest areas.", function (c, p) {
+    return p37.score.home[1] + (p < 1100000
+      ? " In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, nearly all new homes fall under the price cap."
+      : " In " + c + " County, where the median home sold for about " + money(p) + " in August 2026, many new homes cost more than the cap, so it will help fewer buyers here.");
+  });
   p37.src.push(CAR);
 
-  // Prop 4: public campaign money
-  var p4 = byId("p4");
-  p4.why[0] = "Every dollar that goes to political campaigns is a dollar not spent on services. The state and many cities and counties are already dealing with budget gaps and federal cuts.";
-  p4.other[0].about = p4.other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-  byId("p40").other[0].about = byId("p40").other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-  byId("p41").other[0].about = byId("p41").other[0].about.replace("the Riverside County Democratic Party", "the California Democratic Party");
-
-  // Prop 43: two-thirds vote for local special taxes
   var p43 = byId("p43");
-  p43.why[1] = {
-    all: "Communities across California depend on local measures for fire stations, 911 response, parks, roads, transit and homeless services.",
-    ie: "Fast-growing Inland Empire communities depend on local measures to build fire stations, speed up 911 response and keep up with parks and roads.",
-    la: "Los Angeles County's 2024 Measure A homelessness tax passed with about 57% of the vote. Under Prop 43's two-thirds rule, it would have failed.",
-    bay: "San Francisco's 2018 Prop C, which funds homeless housing and services, passed with 61% of the vote. Under Prop 43's two-thirds rule, it would have failed. Bay Area transit also leans on voter-approved local taxes.",
-    valley: "Valley cities and counties with tight budgets rely on local measures for police, fire and road repair. A two-thirds bar would let a small minority block them.",
-    sd: "San Diego County's 2016 Measure A for transit and roads won about 58% of the vote but failed because it needed two-thirds. Prop 43 would bring that same bar to measures voters put on the ballot themselves."
+  var base43 = p43.score.services[1];
+  p43.score.services[1] = {
+    all: base43,
+    ie: base43 + " Fast-growing Inland Empire cities rely on local measures to build fire stations and keep up with 911 response, parks and roads.",
+    la: base43 + " L.A. County's 2024 Measure A homelessness tax passed with about 57% and would have failed under a two-thirds rule.",
+    bay: base43 + " San Francisco's 2018 Prop C for homeless housing passed with 61% and would have failed under a two-thirds rule.",
+    valley: base43 + " Valley cities with tight budgets rely on local measures for police, fire and road repair.",
+    sd: base43 + " San Diego County's 2016 Measure A for transit and roads won about 58% but failed because it needed two-thirds."
   };
 
-  // Prop 45: CEQA fast-track. Regional home prices on the YES side, regional air quality on the NO side.
   var p45 = byId("p45");
-  p45.why[0] = perCounty(p45.why[0], function (c, p) {
-    return "In " + c + " County the median home sold for about " + money(p) + " in August 2026. Delays and lawsuits add years and cost to new homes, clinics and transit, and Black and Latino families pay that price.";
+  p45.score.home[1] = perCounty(p45.score.home[1], function (c, p) {
+    return p45.score.home[1] + " In " + c + " County the median home sold for about " + money(p) + " in August 2026.";
   });
-  p45.other[0].about = {
-    all: p45.other[0].about,
-    ie: "The Inland Empire breathes some of the worst ozone in the country. Clean-air and environmental-justice groups say faster review for freeway and transit projects could add pollution near homes and schools. " + p45.other[0].about,
-    la: "Neighborhoods near LA's ports, rail yards and freeways breathe the worst air in the country. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the nation's worst ozone. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    valley: "Bakersfield, Visalia and Fresno have some of the nation's worst particle pollution. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    bay: "West Oakland and Richmond already carry the Bay Area's heaviest pollution next to ports, freeways and refineries. Clean-air groups say faster review for transportation projects could add to it. " + p45.other[0].about,
-    sd: "Barrio Logan and National City sit beside the port, shipyards and freeways. Clean-air groups say faster review for transportation projects could add to that burden. " + p45.other[0].about
+  var base45 = p45.score.air[1];
+  p45.score.air[1] = {
+    all: base45,
+    ie: "The Inland Empire breathes some of the worst ozone in the country, so faster freeway projects matter here. " + base45,
+    la: "Neighborhoods near L.A.'s ports, rail yards and freeways breathe the worst air in the country. " + base45,
+    oc: "The Los Angeles–Long Beach air basin, which includes Orange County, has the nation's worst ozone. " + base45,
+    valley: "Bakersfield, Visalia and Fresno have some of the nation's worst particle pollution. " + base45,
+    bay: "West Oakland and Richmond already carry the Bay Area's heaviest pollution next to ports and freeways. " + base45,
+    sd: "Barrio Logan and National City sit beside the port, shipyards and freeways. " + base45
   };
   p45.src.push(CAR, ALA);
 
@@ -2842,399 +3211,6 @@ window.GUIDE = {
     ie: "Many homes in Inland Empire foothill and mountain communities have been dropped by insurers because of wildfire risk. Keeping coverage available protects families' biggest investment.",
     north: "Northern California towns hit by wildfires have seen insurers pull out. Keeping coverage available protects families' biggest investment.",
     sac: "Foothill communities around Sacramento have seen insurers drop policies over wildfire risk. Keeping coverage available protects families' biggest investment."
-  });
-})();
-
-// Help for deciding for yourself on the statewide propositions:
-// the strongest case on each side, common claims checked against the official state voter guide,
-// what major groups recommend, notes that depend on the viewer's situation, and which
-// priorities point toward YES or NO. Nothing here changes the suggested picks.
-(function () {
-  var G = window.GUIDE;
-  var VIG = ["Official Voter Information Guide (Secretary of State), Nov. 3, 2026", "https://vig.cdn.sos.ca.gov/2026/general/pdf/complete-vig.pdf"];
-
-  G.CHOICE = {
-    groups: [
-      { id: "naacp", n: "NAACP California/Hawaii", url: "https://cahinaacp.org/our-vote-our-voice-where-we-stand-on-every-2026-ballot-measure/" },
-      { id: "dem", n: "California Democratic Party", url: "https://cadem.org/our-endorsements/" },
-      { id: "gop", n: "California Republican Party", url: "https://cagop.org/pages/endorsements" },
-      { id: "lwv", n: "League of Women Voters of California", url: "https://lwvc.org/vote-with-league/" }
-    ],
-
-    // About you. Answers only add notes; they never change a suggested pick.
-    profile: [
-      { id: "home", en: "Do you rent or own your home?", es: "¿Renta o es dueño de su vivienda?",
-        opts: [["rent", "Rent", "Rento"], ["own", "Own", "Soy dueño"], ["other", "Neither", "Ninguno"]] },
-      { id: "buy", en: "Hoping to buy a home in the next few years?", es: "¿Espera comprar casa en los próximos años?" },
-      { id: "vet", en: "Are you a veteran?", es: "¿Es veterano?" },
-      { id: "clinic", en: "Do you or your family use Medi-Cal or a community health clinic?", es: "¿Usted o su familia usan Medi-Cal o una clínica comunitaria?" },
-      { id: "kids", en: "Do you have kids in public school or community college?", es: "¿Tiene hijos en escuela pública o colegio comunitario?" },
-      { id: "high", en: "Does your household earn more than about $370,000 a year (single) or $740,000 (married)?", es: "¿Su hogar gana más de unos $370,000 al año (soltero) o $740,000 (casados)?" },
-      { id: "retire", en: "Do you have retirement savings, like a 401(k), IRA or pension?", es: "¿Tiene ahorros para el retiro, como 401(k), IRA o pensión?" },
-      { id: "biz", en: "Do you own a business?", es: "¿Es dueño de un negocio?" },
-      { id: "id", en: "Do you have a current California driver's license or state ID?", es: "¿Tiene licencia de manejar o identificación de California vigente?" },
-      { id: "near", en: "Do you live near a freeway, port, rail yard or other big transportation project?", es: "¿Vive cerca de una autopista, puerto, patio ferroviario u otra obra de transporte grande?" }
-    ],
-
-    // What matters most. Each choice has two sides; "lean" on a measure names the side that points to YES.
-    priorities: [
-      { id: "tax", en: "Taxes and services", es: "Impuestos y servicios",
-        a: ["Keep taxes as low as possible, even if that means fewer public services", "Mantener los impuestos lo más bajos posible, aunque haya menos servicios"],
-        b: ["Keep funding schools, health care and services, even if taxes stay where they are", "Seguir financiando escuelas, salud y servicios, aunque los impuestos sigan igual"] },
-      { id: "wealth", en: "Taxing the very wealthy", es: "Impuestos a los más ricos",
-        a: ["Avoid new taxes on the very wealthy that could push them or their money out of state", "Evitar nuevos impuestos a los más ricos que podrían sacarlos a ellos o su dinero del estado"],
-        b: ["Ask billionaires and top earners to pay more", "Pedir que los multimillonarios y quienes más ganan paguen más"] },
-      { id: "debt", en: "State borrowing", es: "Préstamos del estado",
-        a: ["Avoid new state debt", "Evitar nueva deuda estatal"],
-        b: ["Borrow to invest in housing, research and other long-term needs", "Pedir prestado para invertir en vivienda, investigación y otras necesidades a largo plazo"] },
-      { id: "save", en: "Budget surpluses", es: "Superávits del presupuesto",
-        a: ["Return extra money to taxpayers when revenue runs high", "Devolver el dinero extra a los contribuyentes cuando sobran ingresos"],
-        b: ["Save more in good years to protect services in bad years", "Ahorrar más en años buenos para proteger servicios en años malos"] },
-      { id: "home", en: "Help buying a home", es: "Ayuda para comprar casa",
-        a: ["Government help with down payments for working and middle-class buyers", "Ayuda del gobierno con el enganche para compradores de clase trabajadora y media"],
-        b: ["Leave home financing to the private market", "Dejar el financiamiento de vivienda al mercado privado"] },
-      { id: "build", en: "Building vs. review", es: "Construir o revisar",
-        a: ["Build homes, clinics, transit and clean energy faster, with shorter reviews and fewer lawsuits", "Construir vivienda, clínicas, transporte y energía limpia más rápido, con revisiones más cortas y menos demandas"],
-        b: ["Keep full environmental review and more time for public input, even if projects take longer", "Mantener la revisión ambiental completa y más tiempo para opinar, aunque los proyectos tarden más"] },
-      { id: "local", en: "Local tax votes", es: "Votos de impuestos locales",
-        a: ["A simple majority of local voters should be able to pass a tax", "Una mayoría simple de votantes locales debe poder aprobar un impuesto"],
-        b: ["New local special taxes should need two-thirds support", "Los nuevos impuestos locales especiales deben necesitar dos tercios"] },
-      { id: "audit", en: "Rules on public money", es: "Reglas sobre dinero público",
-        a: ["Add audits and spending rules for programs and clinics that get public money", "Agregar auditorías y reglas de gasto a programas y clínicas que reciben dinero público"],
-        b: ["Avoid extra rules that cost money or could cut services", "Evitar reglas extra que cuestan dinero o podrían recortar servicios"] },
-      { id: "vote", en: "Voting rules", es: "Reglas para votar",
-        a: ["Make voting as easy as possible for eligible voters", "Hacer que votar sea lo más fácil posible para los votantes elegibles"],
-        b: ["Require ID to vote, even if it adds steps", "Exigir identificación para votar, aunque agregue pasos"] },
-      { id: "money", en: "Money in politics", es: "Dinero en la política",
-        a: ["Allow public money to help candidates compete without big donors", "Permitir dinero público para que los candidatos compitan sin grandes donantes"],
-        b: ["Keep tax money out of political campaigns", "Mantener el dinero de los impuestos fuera de las campañas"] },
-      { id: "recall", en: "Recall elections", es: "Elecciones revocatorias",
-        a: ["Voters should pick the replacement on the same recall ballot", "Los votantes deben elegir al reemplazo en la misma boleta de revocación"],
-        b: ["A replacement should be chosen through the normal process for a vacancy, not by a small plurality", "El reemplazo debe elegirse por el proceso normal de vacante, no por una pequeña pluralidad"] }
-    ]
-  };
-
-  var PROPS = {
-    p1: {
-      groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "YES" },
-      lean: { debt: "b", home: "a" },
-      yes: [
-        "California builds far too few homes people can afford. More than half of renters spend over 30% of their income on rent.",
-        "Most of the money ($7.2 billion) builds, buys or renovates affordable rentals, usually reserved for lower-income households for 55 years. The state estimates up to 40,000 rental units and up to 40,000 households helped toward ownership.",
-        "It raises no taxes, and $1.25 billion for veterans' home loans is repaid by the veterans themselves."
-      ],
-      no: [
-        "It adds about $500–600 million a year in debt payments for 25 years, money that can't go to other needs.",
-        "Fiscal conservatives argue that subsidizing housing without fixing what makes it slow and costly to build (permits, fees, lawsuits) keeps costs per unit high.",
-        "No official argument against it was filed, and no major group opposes it. The California Republican Party is neutral."
-      ],
-      claims: [
-        ["Borrowing doubles what Prop 1 really costs.", "false", "The state's analysts estimate repayment at about $500–600 million a year for about 25 years. After inflation, that is about 15% more than paying cash up front."],
-        ["Most of the money goes to buying existing homes for people.", "false", "$7.2 billion of the $10 billion housing portion goes to building, buying or renovating affordable rental housing. $1.1 billion supports homeownership, mostly as down-payment loans."],
-        ["Down-payment help just pushes home prices up.", "debated", "Economists warn that helping buyers without adding homes can raise prices when supply is tight. Most of Prop 1 pays for new and preserved units rather than buyer aid."]
-      ],
-      me: [
-        ["home", "rent", "Most of Prop 1 funds affordable rentals. Units are usually reserved for lower-income households."],
-        ["buy", "yes", "$1.1 billion helps first-time and low- and moderate-income buyers, mostly with down-payment loans you repay when you sell or pay off the home."],
-        ["vet", "yes", "$1.25 billion funds CalVet home loans for veterans, including some who might not qualify for a regular mortgage."]
-      ]
-    },
-    p2: {
-      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { save: "b" },
-      yes: [
-        "The budget swung from a $100 billion surplus to a large deficit in a few years. Doubling the rainy day fund to 20% cushions schools, Medi-Cal and public safety in the next downturn.",
-        "It forces the state to bank more of a revenue spike instead of starting new spending it can't sustain.",
-        "The nonpartisan Legislative Analyst has advised saving more. It passed the Legislature with both parties' votes."
-      ],
-      no: [
-        "Deposits would no longer count toward the voter-approved state spending limit (the 1979 Gann limit), which makes taxpayer rebates less likely.",
-        "It adds no new money for schools, health care or public safety.",
-        "Opponents point out that lawmakers suspended more than $5 billion in required deposits right after passing it, so bigger rules may not mean more savings."
-      ],
-      claims: [
-        ["Prop 2 opens a loophole in the state spending limit.", "true", "Under Prop 2, rainy day fund deposits would count toward the limit only when the money is taken out, not when it is saved. That makes it less likely the state goes over the limit and owes rebates."],
-        ["Prop 2 adds money for schools and health care.", "false", "It doesn't add new money. It saves more in good years so less has to be cut in bad years."]
-      ],
-      me: [
-        ["kids", "yes", "Bigger reserves are meant to soften cuts to schools during a recession."],
-        ["clinic", "yes", "Bigger reserves are meant to soften cuts to Medi-Cal and clinics during a recession."]
-      ]
-    },
-    p3: {
-      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { tax: "b", wealth: "b" },
-      yes: [
-        "It keeps today's rates on the top 2% of earners. Without it, those rates end in 2031 and the state loses $5–15 billion a year.",
-        "The money goes to schools and community colleges, which frees other state money for programs like Medi-Cal. Supporters list school layoffs and bigger classes as the risk of losing it.",
-        "Local school boards decide how to spend it, no administrative overhead is allowed, and spending is audited every year."
-      ],
-      no: [
-        "Voters were told in 2012 and again in 2016 that these rates were temporary. Making them permanent breaks that promise.",
-        "California already has the highest top income tax rate in the nation. Opponents say high earners and businesses leave, shrinking the tax base.",
-        "Fiscal conservatives argue the state should fix spending first; the budget has grown much faster than population."
-      ],
-      claims: [
-        ["Prop 3 doesn't raise anyone's taxes.", "true", "Rates stay where they have been since 2012. The difference is that without Prop 3 they would drop in 2031."],
-        ["Prop 3 is the largest permanent income tax increase in state history.", "debated", "It depends on what you compare to. Compared with current rates, nothing changes. Compared with the law after 2030, top earners would pay $5–15 billion a year more, permanently."],
-        ["High earners will leave the state because of it.", "unverified", "The state's analysts did not estimate any change in where people live because of Prop 3."]
-      ],
-      me: [
-        ["high", "no", "This tax doesn't apply to you. It only affects income over about $371,000 (single) or $742,000 (married)."],
-        ["high", "yes", "You would keep paying the higher rates on income above about $371,000 (single) or $742,000 (married) after 2030."],
-        ["kids", "yes", "The money is assigned to K–12 schools (89%) and community colleges (11%). Local school boards decide how to use it."]
-      ]
-    },
-    p4: {
-      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { money: "a" },
-      yes: [
-        "Running for office often takes personal wealth or rich donors. Small-donor matching programs help working-class candidates and candidates of color compete.",
-        "It creates no program and spends no money by itself. Each city, county or the state could choose to adopt one.",
-        "Candidates must show broad support and accept spending limits, and the money can't come from funds for schools, transportation or public safety. It also triples fines for illegal foreign campaign money."
-      ],
-      no: [
-        "It is a blank check: it sets no statewide cap on how much public money a program can spend or how many candidates can get it.",
-        "Candidates could take public money and still take special-interest money.",
-        "The details would be written by the same officials who would benefit. Some critics also raise free-speech concerns about using public money for political messages."
-      ],
-      claims: [
-        ["Prop 4 has no limit on how much taxpayer money candidates can get.", "partly", "Prop 4 itself sets no dollar cap. Each government that creates a program would set one. Candidates must accept spending limits and show broad support to qualify."],
-        ["Candidates could get both public money and special-interest money.", "true", "Prop 4 doesn't ban private contributions to candidates who take public funds."],
-        ["Prop 4 spends tax money on campaigns.", "partly", "Not by itself. It lifts the ban so governments can create programs later. Costs depend on what each one chooses."]
-      ],
-      me: []
-    },
-    p5: {
-      groups: { naacp: "YES", dem: "YES", gop: "NO", lwv: "YES" },
-      lean: { recall: "b" },
-      yes: [
-        "Today a recalled governor can be replaced by someone who wins only a small share of the vote. In 2021, the leading replacement would have taken office with support from about 28% of recall voters.",
-        "It removes the incentive to use recalls to redo an election, and most states with recalls already fill vacancies this way.",
-        "If a governor is recalled, the elected Lieutenant Governor takes over, and voters choose a successor at the next statewide election if there's enough time left in the term."
-      ],
-      no: [
-        "Voters lose the right to choose the replacement on the same ballot. For most statewide offices, the governor would appoint one.",
-        "For legislative seats, the office could sit empty until a costly special election months later.",
-        "The recalled official could run again in that later election. It's a constitutional change, so it's hard to undo."
-      ],
-      claims: [
-        ["Prop 5 takes away voters' power to choose a replacement.", "partly", "For governor, the elected Lieutenant Governor serves, and voters pick a successor at the next statewide election if the recall is early enough. For other statewide offices, the governor appoints. Legislative seats go to a special election."],
-        ["A recalled official could run for the same seat again.", "true", "Under Prop 5, a recalled official may be a candidate in the special election to fill the office."]
-      ],
-      me: []
-    },
-    p37: {
-      groups: { naacp: "YES", dem: "YES", gop: "Neutral", lwv: "NO" },
-      lean: { home: "a" },
-      yes: [
-        "Many families can afford a monthly mortgage but can't save a big down payment. Prop 37 lends up to 17% of the price, so a buyer needs only 3% down.",
-        "Private bond investors fund it and buyers repay it, so the state's analysts find no direct cost to taxpayers.",
-        "It only applies to newly built homes, which supporters say will encourage more construction."
-      ],
-      no: [
-        "It's a second loan on the home, with terms voters won't know in advance, and buyers still need 3% down.",
-        "It gives no priority to first-time or first-generation buyers. Income can be up to twice the area median, which tops $300,000 in some areas.",
-        "Fiscal conservatives argue that helping buyers bid without adding supply pushes prices up. The state's analysts say it's unknown whether it would increase home building."
-      ],
-      claims: [
-        ["Prop 37 costs taxpayers nothing.", "true", "The state's analysts find no direct state or local cost. The bonds are repaid from buyers' payments, and the measure says the state does not repay them."],
-        ["If buyers default, taxpayers pay.", "false", "Under the measure as written, the bonds are repaid from homeowners' mortgage payments, not the state budget. Investors who buy the bonds carry that risk."],
-        ["It will lead to more homes being built.", "debated", "The state's analysts say it's unknown whether the program would increase construction or home buying."],
-        ["Higher earners could qualify.", "true", "The income limit is twice the area's median income, which is above $300,000 in some high-cost areas."]
-      ],
-      me: [
-        ["buy", "yes", "You may qualify if you've lived in California for a year, your household income is no more than twice your area's median, you buy a newly built home under your county's price cap, live in it, and put at least 3% down. It's a second loan you repay monthly."],
-        ["home", "rent", "Renters hoping to buy are the main target, but only for newly built homes."]
-      ]
-    },
-    p38: {
-      groups: { naacp: "YES", dem: "YES", gop: "YES", lwv: "NO" },
-      lean: { debt: "b" },
-      yes: [
-        "Immunotherapy is already curing some cancers. At least half the money must go to cancer, heart disease and Alzheimer's, which hit Black communities hard.",
-        "Treatments it helps create must be sold in California at a 20% discount, and 10% of any revenue goes back to the state until the bonds are repaid.",
-        "It helps make up for federal cuts to medical research, and administration is capped at 2%."
-      ],
-      no: [
-        "It costs about $500–600 million a year for about 20 years, and royalties are uncertain and could take decades.",
-        "Research priorities should be set by scientists and the regular budget, not locked in by a ballot measure for one field.",
-        "California's stem-cell bonds were promised to pay back far more in royalties than they have."
-      ],
-      claims: [
-        ["Prop 38 pays for itself.", "debated", "The state's analysts say revenue from discoveries is uncertain, could be significant, and could take decades to offset the cost."],
-        ["California's stem-cell bonds returned almost nothing in royalties.", "partly", "Royalties have been far below early promises. The stem-cell agency had received about $16 million by early 2022, against about $1.1 billion once predicted. The official voter guide doesn't report a figure."]
-      ],
-      me: []
-    },
-    p39: {
-      groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { vote: "b" },
-      yes: [
-        "Voter ID is common in other states and polls show support across parties. Supporters say it builds trust in elections.",
-        "Everyone could get a free state voter ID card on request.",
-        "It requires checking that voters on the rolls are citizens and an audit of every county every two years."
-      ],
-      no: [
-        "A missing or mismatched ID number on a mail ballot envelope would get a valid ballot thrown out, and most Californians vote by mail.",
-        "A 'free' ID still takes documents, travel and time off work. Seniors, students, low-income voters and voters of color are least likely to have a current ID.",
-        "It costs tens to low hundreds of millions of dollars a year, and California already confirms identity when people register and checks signatures on mail ballots."
-      ],
-      claims: [
-        ["California doesn't check who is voting.", "false", "Identity is confirmed at registration with a license or Social Security number, and every mail ballot signature is checked. Signatures from in-person voters generally aren't checked before counting."],
-        ["Voter ID would be free.", "partly", "The state must provide a free voter ID card on request. Getting the documents to qualify, and getting to an office, can still cost time and money."],
-        ["Prop 39 would reject mail ballots over a small mistake.", "true", "A mail ballot would not count if the last four digits on the envelope don't match the ID number the voter chose in their registration."]
-      ],
-      me: [
-        ["id", "no", "You'd need a government ID to vote in person and would have to choose an ID number for mail voting. The measure promises a free voter ID card on request."],
-        ["id", "yes", "You'd write the last four digits of your chosen ID number on every mail ballot envelope. A mismatch could get the ballot rejected."]
-      ]
-    },
-    p40: {
-      groups: { naacp: "NO", dem: "YES", gop: "NO", lwv: "Neutral" },
-      lean: { wealth: "b", tax: "b" },
-      yes: [
-        "Federal cuts are expected to take health coverage from more than a million Californians. Asking about 200 billionaires to pay a one-time 5% tax on their wealth would fund care.",
-        "90% of the money must go to health care. Real estate, pensions and retirement accounts are generally excluded.",
-        "It applies to billionaires who lived here on January 1, 2026, so moving away now doesn't avoid it."
-      ],
-      no: [
-        "A one-time tax can't pay for ongoing health care. When it runs out, the gap returns.",
-        "The state's analysts expect a possible loss of under $1 billion a year in income taxes if billionaires leave or shift income.",
-        "Most countries that tried annual wealth taxes dropped them. Taxing hard-to-value assets would mean years of lawsuits, and opponents say the Legislature could expand it without a vote."
-      ],
-      claims: [
-        ["Prop 40 would raise about $100 billion.", "unverified", "That's the supporters' estimate. The state's analysts say 'tens of billions of dollars' over several years and call the amount very hard to predict."],
-        ["Prop 40 will cost California $25 billion as billionaires leave.", "debated", "Opponents cite a Stanford study. The state's analysts project an ongoing income-tax loss of less than $1 billion a year."],
-        ["Prop 40 taxes retirement accounts.", "false", "The state's analysts say real estate, pensions and retirement accounts generally are excluded, and only people worth more than $1 billion owe the tax."],
-        ["Wealth taxes failed in Europe.", "partly", "Twelve OECD countries, nearly all in Europe, had annual wealth taxes in 1990. By 2017 only four did. Prop 40 is different because it is a one-time tax."],
-        ["Billionaires have already left, so it won't raise much.", "partly", "The tax applies to billionaires who lived in California on January 1, 2026, so leaving afterward doesn't avoid it. Future income taxes from those who leave would be lost."]
-      ],
-      me: [
-        ["clinic", "yes", "90% of the money must go to health care services. How it's spent would be decided by the state."]
-      ]
-    },
-    p41: {
-      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { audit: "a", tax: "a" },
-      yes: [
-        "Billions have gone to programs like homelessness with too little to show for it. Prop 41 has the independent State Auditor review a program before voters are asked for a new tax, and every four years after.",
-        "Audit summaries would appear in the official voter guide, so voters see results before deciding.",
-        "New taxes would have to count toward the voter-approved spending limit, including its rule that extra revenue goes back to taxpayers."
-      ],
-      no: [
-        "Opponents call it a billionaire-funded move to cancel Prop 40. If it gets more yes votes than Prop 40, courts could block Prop 40.",
-        "It cancels state taxes passed after January 1, 2026 that sit outside the spending limit, which could limit future funding choices.",
-        "The audits cost money, low millions a year and growing, and voters can already reject a tax they don't trust."
-      ],
-      claims: [
-        ["Prop 41 is just about audits.", "partly", "It also cancels new state taxes, enacted after January 1, 2026, that exclude their revenue from the state spending limit."],
-        ["Prop 41 would cancel the billionaire tax.", "true", "The state's analysts say that if Prop 41 gets more yes votes than Prop 40, courts could find they conflict and Prop 40 could be stopped."]
-      ],
-      me: []
-    },
-    p42: {
-      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { wealth: "a", tax: "a" },
-      yes: [
-        "It bans new state taxes on simply owning savings, investments, retirement accounts, business interests and other personal property, which you already paid income tax to build.",
-        "It bans taxes that reach back to money earned or actions taken before the tax passed. Supporters call retroactive taxes unfair.",
-        "The NAACP says protecting savings and Black-owned businesses gives families certainty after generations of barriers to building wealth."
-      ],
-      no: [
-        "No one on this ballot proposes taxing ordinary retirement accounts. Opponents say the real purpose is to block the billionaire tax.",
-        "A permanent constitutional ban ties the hands of future voters, even in a crisis.",
-        "If it gets more yes votes than Prop 40, courts could block Prop 40."
-      ],
-      claims: [
-        ["The Constitution currently allows the state to tax your retirement savings.", "partly", "The state could propose such a tax, but it doesn't tax owning financial assets today. Prop 42 would ban any new tax like that."],
-        ["Prop 42 would cancel the billionaire tax.", "true", "The state's analysts say that if Prop 42 gets more yes votes than Prop 40, courts could find they conflict and Prop 40 could be stopped."],
-        ["Prop 42 changes taxes on retirement withdrawals.", "false", "It doesn't touch income taxes, including taxes on retirement withdrawals."]
-      ],
-      me: [
-        ["retire", "yes", "Your retirement accounts aren't taxed for being owned today. Prop 42 would keep the state from adding such a tax in the future."],
-        ["biz", "yes", "It would also ban new state taxes on owning business interests and intellectual property."]
-      ]
-    },
-    p43: {
-      groups: { naacp: "NO", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { local: "b", tax: "a" },
-      yes: [
-        "Prop 13 required two-thirds approval for local special taxes. A 2017 court ruling let taxes proposed by citizen petition pass with a simple majority, and Prop 43 closes that gap.",
-        "Supporters say local governments imposed more than 2,000 new or higher taxes in a decade, including transfer taxes on home sales.",
-        "The Legislature voted almost unanimously to put it on the ballot (35–1 in the Senate, 68–2 in the Assembly)."
-      ],
-      no: [
-        "Just over one-third of voters could block a measure that nearly two-thirds support.",
-        "Local measures pay for fire stations, 911, roads, schools, clinics and affordable housing. Firefighters, teachers and nurses oppose it.",
-        "It doesn't cut any existing tax."
-      ],
-      claims: [
-        ["Prop 43 restores Prop 13's two-thirds rule.", "partly", "Taxes that local governments put on the ballot already need two-thirds. Prop 43 adds the same bar for special taxes that citizens put on the ballot by petition."],
-        ["It lets one-third of voters veto what the majority wants.", "true", "A measure with 66% support would fail."]
-      ],
-      me: [
-        ["home", "own", "It covers local special taxes such as parcel taxes, sales taxes and real-estate transfer taxes when citizens put them on the ballot."],
-        ["home", "rent", "Supporters say local taxes raise rents. Opponents say local measures fund affordable housing and services renters rely on."]
-      ]
-    },
-    p44: {
-      groups: { naacp: "NO", dem: "NO", gop: "NO", lwv: "NO" },
-      lean: { audit: "a" },
-      yes: [
-        "Community clinics receive billions in public money. Supporters say some spend too much on executive pay and overhead while patients wait months for appointments.",
-        "Requiring 90% of revenue to go to care and related services, with public reporting, would steer more money to patients and frontline workers.",
-        "Clinics that fall short can get penalties back if they comply within five years, and unrecovered penalties fund clinic workforce programs."
-      ],
-      no: [
-        "Clinics now spend about 80% of revenue on care on average. The state's analysts warn clinics that can't reach 90% might close.",
-        "Opponents say it limits spending on interpreters, billing, technology, X-ray machines and other basics that keep clinics open.",
-        "Doctors, pediatricians, school nurses, Planned Parenthood and clinics oppose it. It was written and funded by one union, SEIU-UHW."
-      ],
-      claims: [
-        ["Some clinics spend less than half their money on patients.", "unverified", "That's the supporters' claim. The state's analysts report an average of about 80% spent on health care services, varying by clinic."],
-        ["Prop 44 will close clinics.", "debated", "The state's analysts say some clinics that can't meet the minimum might close instead. How many depends on how the Attorney General defines qualifying spending."]
-      ],
-      me: [
-        ["clinic", "yes", "Community clinics are where many Medi-Cal patients get care. The state's analysts warn some clinics might close rather than meet the 90% rule."]
-      ]
-    },
-    p45: {
-      groups: { naacp: "YES", dem: "NO", gop: "YES", lwv: "NO" },
-      lean: { build: "a" },
-      yes: [
-        "Delays and lawsuits raise the cost of homes, clinics, schools, transit, water and clean energy. Prop 45 sets firm deadlines for reviews, permits and court cases on those projects.",
-        "Projects still need environmental review and must follow every environmental law. Builders can choose whether to use the faster process.",
-        "Warehouses, refineries and other industrial projects aren't eligible. The NAACP California/Hawaii supports it because Black communities pay when homes, clinics and transit never get built."
-      ],
-      no: [
-        "It caps public comment periods, lets the builder propose a single alternative, and narrows what courts can consider or stop.",
-        "The state's analysts say it could lead to approval of projects with negative environmental impacts. Clean-air, environmental-justice and nurses' groups oppose it.",
-        "It doesn't require any project to lower rents, prices or utility bills, and it was funded largely by gas and electric utilities and business groups."
-      ],
-      claims: [
-        ["Prop 45 exempts projects from environmental review.", "false", "It doesn't exempt any project. Eligible projects still get reviewed, under tighter deadlines and narrower rules."],
-        ["Prop 45 will fast-track warehouses and refineries.", "false", "Only these project types are eligible: housing, water, clean energy, health facilities, fire and police stations, wildfire prevention, broadband, schools and transportation."],
-        ["Prop 45 will lower housing costs.", "debated", "The state's analysts call the long-term effects uncertain. Faster building could lower costs, but nothing in the measure requires lower prices."],
-        ["Prop 45 limits public input.", "true", "It sets a maximum length for comment periods (today there's only a minimum), limits project alternatives and narrows court review."]
-      ],
-      me: [
-        ["near", "yes", "Transportation projects, like freeway and transit work, are eligible for the faster process. Industrial projects like warehouses are not."],
-        ["buy", "yes", "Housing projects are eligible. Supporters say permit delays add more than $75,000 to the cost of a new home; that figure wasn't checked by the state."],
-        ["home", "rent", "Housing projects, including apartments, are eligible for faster approval."]
-      ]
-    }
-  };
-
-  var EXTRA_SRC = {
-    p38: [["Capitol Weekly: Stem cell agency receives $15.6 million in royalties", "https://capitolweekly.net/?p=15528"]],
-    p40: [["OECD: The Role and Design of Net Wealth Taxes (2018)", "https://www.oecd.org/tax/the-role-and-design-of-net-wealth-taxes-in-the-oecd-9789264290303-en.htm"]]
-  };
-
-  G.contests.forEach(function (c) {
-    var d = PROPS[c.id]; if (!d) return;
-    c.groups = d.groups; c.lean = d.lean; c.sides = { yes: d.yes, no: d.no }; c.claims = d.claims; c.me = d.me;
-    c.src = c.src.concat([VIG], EXTRA_SRC[c.id] || []);
   });
 })();
 
@@ -3284,12 +3260,32 @@ window.GUIDE = {
       caseYes: "The case for YES", caseNo: "The case for NO", claimsH: "Claims you may hear, checked against the official voter guide",
       verdict: { "true": "Accurate", partly: "Partly accurate", "false": "Not accurate", debated: "Debated", unverified: "Not verified" },
       groupsH: "What major groups recommend", forYou: "For you",
-      lean: { yes: "Your priorities lean YES", no: "Your priorities lean NO", mix: "Your priorities point both ways" },
-      becauseOf: "Based on what you chose:",
+      conf: { strong: "Strong pick", lean: "Lean", close: "Close call" },
+      byWeights: "Changed by your weights",
+      howMade: "How the suggested pick was made",
+      eff: { "2": "Helps a lot", "1": "Helps", "0": "Cuts both ways", "-1": "Hurts", "-2": "Hurts a lot" },
+      offNote: "you set this to not count",
+      noEffect: "No clear effect on:",
+      tally: function (h, u) { return "Helps: " + h + " · Hurts: " + u; },
+      byLens: function (p) { return "The issues point to " + p + "."; },
+      byGroups: function (p) { return "The issues are close, so the groups below break the tie: " + p + "."; },
+      noCall: "The issues are close and the groups split, so there's no recommendation.",
+      confWhy: { strong: "The issues clearly point this way and most groups agree.", lean: "The issues point this way, but not by much, or the groups are split.", close: "The issues are close, or the groups disagree with where they point." },
+      tieNote: "The NAACP California/Hawaii, California Democratic Party and League of Women Voters break close calls by majority. The Republican Party's position is shown for reference.",
+      ruleH: "How this pick was made",
+      rules: {
+        dr: "Democrat vs. Republican: the Democrat, unless the Republican's record is clearly better on the issues this guide weighs.",
+        same: "Same party: trusted community groups first (Black Caucus, NAACP, local Black and grassroots groups), then the California Democratic Party's endorsement, then the more practical, budget-minded candidate, then a Black candidate when it's still close, then experience.",
+        nodem: "No Democrat on the ballot: the candidate closer to the issues this guide weighs.",
+        judges: "Judges: keep them unless there's a serious reason to remove one.",
+        local: "Local race: weighed against the issues this guide weighs, using records and endorsements."
+      },
+      weightsH: "How much each issue counts", weightsHint: "Every issue counts the same unless you change it. Your weights can change the suggested pick on propositions; candidate picks follow the written rules.",
+      wLvl: ["Doesn't count", "Counts", "Counts more", "Counts most"], otherIssues: "Other issues some voters weigh (off unless you turn them on)",
+      resetW: "Reset to equal",
       perTitle: "Optional: tailor it to you", perHint: "Skip this if you like. Nothing here is required, and answers stay on this device. They never change the suggested picks. They add short notes on how each measure could affect you and which side fits what you care about.",
-      aboutYou: "About you", matters: "What matters most to you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
-      lineup: "How the measures line up", colSug: "Suggested", colPri: "Your priorities", colMine: "My pick",
-      leanShort: { yes: "Lean YES", no: "Lean NO", mix: "Mixed" },
+      aboutYou: "About you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
+      lineup: "How the measures line up", colSug: "Suggested", colConf: "Confidence", colMine: "My pick",
       copy: "Copy as text", copied: "Copied. Paste it into a text or email.", copyFail: "Copy isn't allowed here. Select the text below and copy it.",
       election: "Election Day: Tuesday, Nov. 3, 2026",
       party: { "Democratic": "Democrat", "Republican": "Republican", "Non-Partisan": "Nonpartisan", "Green": "Green", "Peace and Freedom": "Peace & Freedom", "Libertarian": "Libertarian", "No party preference": "No party preference", "": "" },
@@ -3329,12 +3325,32 @@ window.GUIDE = {
       caseYes: "Argumentos a favor (SÍ)", caseNo: "Argumentos en contra (NO)", claimsH: "Afirmaciones que puede oír, verificadas con la guía oficial",
       verdict: { "true": "Correcto", partly: "Parcialmente correcto", "false": "Incorrecto", debated: "En debate", unverified: "Sin verificar" },
       groupsH: "Qué recomiendan grupos importantes", forYou: "Para usted",
-      lean: { yes: "Sus prioridades se inclinan al SÍ", no: "Sus prioridades se inclinan al NO", mix: "Sus prioridades apuntan a ambos lados" },
-      becauseOf: "Según lo que eligió:",
+      conf: { strong: "Selección firme", lean: "Inclinación", close: "Reñida" },
+      byWeights: "Cambió por sus pesos",
+      howMade: "Cómo se hizo la selección sugerida",
+      eff: { "2": "Ayuda mucho", "1": "Ayuda", "0": "Ambos lados", "-1": "Perjudica", "-2": "Perjudica mucho" },
+      offNote: "usted lo puso en no cuenta",
+      noEffect: "Sin efecto claro en:",
+      tally: function (h, u) { return "Ayuda: " + h + " · Perjudica: " + u; },
+      byLens: function (p) { return "Los temas apuntan a " + p + "."; },
+      byGroups: function (p) { return "Los temas están parejos, así que los grupos de abajo desempatan: " + p + "."; },
+      noCall: "Los temas están parejos y los grupos divididos, así que no hay recomendación.",
+      confWhy: { strong: "Los temas apuntan claramente en esta dirección y la mayoría de los grupos coincide.", lean: "Los temas apuntan en esta dirección, pero por poco, o los grupos están divididos.", close: "Los temas están parejos, o los grupos no coinciden con la dirección de los temas." },
+      tieNote: "La NAACP California/Hawái, el Partido Demócrata de California y la Liga de Mujeres Votantes desempatan por mayoría. La posición del Partido Republicano se muestra como referencia.",
+      ruleH: "Cómo se hizo esta selección",
+      rules: {
+        dr: "Demócrata contra republicano: el demócrata, salvo que el historial del republicano sea claramente mejor en los temas que pesa esta guía.",
+        same: "Mismo partido: primero grupos comunitarios de confianza (Caucus Afroamericano, NAACP, grupos locales), luego el respaldo del Partido Demócrata de California, luego el candidato más práctico y prudente, luego un candidato afroamericano si sigue parejo, y por último la experiencia.",
+        nodem: "Sin demócrata en la boleta: el candidato más cercano a los temas que pesa esta guía.",
+        judges: "Jueces: mantenerlos salvo que haya una razón seria para destituir a alguno.",
+        local: "Contienda local: comparada con los temas que pesa esta guía, según historial y respaldos."
+      },
+      weightsH: "Cuánto cuenta cada tema", weightsHint: "Todos los temas cuentan igual a menos que usted lo cambie. Sus pesos pueden cambiar la selección sugerida en las proposiciones; las de candidatos siguen las reglas escritas.",
+      wLvl: ["No cuenta", "Cuenta", "Cuenta más", "Cuenta mucho"], otherIssues: "Otros temas que algunos votantes pesan (apagados salvo que los active)",
+      resetW: "Volver a igual",
       perTitle: "Opcional: personalícelo", perHint: "Puede omitir esto. Nada es obligatorio y las respuestas se quedan en este dispositivo. Nunca cambian las selecciones sugeridas. Agregan notas breves sobre cómo cada medida podría afectarle y qué lado coincide con lo que le importa.",
-      aboutYou: "Sobre usted", matters: "Lo que más le importa", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
-      lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colPri: "Sus prioridades", colMine: "Mi selección",
-      leanShort: { yes: "SÍ", no: "NO", mix: "Mixto" },
+      aboutYou: "Sobre usted", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
+      lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colConf: "Confianza", colMine: "Mi selección",
       copy: "Copiar como texto", copied: "Copiado. Péguelo en un mensaje o correo.", copyFail: "No se permite copiar aquí. Seleccione el texto de abajo y cópielo.",
       election: "Día de la elección: martes 3 de noviembre de 2026",
       esNote: "Los detalles de la investigación están en inglés.",
@@ -3351,12 +3367,12 @@ window.GUIDE = {
   var SEC_OF = { cd: "house", sd: "senate", ad: "assembly", boe: "state" };
 
   // ── state ──
-  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {}, mine: {}, prof: {}, pri: {} };
+  var S = { lang: "en", tab: "ballot", size: 0, county: "", cd: "", sd: "", ad: "", boe: "", all: false, open: false, q: "", geo: null, done: {}, mine: {}, prof: {}, w: {} };
   var expanded = {};
-  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done", "mine", "prof", "pri"];
+  var PERSIST = ["lang", "size", "county", "cd", "sd", "ad", "boe", "all", "open", "geo", "done", "mine", "prof", "w"];
   function load() {
     try { var v = JSON.parse(localStorage.getItem("fvg2026v2") || "{}"); PERSIST.forEach(function (k) { if (k in v) S[k] = v[k]; }); } catch (e) {}
-    ["done", "mine", "prof", "pri"].forEach(function (k) { if (!S[k] || typeof S[k] !== "object") S[k] = {}; });
+    ["done", "mine", "prof", "w"].forEach(function (k) { if (!S[k] || typeof S[k] !== "object") S[k] = {}; });
     var h = (location.hash || "").slice(1);
     if (["ballot", "list", "vote", "about"].indexOf(h) >= 0) S.tab = h;
   }
@@ -3395,11 +3411,11 @@ window.GUIDE = {
   }
   function matches(c) {
     if (!S.q) return true;
-    var hay = [c.title, c.sub, c.pick, rt(c.quick), c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
+    var hay = [c.title, c.sub, sugg(c), rt(c.quick), c.place, (c.cands || []).map(function (x) { return x.n; }).join(" ")].join(" ").toLowerCase();
     return S.q.toLowerCase().split(/\s+/).every(function (w) { return hay.indexOf(w) >= 0; });
   }
   function visible() { return G.contests.filter(function (c) { return inScope(c) && matches(c); }); }
-  function countable(list) { return list.filter(function (c) { return !c.unopposed && c.pick !== "No recommendation"; }); }
+  function countable(list) { return list.filter(function (c) { return !c.unopposed && sugg(c) !== "No recommendation"; }); }
 
   // ── rendering helpers ──
   function pickKind(p) { return p === "NO" ? "no" : /^YES/.test(p) ? "yes" : p === "No recommendation" ? "none" : "name"; }
@@ -3426,31 +3442,73 @@ window.GUIDE = {
   }
   function mineList(c) { var m = S.mine[c.id]; return m == null ? [] : [].concat(m); }
   function mineText(c) { var m = mineList(c); return m.length ? m.map(shortPick).join(", ") : ""; }
-  function finalPick(c) { return mineText(c) || shortPick(c.pick); }
+  function finalPick(c) { return mineText(c) || shortPick(sugg(c)); }
   function differs(c) {
     var m = mineList(c); if (!m.length) return false;
     var sug = (c.cands || []).filter(function (x) { return x.pick; }).map(function (x) { return x.n; });
-    if (!sug.length) sug = [c.pick];
+    if (!sug.length) sug = [sugg(c)];
     return m.slice().sort().join("|") !== sug.slice().sort().join("|");
   }
-  function leanOf(c) {
-    if (!c.lean) return null;
-    var sc = 0, n = 0, why = [];
-    Object.keys(c.lean).forEach(function (ax) {
-      var a = S.pri[ax], pr = CH.priorities.filter(function (x) { return x.id === ax; })[0];
-      if (!a || !pr) return;
-      n++; sc += a === c.lean[ax] ? 1 : -1;
-      why.push(pr[a][S.lang === "es" ? 1 : 0]);
+  // ── how suggested picks are made ──
+  function crit(id) { return CH.criteria.filter(function (x) { return x.id === id; })[0]; }
+  function wOf(id) { return id in S.w ? S.w[id] : (crit(id) && crit(id).lens ? 1 : 0); }
+  function customW() { return Object.keys(S.w).some(function (k) { return S.w[k] !== (crit(k) && crit(k).lens ? 1 : 0); }); }
+  // Propositions: add up helps and hurts by weight; if the issues are close, the tiebreak groups decide by majority.
+  function evaluate(c, useDefault) {
+    var pro = 0, con = 0;
+    Object.keys(c.score).forEach(function (id) {
+      var w = useDefault ? (crit(id).lens ? 1 : 0) : wOf(id), v = c.score[id][0] * w;
+      if (v > 0) pro += v; else con -= v;
     });
-    return n ? { v: sc > 0 ? "yes" : sc < 0 ? "no" : "mix", why: why } : null;
+    var net = pro - con, m = pro + con ? net / (pro + con) : 0, y = 0, n = 0;
+    (CH.tiebreak || []).forEach(function (g) { var v = c.groups[g]; if (v === "YES") y++; else if (v === "NO") n++; });
+    var gSide = y > n ? "YES" : n > y ? "NO" : null, unan = y + n >= 2 && (!y || !n);
+    var r = { pro: pro, con: con, net: net };
+    if (Math.abs(net) >= 1 && Math.abs(m) >= 0.25) {
+      r.pick = net > 0 ? "YES" : "NO"; r.by = "lens";
+      var agree = gSide === r.pick;
+      r.conf = agree && (Math.abs(net) >= 2 || unan) ? "strong" : agree || (!gSide && Math.abs(net) >= 2) ? "lean" : "close";
+    } else if (gSide) { r.pick = gSide; r.by = "groups"; r.conf = unan ? "lean" : "close"; }
+    else { r.pick = "No recommendation"; r.by = "none"; r.conf = null; }
+    return r;
+  }
+  function sugg(c) { return c.score ? evaluate(c).pick : c.pick; }
+  function changedByW(c) { return !!c.score && customW() && evaluate(c).pick !== evaluate(c, true).pick; }
+  function ruleOf(c) {
+    if (c.unopposed || c.pick === "No recommendation" || c.score) return null;
+    if (/^YES on/.test(c.pick)) return "judges";
+    var ps = (c.cands || []).map(function (x) { return x.p; }).filter(Boolean);
+    if (!ps.length) return "local";
+    if (ps.indexOf("Democratic") < 0) return "nodem";
+    if (ps.indexOf("Republican") >= 0) return "dr";
+    return "same";
+  }
+  function confOf(c) {
+    if (c.score) return evaluate(c).conf;
+    if (c.conf) return c.conf;
+    var r = ruleOf(c);
+    return r === "dr" || r === "judges" ? "strong" : r === "local" && c.depth === "limited" ? "close" : r ? "lean" : null;
   }
   function notesFor(c) { return (c.me || []).filter(function (m) { return S.prof[m[0]] === m[1]; }).map(function (m) { return m[2]; }); }
   function forYou(c) {
-    var l = leanOf(c), notes = notesFor(c);
-    if (!l && !notes.length) return "";
-    return '<div class="foryou"><b class="fy-h">' + esc(t("forYou")) + "</b>" +
-      (l ? '<div class="lean ' + l.v + '">' + esc(t("lean")[l.v]) + '</div><div class="fy-why">' + esc(t("becauseOf")) + " " + esc(l.why.join(" · ")) + "</div>" : "") +
-      (notes.length ? "<ul>" + notes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" : "") + "</div>";
+    var notes = notesFor(c);
+    if (!notes.length) return "";
+    return '<div class="foryou"><b class="fy-h">' + esc(t("forYou")) + "</b><ul>" + notes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+  }
+  function scorecard(c) {
+    var r = evaluate(c), es = S.lang === "es", rows = [], none = [];
+    CH.criteria.forEach(function (cr) {
+      var sc = c.score[cr.id], w = wOf(cr.id);
+      if (!sc) { if (cr.lens && w) none.push(es ? cr.es : cr.en); return; }
+      if (!cr.lens && !w) return;
+      var k = sc[0] > 0 ? "yes" : sc[0] < 0 ? "no" : "";
+      rows.push('<tr><td><b>' + esc(es ? cr.es : cr.en) + '</b><div class="sc-why">' + esc(rt(sc[1])) + "</div></td><td class=\"sc-eff " + k + (w ? "" : " off") + '">' + esc(t("eff")[String(sc[0])]) + (w !== 1 ? "<small>×" + w + (w ? "" : " · " + esc(t("offNote"))) + "</small>" : "") + "</td></tr>");
+    });
+    var res = r.by === "lens" ? t("byLens")(pickText(r.pick)) : r.by === "groups" ? t("byGroups")(pickText(r.pick)) : t("noCall");
+    return "<div><h3>" + esc(t("howMade")) + '</h3><p class="fine">' + esc(es ? "Efecto de votar SÍ en cada tema:" : "What a YES vote does on each issue:") + '</p><table class="scorecard">' + rows.join("") + "</table>" +
+      (none.length ? '<p class="fine">' + esc(t("noEffect")) + " " + esc(none.join(", ")) + "</p>" : "") +
+      '<div class="verdict-box"><div><b>' + esc(t("tally")(r.pro, r.con)) + "</b></div><div>" + esc(res) + "</div>" +
+      (r.conf ? '<div><span class="tag conf-' + r.conf + '">' + esc(t("conf")[r.conf]) + "</span> " + esc(t("confWhy")[r.conf]) + "</div>" : "") + "</div></div>";
   }
   function mineRow(c) {
     var opts = mineOpts(c); if (!opts.length) return "";
@@ -3483,6 +3541,9 @@ window.GUIDE = {
       h.push("<div><h3>" + esc(t("whatItDoes")) + "</h3><p>" + esc(c.what.summary) + "</p>" +
         '<div class="yn"><div class="y"><b>' + esc(t("yesMeans")) + "</b>" + esc(c.what.yes) + '</div><div class="n"><b>' + esc(t("noMeans")) + "</b>" + esc(c.what.no) + "</div><div><b>" + esc(t("cost")) + "</b>" + esc(c.what.fiscal) + "</div></div></div>");
     }
+    if (c.score) h.push(scorecard(c));
+    var rl = ruleOf(c), cfc = confOf(c);
+    if (rl) h.push('<div class="note"><b>' + esc(t("ruleH")) + ":</b> " + esc(t("rules")[rl]) + (cfc ? ' <span class="tag conf-' + cfc + '">' + esc(t("conf")[cfc]) + "</span>" : "") + "</div>");
     if (c.sides) {
       h.push('<div class="sides"><div class="side y"><h3>' + esc(t("caseYes")) + "</h3><ul>" + c.sides.yes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div><div class="side n"><h3>' + esc(t("caseNo")) + "</h3><ul>" + c.sides.no.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div></div>");
     }
@@ -3492,12 +3553,12 @@ window.GUIDE = {
       }).join("") + "</div></div>");
     }
     if (c.groups) {
-      h.push("<div><h3>" + esc(t("groupsH")) + '</h3><table class="groups">' + CH.groups.map(function (g) {
+      h.push("<div><h3>" + esc(t("groupsH")) + '</h3><p class="fine">' + esc(t("tieNote")) + '</p><table class="groups">' + CH.groups.map(function (g) {
         var v = c.groups[g.id] || "—";
         return '<tr><td><a href="' + esc(g.url) + '" target="_blank" rel="noopener">' + esc(g.n) + '</a></td><td class="gv ' + (v === "YES" ? "yes" : v === "NO" ? "no" : "") + '">' + esc(groupVal(v)) + "</td></tr>";
       }).join("") + "</table></div>");
     }
-    h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
+    if (c.why) h.push("<div><h3>" + esc(t("whyPick")) + "</h3><ul>" + c.why.map(function (w) { return "<li>" + esc(rt(w)) + "</li>"; }).join("") + "</ul></div>");
     var chosen = (c.cands || []).filter(function (x) { return x.pick; });
     var alts = (c.other || []).concat((c.cands || []).filter(function (x) { return !x.pick; }));
     if (alts.length || chosen.length) {
@@ -3518,17 +3579,20 @@ window.GUIDE = {
 
   function whyLbl(c) { return c.sides ? t("whyProp") : t("why"); }
   function card(c) {
-    var open = S.open || !!expanded[c.id], done = !!S.done[c.id], kind = pickKind(c.pick);
-    var quick = S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
+    var open = S.open || !!expanded[c.id], done = !!S.done[c.id], sp = sugg(c), kind = pickKind(sp);
+    var qb = c.quickBy && c.quickBy[sp], quick = qb ? qb[S.lang === "es" ? 1 : 0] : S.lang === "es" && c.quick_es ? c.quick_es : rt(c.quick);
+    var cf = confOf(c);
     var tags = [];
     if (c.part) tags.push('<span class="tag part">' + esc(t("part")(c.part)) + "</span>");
     if (c.unopposed) tags.push('<span class="tag">' + esc(t("unopposed")) + "</span>");
     else if (c.impact === "low") tags.push('<span class="tag low">' + esc(t("low")) + "</span>");
+    if (cf) tags.unshift('<span class="tag conf-' + cf + '">' + esc(t("conf")[cf]) + "</span>");
+    if (changedByW(c)) tags.unshift('<span class="tag part">' + esc(t("byWeights")) + "</span>");
     if (c.depth === "limited") tags.push('<span class="tag">' + esc(t("limited")) + "</span>");
     return '<article class="race' + (done ? " done" : "") + '" id="c-' + c.id + '">' +
       '<div class="race-main">' +
         '<div><h3 class="race-title">' + esc(c.title) + "</h3>" + (c.sub ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + "</div>" +
-        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(c.pick)) + "</span></div>" +
+        '<div class="pick ' + kind + '"><span class="oval" aria-hidden="true"></span><span><span class="lbl">' + esc(t("pickLbl")) + "</span> " + esc(pickText(sp)) + "</span></div>" +
         '<p class="race-quick">' + esc(quick) + "</p>" +
         (tags.length ? '<div class="tags">' + tags.join("") + "</div>" : "") +
         forYou(c) + mineRow(c) +
@@ -3620,7 +3684,7 @@ window.GUIDE = {
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       lines.push(secName(id).toUpperCase());
-      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + finalPick(c) + (differs(c) ? " (" + t("mineCopy")(shortPick(c.pick)) + ")" : "")); });
+      cs.forEach(function (c) { lines.push((S.done[c.id] ? "☑ " : "☐ ") + c.title + (c.sec === "props" ? " (" + c.sub + ")" : "") + ": " + finalPick(c) + (differs(c) ? " (" + t("mineCopy")(shortPick(sugg(c))) + ")" : "")); });
       lines.push("");
     });
     return lines.join("\n").trim();
@@ -3630,7 +3694,7 @@ window.GUIDE = {
     SECTIONS.forEach(function (id) {
       var cs = list.filter(function (c) { return c.sec === id; }); if (!cs.length) return;
       h.push("<h3>" + esc(secName(id)) + "</h3><table>" + cs.map(function (c) {
-        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(mineList(c)[0] || c.pick) + '">' + esc(finalPick(c)) + (mineList(c).length ? '<div class="mine-note">' + esc(differs(c) ? t("sugWas")(shortPick(c.pick)) : t("mineTag")) + "</div>" : "") + "</td></tr>";
+        return '<tr class="' + (S.done[c.id] ? "done" : "") + '"><td class="c"><span class="box" aria-hidden="true"></span></td><td>' + esc(c.title) + (c.sec === "props" ? '<div class="race-sub">' + esc(c.sub) + "</div>" : "") + '</td><td class="p ' + pickKind(mineList(c)[0] || sugg(c)) + '">' + esc(finalPick(c)) + (mineList(c).length ? '<div class="mine-note">' + esc(differs(c) ? t("sugWas")(shortPick(sugg(c))) : t("mineTag")) + "</div>" : "") + "</td></tr>";
       }).join("") + "</table>");
     });
     $("#cheat-list").innerHTML = h.join("") || '<p class="empty">' + esc(t("empty")) + "</p>";
@@ -3650,21 +3714,23 @@ window.GUIDE = {
       var opts = q.opts ? q.opts.map(function (o) { return [o[0], es ? o[2] : o[1]]; }) : [["yes", t("optYes")], ["no", t("optNo")]];
       h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + "</div>" + seg("prof", q.id, opts, S.prof[q.id]) + "</div>");
     });
-    h.push('<h3 class="per-h">' + esc(t("matters")) + "</h3>");
-    CH.priorities.forEach(function (q) {
-      h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + '</div><div class="seg col" role="group">' + ["a", "b"].map(function (k) {
-        return '<button type="button" class="mchip wide" data-pri="' + q.id + '" data-v="' + k + '" aria-pressed="' + (S.pri[q.id] === k) + '">' + esc(q[k][es ? 1 : 0]) + "</button>";
-      }).join("") + "</div></div>");
-    });
-    var props = G.contests.filter(function (c) { return c.lean; }), any = props.some(leanOf);
-    if (any) {
-      h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colPri")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
-        props.map(function (c) {
-          var l = leanOf(c);
-          return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(c.pick) + '">' + esc(shortPick(c.pick)) + '</td><td class="' + (l ? l.v : "") + '">' + esc(l ? t("leanShort")[l.v] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
-        }).join("") + "</tbody></table>");
-    }
-    if (Object.keys(S.prof).length || Object.keys(S.pri).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
+    h.push('<h3 class="per-h">' + esc(t("weightsH")) + '</h3><p class="fine">' + esc(t("weightsHint")) + "</p>");
+    var wq = function (cr) {
+      return '<div class="q"><div class="q-t">' + esc(es ? cr.es : cr.en) + '</div><div class="seg">' + [0, 1, 2, 3].map(function (n) {
+        return '<button type="button" class="mchip sm" data-w="' + cr.id + '" data-v="' + n + '" aria-pressed="' + (wOf(cr.id) === n) + '">' + esc(t("wLvl")[n]) + "</button>";
+      }).join("") + "</div></div>";
+    };
+    CH.criteria.filter(function (x) { return x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
+    h.push('<p class="per-sub">' + esc(t("otherIssues")) + "</p>");
+    CH.criteria.filter(function (x) { return !x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
+    if (customW()) h.push('<button type="button" class="btn ghost" id="reset-w">' + esc(t("resetW")) + "</button>");
+    var props = G.contests.filter(function (c) { return c.score; });
+    h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colConf")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
+      props.map(function (c) {
+        var sp = sugg(c), cf = confOf(c);
+        return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(sp) + '">' + esc(shortPick(sp)) + (changedByW(c) ? " *" : "") + "</td><td>" + esc(cf ? t("conf")[cf] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
+      }).join("") + "</tbody></table>" + (props.some(changedByW) ? '<p class="fine">* ' + esc(t("byWeights")) + "</p>" : ""));
+    if (Object.keys(S.prof).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
     $("#personal-body").innerHTML = h.join("");
   }
 
@@ -3805,14 +3871,19 @@ window.GUIDE = {
       var g = e.target.closest("[data-goto]");
       if (g) { e.preventDefault(); S.q = ""; $("#q").value = ""; renderBallot(); var el = $("#c-" + g.dataset.goto); if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" }); return; }
       var b = e.target.closest("button"); if (!b) return;
-      if (b.id === "clear-ans") { S.prof = {}; S.pri = {}; }
-      else {
-        var store = b.dataset.prof ? S.prof : b.dataset.pri ? S.pri : null, key = b.dataset.prof || b.dataset.pri;
-        if (!store) return;
-        if (store[key] === b.dataset.v) delete store[key]; else store[key] = b.dataset.v;
-      }
-      var y = window.scrollY, sel = b.id === "clear-ans" ? null : '[data-' + (b.dataset.prof ? "prof" : "pri") + '="' + key + '"][data-v="' + b.dataset.v + '"]';
-      renderPersonal(); renderBallot(); save();
+      var key, kind, sel = null;
+      if (b.id === "clear-ans") S.prof = {};
+      else if (b.id === "reset-w") S.w = {};
+      else if (b.dataset.w) {
+        key = b.dataset.w; kind = "w"; var n = +b.dataset.v, def = crit(key).lens ? 1 : 0;
+        if (n === def) delete S.w[key]; else S.w[key] = n;
+      } else if (b.dataset.prof) {
+        key = b.dataset.prof; kind = "prof";
+        if (S.prof[key] === b.dataset.v) delete S.prof[key]; else S.prof[key] = b.dataset.v;
+      } else return;
+      var y = window.scrollY;
+      if (kind) sel = '[data-' + kind + '="' + key + '"][data-v="' + b.dataset.v + '"]';
+      renderPersonal(); renderBallot(); renderList(); save();
       window.scrollTo(0, y);
       if (sel) { var nb = document.querySelector("#personal-body " + sel); if (nb) nb.focus(); }
     });
