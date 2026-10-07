@@ -22,19 +22,19 @@ Anything that clearly helps or hurts the Black community (reparations, police re
 1. **Score the issues.** For each measure, score what a YES vote does on each lens issue from -2 (hurts a lot) to +2 (helps a lot), with a one-line reason. Use facts from the official state Voter Information Guide (Legislative Analyst and Attorney General). Official arguments are opinions. Scores live in `src/content-choices.js`.
 2. **Add them up.** All lens issues count equally by default (weight 1). Two other issues, lower taxes and less state borrowing, start at weight 0. Readers can set any weight from 0 to 3, and the pick updates.
 3. **Decide.** If the net score is at least 1 and the helps-minus-hurts margin is at least a quarter of the total, the issues decide. Otherwise the majority of the NAACP California/Hawaii, California Democratic Party and League of Women Voters decides. If they split evenly, there's no recommendation.
-4. **Confidence.**
-   - Strong: the issues decide, the group majority agrees, and the net score is at least 2 or the groups are unanimous.
-   - Lean: the issues decide and the groups agree, but narrowly; or the issues decide by 2+ while the groups tie; or the groups decide unanimously.
+4. **Confidence** (shown as Very confident, Fairly confident or Close call).
+   - Very confident: the issues decide, the group majority agrees, and the net score is at least 2 or the groups are unanimous.
+   - Fairly confident: the issues decide and the groups agree, but narrowly; or the issues decide by 2+ while the groups tie; or the groups decide unanimously.
    - Close call: the issues decide but the group majority disagrees; or the groups decide without being unanimous.
 5. **Score each measure on its own.** Effects that only happen through another measure on the same ballot (for example, Prop 41 or 42 canceling Prop 40) are not scored. Show them in a "tied together" box on each linked measure instead, and warn readers whose own picks work against each other.
 6. Show the California Republican Party's position for reference; it isn't part of the tiebreak.
 7. Give the strongest case on each side and fact-check common claims (Accurate, Partly accurate, Not accurate, Debated, Not verified).
 
-Results with equal weights (Oct. 7, 2026): YES on 1, 2, 3, 4, 5, 37, 38, 40, 45; NO on 39, 41, 42, 43, 44. Compared with the original list, 4, 5 and 40 changed to YES, 41 changed to NO, and 45 changed to YES. Prop 40 is a Lean, 41 a Close call (decided by the groups), and 42 a Lean.
+Results with equal weights (Oct. 7, 2026): YES on 1, 2, 3, 4, 5, 37, 38, 40, 45; NO on 39, 41, 42, 43, 44. Compared with the original list, 4, 5 and 40 changed to YES, 41 changed to NO, and 45 changed to YES. Prop 40 is Fairly confident, 41 a Close call (decided by the groups), and 42 Fairly confident.
 
 ## Confidence for candidate races
 
-Democrat vs. Republican and judicial retention: Strong. Same party, no Democrat, or a local race: Lean. Local race with limited information: Close call.
+Democrat vs. Republican and judicial retention: Very confident. Same party, no Democrat, or a local race: Fairly confident. Local race with limited information: Close call.
 
 ## New information
 
