@@ -4,7 +4,7 @@ An interactive voting guide for the November 3, 2026 California general election
 
 - **Quick picks:** what to vote for, in one line per race.
 - **Full research:** why each pick was made, what each measure does, and every other candidate or position with the reason it wasn't chosen, plus sources.
-- **Find my ballot:** type a street address or ZIP code and the page fills in your county, congressional, legislative and Board of Equalization districts, plus your city and school district for local races. ZIP lookups run entirely on the device. Street addresses go to the free U.S. Census Bureau geocoder, which works in the standalone file; the hosted link allows ZIP lookup only.
+- **Find my ballot:** type a street address or ZIP code and the page fills in your county, congressional, legislative and Board of Equalization districts, plus your city and school district for local races. ZIP lookups run entirely on the device. In the standalone file, street addresses go to the free U.S. Census Bureau geocoder for an exact match. The hosted link can't reach outside services, so it matches a typed address by its ZIP code, or by its city when there's no ZIP, entirely on the device.
 - **My ballot:** or choose a county and districts by hand to see only your races. Districts the guide doesn't cover show the official candidates from the Secretary of State.
 - **Both sides:** every proposition shows the strongest case for and against, common claims checked against the official voter guide, and what the NAACP California/Hawaii, both major parties and the League of Women Voters recommend.
 - **My pick:** tap your own choice on any race. Your list and copied text use it. Picks stay on the device.

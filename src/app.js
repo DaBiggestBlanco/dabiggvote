@@ -14,11 +14,14 @@
       days: function (n) { return n > 1 ? n + " days until Election Day" : n === 1 ? "Election Day is tomorrow" : n === 0 ? "Election Day is today" : "Election Day has passed"; },
       tabBallot: "My ballot", tabList: "My list", tabVote: "How to vote", tabAbout: "About",
       findTitle: "Find your ballot", findHint: "Type your home address for an exact match, or just your ZIP code.",
-      hostedHint: "Type your ZIP code to see the races on your ballot.",
-      findPh: "Address and city, or ZIP code", hostedPh: "ZIP code, like 92553", findBtn: "Show my ballot", looking: "Looking up your address…",
+      hostedHint: "Type your address or ZIP code to see the races on your ballot.",
+      findPh: "Address and city, or ZIP code", hostedPh: "Address or ZIP code", findBtn: "Show my ballot", looking: "Looking up your address…",
       privacy: "ZIP codes are matched on your device. A full address is sent only to the U.S. Census Bureau's free address service to find your neighborhood. This guide doesn't save or share it.",
       notFound: "We couldn't find that address. Check the spelling and include the city, or try your ZIP code.",
-      blocked: "Address lookup isn't available here. Please type your 5-digit ZIP code instead.",
+      blocked: "We couldn't reach the address service. Add your ZIP code to the address, or type just your ZIP.",
+      noMatch: "We couldn't find a California ZIP code or city in that. Add your ZIP code, like 92553.",
+      privacyHosted: "Your address is matched on your device using its ZIP code or city. Nothing is sent or saved.",
+      viaZip: "matched by the ZIP in your address", viaCity: "matched by city; add your ZIP for a closer match",
       zipUnknown: "We don't have that ZIP code for California. Check the number or type your street address.",
       yourBallot: "Your ballot", clear: "Change", exact: "exact match for your address",
       zipOf: function (z) { return "ZIP " + z; },
@@ -79,11 +82,14 @@
       days: function (n) { return n > 1 ? "Faltan " + n + " días para votar" : n === 1 ? "La elección es mañana" : n === 0 ? "Hoy es la elección" : "La elección ya pasó"; },
       tabBallot: "Mi boleta", tabList: "Mi lista", tabVote: "Cómo votar", tabAbout: "Acerca de",
       findTitle: "Encuentre su boleta", findHint: "Escriba su dirección para un resultado exacto, o solo su código postal.",
-      hostedHint: "Escriba su código postal para ver las contiendas de su boleta.",
-      findPh: "Dirección y ciudad, o código postal", hostedPh: "Código postal, ej. 92553", findBtn: "Ver mi boleta", looking: "Buscando su dirección…",
+      hostedHint: "Escriba su dirección o código postal para ver las contiendas de su boleta.",
+      findPh: "Dirección y ciudad, o código postal", hostedPh: "Dirección o código postal", findBtn: "Ver mi boleta", looking: "Buscando su dirección…",
       privacy: "Los códigos postales se buscan en su dispositivo. Una dirección completa solo se envía al servicio gratuito de la Oficina del Censo de EE. UU. para encontrar su vecindario. Esta guía no la guarda ni la comparte.",
       notFound: "No encontramos esa dirección. Revise la ortografía e incluya la ciudad, o pruebe con su código postal.",
-      blocked: "La búsqueda por dirección no está disponible aquí. Escriba su código postal de 5 dígitos.",
+      blocked: "No pudimos conectar con el servicio de direcciones. Agregue su código postal a la dirección o escriba solo el código.",
+      noMatch: "No encontramos un código postal o ciudad de California. Agregue su código postal, ej. 92553.",
+      privacyHosted: "Su dirección se busca en su dispositivo por su código postal o ciudad. No se envía ni se guarda nada.",
+      viaZip: "según el código postal de su dirección", viaCity: "según la ciudad; agregue su código postal para más precisión",
       zipUnknown: "No tenemos ese código postal para California. Revise el número o escriba su dirección.",
       yourBallot: "Su boleta", clear: "Cambiar", exact: "resultado exacto para su dirección",
       zipOf: function (z) { return "Código postal " + z; },
@@ -457,7 +463,7 @@
       }).join("") + "</div>");
     });
     box.innerHTML = '<div class="sum-head"><div style="flex:1"><h2>' + esc(t("yourBallot")) + "</h2>" +
-      (where ? '<div class="sum-where">' + esc(where) + (g && g.kind === "address" ? " · " + esc(t("exact")) : "") + "</div>" : "") +
+      (where ? '<div class="sum-where">' + esc(where) + (g && g.kind === "address" ? " · " + esc(t("exact")) : g && g.via ? " · " + esc(t(g.via)) : "") + "</div>" : "") +
       '</div><button type="button" class="btn ghost" id="clear">' + esc(t("clear")) + "</button></div>" +
       '<div class="chips">' + chips.join("") + "</div>" +
       (split.length ? '<div class="split-note"><div>' + esc(t("split")) + "</div>" + split.join("") + "</div>" : "");
@@ -545,7 +551,7 @@
     document.querySelectorAll("[data-t]").forEach(function (el) { var v = t(el.dataset.t); if (typeof v === "string") el.textContent = v; });
     document.querySelectorAll("[data-lang]").forEach(function (el) { el.hidden = el.dataset.lang !== S.lang; });
     $("#find-q").placeholder = t(HOSTED ? "hostedPh" : "findPh");
-    if (HOSTED) { $("#find-hint").textContent = t("hostedHint"); $("#find-q").setAttribute("inputmode", "numeric"); }
+    if (HOSTED) { $("#find-hint").textContent = t("hostedHint"); $("#find-privacy").textContent = t("privacyHosted"); }
     $("#q").placeholder = t("search"); $("#q").setAttribute("aria-label", t("search"));
     $("#size").setAttribute("aria-label", t("textSize")); $("#size").title = t("textSize");
     var days = Math.ceil((new Date(G.electionDate + "T00:00:00-08:00") - new Date()) / 864e5);
@@ -576,6 +582,37 @@
     return { kind: "zip", label: z, county: GEO.counties[d.c[0][0]] || "", opts: opts,
       pl: d.pl.map(function (x) { return x[0]; }), sch: d.sch.map(function (x) { return x[0]; }) };
   }
+  // City match: combine every ZIP that city covers, weighted by how much of each ZIP is in the city.
+  var CITY_NAMES = null;
+  function fromCity(text) {
+    if (!CITY_NAMES) {
+      CITY_NAMES = {};
+      Object.keys(GEO.zips).forEach(function (z) { GEO.zips[z].pl.forEach(function (p) { (CITY_NAMES[p[0].toLowerCase()] = CITY_NAMES[p[0].toLowerCase()] || []).push([z, p[1]]); }); });
+    }
+    var low = " " + text.toLowerCase().replace(/[^a-z\u00c0-\u017f .'-]/g, " ").replace(/\s+/g, " ") + " ", best = "";
+    Object.keys(CITY_NAMES).forEach(function (n) { if (n.length > best.length && low.indexOf(" " + n + " ") >= 0) best = n; });
+    if (!best) return null;
+    var tally = { c: {}, sch: {} }, opts = {}, name = "";
+    TYPES.forEach(function (k) { tally[k] = {}; });
+    CITY_NAMES[best].forEach(function (e) {
+      var d = GEO.zips[e[0]], w = e[1];
+      d.pl.forEach(function (p) { if (p[0].toLowerCase() === best) name = p[0]; });
+      ["c", "sch"].concat(TYPES).forEach(function (k) { (d[k] || []).forEach(function (x) { tally[k][x[0]] = (tally[k][x[0]] || 0) + x[1] * w; }); });
+    });
+    function ranked(k) {
+      var tot = 0, arr = Object.keys(tally[k]).map(function (key) { tot += tally[k][key]; return [key, tally[k][key]]; });
+      return arr.sort(function (a, b) { return b[1] - a[1]; }).map(function (x) { return [k === "c" || k === "sch" ? x[0] : +x[0], Math.round(x[1] / tot * 100) / 100]; }).filter(function (x) { return x[1] >= 0.02; });
+    }
+    TYPES.forEach(function (k) { opts[k] = ranked(k); });
+    return { kind: "city", via: "viaCity", label: name, county: GEO.counties[ranked("c")[0][0]] || "", opts: opts, pl: [name], sch: ranked("sch").map(function (x) { return x[0]; }) };
+  }
+  // Fallback for a typed address: use its ZIP, then its city.
+  function fromText(v) {
+    var m = v.match(/\b(9[0-6]\d{3})(?:-\d{4})?\s*$/) || v.match(/\b(9[0-6]\d{3})(?:-\d{4})?\b/);
+    var g = m && fromZip(m[1]);
+    if (g) { g.via = "viaZip"; return g; }
+    return fromCity(v);
+  }
   function fromBlock(geoid) {
     var county = geoid.slice(2, 5), tract = geoid.slice(5, 11), blk = geoid.slice(11);
     var k = (GEO.tracts[county] || {})[tract];
@@ -602,15 +639,19 @@
       if (!g) { msg.textContent = t("zipUnknown"); return; }
       msg.textContent = ""; applyGeo(g); return;
     }
-    if (HOSTED) { msg.textContent = t("blocked"); return; }
+    function fallback(errKey) {
+      var fg = fromText(v);
+      if (fg) { msg.textContent = ""; applyGeo(fg); } else msg.textContent = t(errKey);
+    }
+    if (HOSTED) { fallback("noMatch"); return; }
     msg.textContent = t("looking");
     geocode(/\b(CA|Calif(ornia)?)\b/i.test(v) ? v : v + ", CA", function (err, data) {
-      if (err) { msg.textContent = t("blocked"); return; }
+      if (err) { fallback("blocked"); return; }
       var m = data && data.result && data.result.addressMatches && data.result.addressMatches[0];
       var geos = m && m.geographies, blocks = geos && geos["Census Blocks"];
-      if (!blocks || !blocks.length || blocks[0].GEOID.slice(0, 2) !== "06") { msg.textContent = t("notFound"); return; }
+      if (!blocks || !blocks.length || blocks[0].GEOID.slice(0, 2) !== "06") { fallback("notFound"); return; }
       var g = fromBlock(blocks[0].GEOID);
-      if (!g) { msg.textContent = t("notFound"); return; }
+      if (!g) { fallback("notFound"); return; }
       var names = function (layer, key) { return (geos[layer] || []).map(function (x) { return x[key]; }); };
       g.kind = "address"; g.label = m.matchedAddress;
       g.pl = names("Incorporated Places", "BASENAME").concat(names("Census Designated Places", "BASENAME"));
