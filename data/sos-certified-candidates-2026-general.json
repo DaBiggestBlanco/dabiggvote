@@ -1,0 +1,2766 @@
+[
+ {
+  "office": "Governor",
+  "cands": [
+   {
+    "name": "Xavier Becerra",
+    "party": "Democratic",
+    "desig": "Voting Rights Attorney",
+    "inc": false
+   },
+   {
+    "name": "Steve Hilton",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Lieutenant Governor",
+  "cands": [
+   {
+    "name": "Fiona Ma",
+    "party": "Democratic",
+    "desig": "State Treasurer/CPA",
+    "inc": false
+   },
+   {
+    "name": "Gloria Romero",
+    "party": "Republican",
+    "desig": "Educator/Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Secretary of State",
+  "cands": [
+   {
+    "name": "Shirley N. Weber",
+    "party": "Democratic",
+    "desig": "California Secretary of State",
+    "inc": true
+   },
+   {
+    "name": "Donald P. (Don) Wagner",
+    "party": "Republican",
+    "desig": "Orange County Supervisor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Controller",
+  "cands": [
+   {
+    "name": "Malia M. Cohen",
+    "party": "Democratic",
+    "desig": "State Controller/Mother",
+    "inc": true
+   },
+   {
+    "name": "Herb W Morgan",
+    "party": "Republican",
+    "desig": "Chief Investment Officer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Treasurer",
+  "cands": [
+   {
+    "name": "Eleni Kounalakis",
+    "party": "Democratic",
+    "desig": "Lieutenant Governor of California",
+    "inc": false
+   },
+   {
+    "name": "Jennifer Hawks",
+    "party": "Republican",
+    "desig": "Retired Business Executive",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Attorney General",
+  "cands": [
+   {
+    "name": "Rob Bonta",
+    "party": "Democratic",
+    "desig": "California Attorney General",
+    "inc": true
+   },
+   {
+    "name": "Michael E. Gates",
+    "party": "Republican",
+    "desig": "Deputy United States Attorney",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Insurance Commissioner",
+  "cands": [
+   {
+    "name": "Ben Allen",
+    "party": "Democratic",
+    "desig": "California State Senator",
+    "inc": false
+   },
+   {
+    "name": "Jane Kim",
+    "party": "Democratic",
+    "desig": "Attorney/Consumer Advocate",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Superintendent of Public Instruction",
+  "cands": [
+   {
+    "name": "Richard Barrera",
+    "party": "Non-Partisan",
+    "desig": "State Superintendent Advisor",
+    "inc": false
+   },
+   {
+    "name": "Sonja Shaw",
+    "party": "Non-Partisan",
+    "desig": "School District President",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Board of Equalization Member District 1",
+  "cands": [
+   {
+    "name": "Nelson Esparza",
+    "party": "Democratic",
+    "desig": "Teacher/Economist/Councilmember",
+    "inc": false
+   },
+   {
+    "name": "Shannon Grove",
+    "party": "Republican",
+    "desig": "State Senator/Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Board of Equalization Member District 2",
+  "cands": [
+   {
+    "name": "Sally J. Lieber",
+    "party": "Democratic",
+    "desig": "Incumbent",
+    "inc": true
+   },
+   {
+    "name": "John Pimentel",
+    "party": "Democratic",
+    "desig": "Member, Board of Trustees, San Mateo County Community College District",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Board of Equalization Member District 3",
+  "cands": [
+   {
+    "name": "Mike Gipson",
+    "party": "Democratic",
+    "desig": "State Assemblymember/Father",
+    "inc": false
+   },
+   {
+    "name": "Samuel P. Sukaton",
+    "party": "Democratic",
+    "desig": "Labor Union Organizer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "Board of Equalization Member District 4",
+  "cands": [
+   {
+    "name": "Tom Umberg",
+    "party": "Democratic",
+    "desig": "Small Businessman/Senator",
+    "inc": false
+   },
+   {
+    "name": "Denis Bilodeau",
+    "party": "Republican",
+    "desig": "Councilmember/Civil Engineer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 1",
+  "cands": [
+   {
+    "name": "Mike McGuire",
+    "party": "Democratic",
+    "desig": "California State Senator",
+    "inc": false
+   },
+   {
+    "name": "James Gallagher",
+    "party": "Republican",
+    "desig": "United States Representative/Farmer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 2",
+  "cands": [
+   {
+    "name": "Jared Huffman",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Robin Littau",
+    "party": "Republican",
+    "desig": "Enterprise Elementary School Board Member",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 3",
+  "cands": [
+   {
+    "name": "Ami Bera",
+    "party": "Democratic",
+    "desig": "United States Congressman",
+    "inc": false
+   },
+   {
+    "name": "Robb Tucker",
+    "party": "Republican",
+    "desig": "County Supervisor/Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 4",
+  "cands": [
+   {
+    "name": "Eric Jones",
+    "party": "Democratic",
+    "desig": "Businessman/Nonprofit Executive",
+    "inc": false
+   },
+   {
+    "name": "Mike Thompson",
+    "party": "Democratic",
+    "desig": "Member of Congress",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 5",
+  "cands": [
+   {
+    "name": "Michael Masuda",
+    "party": "Democratic",
+    "desig": "Foreign Affairs Officer",
+    "inc": false
+   },
+   {
+    "name": "Tom McClintock",
+    "party": "Republican",
+    "desig": "United States Representative",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 6",
+  "cands": [
+   {
+    "name": "Richard Pan",
+    "party": "Democratic",
+    "desig": "Doctor/Health Advocate",
+    "inc": false
+   },
+   {
+    "name": "Kevin Kiley",
+    "party": "No Party Preference",
+    "desig": "United States Representative",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 7",
+  "cands": [
+   {
+    "name": "Doris Matsui",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Mai Vang",
+    "party": "Democratic",
+    "desig": "Teacher/City Councilmember",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 8",
+  "cands": [
+   {
+    "name": "John Garamendi",
+    "party": "Democratic",
+    "desig": "Member of Congress",
+    "inc": false
+   },
+   {
+    "name": "Rudy Recile",
+    "party": "Republican",
+    "desig": "Business Owner/Consultant",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 9",
+  "cands": [
+   {
+    "name": "Josh Harder",
+    "party": "Democratic",
+    "desig": "Father/Representative",
+    "inc": false
+   },
+   {
+    "name": "John McBride",
+    "party": "Republican",
+    "desig": "Athletic Performance Coach",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 10",
+  "cands": [
+   {
+    "name": "Mark DeSaulnier",
+    "party": "Democratic",
+    "desig": "United States Congressman",
+    "inc": false
+   },
+   {
+    "name": "Jeff Frese",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 11",
+  "cands": [
+   {
+    "name": "Connie Chan",
+    "party": "Democratic",
+    "desig": "San Francisco Supervisor",
+    "inc": false
+   },
+   {
+    "name": "Scott Wiener",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 12",
+  "cands": [
+   {
+    "name": "Jamie Joyce",
+    "party": "Democratic",
+    "desig": "Nonprofit Executive Director",
+    "inc": false
+   },
+   {
+    "name": "Lateefah Simon",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 13",
+  "cands": [
+   {
+    "name": "Adam Gray",
+    "party": "Democratic",
+    "desig": "United States Representative/Educator",
+    "inc": false
+   },
+   {
+    "name": "Kevin Lincoln",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 14",
+  "cands": [
+   {
+    "name": "Melissa Hernandez",
+    "party": "Democratic",
+    "desig": "Healthcare Services Director",
+    "inc": false
+   },
+   {
+    "name": "Aisha Wahab",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 15",
+  "cands": [
+   {
+    "name": "Kevin Mullin",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Charles Hoelter",
+    "party": "Republican",
+    "desig": "Retired Training Supervisor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 16",
+  "cands": [
+   {
+    "name": "Sam Liccardo",
+    "party": "Democratic",
+    "desig": "United States Representative",
+    "inc": false
+   },
+   {
+    "name": "Peter Sundin Soul\u00e9",
+    "party": "Republican",
+    "desig": "Investor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 17",
+  "cands": [
+   {
+    "name": "Ro Khanna",
+    "party": "Democratic",
+    "desig": "United States Congressmember",
+    "inc": false
+   },
+   {
+    "name": "Ritesh Tandon",
+    "party": "Republican",
+    "desig": "CEO/Entrepreneur/Researcher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 18",
+  "cands": [
+   {
+    "name": "Zoe Lofgren",
+    "party": "Democratic",
+    "desig": "Congresswoman",
+    "inc": false
+   },
+   {
+    "name": "Shane Lewis",
+    "party": "Republican",
+    "desig": "Electrical Test Engineer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 19",
+  "cands": [
+   {
+    "name": "Jimmy Panetta",
+    "party": "Democratic",
+    "desig": "United States Representative",
+    "inc": false
+   },
+   {
+    "name": "Peter Coe Verbica",
+    "party": "Republican",
+    "desig": "Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 20",
+  "cands": [
+   {
+    "name": "Sandra Van Scotter",
+    "party": "Democratic",
+    "desig": "Disability Community Advocate",
+    "inc": false
+   },
+   {
+    "name": "Vince Fong",
+    "party": "Republican",
+    "desig": "United States Representative",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 21",
+  "cands": [
+   {
+    "name": "Jim Costa",
+    "party": "Democratic",
+    "desig": "Farmer/Representative",
+    "inc": false
+   },
+   {
+    "name": "Kyle Kirkland",
+    "party": "Republican",
+    "desig": "Entrepreneur/Nonprofit CEO",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 22",
+  "cands": [
+   {
+    "name": "Randy Villegas",
+    "party": "Democratic",
+    "desig": "Teacher/Business Owner",
+    "inc": false
+   },
+   {
+    "name": "David G. Valadao",
+    "party": "Republican",
+    "desig": "Congressman/Dairy Farmer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 23",
+  "cands": [
+   {
+    "name": "Tessa Lynn Hodge",
+    "party": "Democratic",
+    "desig": "Social Worker/Businesswoman",
+    "inc": false
+   },
+   {
+    "name": "Jay Obernolte",
+    "party": "Republican",
+    "desig": "Congressman/Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 24",
+  "cands": [
+   {
+    "name": "Salud Carbajal",
+    "party": "Democratic",
+    "desig": "Member of Congress",
+    "inc": false
+   },
+   {
+    "name": "Bob Smith",
+    "party": "Republican",
+    "desig": "Defense Systems Engineer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 25",
+  "cands": [
+   {
+    "name": "Raul Ruiz",
+    "party": "Democratic",
+    "desig": "Emergency Physician/Congressman",
+    "inc": false
+   },
+   {
+    "name": "Joe Males",
+    "party": "Republican",
+    "desig": "Mayor Pro Tem",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 26",
+  "cands": [
+   {
+    "name": "Jacqui Irwin",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": false
+   },
+   {
+    "name": "Sam Gallucci",
+    "party": "Republican",
+    "desig": "Business Executive/Pastor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 27",
+  "cands": [
+   {
+    "name": "George Whitesides",
+    "party": "Democratic",
+    "desig": "U.S. Representative/Father",
+    "inc": false
+   },
+   {
+    "name": "Jason Gibbs",
+    "party": "Republican",
+    "desig": "City Councilmember/Engineer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 28",
+  "cands": [
+   {
+    "name": "Judy Chu",
+    "party": "Democratic",
+    "desig": "United States Representative",
+    "inc": false
+   },
+   {
+    "name": "April A. Verlato",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 29",
+  "cands": [
+   {
+    "name": "Ang\u00e9lica Mar\u00eda Due\u00f1as",
+    "party": "Democratic",
+    "desig": "Mother/Community Organizer",
+    "inc": false
+   },
+   {
+    "name": "Luz Maria Rivas",
+    "party": "Democratic",
+    "desig": "Congresswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 30",
+  "cands": [
+   {
+    "name": "Laura Friedman",
+    "party": "Democratic",
+    "desig": "Member, United States House of Representatives",
+    "inc": false
+   },
+   {
+    "name": "Scott Alan Meyers",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 31",
+  "cands": [
+   {
+    "name": "Gil Cisneros",
+    "party": "Democratic",
+    "desig": "U.S. Congressman",
+    "inc": false
+   },
+   {
+    "name": "Eric Ching",
+    "party": "Republican",
+    "desig": "Entrepreneur",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 32",
+  "cands": [
+   {
+    "name": "Brad Sherman",
+    "party": "Democratic",
+    "desig": "United States Congressman/Dad",
+    "inc": false
+   },
+   {
+    "name": "Larry Thompson",
+    "party": "Republican",
+    "desig": "Attorney/Film Producer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 33",
+  "cands": [
+   {
+    "name": "Pete Aguilar",
+    "party": "Democratic",
+    "desig": "United States Representative",
+    "inc": false
+   },
+   {
+    "name": "Stephanie M. Vargas",
+    "party": "Republican",
+    "desig": "Chief Deputy Clerk",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 34",
+  "cands": [
+   {
+    "name": "Jimmy Gomez",
+    "party": "Democratic",
+    "desig": "U.S. Representative/Parent",
+    "inc": false
+   },
+   {
+    "name": "Angela Gonzales-Torres",
+    "party": "Democratic",
+    "desig": "Advocate For Justice",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 35",
+  "cands": [
+   {
+    "name": "Norma J. Torres",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Mike Cargile",
+    "party": "Republican",
+    "desig": "Small Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 36",
+  "cands": [
+   {
+    "name": "Ted W. Lieu",
+    "party": "Democratic",
+    "desig": "United States Representative, 36th District",
+    "inc": false
+   },
+   {
+    "name": "Houston Brignano",
+    "party": "Republican",
+    "desig": "Technology Executive",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 37",
+  "cands": [
+   {
+    "name": "Sydney Kamlager-Dove",
+    "party": "Democratic",
+    "desig": "U.S. Representative, 37th District",
+    "inc": false
+   },
+   {
+    "name": "Samantha Mota",
+    "party": "Democratic",
+    "desig": "Community Advocate",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 38",
+  "cands": [
+   {
+    "name": "Hilda Solis",
+    "party": "Democratic",
+    "desig": "County Supervisor",
+    "inc": false
+   },
+   {
+    "name": "Pedro Antonio Casas",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 39",
+  "cands": [
+   {
+    "name": "Mark Takano",
+    "party": "Democratic",
+    "desig": "U.S. Congressman",
+    "inc": false
+   },
+   {
+    "name": "Steve Manos",
+    "party": "Republican",
+    "desig": "Mayor/Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 40",
+  "cands": [
+   {
+    "name": "Ken Calvert",
+    "party": "Republican",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Young Kim",
+    "party": "Republican",
+    "desig": "United States Representative, 40th District",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 41",
+  "cands": [
+   {
+    "name": "Linda S\u00e1nchez",
+    "party": "Democratic",
+    "desig": "Congresswoman/Mom",
+    "inc": false
+   },
+   {
+    "name": "Mitch Clemmons",
+    "party": "Republican",
+    "desig": "Plumbing Contractor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 42",
+  "cands": [
+   {
+    "name": "Robert Garcia",
+    "party": "Democratic",
+    "desig": "United States Congressman",
+    "inc": false
+   },
+   {
+    "name": "Brian Burley",
+    "party": "Republican",
+    "desig": "Trustee, Huntington Beach City School District",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 43",
+  "cands": [
+   {
+    "name": "Maxine Waters",
+    "party": "Democratic",
+    "desig": "United States Congresswoman",
+    "inc": false
+   },
+   {
+    "name": "Cristian Morales",
+    "party": "Republican",
+    "desig": "Manufacturing Executive",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 44",
+  "cands": [
+   {
+    "name": "Nanette Diaz Barragan",
+    "party": "Democratic",
+    "desig": "U.S. Representative, 44th District",
+    "inc": false
+   },
+   {
+    "name": "Genevieve Angel",
+    "party": "Republican",
+    "desig": "Family Nurse Practitioner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 45",
+  "cands": [
+   {
+    "name": "Derek Tran",
+    "party": "Democratic",
+    "desig": "Representative/Business Owner",
+    "inc": false
+   },
+   {
+    "name": "Chuong V. Vo",
+    "party": "Republican",
+    "desig": "Retired Police Officer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 46",
+  "cands": [
+   {
+    "name": "Lou Correa",
+    "party": "Democratic",
+    "desig": "United States Congressmember",
+    "inc": false
+   },
+   {
+    "name": "David Pan",
+    "party": "Republican",
+    "desig": "Professor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 47",
+  "cands": [
+   {
+    "name": "Dave Min",
+    "party": "Democratic",
+    "desig": "United States Representative/Father",
+    "inc": false
+   },
+   {
+    "name": "Jenny Rae Le Roux",
+    "party": "Republican",
+    "desig": "Entrepreneur/Investor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 48",
+  "cands": [
+   {
+    "name": "Marni von Wilpert",
+    "party": "Democratic",
+    "desig": "Councilwoman/Health Advocate",
+    "inc": false
+   },
+   {
+    "name": "Jim Desmond",
+    "party": "Republican",
+    "desig": "San Diego County Supervisor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 49",
+  "cands": [
+   {
+    "name": "Mike Levin",
+    "party": "Democratic",
+    "desig": "U.S. Representative, 49th District",
+    "inc": false
+   },
+   {
+    "name": "Armen Kurdian",
+    "party": "Republican",
+    "desig": "Retired Navy Captain",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 50",
+  "cands": [
+   {
+    "name": "Scott Peters",
+    "party": "Democratic",
+    "desig": "Member of Congress",
+    "inc": false
+   },
+   {
+    "name": "Steve Cohen",
+    "party": "Republican",
+    "desig": "Television News Consultant",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 51",
+  "cands": [
+   {
+    "name": "Sara Jacobs",
+    "party": "Democratic",
+    "desig": "U.S. Representative",
+    "inc": false
+   },
+   {
+    "name": "Ricardo Cabrera",
+    "party": "Republican",
+    "desig": "Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "United States Representative District 52",
+  "cands": [
+   {
+    "name": "Juan Vargas",
+    "party": "Democratic",
+    "desig": "Member of Congress",
+    "inc": false
+   },
+   {
+    "name": "Jeff Belle",
+    "party": "Republican",
+    "desig": "Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 2",
+  "cands": [
+   {
+    "name": "Damon Connolly",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": false
+   },
+   {
+    "name": "Tief Gibbs",
+    "party": "Republican",
+    "desig": "Small Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 4",
+  "cands": [
+   {
+    "name": "Jaron Brandon",
+    "party": "Democratic",
+    "desig": "County Supervisor",
+    "inc": false
+   },
+   {
+    "name": "Alexandra Duarte",
+    "party": "Republican",
+    "desig": "Mother/Farmer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 6",
+  "cands": [
+   {
+    "name": "Sean Frame",
+    "party": "Democratic",
+    "desig": "Small Business Owner",
+    "inc": false
+   },
+   {
+    "name": "Roger Niello",
+    "party": "Republican",
+    "desig": "California State Senator",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 8",
+  "cands": [
+   {
+    "name": "Angelique Ashby",
+    "party": "Democratic",
+    "desig": "California State Senator",
+    "inc": true
+   },
+   {
+    "name": "Susan A Mason",
+    "party": "Republican",
+    "desig": "Retired Nurse",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 10",
+  "cands": [
+   {
+    "name": "Scott Sakakihara",
+    "party": "Democratic",
+    "desig": "Councilmember/Navy Officer",
+    "inc": false
+   },
+   {
+    "name": "Linda R. Price",
+    "party": "Republican",
+    "desig": "Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 12",
+  "cands": [
+   {
+    "name": "Nathan Magsig",
+    "party": "Republican",
+    "desig": "County Supervisor/Businessman",
+    "inc": false
+   },
+   {
+    "name": "William Brown Jr.",
+    "party": "Libertarian",
+    "desig": "Social Worker/Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 14",
+  "cands": [
+   {
+    "name": "Esmeralda Soria",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": false
+   },
+   {
+    "name": "Darin S. DuPont",
+    "party": "Republican",
+    "desig": "Councilman/Water Attorney",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 16",
+  "cands": [
+   {
+    "name": "Melissa Hurtado",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": true
+   },
+   {
+    "name": "Guillermo Asuncion Gonzalez",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 18",
+  "cands": [
+   {
+    "name": "Steve Padilla",
+    "party": "Democratic",
+    "desig": "California State Senator",
+    "inc": true
+   },
+   {
+    "name": "Art Hodges",
+    "party": "Republican",
+    "desig": "CEO/Educator/Pastor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 20",
+  "cands": [
+   {
+    "name": "Caroline Menjivar",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": true
+   },
+   {
+    "name": "Tony Rodriguez",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 22",
+  "cands": [
+   {
+    "name": "Susan Rubio",
+    "party": "Democratic",
+    "desig": "State Senator/Teacher",
+    "inc": true
+   },
+   {
+    "name": "Mike Netter",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 24",
+  "cands": [
+   {
+    "name": "John M. Erickson",
+    "party": "Democratic",
+    "desig": "Councilmember",
+    "inc": false
+   },
+   {
+    "name": "Brian Goldsmith",
+    "party": "Democratic",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 26",
+  "cands": [
+   {
+    "name": "Sara Hernandez",
+    "party": "Democratic",
+    "desig": "Affordable Housing Advocate",
+    "inc": false
+   },
+   {
+    "name": "Sarah Rasc\u00f3n",
+    "party": "Democratic",
+    "desig": "Environmental Protection Director",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 28",
+  "cands": [
+   {
+    "name": "Lola Smallwood-Cuevas",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": true
+   },
+   {
+    "name": "Joe Lisuzzo",
+    "party": "Republican",
+    "desig": "LA Neighborhood Councilmember",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 30",
+  "cands": [
+   {
+    "name": "Bob J. Archuleta",
+    "party": "Democratic",
+    "desig": "State Senator",
+    "inc": true
+   },
+   {
+    "name": "Araceli Martinez",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 32",
+  "cands": [
+   {
+    "name": "Tiffanie Tate",
+    "party": "Democratic",
+    "desig": "Doctor/Educator/Author",
+    "inc": false
+   },
+   {
+    "name": "Kelly Seyarto",
+    "party": "Republican",
+    "desig": "State Senator",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 34",
+  "cands": [
+   {
+    "name": "Avelino Valencia",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": false
+   },
+   {
+    "name": "Rhonda Shader",
+    "party": "Republican",
+    "desig": "Local Small Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 36",
+  "cands": [
+   {
+    "name": "Chris Duncan",
+    "party": "Democratic",
+    "desig": "Anti-Tariff Attorney",
+    "inc": false
+   },
+   {
+    "name": "Tony Strickland",
+    "party": "Republican",
+    "desig": "State Senator/Businessman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 38",
+  "cands": [
+   {
+    "name": "Catherine S. Blakespear",
+    "party": "Democratic",
+    "desig": "California State Senator",
+    "inc": true
+   },
+   {
+    "name": "Laura Bassett",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Senate District 40",
+  "cands": [
+   {
+    "name": "Mara Elliott",
+    "party": "Democratic",
+    "desig": "Ethics Attorney",
+    "inc": false
+   },
+   {
+    "name": "Kristie Bruce-Lane",
+    "party": "Republican",
+    "desig": "Businesswoman/Victims Advocate",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 1",
+  "cands": [
+   {
+    "name": "Dianna Margaret James",
+    "party": "Democratic",
+    "desig": "Community Organizer",
+    "inc": false
+   },
+   {
+    "name": "Heather Hadwick",
+    "party": "Republican",
+    "desig": "Farmer/Assemblywoman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 2",
+  "cands": [
+   {
+    "name": "Chris Rogers",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Michael Greer",
+    "party": "Republican",
+    "desig": "Retired Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 3",
+  "cands": [
+   {
+    "name": "Dom Belza",
+    "party": "Republican",
+    "desig": "Agricultural Businessman/Father",
+    "inc": false
+   },
+   {
+    "name": "James \"Jamie\" Johansson",
+    "party": "Republican",
+    "desig": "Farmer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 4",
+  "cands": [
+   {
+    "name": "Cecilia M. Aguiar-Curry",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 5",
+  "cands": [
+   {
+    "name": "Neva Parker",
+    "party": "Democratic",
+    "desig": "Community Advocate",
+    "inc": false
+   },
+   {
+    "name": "Joe Patterson",
+    "party": "Republican",
+    "desig": "Member of State Assembly, 5th District",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 6",
+  "cands": [
+   {
+    "name": "Maggy Krell",
+    "party": "Democratic",
+    "desig": "Constitutional Attorney/Assemblywoman",
+    "inc": true
+   },
+   {
+    "name": "Jagtar Singh",
+    "party": "Democratic",
+    "desig": "Caregiver/Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 7",
+  "cands": [
+   {
+    "name": "Amy L. Slavensky",
+    "party": "Democratic",
+    "desig": "Public School Educator",
+    "inc": false
+   },
+   {
+    "name": "Josh Hoover",
+    "party": "Republican",
+    "desig": "Member of the State Assembly, 7th District",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 8",
+  "cands": [
+   {
+    "name": "David Jariustokaeutulelei Tangipa",
+    "party": "Republican",
+    "desig": "State Assemblymember",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 9",
+  "cands": [
+   {
+    "name": "Matthew Adams",
+    "party": "Democratic",
+    "desig": "Teacher",
+    "inc": false
+   },
+   {
+    "name": "Heath Flora",
+    "party": "Republican",
+    "desig": "Father/Farmer/Assemblyman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 10",
+  "cands": [
+   {
+    "name": "Stephanie Nguyen",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Vinaya Singh",
+    "party": "Republican",
+    "desig": "Retired Application Developer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 11",
+  "cands": [
+   {
+    "name": "Lori D Wilson",
+    "party": "Democratic",
+    "desig": "Assemblymember, 11th District",
+    "inc": true
+   },
+   {
+    "name": "Jenny Leilani Callison",
+    "party": "No Party Preference",
+    "desig": "Legislative Consultant",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 12",
+  "cands": [
+   {
+    "name": "Jackie Elward",
+    "party": "Democratic",
+    "desig": "Councilwoman/Educator",
+    "inc": false
+   },
+   {
+    "name": "Eric Lucan",
+    "party": "Democratic",
+    "desig": "County Supervisor/Father",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 13",
+  "cands": [
+   {
+    "name": "Rhodesia Ransom",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Tom Patti",
+    "party": "Republican",
+    "desig": "Businessman/Father",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 14",
+  "cands": [
+   {
+    "name": "Buffy Wicks",
+    "party": "Democratic",
+    "desig": "Assemblymember/Mom",
+    "inc": true
+   },
+   {
+    "name": "Mark Rendon",
+    "party": "Green",
+    "desig": "Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 15",
+  "cands": [
+   {
+    "name": "Anamarie Avila Farias",
+    "party": "Democratic",
+    "desig": "Member of the State Assembly, District 15",
+    "inc": true
+   },
+   {
+    "name": "Arthur Webb",
+    "party": "No Party Preference",
+    "desig": "Retired Technology Manager",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 16",
+  "cands": [
+   {
+    "name": "Rebecca Bauer-Kahan",
+    "party": "Democratic",
+    "desig": "Assemblymember/Mother",
+    "inc": true
+   },
+   {
+    "name": "Joseph A. Rubay",
+    "party": "Republican",
+    "desig": "Businessman/Father",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 17",
+  "cands": [
+   {
+    "name": "Matt Haney",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Manuel Noris-Barrera",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 18",
+  "cands": [
+   {
+    "name": "Mia Bonta",
+    "party": "Democratic",
+    "desig": "California State Assemblymember, Assembly District 18",
+    "inc": true
+   },
+   {
+    "name": "Andre Sandford",
+    "party": "Democratic",
+    "desig": "Housing Program Director",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 19",
+  "cands": [
+   {
+    "name": "Catherine Stefani",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Philip Louis Wing",
+    "party": "Republican",
+    "desig": "Retired Financial Advisor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 20",
+  "cands": [
+   {
+    "name": "Liz Ortega",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Patricia Muga",
+    "party": "Republican",
+    "desig": "Real Estate Appraiser",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 21",
+  "cands": [
+   {
+    "name": "Diane Papan",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Jabra J Muhawieh",
+    "party": "Republican",
+    "desig": "Enrolled Agent/Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 22",
+  "cands": [
+   {
+    "name": "Juan Alanis",
+    "party": "Republican",
+    "desig": "Assemblyman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 23",
+  "cands": [
+   {
+    "name": "Marc Berman",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "David G. Johnson",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 24",
+  "cands": [
+   {
+    "name": "Alex Lee",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Max Hsia",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 25",
+  "cands": [
+   {
+    "name": "Ash Kalra",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Himat Singh Bainiwal",
+    "party": "Republican",
+    "desig": "Attorney",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 26",
+  "cands": [
+   {
+    "name": "Patrick Ahrens",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Tim Gorsulowsky",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 27",
+  "cands": [
+   {
+    "name": "Brian Pacheco",
+    "party": "Democratic",
+    "desig": "County Supervisor/Farmer",
+    "inc": false
+   },
+   {
+    "name": "Mike Murphy",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 28",
+  "cands": [
+   {
+    "name": "Gail Pellerin",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Carol Pefley",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 29",
+  "cands": [
+   {
+    "name": "Robert Rivas",
+    "party": "Democratic",
+    "desig": "California Assembly Speaker",
+    "inc": true
+   },
+   {
+    "name": "Dennis P. Sanchez",
+    "party": "Republican",
+    "desig": "Small Businessman/Father",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 30",
+  "cands": [
+   {
+    "name": "Dawn Addis",
+    "party": "Democratic",
+    "desig": "State Assemblymember/Teacher",
+    "inc": true
+   },
+   {
+    "name": "Shannon Kessler",
+    "party": "Republican",
+    "desig": "Children's Advocate/Businesswoman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 31",
+  "cands": [
+   {
+    "name": "Annalisa Perea",
+    "party": "Democratic",
+    "desig": "City Councilmember/Mother",
+    "inc": false
+   },
+   {
+    "name": "Jim Polsgrove",
+    "party": "Republican",
+    "desig": "Retired Engineering Technician",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 32",
+  "cands": [
+   {
+    "name": "David Couch",
+    "party": "Republican",
+    "desig": "Kern County Supervisor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 33",
+  "cands": [
+   {
+    "name": "Hipolito Angel Cerros",
+    "party": "Democratic",
+    "desig": "Public Policy Fellow",
+    "inc": false
+   },
+   {
+    "name": "Alexandra (Ali) Macedo",
+    "party": "Republican",
+    "desig": "Cattlewoman/Business Owner",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 34",
+  "cands": [
+   {
+    "name": "Randall Putz",
+    "party": "Democratic",
+    "desig": "Mayor/Business Owner",
+    "inc": false
+   },
+   {
+    "name": "Charles Frederick Hughes",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 35",
+  "cands": [
+   {
+    "name": "Andrae Gonzales",
+    "party": "Democratic",
+    "desig": "Councilmember/Nonprofit Director",
+    "inc": false
+   },
+   {
+    "name": "Saul Ayon",
+    "party": "Republican",
+    "desig": "Mayor/Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 36",
+  "cands": [
+   {
+    "name": "Ida S. Obeso-Martinez",
+    "party": "Democratic",
+    "desig": "Mayor/Nurse",
+    "inc": false
+   },
+   {
+    "name": "Jeff Gonzalez",
+    "party": "Republican",
+    "desig": "Assemblymember/Father",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 37",
+  "cands": [
+   {
+    "name": "Gregg Hart",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Sari Domingues",
+    "party": "Republican",
+    "desig": "Retired Business Analyst",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 38",
+  "cands": [
+   {
+    "name": "Steve Bennett",
+    "party": "Democratic",
+    "desig": "Member of the Assembly, 38th District",
+    "inc": true
+   },
+   {
+    "name": "Michael MacDonald",
+    "party": "Democratic",
+    "desig": "City Clerk",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 39",
+  "cands": [
+   {
+    "name": "Juan Carrillo",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Paul Andre Marsh",
+    "party": "Republican",
+    "desig": "Community Services Liaison",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 40",
+  "cands": [
+   {
+    "name": "Pilar Schiavo",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Rickey Tracy Hayes II",
+    "party": "Republican",
+    "desig": "Lineman/Entrepreneur/Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 41",
+  "cands": [
+   {
+    "name": "John Harabedian",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Adam Christopher Vena",
+    "party": "Republican",
+    "desig": "Father/Sanitation Employee",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 42",
+  "cands": [
+   {
+    "name": "Deborah Klein Lopez",
+    "party": "Democratic",
+    "desig": "City Councilmember",
+    "inc": false
+   },
+   {
+    "name": "Ted Nordblum",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 43",
+  "cands": [
+   {
+    "name": "Celeste Rodriguez",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Ricardo Benitez",
+    "party": "Republican",
+    "desig": "Plumber/Electrical Contractor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 44",
+  "cands": [
+   {
+    "name": "Nicholas \"Nick\" Schultz",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Carolyn Daniels",
+    "party": "Republican",
+    "desig": "Independent Contractor/Mother",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 45",
+  "cands": [
+   {
+    "name": "James C. Ramos",
+    "party": "Democratic",
+    "desig": "Assemblymember/Business Owner",
+    "inc": true
+   },
+   {
+    "name": "Greg Abdouch",
+    "party": "Republican",
+    "desig": "Small Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 46",
+  "cands": [
+   {
+    "name": "Jesse Gabriel",
+    "party": "Democratic",
+    "desig": "Member of the State Assembly, 46th District",
+    "inc": true
+   },
+   {
+    "name": "Tracey Schroeder",
+    "party": "Republican",
+    "desig": "Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 47",
+  "cands": [
+   {
+    "name": "Leila Namvar",
+    "party": "Democratic",
+    "desig": "Civil Servant/Mom",
+    "inc": false
+   },
+   {
+    "name": "Greg Wallis",
+    "party": "Republican",
+    "desig": "Member of the State Assembly",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 48",
+  "cands": [
+   {
+    "name": "Blanca Rubio",
+    "party": "Democratic",
+    "desig": "State Assemblymember/Teacher",
+    "inc": true
+   },
+   {
+    "name": "Dan T. Tran",
+    "party": "Republican",
+    "desig": "Real Estate Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 49",
+  "cands": [
+   {
+    "name": "Mike Fong",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Long David Liu",
+    "party": "Republican",
+    "desig": "Attorney/Father",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 50",
+  "cands": [
+   {
+    "name": "Robert Garcia",
+    "party": "Democratic",
+    "desig": "State Assemblymember/Educator",
+    "inc": true
+   },
+   {
+    "name": "Victoria Viveros Mageno",
+    "party": "Republican",
+    "desig": "Cucamonga School District Member Governing Board Area 1",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 51",
+  "cands": [
+   {
+    "name": "Colin D. Hernandez",
+    "party": "Democratic",
+    "desig": "Digital Communication Strategist",
+    "inc": false
+   },
+   {
+    "name": "Rick Chavez Zbur",
+    "party": "Democratic",
+    "desig": "California Assemblymember",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 52",
+  "cands": [
+   {
+    "name": "Jessica Caloza",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Andrea Lee Anderson",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 53",
+  "cands": [
+   {
+    "name": "Michelle Rodriguez",
+    "party": "Democratic",
+    "desig": "Assemblymember/Mom",
+    "inc": true
+   },
+   {
+    "name": "Rafaela Romero",
+    "party": "Republican",
+    "desig": "Special Education Aide",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 54",
+  "cands": [
+   {
+    "name": "Mark Gonzalez",
+    "party": "Democratic",
+    "desig": "Member of the State Assembly",
+    "inc": true
+   },
+   {
+    "name": "Alexandra Briseno",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 55",
+  "cands": [
+   {
+    "name": "Ashley M. Brown",
+    "party": "Democratic",
+    "desig": "School Social Worker",
+    "inc": false
+   },
+   {
+    "name": "Isaac G. Bryan",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 56",
+  "cands": [
+   {
+    "name": "Lisa Calderon",
+    "party": "Democratic",
+    "desig": "Assembly Member/Mom",
+    "inc": true
+   },
+   {
+    "name": "Jessica Martinez",
+    "party": "Republican",
+    "desig": "Retired Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 57",
+  "cands": [
+   {
+    "name": "Sade Elhawary",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Constance Jewel Menzies",
+    "party": "Republican",
+    "desig": "In-Home Care Provider",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 58",
+  "cands": [
+   {
+    "name": "Clarissa Cervantes",
+    "party": "Democratic",
+    "desig": "Councilmember/Businesswoman/Mother",
+    "inc": false
+   },
+   {
+    "name": "Leticia Castillo",
+    "party": "Republican",
+    "desig": "Assemblywoman/Licensed Psychotherapist",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 59",
+  "cands": [
+   {
+    "name": "Phillip Chen",
+    "party": "Republican",
+    "desig": "Assemblyman/Business Owner",
+    "inc": true
+   },
+   {
+    "name": "Victor Hernandez",
+    "party": "Green",
+    "desig": "Account Sales Manager",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 60",
+  "cands": [
+   {
+    "name": "Corey A Jackson",
+    "party": "Democratic",
+    "desig": "State Assembly Member",
+    "inc": true
+   },
+   {
+    "name": "Ed Delgado",
+    "party": "Republican",
+    "desig": "City Council Member",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 61",
+  "cands": [
+   {
+    "name": "Tina Simone McKinnor",
+    "party": "Democratic",
+    "desig": "State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Brian Lockwood",
+    "party": "Republican",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 62",
+  "cands": [
+   {
+    "name": "Jos\u00e9 Luis Solache",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Paul Irving Jones",
+    "party": "Republican",
+    "desig": "Retired Combat Marine",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 63",
+  "cands": [
+   {
+    "name": "Natasha Johnson",
+    "party": "Republican",
+    "desig": "Assemblywoman/Business Owner",
+    "inc": true
+   },
+   {
+    "name": "Kevin Akin",
+    "party": "Peace and Freedom",
+    "desig": "No Ballot Designation",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 64",
+  "cands": [
+   {
+    "name": "Blanca Pacheco",
+    "party": "Democratic",
+    "desig": "Assemblywoman",
+    "inc": true
+   },
+   {
+    "name": "Raul Ortiz Jr.",
+    "party": "Republican",
+    "desig": "Pest Control Manager",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 65",
+  "cands": [
+   {
+    "name": "Ayanna Davis",
+    "party": "Democratic",
+    "desig": "Educator/School Boardmember",
+    "inc": false
+   },
+   {
+    "name": "Lydia A. Guti\u00e9rrez",
+    "party": "Republican",
+    "desig": "Public School Teacher",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 66",
+  "cands": [
+   {
+    "name": "Sara Deen",
+    "party": "Democratic",
+    "desig": "School Boardmember/Businesswoman",
+    "inc": false
+   },
+   {
+    "name": "Paul Seo",
+    "party": "Democratic",
+    "desig": "Mayor/Corruption Prosecutor",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 67",
+  "cands": [
+   {
+    "name": "Mark Pulido",
+    "party": "Democratic",
+    "desig": "City Councilmember",
+    "inc": false
+   },
+   {
+    "name": "Paulo Morales",
+    "party": "Republican",
+    "desig": "Law Enforcement Officer",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 68",
+  "cands": [
+   {
+    "name": "Jessie Lopez",
+    "party": "Democratic",
+    "desig": "City Councilwoman",
+    "inc": false
+   },
+   {
+    "name": "David Penaloza",
+    "party": "Democratic",
+    "desig": "Councilmember/Dad/Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 69",
+  "cands": [
+   {
+    "name": "Carolyn J. Essex",
+    "party": "Democratic",
+    "desig": "Legislative Policy Analyst",
+    "inc": false
+   },
+   {
+    "name": "Josh Lowenthal",
+    "party": "Democratic",
+    "desig": "Business Owner/Assemblymember",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 70",
+  "cands": [
+   {
+    "name": "Paula Swift",
+    "party": "Democratic",
+    "desig": "Small Business Owner",
+    "inc": false
+   },
+   {
+    "name": "Tri Ta",
+    "party": "Republican",
+    "desig": "California Assemblyman/Businessman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 71",
+  "cands": [
+   {
+    "name": "JJ Galvez",
+    "party": "Democratic",
+    "desig": "Appointed Director, Silverado-Modjeska Recreation and Park District",
+    "inc": false
+   },
+   {
+    "name": "Kate Sanchez",
+    "party": "Republican",
+    "desig": "California State Assemblywoman",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 72",
+  "cands": [
+   {
+    "name": "Chris Kluwe",
+    "party": "Democratic",
+    "desig": "Businessman/Coach/Father",
+    "inc": false
+   },
+   {
+    "name": "Gracey Van Der Mark",
+    "party": "Republican",
+    "desig": "Councilwoman/Business Owner",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 73",
+  "cands": [
+   {
+    "name": "Cottie Petrie-Norris",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Urson Russell",
+    "party": "Republican",
+    "desig": "Businessman",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 74",
+  "cands": [
+   {
+    "name": "Sergio Farias",
+    "party": "Democratic",
+    "desig": "City Councilmember/Businessman",
+    "inc": false
+   },
+   {
+    "name": "Laurie Davies",
+    "party": "Republican",
+    "desig": "Assemblywoman/Business Owner",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 75",
+  "cands": [
+   {
+    "name": "Gerald C. Boursiquot",
+    "party": "Democratic",
+    "desig": "IT Contractor/Father",
+    "inc": false
+   },
+   {
+    "name": "Carl DeMaio",
+    "party": "Republican",
+    "desig": "Businessman/State Legislator",
+    "inc": true
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 76",
+  "cands": [
+   {
+    "name": "Darshana Patel",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Carrie S. Espinoza Villanueva",
+    "party": "Republican",
+    "desig": "College Administration Support",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 77",
+  "cands": [
+   {
+    "name": "Tasha Boerner",
+    "party": "Democratic",
+    "desig": "California State Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Trinity Hannaway",
+    "party": "Republican",
+    "desig": "Taxpayer Advocate",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 78",
+  "cands": [
+   {
+    "name": "Chris Ward",
+    "party": "Democratic",
+    "desig": "Member of the State Assembly, 78th District",
+    "inc": true
+   },
+   {
+    "name": "Payton Galvez",
+    "party": "Republican",
+    "desig": "Constituent Services Manager",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 79",
+  "cands": [
+   {
+    "name": "LaShae Sharp-Collins",
+    "party": "Democratic",
+    "desig": "Incumbent",
+    "inc": true
+   },
+   {
+    "name": "Andrew Lawson",
+    "party": "Republican",
+    "desig": "Spring Valley Community Planning Group Member",
+    "inc": false
+   }
+  ]
+ },
+ {
+  "office": "State Assembly Member District 80",
+  "cands": [
+   {
+    "name": "David A. Alvarez",
+    "party": "Democratic",
+    "desig": "Assemblymember",
+    "inc": true
+   },
+   {
+    "name": "Alejandro Galicia",
+    "party": "Republican",
+    "desig": "Business Owner/Commissioner",
+    "inc": false
+   }
+  ]
+ }
+]
