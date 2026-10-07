@@ -52,8 +52,10 @@
 
     <div class="card summary" id="summary" hidden></div>
 
-    <details class="card manual" id="manual">
-      <summary data-t="manualTitle">Set my districts by hand</summary>
+    <div class="card tools">
+    <details class="tool" id="manual">
+      <summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7Zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg><span class="tool-txt"><b data-t="manualTitle">Set my districts by hand</b><small data-t="manualSub"></small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5 5.5 9l1.4-1.4 5.1 5.1 5.1-5.1L18.5 9 12 15.5Z"/></svg></summary>
+      <div class="tool-body">
       <div class="fields">
         <div class="field"><label for="f-county" data-t="county">County</label><select id="f-county"></select></div>
         <div class="field"><label for="f-cd" data-t="cd">U.S. House</label><select id="f-cd"></select></div>
@@ -62,22 +64,23 @@
         <div class="field"><label for="f-boe" data-t="boe">Board of Equalization</label><select id="f-boe"></select></div>
       </div>
       <p class="fine"><span data-t="lookup">Look up your districts:</span> <a href="https://findyourrep.legislature.ca.gov/" target="_blank" rel="noopener">findyourrep.legislature.ca.gov</a></p>
+      </div>
     </details>
-
-    <details class="card manual personal" id="personal">
-      <summary data-t="perTitle">Optional: tailor it to you</summary>
-      <div id="personal-body"></div>
+    <details class="tool personal" id="personal">
+      <summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17v2h6v-2H3ZM3 5v2h10V5H3Zm10 16v-2h8v-2h-8v-2h-2v6h2ZM7 9v2H3v2h4v2h2V9H7Zm14 4v-2H11v2h10Zm-6-4h2V7h4V5h-4V3h-2v6Z"/></svg><span class="tool-txt"><b data-t="perTitle">Tailor it to you</b><small data-t="perSub"></small></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.5 5.5 9l1.4-1.4 5.1 5.1 5.1-5.1L18.5 9 12 15.5Z"/></svg></summary>
+      <div class="tool-body" id="personal-body"></div>
     </details>
+    </div>
 
     <div class="toolbar" id="toolbar">
       <div class="progress" id="progress" aria-live="polite"></div>
-      <div class="toolbar-row">
-        <label class="switch"><input type="checkbox" id="f-all"><span class="track" aria-hidden="true"></span><span data-t="browseAll">Show every race in California</span></label>
-        <label class="switch"><input type="checkbox" id="f-open"><span class="track" aria-hidden="true"></span><span data-t="openAll">Show all reasons</span></label>
-      </div>
       <div class="search">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 0 1 5.6 11.2l4.6 4.6-1.4 1.4-4.6-4.6A7 7 0 1 1 10 3Zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg>
         <input type="search" id="q" autocomplete="off">
+      </div>
+      <div class="toolbar-row">
+        <label class="switch"><input type="checkbox" id="f-all"><span class="track" aria-hidden="true"></span><span data-t="browseAll">Show every race in California</span></label>
+        <label class="switch"><input type="checkbox" id="f-open"><span class="track" aria-hidden="true"></span><span data-t="openAll">Show all reasons</span></label>
       </div>
       <nav class="jump" id="jump" aria-label="Jump to section"></nav>
     </div>

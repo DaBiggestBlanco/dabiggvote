@@ -20,18 +20,18 @@
       notFound: "We couldn't find that address. Check the spelling and include the city, or try your ZIP code.",
       blocked: "Address lookup isn't available here. Please type your 5-digit ZIP code instead.",
       zipUnknown: "We don't have that ZIP code for California. Check the number or type your street address.",
-      yourBallot: "Your ballot", clear: "Start over", exact: "exact match for your address",
+      yourBallot: "Your ballot", clear: "Change", exact: "exact match for your address",
       zipOf: function (z) { return "ZIP " + z; },
       split: "Your ZIP code crosses district lines. We picked the district where most people in your ZIP live. Tap another one if it's yours, or type your street address for an exact match.",
       noSenate: "There's no State Senate race in your district this year. Only even-numbered districts vote in 2026.",
       county: "County", cd: "U.S. House", sd: "State Senate", ad: "State Assembly", boe: "Board of Equalization",
-      manualTitle: "Set my districts by hand", lookup: "Look up your districts:", any: "Not sure",
-      browseAll: "Show every race in California", openAll: "Show all reasons",
+      manualTitle: "Set my districts by hand", manualSub: "Pick your county and districts yourself", lookup: "Look up your districts:", any: "Not sure",
+      browseAll: "Show every race in California", openAll: "Open all details",
       search: "Search races, names or measures",
       progress: function (d, n) { return d + " of " + n + " races marked done"; },
       startHere: "Type your ZIP code above to add your congressional, legislative and local races. Statewide races are below.",
       pickLbl: "Suggested pick", yes: "Vote YES", no: "Vote NO", yesAll: "Vote YES on all", yesBoth: "Vote YES on both", noRec: "No recommendation",
-      why: "Why this pick", whyProp: "Details & both sides", hide: "Hide details", done: "Done", markDone: "Mark done",
+      why: "Why this pick", whyProp: "Details", hide: "Hide details", done: "Done", markDone: "Mark done",
       low: "Low impact", limited: "Limited info", unopposed: "Unopposed", part: function (p) { return p + " only"; }, inc: "Incumbent",
       whatItDoes: "What it does", yesMeans: "A YES vote means", noMeans: "A NO vote means", cost: "Cost",
       whyPick: "Why it's the suggested pick", others: "The other choices, and why they aren't suggested", whyNot: "Why not:", note: "Good to know", check: "Check your sample ballot", sources: "Sources",
@@ -42,7 +42,7 @@
       caseYes: "The case for YES", caseNo: "The case for NO", claimsH: "Claims you may hear, checked against the official voter guide",
       verdict: { "true": "Accurate", partly: "Partly accurate", "false": "Not accurate", debated: "Debated", unverified: "Not verified" },
       groupsH: "What major groups recommend", forYou: "For you",
-      conf: { strong: "Strong pick", lean: "Lean", close: "Close call" },
+      conf: { strong: "Strong pick", lean: "Lean", close: "Close call" }, confShort: { strong: "Strong", lean: "Lean", close: "Close" },
       byWeights: "Changed by your weights",
       howMade: "How the suggested pick was made",
       eff: { "2": "Helps a lot", "1": "Helps", "0": "Cuts both ways", "-1": "Hurts", "-2": "Hurts a lot" },
@@ -62,10 +62,10 @@
         judges: "Judges: keep them unless there's a serious reason to remove one.",
         local: "Local race: weighed against the issues this guide weighs, using records and endorsements."
       },
-      weightsH: "How much each issue counts", weightsHint: "Every issue counts the same unless you change it. Your weights can change the suggested pick on propositions; candidate picks follow the written rules.",
-      wLvl: ["Doesn't count", "Counts", "Counts more", "Counts most"], otherIssues: "Other issues some voters weigh (off unless you turn them on)",
+      weightsH: "How much each issue counts", weightsHint: "Every issue counts the same until you change it. Candidate picks follow the written rules.",
+      wLvl: ["Off", "Normal", "More", "Most"], wChanged: function (l) { return "Changed by your weights: " + l; }, wNone: "No suggested picks have changed yet.", otherIssues: "Other issues some voters weigh (off unless you turn them on)",
       resetW: "Reset to equal",
-      perTitle: "Optional: tailor it to you", perHint: "Skip this if you like. Nothing here is required, and answers stay on this device. They never change the suggested picks. They add short notes on how each measure could affect you and which side fits what you care about.",
+      perTitle: "Tailor it to you", perSub: "Optional · weigh the issues your way, add notes for your household", perTabs: ["Weights", "About you", "Summary"], perHint: "All optional, and nothing leaves this device. Weights change how propositions are scored. About you only adds notes.",
       aboutYou: "About you", optYes: "Yes", optNo: "No", clearAns: "Clear my answers",
       lineup: "How the measures line up", colSug: "Suggested", colConf: "Confidence", colMine: "My pick",
       copy: "Copy as text", copied: "Copied. Paste it into a text or email.", copyFail: "Copy isn't allowed here. Select the text below and copy it.",
@@ -85,18 +85,18 @@
       notFound: "No encontramos esa dirección. Revise la ortografía e incluya la ciudad, o pruebe con su código postal.",
       blocked: "La búsqueda por dirección no está disponible aquí. Escriba su código postal de 5 dígitos.",
       zipUnknown: "No tenemos ese código postal para California. Revise el número o escriba su dirección.",
-      yourBallot: "Su boleta", clear: "Empezar de nuevo", exact: "resultado exacto para su dirección",
+      yourBallot: "Su boleta", clear: "Cambiar", exact: "resultado exacto para su dirección",
       zipOf: function (z) { return "Código postal " + z; },
       split: "Su código postal cruza límites de distritos. Elegimos el distrito donde vive la mayoría. Toque otro si es el suyo, o escriba su dirección para un resultado exacto.",
       noSenate: "No hay elección del Senado estatal en su distrito este año. Solo votan los distritos pares en 2026.",
       county: "Condado", cd: "Cámara de EE. UU.", sd: "Senado estatal", ad: "Asamblea estatal", boe: "Junta de Igualación",
-      manualTitle: "Elegir mis distritos a mano", lookup: "Busque sus distritos:", any: "No sé",
-      browseAll: "Mostrar todas las contiendas de California", openAll: "Mostrar todas las razones",
+      manualTitle: "Elegir mis distritos a mano", manualSub: "Elija usted su condado y distritos", lookup: "Busque sus distritos:", any: "No sé",
+      browseAll: "Mostrar todas las contiendas de California", openAll: "Abrir todos los detalles",
       search: "Buscar contiendas, nombres o medidas",
       progress: function (d, n) { return d + " de " + n + " contiendas marcadas"; },
       startHere: "Escriba su código postal arriba para agregar sus contiendas del Congreso, la Legislatura y locales. Las contiendas estatales están abajo.",
       pickLbl: "Selección sugerida", yes: "Vote SÍ", no: "Vote NO", yesAll: "Vote SÍ a todos", yesBoth: "Vote SÍ a ambos", noRec: "Sin recomendación",
-      why: "Por qué", whyProp: "Detalles y ambos lados", hide: "Ocultar detalles", done: "Listo", markDone: "Marcar listo",
+      why: "Por qué", whyProp: "Detalles", hide: "Ocultar detalles", done: "Listo", markDone: "Marcar listo",
       low: "Bajo impacto", limited: "Poca información", unopposed: "Sin oposición", part: function (p) { return "Solo " + p; }, inc: "En funciones",
       whatItDoes: "Qué hace", yesMeans: "Votar SÍ significa", noMeans: "Votar NO significa", cost: "Costo",
       whyPick: "Por qué es la selección sugerida", others: "Las otras opciones y por qué no se sugieren", whyNot: "Por qué no:", note: "Bueno saber", check: "Revise su boleta de muestra", sources: "Fuentes",
@@ -107,7 +107,7 @@
       caseYes: "Argumentos a favor (SÍ)", caseNo: "Argumentos en contra (NO)", claimsH: "Afirmaciones que puede oír, verificadas con la guía oficial",
       verdict: { "true": "Correcto", partly: "Parcialmente correcto", "false": "Incorrecto", debated: "En debate", unverified: "Sin verificar" },
       groupsH: "Qué recomiendan grupos importantes", forYou: "Para usted",
-      conf: { strong: "Selección firme", lean: "Inclinación", close: "Reñida" },
+      conf: { strong: "Selección firme", lean: "Inclinación", close: "Reñida" }, confShort: { strong: "Firme", lean: "Inclin.", close: "Reñida" },
       byWeights: "Cambió por sus pesos",
       howMade: "Cómo se hizo la selección sugerida",
       eff: { "2": "Ayuda mucho", "1": "Ayuda", "0": "Ambos lados", "-1": "Perjudica", "-2": "Perjudica mucho" },
@@ -127,10 +127,10 @@
         judges: "Jueces: mantenerlos salvo que haya una razón seria para destituir a alguno.",
         local: "Contienda local: comparada con los temas que pesa esta guía, según historial y respaldos."
       },
-      weightsH: "Cuánto cuenta cada tema", weightsHint: "Todos los temas cuentan igual a menos que usted lo cambie. Sus pesos pueden cambiar la selección sugerida en las proposiciones; las de candidatos siguen las reglas escritas.",
-      wLvl: ["No cuenta", "Cuenta", "Cuenta más", "Cuenta mucho"], otherIssues: "Otros temas que algunos votantes pesan (apagados salvo que los active)",
+      weightsH: "Cuánto cuenta cada tema", weightsHint: "Todos los temas cuentan igual hasta que lo cambie. Las selecciones de candidatos siguen las reglas escritas.",
+      wLvl: ["No", "Normal", "Más", "Mucho"], wChanged: function (l) { return "Cambiaron por sus pesos: " + l; }, wNone: "Ninguna selección sugerida ha cambiado.", otherIssues: "Otros temas que algunos votantes pesan (apagados salvo que los active)",
       resetW: "Volver a igual",
-      perTitle: "Opcional: personalícelo", perHint: "Puede omitir esto. Nada es obligatorio y las respuestas se quedan en este dispositivo. Nunca cambian las selecciones sugeridas. Agregan notas breves sobre cómo cada medida podría afectarle y qué lado coincide con lo que le importa.",
+      perTitle: "Personalícelo", perSub: "Opcional · pese los temas a su manera y agregue notas para su hogar", perTabs: ["Pesos", "Sobre usted", "Resumen"], perHint: "Todo es opcional y nada sale de este dispositivo. Los pesos cambian cómo se califican las proposiciones. Sobre usted solo agrega notas.",
       aboutYou: "Sobre usted", optYes: "Sí", optNo: "No", clearAns: "Borrar mis respuestas",
       lineup: "Cómo se alinean las medidas", colSug: "Sugerida", colConf: "Confianza", colMine: "Mi selección",
       copy: "Copiar como texto", copied: "Copiado. Péguelo en un mensaje o correo.", copyFail: "No se permite copiar aquí. Seleccione el texto de abajo y cópielo.",
@@ -442,7 +442,7 @@
 
   function renderSummary() {
     var box = $("#summary"), g = S.geo;
-    $("#find-card").classList.toggle("compact", located());
+    $("#find-card").hidden = located();
     if (!located()) { box.hidden = true; return; }
     box.hidden = false;
     var where = g && g.label ? (g.kind === "zip" ? t("zipOf")(g.label) : g.label) : (S.county ? S.county + " County" : "");
@@ -502,31 +502,39 @@
       return '<button type="button" class="mchip" data-' + kind + '="' + id + '" data-v="' + esc(o[0]) + '" aria-pressed="' + (cur === o[0]) + '">' + esc(o[1]) + "</button>";
     }).join("") + "</div>";
   }
+  var perTab = 0;
   function renderPersonal() {
-    var es = S.lang === "es", h = [];
+    var es = S.lang === "es", h = [], tabs = t("perTabs");
     h.push('<p class="fine">' + esc(t("perHint")) + "</p>");
-    h.push('<h3 class="per-h">' + esc(t("aboutYou")) + "</h3>");
+    h.push('<div class="seg-tabs" role="tablist">' + tabs.map(function (x, i) {
+      return '<button type="button" role="tab" data-ptab="' + i + '" aria-selected="' + (perTab === i) + '">' + esc(x) + "</button>";
+    }).join("") + "</div>");
+    var pane = function (i) { return '<div class="ppane"' + (perTab === i ? "" : " hidden") + ">"; };
+    h.push(pane(1));
     CH.profile.forEach(function (q) {
       var opts = q.opts ? q.opts.map(function (o) { return [o[0], es ? o[2] : o[1]]; }) : [["yes", t("optYes")], ["no", t("optNo")]];
       h.push('<div class="q"><div class="q-t">' + esc(es ? q.es : q.en) + "</div>" + seg("prof", q.id, opts, S.prof[q.id]) + "</div>");
     });
-    h.push('<h3 class="per-h">' + esc(t("weightsH")) + '</h3><p class="fine">' + esc(t("weightsHint")) + "</p>");
+    if (Object.keys(S.prof).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
+    var flipped = G.contests.filter(changedByW).map(function (c) { return c.title.replace("Proposition", "Prop"); });
+    h.push("</div>" + pane(0) + '<p class="fine">' + esc(t("weightsHint")) + '</p><div class="wstatus' + (flipped.length ? " on" : "") + '" aria-live="polite">' + esc(flipped.length ? t("wChanged")(flipped.join(", ")) : t("wNone")) + "</div>");
     var wq = function (cr) {
-      return '<div class="q"><div class="q-t">' + esc(es ? cr.es : cr.en) + '</div><div class="seg">' + [0, 1, 2, 3].map(function (n) {
-        return '<button type="button" class="mchip sm" data-w="' + cr.id + '" data-v="' + n + '" aria-pressed="' + (wOf(cr.id) === n) + '">' + esc(t("wLvl")[n]) + "</button>";
+      return '<div class="q"><div class="q-t">' + esc(es ? cr.es : cr.en) + '</div><div class="seg4" role="group" aria-label="' + esc(es ? cr.es : cr.en) + '">' + [0, 1, 2, 3].map(function (n) {
+        return '<button type="button" data-w="' + cr.id + '" data-v="' + n + '" aria-pressed="' + (wOf(cr.id) === n) + '">' + esc(t("wLvl")[n]) + "</button>";
       }).join("") + "</div></div>";
     };
     CH.criteria.filter(function (x) { return x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
     h.push('<p class="per-sub">' + esc(t("otherIssues")) + "</p>");
     CH.criteria.filter(function (x) { return !x.lens; }).forEach(function (cr) { h.push(wq(cr)); });
     if (customW()) h.push('<button type="button" class="btn ghost" id="reset-w">' + esc(t("resetW")) + "</button>");
+    h.push("</div>" + pane(2));
     var props = G.contests.filter(function (c) { return c.score; });
-    h.push('<h3 class="per-h">' + esc(t("lineup")) + '</h3><table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colConf")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
+    h.push('<table class="lineup"><thead><tr><th></th><th>' + esc(t("colSug")) + "</th><th>" + esc(t("colConf")) + "</th><th>" + esc(t("colMine")) + "</th></tr></thead><tbody>" +
       props.map(function (c) {
         var sp = sugg(c), cf = confOf(c);
-        return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(sp) + '">' + esc(shortPick(sp)) + (changedByW(c) ? " *" : "") + "</td><td>" + esc(cf ? t("conf")[cf] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
+        return '<tr><td><a href="#c-' + c.id + '" data-goto="' + c.id + '">' + esc(c.title.replace("Proposition", "Prop")) + '</a></td><td class="' + pickKind(sp) + '">' + esc(shortPick(sp)) + (changedByW(c) ? " *" : "") + "</td><td>" + esc(cf ? t("confShort")[cf] : "—") + '</td><td class="' + (mineList(c).length ? pickKind(mineList(c)[0]) : "") + '">' + esc(mineText(c) || "—") + "</td></tr>";
       }).join("") + "</tbody></table>" + (props.some(changedByW) ? '<p class="fine">* ' + esc(t("byWeights")) + "</p>" : ""));
-    if (Object.keys(S.prof).length) h.push('<button type="button" class="btn ghost" id="clear-ans">' + esc(t("clearAns")) + "</button>");
+    h.push("</div>");
     $("#personal-body").innerHTML = h.join("");
   }
 
@@ -669,6 +677,7 @@
       if (g) { e.preventDefault(); S.q = ""; $("#q").value = ""; renderBallot(); var el = $("#c-" + g.dataset.goto); if (el && el.scrollIntoView) el.scrollIntoView({ block: "start" }); return; }
       var b = e.target.closest("button"); if (!b) return;
       var key, kind, sel = null;
+      if (b.dataset.ptab) { perTab = +b.dataset.ptab; renderPersonal(); var tb = document.querySelector('[data-ptab="' + perTab + '"]'); if (tb) tb.focus(); return; }
       if (b.id === "clear-ans") S.prof = {};
       else if (b.id === "reset-w") S.w = {};
       else if (b.dataset.w) {
