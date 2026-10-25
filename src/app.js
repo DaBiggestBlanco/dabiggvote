@@ -12,6 +12,10 @@
     en: {
       skip: "Skip to main content", title: "Family Voting Guide", lang: "Español",
       days: function (n) { return n > 1 ? n + " days until Election Day" : n === 1 ? "Election Day is tomorrow" : n === 0 ? "Election Day is today" : "Election Day has passed"; },
+      localH: "Local races and measures", localPtr: "Local races may be missing from this guide.", localJump: "See how to find them",
+      localMissing: function (c) { return "Your ballot likely has city, school, water and other local races and measures that this guide doesn't list. To see your complete ballot, look it up with " + c + " County elections or VOTE411."; },
+      localSome: function (c) { return "This guide covers some local races in " + c + " County, but your ballot may have more. To see your complete ballot, look it up with " + c + " County elections or VOTE411."; },
+      localOffice: function (c) { return c + " County elections"; }, localVote411: "VOTE411 ballot lookup (League of Women Voters)",
       tabBallot: "My ballot", tabList: "My list", tabVote: "How to vote", tabAbout: "About",
       findTitle: "Find your ballot", findHint: "Type your home address for an exact match, or just your ZIP code.",
       hostedHint: "Type your address or ZIP code to see the races on your ballot.",
@@ -80,6 +84,10 @@
     es: {
       skip: "Ir al contenido principal", title: "Guía Familiar para Votar", lang: "English",
       days: function (n) { return n > 1 ? "Faltan " + n + " días para votar" : n === 1 ? "La elección es mañana" : n === 0 ? "Hoy es la elección" : "La elección ya pasó"; },
+      localH: "Contiendas y medidas locales", localPtr: "Puede que falten contiendas locales en esta guía.", localJump: "Cómo encontrarlas",
+      localMissing: function (c) { return "Su boleta probablemente tiene contiendas y medidas de su ciudad, escuelas, agua y otras que esta guía no incluye. Para ver su boleta completa, búsquela en la oficina electoral del condado de " + c + " o en VOTE411."; },
+      localSome: function (c) { return "Esta guía cubre algunas contiendas locales del condado de " + c + ", pero su boleta puede tener más. Para ver su boleta completa, búsquela en la oficina electoral del condado o en VOTE411."; },
+      localOffice: function (c) { return "Elecciones del condado de " + c; }, localVote411: "Buscar boleta en VOTE411 (Liga de Mujeres Votantes)",
       tabBallot: "Mi boleta", tabList: "Mi lista", tabVote: "Cómo votar", tabAbout: "Acerca de",
       findTitle: "Encuentre su boleta", findHint: "Escriba su dirección para un resultado exacto, o solo su código postal.",
       hostedHint: "Escriba su dirección o código postal para ver las contiendas de su boleta.",
@@ -441,6 +449,13 @@
       h.push('<section class="sec" id="s-' + id + '"><div class="sec-head"><h2>' + esc(secName(id)) + "</h2>" + (cs.length ? "<span>" + esc(t("races")(cs.length)) + "</span>" : "") + "</div>" + (ex[id] || "") + cs.map(card).join("") + "</section>");
     });
     if (!located() && !S.all && !S.q) h.unshift('<p class="note">' + esc(t("startHere")) + "</p>");
+    if (S.county && !S.all && !S.q) {
+      var some = G.contests.some(function (c) { return (c.scope === "local" || c.scope === "county") && inScope(c); }), off = (G.countyOffice || {})[S.county];
+      h.push('<section class="sec" id="s-local"><div class="sec-head"><h2>' + esc(t("localH")) + '</h2></div><div class="card local-card"><p>' + esc(t(some ? "localSome" : "localMissing")(S.county)) + '</p><div class="local-links">' +
+        (off ? '<a class="btn primary" href="' + esc(off) + '" target="_blank" rel="noopener">' + esc(t("localOffice")(S.county)) + " ↗</a>" : "") +
+        '<a class="btn" href="https://www.vote411.org/ballot" target="_blank" rel="noopener">' + esc(t("localVote411")) + " ↗</a></div></div></section>");
+      jump.push('<a class="chip" href="#s-local">' + esc(t("localH")) + "</a>");
+    }
     $("#ballot-list").innerHTML = h.join("") || '<p class="empty">' + esc(t("empty")) + "</p>";
     $("#jump").innerHTML = jump.length > 1 ? jump.join("") : "";
     renderProgress(list);
@@ -466,6 +481,7 @@
       (where ? '<div class="sum-where">' + esc(where) + (g && g.kind === "address" ? " · " + esc(t("exact")) : g && g.via ? " · " + esc(t(g.via)) : "") + "</div>" : "") +
       '</div><button type="button" class="btn ghost" id="clear">' + esc(t("clear")) + "</button></div>" +
       '<div class="chips">' + chips.join("") + "</div>" +
+      (S.county ? '<p class="local-ptr">' + esc(t("localPtr")) + ' <a href="#s-local">' + esc(t("localJump")) + "</a></p>" : "") +
       (split.length ? '<div class="split-note"><div>' + esc(t("split")) + "</div>" + split.join("") + "</div>" : "");
   }
 
