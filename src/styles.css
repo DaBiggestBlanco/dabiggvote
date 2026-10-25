@@ -339,3 +339,8 @@ td.sc-eff small { display: block; font-weight: 600; color: var(--muted); }
 .lineup th, .lineup td { padding-inline: 3px; }
 @media (max-width: 380px) { .lineup th { font-size: .6875rem; } }
 @media (max-width: 370px) { .tab { font-size: .6875rem; white-space: nowrap; } .seg-tabs button { font-size: .8125rem; } }
+.local-card { display: grid; gap: 12px; border-left: 4px solid var(--mark); }
+.local-card p { margin: 0; }
+.local-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.local-links .btn { display: inline-flex; align-items: center; text-decoration: none; }
+.local-ptr { margin: 0; font-size: .875rem; color: var(--muted); } .local-ptr a { font-weight: 700; }
